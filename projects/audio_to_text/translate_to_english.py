@@ -1,8 +1,10 @@
+import sys
+
 import pysrt
 from transformers import M2M100ForConditionalGeneration, M2M100Tokenizer
 
-tokenizer = M2M100Tokenizer.from_pretrained("facebook/m2m100_418M")
-model = M2M100ForConditionalGeneration.from_pretrained("facebook/m2m100_418M")
+tokenizer = M2M100Tokenizer.from_pretrained("facebook/m2m100_418M", use_auth_token=False)
+model = M2M100ForConditionalGeneration.from_pretrained("facebook/m2m100_418M", use_auth_token=False)
 
 def translate_ar_to_en(text):
     tokenizer.src_lang = "ar"
@@ -18,3 +20,4 @@ for sub in subs:
 
 subs.save("data/001_combined.srt", encoding="utf-8")
 print("✅ Combined Arabic + English SRT")
+sys.exit(0)

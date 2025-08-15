@@ -1,0 +1,650 @@
+{
+    "audio": {
+        "audio_files": [
+            {
+                "id": 1101,
+                "chapter_id": 96,
+                "file_size": 1532032.0,
+                "format": "mp3",
+                "audio_url": "https://download.quranicaudio.com/qdc/mishari_al_afasy/murattal/96.mp3",
+                "duration": 83000,
+                "verse_timings": [
+                    {
+                        "verse_key": "96:1",
+                        "timestamp_from": 0,
+                        "timestamp_to": 4360,
+                        "duration": 4360,
+                        "segments": [
+                            [
+                                1,
+                                0,
+                                830
+                            ],
+                            [
+                                2,
+                                830,
+                                1370
+                            ],
+                            [
+                                3,
+                                1370,
+                                2250
+                            ],
+                            [
+                                4,
+                                2250,
+                                3050
+                            ],
+                            [
+                                5,
+                                3050,
+                                4325
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "96:2",
+                        "timestamp_from": 4360,
+                        "timestamp_to": 8800,
+                        "duration": 4440,
+                        "segments": [
+                            [
+                                1,
+                                4325,
+                                5085
+                            ],
+                            [
+                                2,
+                                5085,
+                                6985
+                            ],
+                            [
+                                3,
+                                6985,
+                                7425
+                            ],
+                            [
+                                4,
+                                7425,
+                                8710
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "96:3",
+                        "timestamp_from": 8800,
+                        "timestamp_to": 12200,
+                        "duration": 3400,
+                        "segments": [
+                            [
+                                1,
+                                8745,
+                                9625
+                            ],
+                            [
+                                2,
+                                9625,
+                                10555
+                            ],
+                            [
+                                3,
+                                10555,
+                                12090
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "96:4",
+                        "timestamp_from": 12200,
+                        "timestamp_to": 15620,
+                        "duration": 3420,
+                        "segments": [
+                            [
+                                1,
+                                12145,
+                                13205
+                            ],
+                            [
+                                2,
+                                13205,
+                                14055
+                            ],
+                            [
+                                3,
+                                14055,
+                                15010
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "96:5",
+                        "timestamp_from": 15620,
+                        "timestamp_to": 20660,
+                        "duration": 5040,
+                        "segments": [
+                            [
+                                1,
+                                15065,
+                                15965
+                            ],
+                            [
+                                2,
+                                15965,
+                                18075
+                            ],
+                            [
+                                3,
+                                18075,
+                                18415
+                            ],
+                            [
+                                4,
+                                18415,
+                                18835
+                            ],
+                            [
+                                5,
+                                18835,
+                                19680
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "96:6",
+                        "timestamp_from": 20660,
+                        "timestamp_to": 27770,
+                        "duration": 7110,
+                        "segments": [
+                            [
+                                1,
+                                20235,
+                                22615
+                            ],
+                            [
+                                2,
+                                22615,
+                                23665
+                            ],
+                            [
+                                3,
+                                23665,
+                                25715
+                            ],
+                            [
+                                4,
+                                25715,
+                                27290
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "96:7",
+                        "timestamp_from": 27770,
+                        "timestamp_to": 30720,
+                        "duration": 2950,
+                        "segments": [
+                            [
+                                1,
+                                27715,
+                                28015
+                            ],
+                            [
+                                2,
+                                28015,
+                                29035
+                            ],
+                            [
+                                3,
+                                29035,
+                                30240
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "96:8",
+                        "timestamp_from": 30720,
+                        "timestamp_to": 35110,
+                        "duration": 4390,
+                        "segments": [
+                            [
+                                1,
+                                30295,
+                                31515
+                            ],
+                            [
+                                2,
+                                31515,
+                                32195
+                            ],
+                            [
+                                3,
+                                32195,
+                                32995
+                            ],
+                            [
+                                4,
+                                32995,
+                                34200
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "96:9",
+                        "timestamp_from": 35110,
+                        "timestamp_to": 38350,
+                        "duration": 3240,
+                        "segments": [
+                            [
+                                1,
+                                34625,
+                                35695
+                            ],
+                            [
+                                2,
+                                35695,
+                                36605
+                            ],
+                            [
+                                3,
+                                36605,
+                                37540
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "96:10",
+                        "timestamp_from": 38350,
+                        "timestamp_to": 41380,
+                        "duration": 3030,
+                        "segments": [
+                            [
+                                1,
+                                38025,
+                                38865
+                            ],
+                            [
+                                2,
+                                38865,
+                                39525
+                            ],
+                            [
+                                3,
+                                39525,
+                                40570
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "96:11",
+                        "timestamp_from": 41380,
+                        "timestamp_to": 45820,
+                        "duration": 4440,
+                        "segments": [
+                            [
+                                1,
+                                40895,
+                                41885
+                            ],
+                            [
+                                2,
+                                41885,
+                                42945
+                            ],
+                            [
+                                3,
+                                42945,
+                                43615
+                            ],
+                            [
+                                4,
+                                43615,
+                                43935
+                            ],
+                            [
+                                5,
+                                43935,
+                                44950
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "96:12",
+                        "timestamp_from": 45820,
+                        "timestamp_to": 48750,
+                        "duration": 2930,
+                        "segments": [
+                            [
+                                1,
+                                45435,
+                                45875
+                            ],
+                            [
+                                2,
+                                45875,
+                                46535
+                            ],
+                            [
+                                3,
+                                46535,
+                                47910
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "96:13",
+                        "timestamp_from": 48750,
+                        "timestamp_to": 53320,
+                        "duration": 4570,
+                        "segments": [
+                            [
+                                1,
+                                48295,
+                                49355
+                            ],
+                            [
+                                2,
+                                49355,
+                                50385
+                            ],
+                            [
+                                3,
+                                50385,
+                                51225
+                            ],
+                            [
+                                4,
+                                51225,
+                                52490
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "96:14",
+                        "timestamp_from": 53320,
+                        "timestamp_to": 58910,
+                        "duration": 5590,
+                        "segments": [
+                            [
+                                1,
+                                52945,
+                                53535
+                            ],
+                            [
+                                2,
+                                53535,
+                                55105
+                            ],
+                            [
+                                3,
+                                55105,
+                                56565
+                            ],
+                            [
+                                4,
+                                56565,
+                                57385
+                            ],
+                            [
+                                5,
+                                57385,
+                                58490
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "96:15",
+                        "timestamp_from": 58910,
+                        "timestamp_to": 67610,
+                        "duration": 8700,
+                        "segments": [
+                            [
+                                1,
+                                58865,
+                                59885
+                            ],
+                            [
+                                2,
+                                59885,
+                                60805
+                            ],
+                            [
+                                3,
+                                60805,
+                                61325
+                            ],
+                            [
+                                4,
+                                61325,
+                                62805
+                            ],
+                            [
+                                5,
+                                62805,
+                                64215
+                            ],
+                            [
+                                6,
+                                64215,
+                                67540
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "96:16",
+                        "timestamp_from": 67610,
+                        "timestamp_to": 72260,
+                        "duration": 4650,
+                        "segments": [
+                            [
+                                1,
+                                67585,
+                                69545
+                            ],
+                            [
+                                2,
+                                69545,
+                                70755
+                            ],
+                            [
+                                3,
+                                70755,
+                                72200
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "96:17",
+                        "timestamp_from": 72260,
+                        "timestamp_to": 74790,
+                        "duration": 2530,
+                        "segments": [
+                            [
+                                1,
+                                72225,
+                                73315
+                            ],
+                            [
+                                2,
+                                73315,
+                                74730
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "96:18",
+                        "timestamp_from": 74790,
+                        "timestamp_to": 77690,
+                        "duration": 2900,
+                        "segments": [
+                            [
+                                1,
+                                74765,
+                                75625
+                            ],
+                            [
+                                2,
+                                75625,
+                                77640
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "96:19",
+                        "timestamp_from": 77690,
+                        "timestamp_to": 83720,
+                        "duration": 6040,
+                        "segments": [
+                            [
+                                1,
+                                77665,
+                                78575
+                            ],
+                            [
+                                2,
+                                78575,
+                                78975
+                            ],
+                            [
+                                3,
+                                78975,
+                                80005
+                            ],
+                            [
+                                4,
+                                80005,
+                                80815
+                            ],
+                            [
+                                5,
+                                80815,
+                                83650
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "surah_info": {
+        "surah_name": "Surah Al-'Alaq",
+        "ayah_count": "19",
+        "revelation_place": "Mecca",
+        "description": "NameThe Surah is titled so, after the word 'alaq in the second verse of this Surah.Period of RevelationThis Surah has two parts: the first part consists of 1-5, and the second of 6-19. About the first part: a great majority of the Islamic scholars are agreed that it forms the very first Revelation to be sent down to the Holy Prophet (upon whom be Allah's peace and blessings). In this regard, the Hadith from Hadrat Aishah, which Imam Ahmad, Bukhari, Muslim, and other traditionists have related with several chains of authorities, is one of the most authentic Ahadith on the subject. In it, Hadrat Aishah has narrated the full story of the beginning of revelation as she herself heard it from the Holy Messenger of Allah. Ibn Abbas, Abu Musa al-Ashari and a group of the Companions are also reported to have stated that these were the very first verses of the Quran to be revealed to the Holy Prophet. The second part was sent down afterwards when the Holy Prophet (upon whom be peace) began to perform the prescribed Prayer in the precincts of the Kabah and Abu Jahl tried to prevent him from this with threats.Beginning of RevelationThe traditionists have related on the strength of their respective authorities the story of the beginning of revelation from Imam Az-Zuhri, who had it from Hadrat Urwah bin Zubair, who had it from Hadrat Aishah, his aunt. She states that revelations to the Holy Prophet (upon whom be peace) began in the form of true (according to other traditions, good) visions. Whichever vision he saw, it seemed as though he saw it in broad daylight. Afterwards solitude became dear to him and he would go to the Cave of Hira to engage in worship there for several days and nights (Hadrat Aishah has used the word tahannuth, which Imam Zuhri has explained as ta'abbud : devotional exercises. This was some kind of worship which he performed, for until then he had not been taught the method of performing the Prayer by Allah). He would take provisions with him and stay there for several days, then would return to Hadrat Khadijah who would again provide for him for a few more days. One day when he was in the Cave of Hira, Revelation came down to him unexpectedly and the Angel said, to him: \"Read\".After this Hadrat Aishah reports the words of the Holy Prophet himself, to the effect, \"I said: 'I cannot read!' Thereupon the Angel took me and pressed me until I could bear it no more. Then he left me and said: 'Read.' I said: 'I cannot read!' He pressed me a second time until I could bear it no more. Then he left me and said: 'Read.' I again said: 'I cannot read!' He pressed me for the third time until I could bear it no more. Then he left me and said: 'Iqra bismi Rabbi kal- ladhi khalaqa': (Read in the name of your Lord Who created) till he reached 'ma lam ya lam' (what he did not know).\"Then the Holy Messenger (upon whom be peace) returned home to Hadrat Khadijah trembling with fear, and said to her: \"Cover me, cover me\", and he was covered. When terror left him, he said: \"O Khadijah, what has happened to me?\" Then he narrated to her whatever had happened, and said: \"I fear for my life.\" She said: \"No never! Be of good cheer. By God, never will God debase you: you treat the kindred well, you speak the truth, (one tradition adds: you restore what is entrusted to you), you bear the burden of the helpless, you help the poor, you entertain the guests, and you cooperate in good works.\"Then she took him to Waraqah bin Naufal, who was her cousin. He had become a Christian in pre-Islamic days, wrote the Gospel in Arabic and Hebrew, and had become very old and blind. Hadrat Khadijah said: \"Brother, listen to the son of your brother.\" Waraqah said to the Holy Prophet: \"What have you seen, nephew?\" The Holy Prophet described what he had seen. Waraqah said: \"This is the same Gabriel (the Angel of Revelation) which Allah had sent down to Moses. Would that I were a young man during your Prophethood! Would that I were alive when your tribe would expel you!\" The Holy Prophet said: \"Will they expel me?\" Waraqah said: \"Yes, never has it so happened that a person brought what you have brought and was not treated as an enemy. If I live till then I would help you with all the power at my command.\" But not very long after this Waraqah died.This narrative is explicit that even until a moment before the arrival of the Angel, the Holy Messenger of Allah (upon whom be peace) was without any expectation that he was going to be appointed as a Prophet. Let alone this being a wish or expectation, he did not even have any idea that he would meet with such an experience. The sending down of the Revelation and appearance of the Angel face to face was an unexpected incident for him- the first effects of which on him were precisely the same as would naturally be on a person experiencing such a tremendous event, in the absence of any preparation. That is why when he proclaimed the message of Islam, the people of Makkah raised all sorts of objections, but no one said that they were already apprehending that he would make a claim, for he had been making preparations for a long time to become a Prophet.From this narrative another matter which also becomes obvious is how pure the Holy Prophet's life was, and how sublime his character was before Prophethood. Hadrat Khadijah was no young lady: she was 55 years old at the time this event took place and had been the Holy Prophet's life companion for 15 years. No weakness of the husband can remain hidden from the wife. She had during this long period of married life found him to be such a generous and noble man that when he told her of his experience in the Cave of Hira', she admitted without the least hesitation that it was indeed Allah's own Angel who had come to him with Revelation. Likewise, Waraqah bin Naufal was an old inhabitant of Makkah, who had seen the Holy Prophet grow up from childhood. Particularly, for the past 15 years because of the close relationship he was even more intimately aware of his life, his affairs and dealings. When he also heard of his experience, he did not regard it as an evil suggestion, but immediately said that it was the same Gabriel who had descended on Moses (upon whom be peace). This meant that even according to Waraqah, the Holy Prophet was such a sublime person that there was nothing surprising in his being elevated to the position of Prophethood.Occasion of Revelation of verses 6-19This second part of the Surah was revealed when the Holy Messenger of Allah began to perform the Prayer in the Islamic way in the Ka'bah and Abu Jahl threatened and tried to prevent him from this. It so happened that after his appointment to Prophethood and even before he could start preaching Islam openly, he began to perform the Prayer in the precincts of the Ka'bah in the way Allah taught him; from this, the Quraish felt for the first time that he had adopted a new religion. The other people were watching on with curiosity, but Abu Jahl in his arrogance and pride threatened the Holy Prophet and forbade him to worship in that way in the Ka'bah. A number of the Ahadith have been related from Hadarat Abdullah ibn Abbas and Hadrat Abu Huraira, which mention the foolish behaviour of Abu Jahl.Hadrat Abu Huraira says that Abu Jahl asked the people of Quraish: \"Does Muhammad (upon whom be Allah's peace and blessings) set his face on the ground before you?\" When they replied in the affirmative, he said: \"By Lat and Uzza, if I ever catch him in that act of worship, I would set my foot on his neck and rub his face in the dust.\"Then it so happened that he saw the Holy Messenger in that posture and came forward to set his foot on his neck, but suddenly turned back as if in a fright. When asked what the matter was, he said there was a ditch of fire and a terrible apparition between himself and Muhammad (upon whom be Allah's peace and blessings) and some wings. On hearing this the Holy Prophet remarked: \"Had he come near me, the angels would have smitten and torn him to pieces.\" (Ahmad, Muslim, Nasai, Ibn Jarir, Ibn AbI Hatim, Ibn al-Mundhir, lbn Marduyah, Abu Nu'aim Isfahani, Baihaqi).According to lbn Abbas, Abu Jahl said: \"If I caught Muhammad (upon whom be Allah's peace and blessings) performing his Prayer by the Ka'bah, I would trample his neck down.\" When the Holy Prophet heard of it, he said: \"If he acted so, the angels would seize him there and then.\" (Bukhari, Tirmidhi, Nasai, Ibn Jarir, Abdur Razzaq, Abd bin Humaid, Ibn al- Mundhir, Ibn Marduyah).According to another tradition from Ibn Abbas, the Holy Prophet was performing his Prayer at the Maqam Ibrahim. Abu Jahl passed that way and said: \"O Muhammad, did I not forbid you this?\" and then he started to threaten him. In reply, the Holy Prophet (upon whom be peace) rebuked him severely. Thereupon Abu Jahl said: \"O Muhammad, on what strength do you rebuke me? By God, my followers in this valley far exceed yours in number.\" (Ahmad, Tirmidhi, Nasai, Ibn Jarir, lbn Abi Shaibah, Ibn al-Mundhir, Tabarani, Ibn Marduyah).Because of these very incidents the portion of this Surah beginning with Kalla inn al-insana la yat gha was sent down. Naturally the position of this part should be the same as assigned to it in this Surah of the Quran, for after the coming down of the first Revelation, the Holy Prophet (upon whom be peace) had expressed Islam first of all by the act of Prayer, and his conflict with the pagans."
+    },
+    "surah_verses": [
+        {
+            "verse_key": "96:1",
+            "verse_num": "96:1",
+            "arabic_text": " ٱقْرَأْ بِٱسْمِ رَبِّكَ ٱلَّذِى خَلَقَ",
+            "en_text": "Read, ˹O Prophet,˺ in the Name of your Lord Who created—"
+        },
+        {
+            "verse_key": "96:2",
+            "verse_num": "96:2",
+            "arabic_text": "خَلَقَ ٱلْإِنسَـٰنَ مِنْ عَلَقٍ",
+            "en_text": "created humans from a clinging clot.<sup foot_note=77629>1</sup>"
+        },
+        {
+            "verse_key": "96:3",
+            "verse_num": "96:3",
+            "arabic_text": "ٱقْرَأْ وَرَبُّكَ ٱلْأَكْرَمُ",
+            "en_text": "Read! And your Lord is the Most Generous,"
+        },
+        {
+            "verse_key": "96:4",
+            "verse_num": "96:4",
+            "arabic_text": "ٱلَّذِى عَلَّمَ بِٱلْقَلَمِ",
+            "en_text": "Who taught by the pen—"
+        },
+        {
+            "verse_key": "96:5",
+            "verse_num": "96:5",
+            "arabic_text": "عَلَّمَ ٱلْإِنسَـٰنَ مَا لَمْ يَعْلَمْ",
+            "en_text": "taught humanity what they knew not.<sup foot_note=77630>1</sup> "
+        },
+        {
+            "verse_key": "96:6",
+            "verse_num": "96:6",
+            "arabic_text": "كَلَّآ إِنَّ ٱلْإِنسَـٰنَ لَيَطْغَىٰٓ",
+            "en_text": "Most certainly, one exceeds all bounds"
+        },
+        {
+            "verse_key": "96:7",
+            "verse_num": "96:7",
+            "arabic_text": "أَن رَّءَاهُ ٱسْتَغْنَىٰٓ",
+            "en_text": "once they think they are self-sufficient."
+        },
+        {
+            "verse_key": "96:8",
+            "verse_num": "96:8",
+            "arabic_text": "إِنَّ إِلَىٰ رَبِّكَ ٱلرُّجْعَىٰٓ",
+            "en_text": "˹But˺ surely to your Lord is the return ˹of all˺."
+        },
+        {
+            "verse_key": "96:9",
+            "verse_num": "96:9",
+            "arabic_text": "أَرَءَيْتَ ٱلَّذِى يَنْهَىٰ",
+            "en_text": "Have you seen the man who prevents"
+        },
+        {
+            "verse_key": "96:10",
+            "verse_num": "96:10",
+            "arabic_text": "عَبْدًا إِذَا صَلَّىٰٓ",
+            "en_text": "a servant ˹of Ours˺ from praying?<sup foot_note=77631>1</sup>"
+        },
+        {
+            "verse_key": "96:11",
+            "verse_num": "96:11",
+            "arabic_text": "أَرَءَيْتَ إِن كَانَ عَلَى ٱلْهُدَىٰٓ",
+            "en_text": "What if this ˹servant˺ is ˹rightly˺ guided,"
+        },
+        {
+            "verse_key": "96:12",
+            "verse_num": "96:12",
+            "arabic_text": "أَوْ أَمَرَ بِٱلتَّقْوَىٰٓ",
+            "en_text": "or encourages righteousness?"
+        },
+        {
+            "verse_key": "96:13",
+            "verse_num": "96:13",
+            "arabic_text": "أَرَءَيْتَ إِن كَذَّبَ وَتَوَلَّىٰٓ",
+            "en_text": "What if that ˹man˺ persists in denial and turns away?"
+        },
+        {
+            "verse_key": "96:14",
+            "verse_num": "96:14",
+            "arabic_text": "أَلَمْ يَعْلَم بِأَنَّ ٱللَّهَ يَرَىٰ",
+            "en_text": "Does he not know that Allah sees ˹all˺?"
+        },
+        {
+            "verse_key": "96:15",
+            "verse_num": "96:15",
+            "arabic_text": "كَلَّا لَئِن لَّمْ يَنتَهِ لَنَسْفَعًۢا بِٱلنَّاصِيَةِ",
+            "en_text": "But no! If he does not desist, We will certainly drag him by the forelock—"
+        },
+        {
+            "verse_key": "96:16",
+            "verse_num": "96:16",
+            "arabic_text": "نَاصِيَةٍ كَـٰذِبَةٍ خَاطِئَةٍ",
+            "en_text": "a lying, sinful forelock.<sup foot_note=77632>1</sup>"
+        },
+        {
+            "verse_key": "96:17",
+            "verse_num": "96:17",
+            "arabic_text": "فَلْيَدْعُ نَادِيَهُۥ",
+            "en_text": "So let him call his associates."
+        },
+        {
+            "verse_key": "96:18",
+            "verse_num": "96:18",
+            "arabic_text": "سَنَدْعُ ٱلزَّبَانِيَةَ",
+            "en_text": "We will call the wardens of Hell."
+        },
+        {
+            "verse_key": "96:19",
+            "verse_num": "96:19",
+            "arabic_text": "كَلَّا لَا تُطِعْهُ وَٱسْجُدْ وَٱقْتَرِب ۩",
+            "en_text": "Again, no! Never obey him ˹O Prophet˺! Rather, ˹continue to˺ prostrate and draw near ˹to Allah˺."
+        }
+    ]
+}

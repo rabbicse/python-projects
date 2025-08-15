@@ -1,0 +1,366 @@
+{
+    "audio": {
+        "audio_files": [
+            {
+                "id": 1109,
+                "chapter_id": 100,
+                "file_size": 1130624.0,
+                "format": "mp3",
+                "audio_url": "https://download.quranicaudio.com/qdc/mishari_al_afasy/murattal/100.mp3",
+                "duration": 60000,
+                "verse_timings": [
+                    {
+                        "verse_key": "100:1",
+                        "timestamp_from": 0,
+                        "timestamp_to": 3290,
+                        "duration": 3290,
+                        "segments": [
+                            [
+                                1,
+                                0,
+                                1840
+                            ],
+                            [
+                                2,
+                                1840,
+                                2865
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "100:2",
+                        "timestamp_from": 3290,
+                        "timestamp_to": 6560,
+                        "duration": 3270,
+                        "segments": [
+                            [
+                                1,
+                                2865,
+                                4675
+                            ],
+                            [
+                                2,
+                                4675,
+                                5650
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "100:3",
+                        "timestamp_from": 6560,
+                        "timestamp_to": 9640,
+                        "duration": 3080,
+                        "segments": [
+                            [
+                                1,
+                                6075,
+                                7755
+                            ],
+                            [
+                                2,
+                                7755,
+                                8790
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "100:4",
+                        "timestamp_from": 9640,
+                        "timestamp_to": 12720,
+                        "duration": 3080,
+                        "segments": [
+                            [
+                                1,
+                                9275,
+                                10275
+                            ],
+                            [
+                                2,
+                                10275,
+                                11035
+                            ],
+                            [
+                                3,
+                                11035,
+                                11970
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "100:5",
+                        "timestamp_from": 12720,
+                        "timestamp_to": 16040,
+                        "duration": 3320,
+                        "segments": [
+                            [
+                                1,
+                                12335,
+                                13395
+                            ],
+                            [
+                                2,
+                                13395,
+                                14075
+                            ],
+                            [
+                                3,
+                                14075,
+                                15580
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "100:6",
+                        "timestamp_from": 16040,
+                        "timestamp_to": 23720,
+                        "duration": 7680,
+                        "segments": [
+                            [
+                                1,
+                                15965,
+                                17135
+                            ],
+                            [
+                                2,
+                                17135,
+                                19385
+                            ],
+                            [
+                                3,
+                                19385,
+                                20695
+                            ],
+                            [
+                                4,
+                                20695,
+                                23570
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "100:7",
+                        "timestamp_from": 23720,
+                        "timestamp_to": 30490,
+                        "duration": 6770,
+                        "segments": [
+                            [
+                                1,
+                                23645,
+                                25595
+                            ],
+                            [
+                                2,
+                                25595,
+                                26275
+                            ],
+                            [
+                                3,
+                                26275,
+                                27205
+                            ],
+                            [
+                                4,
+                                27205,
+                                30330
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "100:8",
+                        "timestamp_from": 30490,
+                        "timestamp_to": 37600,
+                        "duration": 7110,
+                        "segments": [
+                            [
+                                1,
+                                30405,
+                                32495
+                            ],
+                            [
+                                2,
+                                32495,
+                                33335
+                            ],
+                            [
+                                3,
+                                33335,
+                                34245
+                            ],
+                            [
+                                4,
+                                34245,
+                                37460
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "100:9",
+                        "timestamp_from": 37600,
+                        "timestamp_to": 44710,
+                        "duration": 7110,
+                        "segments": [
+                            [
+                                1,
+                                37545,
+                                38455
+                            ],
+                            [
+                                2,
+                                38455,
+                                39295
+                            ],
+                            [
+                                3,
+                                39295,
+                                40015
+                            ],
+                            [
+                                4,
+                                40015,
+                                40945
+                            ],
+                            [
+                                5,
+                                40945,
+                                41295
+                            ],
+                            [
+                                6,
+                                41295,
+                                41525
+                            ],
+                            [
+                                7,
+                                41525,
+                                44610
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "100:10",
+                        "timestamp_from": 44710,
+                        "timestamp_to": 49590,
+                        "duration": 4890,
+                        "segments": [
+                            [
+                                1,
+                                44665,
+                                45785
+                            ],
+                            [
+                                2,
+                                45785,
+                                46195
+                            ],
+                            [
+                                3,
+                                46195,
+                                46395
+                            ],
+                            [
+                                4,
+                                46395,
+                                49480
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "100:11",
+                        "timestamp_from": 49590,
+                        "timestamp_to": 60140,
+                        "duration": 10550,
+                        "segments": [
+                            [
+                                1,
+                                49515,
+                                50825
+                            ],
+                            [
+                                2,
+                                50825,
+                                52815
+                            ],
+                            [
+                                3,
+                                52815,
+                                53415
+                            ],
+                            [
+                                4,
+                                53415,
+                                54615
+                            ],
+                            [
+                                5,
+                                54615,
+                                58230
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "surah_info": {
+        "surah_name": "Surah Al-'Adiyat",
+        "ayah_count": "11",
+        "revelation_place": "Mecca",
+        "description": "NameThe Surah has been titled so after the word al 'adiyat with which it opens.Period of RevelationWhether this is a Makki or a Madani Surah is disputed. Hadrat Abdullah bin Masud, Jabir, Hasan Basri, Ikrimah, and Ata say that it is Makki. Hadrat Anas bin Malik, and Qatadah say that it is Madani; and from Hadrat Ibn Abbas two views have been reported, first that it is a Makki Surah, and second that it is Madani. But the subject matter of the Surah and its style clearly indicate that it is not only Makki but was revealed in the earliest stage in Makkah.Theme and Subject MatterIts objective is to make the people realize how evil man becomes when he denies the Hereafter, or becomes heedless of it, and also to warn them that in the Hereafter not only their visible and apparent deeds but even the secrets hidden in their hearts will be subjected to scrutiny.For this purpose, the general chaos and confusion prevailing in Arabia, with which the whole country was in turmoil, has been presented as an argument. Bloodshed, loot and plunder raged on every side. Tribes were subjecting other tribes to raids, and no one could have peaceful sleep at night from fear that some enemy tribe might raid his settlement early in the morning. Every Arab was fully conscious of this state of affairs and realized that it was wrong. Although the plundered bemoaned their miserable, helpless state and the plunderer rejoiced, when the plunderer himself was plundered, he too realized how abject the condition in which the whole nation was involved was. Referring to this very state of affairs, it has been said: Unaware of the second life after death and his accountability before God in it, man has become ungrateful to his Lord and Sustainer. He is using the powers and abilities given by God for perpetrating tyranny and pillage; blinded by the love of worldly wealth he tries to obtain it by every means, however impure and filthy, and his own state itself testifies that by abusing the powers bestowed by his Lord he is being ungrateful to Him. He would never have behaved so, had he known the time when the dead will be raised from the graves, and when the intentions and motives with which he had done all sorts of deeds in the world, will be exposed and brought out before everyone to see. At that time, the Lord and Sustainer of men shall be well informed of what one has done and what punishment or reward one deserves."
+    },
+    "surah_verses": [
+        {
+            "verse_key": "100:1",
+            "verse_num": "100:1",
+            "arabic_text": " وَٱلْعَـٰدِيَـٰتِ ضَبْحًا",
+            "en_text": "’ By the galloping, panting horses,"
+        },
+        {
+            "verse_key": "100:2",
+            "verse_num": "100:2",
+            "arabic_text": "فَٱلْمُورِيَـٰتِ قَدْحًا",
+            "en_text": "striking sparks of fire ˹with their hoofs˺,"
+        },
+        {
+            "verse_key": "100:3",
+            "verse_num": "100:3",
+            "arabic_text": "فَٱلْمُغِيرَٰتِ صُبْحًا",
+            "en_text": "launching raids at dawn,"
+        },
+        {
+            "verse_key": "100:4",
+            "verse_num": "100:4",
+            "arabic_text": "فَأَثَرْنَ بِهِۦ نَقْعًا",
+            "en_text": "stirring up ˹clouds of˺ dust,"
+        },
+        {
+            "verse_key": "100:5",
+            "verse_num": "100:5",
+            "arabic_text": "فَوَسَطْنَ بِهِۦ جَمْعًا",
+            "en_text": "and penetrating into the heart of enemy lines!"
+        },
+        {
+            "verse_key": "100:6",
+            "verse_num": "100:6",
+            "arabic_text": "إِنَّ ٱلْإِنسَـٰنَ لِرَبِّهِۦ لَكَنُودٌ",
+            "en_text": "Surely humankind is ungrateful to their Lord—"
+        },
+        {
+            "verse_key": "100:7",
+            "verse_num": "100:7",
+            "arabic_text": "وَإِنَّهُۥ عَلَىٰ ذَٰلِكَ لَشَهِيدٌ",
+            "en_text": "and they certainly attest to this—"
+        },
+        {
+            "verse_key": "100:8",
+            "verse_num": "100:8",
+            "arabic_text": "وَإِنَّهُۥ لِحُبِّ ٱلْخَيْرِ لَشَدِيدٌ",
+            "en_text": "and they are truly extreme in their love of ˹worldly˺ gains."
+        },
+        {
+            "verse_key": "100:9",
+            "verse_num": "100:9",
+            "arabic_text": "۞ أَفَلَا يَعْلَمُ إِذَا بُعْثِرَ مَا فِى ٱلْقُبُورِ",
+            "en_text": "Do they not know that when the contents of the graves will be spilled out,"
+        }
+    ]
+}

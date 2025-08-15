@@ -1,0 +1,136 @@
+{
+    "audio": {
+        "audio_files": [
+            {
+                "id": 1115,
+                "chapter_id": 103,
+                "file_size": 448640.0,
+                "format": "mp3",
+                "audio_url": "https://download.quranicaudio.com/qdc/mishari_al_afasy/murattal/103.mp3",
+                "duration": 20000,
+                "verse_timings": [
+                    {
+                        "verse_key": "103:1",
+                        "timestamp_from": 0,
+                        "timestamp_to": 1780,
+                        "duration": 1780,
+                        "segments": [
+                            [
+                                1,
+                                0,
+                                1715
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "103:2",
+                        "timestamp_from": 1780,
+                        "timestamp_to": 7580,
+                        "duration": 5800,
+                        "segments": [
+                            [
+                                1,
+                                1715,
+                                2965
+                            ],
+                            [
+                                2,
+                                2965,
+                                5615
+                            ],
+                            [
+                                3,
+                                5615,
+                                6195
+                            ],
+                            [
+                                4,
+                                6195,
+                                7260
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "103:3",
+                        "timestamp_from": 7580,
+                        "timestamp_to": 20120,
+                        "duration": 12540,
+                        "segments": [
+                            [
+                                1,
+                                7325,
+                                8005
+                            ],
+                            [
+                                2,
+                                8005,
+                                9015
+                            ],
+                            [
+                                3,
+                                9015,
+                                10295
+                            ],
+                            [
+                                4,
+                                10295,
+                                11115
+                            ],
+                            [
+                                5,
+                                11115,
+                                12735
+                            ],
+                            [
+                                6,
+                                12735,
+                                13995
+                            ],
+                            [
+                                7,
+                                13995,
+                                15055
+                            ],
+                            [
+                                8,
+                                15055,
+                                16445
+                            ],
+                            [
+                                9,
+                                16445,
+                                19580
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "surah_info": {
+        "surah_name": "Surah Al-'Asr",
+        "ayah_count": "3",
+        "revelation_place": "Mecca",
+        "description": "NameThe Surah takes its name from the word al-'asr occurring in the  first verse .Period of RevelationAlthough Mujahid, Qatadah and Muqatil regard Surah Al-'Asr as a Madani Surah, a great majority of the commentators opine that it is Makki; its subject matter also testifies that it must have been sent down in the earliest stage in Makkah, when the message of Islam was being presented in brief but highly impressive sentences so that the listeners who heard them once could not forget them even if they wanted to, for they were automatically committed to memory.Theme and Subject MatterThis Surah is a inimitable specimen of comprehensiveness and brevity. A whole world of meaning has been compressed into its few brief words, which is too vast in content to be fully expressed even in a book. In the surah, in a clear and plain way, the way to true success for man and the way to ruin and destruction for him have both been stated. Imam Ash Shafi'i has very rightly said that if the people only considered this Surah well, it alone would suffice them for their guidance. How important this Surah was in the sight of the Companions can be judged from the tradition cited from Hadrat Abdullah bin Hisn ad-Darimi Abu Madinah, according to which whenever any two of them met, they would not part company until they had recited Surah Al-Asr to each other. (Tabarani)"
+    },
+    "surah_verses": [
+        {
+            "verse_key": "103:1",
+            "verse_num": "103:1",
+            "arabic_text": " وَٱلْعَصْرِ",
+            "en_text": "By the ˹passage of˺ time!"
+        },
+        {
+            "verse_key": "103:2",
+            "verse_num": "103:2",
+            "arabic_text": "إِنَّ ٱلْإِنسَـٰنَ لَفِى خُسْرٍ",
+            "en_text": "Surely humanity is in ˹grave˺ loss,"
+        },
+        {
+            "verse_key": "103:3",
+            "verse_num": "103:3",
+            "arabic_text": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ وَتَوَاصَوْا۟ بِٱلْحَقِّ وَتَوَاصَوْا۟ بِٱلصَّبْرِ",
+            "en_text": "except those who have faith, do good, and urge each other to the truth, and urge each other to perseverance."
+        }
+    ]
+}

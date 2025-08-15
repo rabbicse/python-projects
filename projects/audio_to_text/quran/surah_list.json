@@ -1,0 +1,2767 @@
+{
+    "pageProps": {
+        "chaptersData": {
+            "1": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الفاتحة",
+                "versesCount": 7,
+                "translatedName": "الفاتحة",
+                "slug": "al-fatihah"
+            },
+            "2": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "البقرة",
+                "versesCount": 286,
+                "translatedName": "البقرة",
+                "slug": "al-baqarah"
+            },
+            "3": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "آل عمران",
+                "versesCount": 200,
+                "translatedName": "آل عمران",
+                "slug": "ali-imran"
+            },
+            "4": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "النساء",
+                "versesCount": 176,
+                "translatedName": "النساء",
+                "slug": "an-nisa"
+            },
+            "5": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "المائدة",
+                "versesCount": 120,
+                "translatedName": "المائدة",
+                "slug": "al-maidah"
+            },
+            "6": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الأنعام",
+                "versesCount": 165,
+                "translatedName": "الأنعام",
+                "slug": "al-anam"
+            },
+            "7": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الأعراف",
+                "versesCount": 206,
+                "translatedName": "الأعراف",
+                "slug": "al-araf"
+            },
+            "8": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "الأنفال",
+                "versesCount": 75,
+                "translatedName": "الأنفال",
+                "slug": "al-anfal"
+            },
+            "9": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "التوبة",
+                "versesCount": 129,
+                "translatedName": "التوبة",
+                "slug": "at-tawbah"
+            },
+            "10": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "يونس",
+                "versesCount": 109,
+                "translatedName": "يونس",
+                "slug": "yunus"
+            },
+            "11": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "هود",
+                "versesCount": 123,
+                "translatedName": "هود",
+                "slug": "hud"
+            },
+            "12": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "يوسف",
+                "versesCount": 111,
+                "translatedName": "يوسف",
+                "slug": "yusuf"
+            },
+            "13": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "الرعد",
+                "versesCount": 43,
+                "translatedName": "الرعد",
+                "slug": "ar-rad"
+            },
+            "14": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "ابراهيم",
+                "versesCount": 52,
+                "translatedName": "ابراهيم",
+                "slug": "ibrahim"
+            },
+            "15": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الحجر",
+                "versesCount": 99,
+                "translatedName": "الحجر",
+                "slug": "al-hijr"
+            },
+            "16": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "النحل",
+                "versesCount": 128,
+                "translatedName": "النحل",
+                "slug": "an-nahl"
+            },
+            "17": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الإسراء",
+                "versesCount": 111,
+                "translatedName": "الإسراء",
+                "slug": "al-isra"
+            },
+            "18": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الكهف",
+                "versesCount": 110,
+                "translatedName": "الكهف",
+                "slug": "al-kahf"
+            },
+            "19": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "مريم",
+                "versesCount": 98,
+                "translatedName": "مريم",
+                "slug": "maryam"
+            },
+            "20": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "طه",
+                "versesCount": 135,
+                "translatedName": "طه",
+                "slug": "taha"
+            },
+            "21": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الأنبياء",
+                "versesCount": 112,
+                "translatedName": "الأنبياء",
+                "slug": "al-anbya"
+            },
+            "22": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "الحج",
+                "versesCount": 78,
+                "translatedName": "الحج",
+                "slug": "al-hajj"
+            },
+            "23": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "المؤمنون",
+                "versesCount": 118,
+                "translatedName": "المؤمنون",
+                "slug": "al-muminun"
+            },
+            "24": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "النور",
+                "versesCount": 64,
+                "translatedName": "النور",
+                "slug": "an-nur"
+            },
+            "25": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الفرقان",
+                "versesCount": 77,
+                "translatedName": "الفرقان",
+                "slug": "al-furqan"
+            },
+            "26": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الشعراء",
+                "versesCount": 227,
+                "translatedName": "الشعراء",
+                "slug": "ash-shuara"
+            },
+            "27": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "النمل",
+                "versesCount": 93,
+                "translatedName": "النمل",
+                "slug": "an-naml"
+            },
+            "28": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "القصص",
+                "versesCount": 88,
+                "translatedName": "القصص",
+                "slug": "al-qasas"
+            },
+            "29": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "العنكبوت",
+                "versesCount": 69,
+                "translatedName": "العنكبوت",
+                "slug": "al-ankabut"
+            },
+            "30": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الروم",
+                "versesCount": 60,
+                "translatedName": "الروم",
+                "slug": "ar-rum"
+            },
+            "31": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "لقمان",
+                "versesCount": 34,
+                "translatedName": "لقمان",
+                "slug": "luqman"
+            },
+            "32": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "السجدة",
+                "versesCount": 30,
+                "translatedName": "السجدة",
+                "slug": "as-sajdah"
+            },
+            "33": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "الأحزاب",
+                "versesCount": 73,
+                "translatedName": "الأحزاب",
+                "slug": "al-ahzab"
+            },
+            "34": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "سبإ",
+                "versesCount": 54,
+                "translatedName": "سبإ",
+                "slug": "saba"
+            },
+            "35": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "فاطر",
+                "versesCount": 45,
+                "translatedName": "فاطر",
+                "slug": "fatir"
+            },
+            "36": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "يس",
+                "versesCount": 83,
+                "translatedName": "يس",
+                "slug": "ya-sin"
+            },
+            "37": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الصافات",
+                "versesCount": 182,
+                "translatedName": "الصافات",
+                "slug": "as-saffat"
+            },
+            "38": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "ص",
+                "versesCount": 88,
+                "translatedName": "ص",
+                "slug": "sad"
+            },
+            "39": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الزمر",
+                "versesCount": 75,
+                "translatedName": "الزمر",
+                "slug": "az-zumar"
+            },
+            "40": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "غافر",
+                "versesCount": 85,
+                "translatedName": "غافر",
+                "slug": "ghafir"
+            },
+            "41": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "فصلت",
+                "versesCount": 54,
+                "translatedName": "فصلت",
+                "slug": "fussilat"
+            },
+            "42": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الشورى",
+                "versesCount": 53,
+                "translatedName": "الشورى",
+                "slug": "ash-shuraa"
+            },
+            "43": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الزخرف",
+                "versesCount": 89,
+                "translatedName": "الزخرف",
+                "slug": "az-zukhruf"
+            },
+            "44": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الدخان",
+                "versesCount": 59,
+                "translatedName": "الدخان",
+                "slug": "ad-dukhan"
+            },
+            "45": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الجاثية",
+                "versesCount": 37,
+                "translatedName": "الجاثية",
+                "slug": "al-jathiyah"
+            },
+            "46": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الأحقاف",
+                "versesCount": 35,
+                "translatedName": "الأحقاف",
+                "slug": "al-ahqaf"
+            },
+            "47": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "محمد",
+                "versesCount": 38,
+                "translatedName": "محمد",
+                "slug": "muhammad"
+            },
+            "48": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "الفتح",
+                "versesCount": 29,
+                "translatedName": "الفتح",
+                "slug": "al-fath"
+            },
+            "49": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "الحجرات",
+                "versesCount": 18,
+                "translatedName": "الحجرات",
+                "slug": "al-hujurat"
+            },
+            "50": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "ق",
+                "versesCount": 45,
+                "translatedName": "ق",
+                "slug": "qaf"
+            },
+            "51": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الذاريات",
+                "versesCount": 60,
+                "translatedName": "الذاريات",
+                "slug": "adh-dhariyat"
+            },
+            "52": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الطور",
+                "versesCount": 49,
+                "translatedName": "الطور",
+                "slug": "at-tur"
+            },
+            "53": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "النجم",
+                "versesCount": 62,
+                "translatedName": "النجم",
+                "slug": "an-najm"
+            },
+            "54": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "القمر",
+                "versesCount": 55,
+                "translatedName": "القمر",
+                "slug": "al-qamar"
+            },
+            "55": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "الرحمن",
+                "versesCount": 78,
+                "translatedName": "الرحمن",
+                "slug": "ar-rahman"
+            },
+            "56": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الواقعة",
+                "versesCount": 96,
+                "translatedName": "الواقعة",
+                "slug": "al-waqiah"
+            },
+            "57": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "الحديد",
+                "versesCount": 29,
+                "translatedName": "الحديد",
+                "slug": "al-hadid"
+            },
+            "58": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "المجادلة",
+                "versesCount": 22,
+                "translatedName": "المجادلة",
+                "slug": "al-mujadila"
+            },
+            "59": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "الحشر",
+                "versesCount": 24,
+                "translatedName": "الحشر",
+                "slug": "al-hashr"
+            },
+            "60": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "الممتحنة",
+                "versesCount": 13,
+                "translatedName": "الممتحنة",
+                "slug": "al-mumtahanah"
+            },
+            "61": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "الصف",
+                "versesCount": 14,
+                "translatedName": "الصف",
+                "slug": "as-saf"
+            },
+            "62": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "الجمعة",
+                "versesCount": 11,
+                "translatedName": "الجمعة",
+                "slug": "al-jumuah"
+            },
+            "63": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "المنافقون",
+                "versesCount": 11,
+                "translatedName": "المنافقون",
+                "slug": "al-munafiqun"
+            },
+            "64": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "التغابن",
+                "versesCount": 18,
+                "translatedName": "التغابن",
+                "slug": "at-taghabun"
+            },
+            "65": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "الطلاق",
+                "versesCount": 12,
+                "translatedName": "الطلاق",
+                "slug": "at-talaq"
+            },
+            "66": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "التحريم",
+                "versesCount": 12,
+                "translatedName": "التحريم",
+                "slug": "at-tahrim"
+            },
+            "67": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الملك",
+                "versesCount": 30,
+                "translatedName": "الملك",
+                "slug": "al-mulk"
+            },
+            "68": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "القلم",
+                "versesCount": 52,
+                "translatedName": "القلم",
+                "slug": "al-qalam"
+            },
+            "69": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الحاقة",
+                "versesCount": 52,
+                "translatedName": "الحاقة",
+                "slug": "al-haqqah"
+            },
+            "70": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "المعارج",
+                "versesCount": 44,
+                "translatedName": "المعارج",
+                "slug": "al-maarij"
+            },
+            "71": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "نوح",
+                "versesCount": 28,
+                "translatedName": "نوح",
+                "slug": "nuh"
+            },
+            "72": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الجن",
+                "versesCount": 28,
+                "translatedName": "الجن",
+                "slug": "al-jinn"
+            },
+            "73": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "المزمل",
+                "versesCount": 20,
+                "translatedName": "المزمل",
+                "slug": "al-muzzammil"
+            },
+            "74": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "المدثر",
+                "versesCount": 56,
+                "translatedName": "المدثر",
+                "slug": "al-muddaththir"
+            },
+            "75": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "القيامة",
+                "versesCount": 40,
+                "translatedName": "القيامة",
+                "slug": "al-qiyamah"
+            },
+            "76": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "الانسان",
+                "versesCount": 31,
+                "translatedName": "الانسان",
+                "slug": "al-insan"
+            },
+            "77": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "المرسلات",
+                "versesCount": 50,
+                "translatedName": "المرسلات",
+                "slug": "al-mursalat"
+            },
+            "78": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "النبإ",
+                "versesCount": 40,
+                "translatedName": "النبإ",
+                "slug": "an-naba"
+            },
+            "79": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "النازعات",
+                "versesCount": 46,
+                "translatedName": "النازعات",
+                "slug": "an-naziat"
+            },
+            "80": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "عبس",
+                "versesCount": 42,
+                "translatedName": "عبس",
+                "slug": "abasa"
+            },
+            "81": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "التكوير",
+                "versesCount": 29,
+                "translatedName": "التكوير",
+                "slug": "at-takwir"
+            },
+            "82": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الإنفطار",
+                "versesCount": 19,
+                "translatedName": "الإنفطار",
+                "slug": "al-infitar"
+            },
+            "83": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "المطففين",
+                "versesCount": 36,
+                "translatedName": "المطففين",
+                "slug": "al-mutaffifin"
+            },
+            "84": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الإنشقاق",
+                "versesCount": 25,
+                "translatedName": "الإنشقاق",
+                "slug": "al-inshiqaq"
+            },
+            "85": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "البروج",
+                "versesCount": 22,
+                "translatedName": "البروج",
+                "slug": "al-buruj"
+            },
+            "86": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الطارق",
+                "versesCount": 17,
+                "translatedName": "الطارق",
+                "slug": "at-tariq"
+            },
+            "87": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الأعلى",
+                "versesCount": 19,
+                "translatedName": "الأعلى",
+                "slug": "al-ala"
+            },
+            "88": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الغاشية",
+                "versesCount": 26,
+                "translatedName": "الغاشية",
+                "slug": "al-ghashiyah"
+            },
+            "89": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الفجر",
+                "versesCount": 30,
+                "translatedName": "الفجر",
+                "slug": "al-fajr"
+            },
+            "90": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "البلد",
+                "versesCount": 20,
+                "translatedName": "البلد",
+                "slug": "al-balad"
+            },
+            "91": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الشمس",
+                "versesCount": 15,
+                "translatedName": "الشمس",
+                "slug": "ash-shams"
+            },
+            "92": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الليل",
+                "versesCount": 21,
+                "translatedName": "الليل",
+                "slug": "al-layl"
+            },
+            "93": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الضحى",
+                "versesCount": 11,
+                "translatedName": "الضحى",
+                "slug": "ad-duhaa"
+            },
+            "94": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الشرح",
+                "versesCount": 8,
+                "translatedName": "الشرح",
+                "slug": "ash-sharh"
+            },
+            "95": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "التين",
+                "versesCount": 8,
+                "translatedName": "التين",
+                "slug": "at-tin"
+            },
+            "96": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "العلق",
+                "versesCount": 19,
+                "translatedName": "العلق",
+                "slug": "al-alaq"
+            },
+            "97": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "القدر",
+                "versesCount": 5,
+                "translatedName": "القدر",
+                "slug": "al-qadr"
+            },
+            "98": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "البينة",
+                "versesCount": 8,
+                "translatedName": "البينة",
+                "slug": "al-bayyinah"
+            },
+            "99": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "الزلزلة",
+                "versesCount": 8,
+                "translatedName": "الزلزلة",
+                "slug": "az-zalzalah"
+            },
+            "100": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "العاديات",
+                "versesCount": 11,
+                "translatedName": "العاديات",
+                "slug": "al-adiyat"
+            },
+            "101": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "القارعة",
+                "versesCount": 11,
+                "translatedName": "القارعة",
+                "slug": "al-qariah"
+            },
+            "102": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "التكاثر",
+                "versesCount": 8,
+                "translatedName": "التكاثر",
+                "slug": "at-takathur"
+            },
+            "103": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "العصر",
+                "versesCount": 3,
+                "translatedName": "العصر",
+                "slug": "al-asr"
+            },
+            "104": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الهمزة",
+                "versesCount": 9,
+                "translatedName": "الهمزة",
+                "slug": "al-humazah"
+            },
+            "105": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الفيل",
+                "versesCount": 5,
+                "translatedName": "الفيل",
+                "slug": "al-fil"
+            },
+            "106": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "قريش",
+                "versesCount": 4,
+                "translatedName": "قريش",
+                "slug": "quraysh"
+            },
+            "107": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الماعون",
+                "versesCount": 7,
+                "translatedName": "الماعون",
+                "slug": "al-maun"
+            },
+            "108": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الكوثر",
+                "versesCount": 3,
+                "translatedName": "الكوثر",
+                "slug": "al-kawthar"
+            },
+            "109": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الكافرون",
+                "versesCount": 6,
+                "translatedName": "الكافرون",
+                "slug": "al-kafirun"
+            },
+            "110": {
+                "revelationPlace": "madinah",
+                "transliteratedName": "النصر",
+                "versesCount": 3,
+                "translatedName": "النصر",
+                "slug": "an-nasr"
+            },
+            "111": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "المسد",
+                "versesCount": 5,
+                "translatedName": "المسد",
+                "slug": "al-masad"
+            },
+            "112": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الإخلاص",
+                "versesCount": 4,
+                "translatedName": "الإخلاص",
+                "slug": "al-ikhlas"
+            },
+            "113": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الفلق",
+                "versesCount": 5,
+                "translatedName": "الفلق",
+                "slug": "al-falaq"
+            },
+            "114": {
+                "revelationPlace": "makkah",
+                "transliteratedName": "الناس",
+                "versesCount": 6,
+                "translatedName": "الناس",
+                "slug": "an-nas"
+            }
+        },
+        "chaptersResponse": {
+            "chapters": [
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الفاتحة",
+                    "versesCount": 7,
+                    "translatedName": "الفاتحة",
+                    "slug": "al-fatihah",
+                    "id": 1
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "البقرة",
+                    "versesCount": 286,
+                    "translatedName": "البقرة",
+                    "slug": "al-baqarah",
+                    "id": 2
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "آل عمران",
+                    "versesCount": 200,
+                    "translatedName": "آل عمران",
+                    "slug": "ali-imran",
+                    "id": 3
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "النساء",
+                    "versesCount": 176,
+                    "translatedName": "النساء",
+                    "slug": "an-nisa",
+                    "id": 4
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "المائدة",
+                    "versesCount": 120,
+                    "translatedName": "المائدة",
+                    "slug": "al-maidah",
+                    "id": 5
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الأنعام",
+                    "versesCount": 165,
+                    "translatedName": "الأنعام",
+                    "slug": "al-anam",
+                    "id": 6
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الأعراف",
+                    "versesCount": 206,
+                    "translatedName": "الأعراف",
+                    "slug": "al-araf",
+                    "id": 7
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "الأنفال",
+                    "versesCount": 75,
+                    "translatedName": "الأنفال",
+                    "slug": "al-anfal",
+                    "id": 8
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "التوبة",
+                    "versesCount": 129,
+                    "translatedName": "التوبة",
+                    "slug": "at-tawbah",
+                    "id": 9
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "يونس",
+                    "versesCount": 109,
+                    "translatedName": "يونس",
+                    "slug": "yunus",
+                    "id": 10
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "هود",
+                    "versesCount": 123,
+                    "translatedName": "هود",
+                    "slug": "hud",
+                    "id": 11
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "يوسف",
+                    "versesCount": 111,
+                    "translatedName": "يوسف",
+                    "slug": "yusuf",
+                    "id": 12
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "الرعد",
+                    "versesCount": 43,
+                    "translatedName": "الرعد",
+                    "slug": "ar-rad",
+                    "id": 13
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "ابراهيم",
+                    "versesCount": 52,
+                    "translatedName": "ابراهيم",
+                    "slug": "ibrahim",
+                    "id": 14
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الحجر",
+                    "versesCount": 99,
+                    "translatedName": "الحجر",
+                    "slug": "al-hijr",
+                    "id": 15
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "النحل",
+                    "versesCount": 128,
+                    "translatedName": "النحل",
+                    "slug": "an-nahl",
+                    "id": 16
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الإسراء",
+                    "versesCount": 111,
+                    "translatedName": "الإسراء",
+                    "slug": "al-isra",
+                    "id": 17
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الكهف",
+                    "versesCount": 110,
+                    "translatedName": "الكهف",
+                    "slug": "al-kahf",
+                    "id": 18
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "مريم",
+                    "versesCount": 98,
+                    "translatedName": "مريم",
+                    "slug": "maryam",
+                    "id": 19
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "طه",
+                    "versesCount": 135,
+                    "translatedName": "طه",
+                    "slug": "taha",
+                    "id": 20
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الأنبياء",
+                    "versesCount": 112,
+                    "translatedName": "الأنبياء",
+                    "slug": "al-anbya",
+                    "id": 21
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "الحج",
+                    "versesCount": 78,
+                    "translatedName": "الحج",
+                    "slug": "al-hajj",
+                    "id": 22
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "المؤمنون",
+                    "versesCount": 118,
+                    "translatedName": "المؤمنون",
+                    "slug": "al-muminun",
+                    "id": 23
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "النور",
+                    "versesCount": 64,
+                    "translatedName": "النور",
+                    "slug": "an-nur",
+                    "id": 24
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الفرقان",
+                    "versesCount": 77,
+                    "translatedName": "الفرقان",
+                    "slug": "al-furqan",
+                    "id": 25
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الشعراء",
+                    "versesCount": 227,
+                    "translatedName": "الشعراء",
+                    "slug": "ash-shuara",
+                    "id": 26
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "النمل",
+                    "versesCount": 93,
+                    "translatedName": "النمل",
+                    "slug": "an-naml",
+                    "id": 27
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "القصص",
+                    "versesCount": 88,
+                    "translatedName": "القصص",
+                    "slug": "al-qasas",
+                    "id": 28
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "العنكبوت",
+                    "versesCount": 69,
+                    "translatedName": "العنكبوت",
+                    "slug": "al-ankabut",
+                    "id": 29
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الروم",
+                    "versesCount": 60,
+                    "translatedName": "الروم",
+                    "slug": "ar-rum",
+                    "id": 30
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "لقمان",
+                    "versesCount": 34,
+                    "translatedName": "لقمان",
+                    "slug": "luqman",
+                    "id": 31
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "السجدة",
+                    "versesCount": 30,
+                    "translatedName": "السجدة",
+                    "slug": "as-sajdah",
+                    "id": 32
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "الأحزاب",
+                    "versesCount": 73,
+                    "translatedName": "الأحزاب",
+                    "slug": "al-ahzab",
+                    "id": 33
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "سبإ",
+                    "versesCount": 54,
+                    "translatedName": "سبإ",
+                    "slug": "saba",
+                    "id": 34
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "فاطر",
+                    "versesCount": 45,
+                    "translatedName": "فاطر",
+                    "slug": "fatir",
+                    "id": 35
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "يس",
+                    "versesCount": 83,
+                    "translatedName": "يس",
+                    "slug": "ya-sin",
+                    "id": 36
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الصافات",
+                    "versesCount": 182,
+                    "translatedName": "الصافات",
+                    "slug": "as-saffat",
+                    "id": 37
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "ص",
+                    "versesCount": 88,
+                    "translatedName": "ص",
+                    "slug": "sad",
+                    "id": 38
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الزمر",
+                    "versesCount": 75,
+                    "translatedName": "الزمر",
+                    "slug": "az-zumar",
+                    "id": 39
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "غافر",
+                    "versesCount": 85,
+                    "translatedName": "غافر",
+                    "slug": "ghafir",
+                    "id": 40
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "فصلت",
+                    "versesCount": 54,
+                    "translatedName": "فصلت",
+                    "slug": "fussilat",
+                    "id": 41
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الشورى",
+                    "versesCount": 53,
+                    "translatedName": "الشورى",
+                    "slug": "ash-shuraa",
+                    "id": 42
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الزخرف",
+                    "versesCount": 89,
+                    "translatedName": "الزخرف",
+                    "slug": "az-zukhruf",
+                    "id": 43
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الدخان",
+                    "versesCount": 59,
+                    "translatedName": "الدخان",
+                    "slug": "ad-dukhan",
+                    "id": 44
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الجاثية",
+                    "versesCount": 37,
+                    "translatedName": "الجاثية",
+                    "slug": "al-jathiyah",
+                    "id": 45
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الأحقاف",
+                    "versesCount": 35,
+                    "translatedName": "الأحقاف",
+                    "slug": "al-ahqaf",
+                    "id": 46
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "محمد",
+                    "versesCount": 38,
+                    "translatedName": "محمد",
+                    "slug": "muhammad",
+                    "id": 47
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "الفتح",
+                    "versesCount": 29,
+                    "translatedName": "الفتح",
+                    "slug": "al-fath",
+                    "id": 48
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "الحجرات",
+                    "versesCount": 18,
+                    "translatedName": "الحجرات",
+                    "slug": "al-hujurat",
+                    "id": 49
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "ق",
+                    "versesCount": 45,
+                    "translatedName": "ق",
+                    "slug": "qaf",
+                    "id": 50
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الذاريات",
+                    "versesCount": 60,
+                    "translatedName": "الذاريات",
+                    "slug": "adh-dhariyat",
+                    "id": 51
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الطور",
+                    "versesCount": 49,
+                    "translatedName": "الطور",
+                    "slug": "at-tur",
+                    "id": 52
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "النجم",
+                    "versesCount": 62,
+                    "translatedName": "النجم",
+                    "slug": "an-najm",
+                    "id": 53
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "القمر",
+                    "versesCount": 55,
+                    "translatedName": "القمر",
+                    "slug": "al-qamar",
+                    "id": 54
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "الرحمن",
+                    "versesCount": 78,
+                    "translatedName": "الرحمن",
+                    "slug": "ar-rahman",
+                    "id": 55
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الواقعة",
+                    "versesCount": 96,
+                    "translatedName": "الواقعة",
+                    "slug": "al-waqiah",
+                    "id": 56
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "الحديد",
+                    "versesCount": 29,
+                    "translatedName": "الحديد",
+                    "slug": "al-hadid",
+                    "id": 57
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "المجادلة",
+                    "versesCount": 22,
+                    "translatedName": "المجادلة",
+                    "slug": "al-mujadila",
+                    "id": 58
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "الحشر",
+                    "versesCount": 24,
+                    "translatedName": "الحشر",
+                    "slug": "al-hashr",
+                    "id": 59
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "الممتحنة",
+                    "versesCount": 13,
+                    "translatedName": "الممتحنة",
+                    "slug": "al-mumtahanah",
+                    "id": 60
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "الصف",
+                    "versesCount": 14,
+                    "translatedName": "الصف",
+                    "slug": "as-saf",
+                    "id": 61
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "الجمعة",
+                    "versesCount": 11,
+                    "translatedName": "الجمعة",
+                    "slug": "al-jumuah",
+                    "id": 62
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "المنافقون",
+                    "versesCount": 11,
+                    "translatedName": "المنافقون",
+                    "slug": "al-munafiqun",
+                    "id": 63
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "التغابن",
+                    "versesCount": 18,
+                    "translatedName": "التغابن",
+                    "slug": "at-taghabun",
+                    "id": 64
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "الطلاق",
+                    "versesCount": 12,
+                    "translatedName": "الطلاق",
+                    "slug": "at-talaq",
+                    "id": 65
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "التحريم",
+                    "versesCount": 12,
+                    "translatedName": "التحريم",
+                    "slug": "at-tahrim",
+                    "id": 66
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الملك",
+                    "versesCount": 30,
+                    "translatedName": "الملك",
+                    "slug": "al-mulk",
+                    "id": 67
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "القلم",
+                    "versesCount": 52,
+                    "translatedName": "القلم",
+                    "slug": "al-qalam",
+                    "id": 68
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الحاقة",
+                    "versesCount": 52,
+                    "translatedName": "الحاقة",
+                    "slug": "al-haqqah",
+                    "id": 69
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "المعارج",
+                    "versesCount": 44,
+                    "translatedName": "المعارج",
+                    "slug": "al-maarij",
+                    "id": 70
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "نوح",
+                    "versesCount": 28,
+                    "translatedName": "نوح",
+                    "slug": "nuh",
+                    "id": 71
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الجن",
+                    "versesCount": 28,
+                    "translatedName": "الجن",
+                    "slug": "al-jinn",
+                    "id": 72
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "المزمل",
+                    "versesCount": 20,
+                    "translatedName": "المزمل",
+                    "slug": "al-muzzammil",
+                    "id": 73
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "المدثر",
+                    "versesCount": 56,
+                    "translatedName": "المدثر",
+                    "slug": "al-muddaththir",
+                    "id": 74
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "القيامة",
+                    "versesCount": 40,
+                    "translatedName": "القيامة",
+                    "slug": "al-qiyamah",
+                    "id": 75
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "الانسان",
+                    "versesCount": 31,
+                    "translatedName": "الانسان",
+                    "slug": "al-insan",
+                    "id": 76
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "المرسلات",
+                    "versesCount": 50,
+                    "translatedName": "المرسلات",
+                    "slug": "al-mursalat",
+                    "id": 77
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "النبإ",
+                    "versesCount": 40,
+                    "translatedName": "النبإ",
+                    "slug": "an-naba",
+                    "id": 78
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "النازعات",
+                    "versesCount": 46,
+                    "translatedName": "النازعات",
+                    "slug": "an-naziat",
+                    "id": 79
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "عبس",
+                    "versesCount": 42,
+                    "translatedName": "عبس",
+                    "slug": "abasa",
+                    "id": 80
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "التكوير",
+                    "versesCount": 29,
+                    "translatedName": "التكوير",
+                    "slug": "at-takwir",
+                    "id": 81
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الإنفطار",
+                    "versesCount": 19,
+                    "translatedName": "الإنفطار",
+                    "slug": "al-infitar",
+                    "id": 82
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "المطففين",
+                    "versesCount": 36,
+                    "translatedName": "المطففين",
+                    "slug": "al-mutaffifin",
+                    "id": 83
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الإنشقاق",
+                    "versesCount": 25,
+                    "translatedName": "الإنشقاق",
+                    "slug": "al-inshiqaq",
+                    "id": 84
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "البروج",
+                    "versesCount": 22,
+                    "translatedName": "البروج",
+                    "slug": "al-buruj",
+                    "id": 85
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الطارق",
+                    "versesCount": 17,
+                    "translatedName": "الطارق",
+                    "slug": "at-tariq",
+                    "id": 86
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الأعلى",
+                    "versesCount": 19,
+                    "translatedName": "الأعلى",
+                    "slug": "al-ala",
+                    "id": 87
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الغاشية",
+                    "versesCount": 26,
+                    "translatedName": "الغاشية",
+                    "slug": "al-ghashiyah",
+                    "id": 88
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الفجر",
+                    "versesCount": 30,
+                    "translatedName": "الفجر",
+                    "slug": "al-fajr",
+                    "id": 89
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "البلد",
+                    "versesCount": 20,
+                    "translatedName": "البلد",
+                    "slug": "al-balad",
+                    "id": 90
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الشمس",
+                    "versesCount": 15,
+                    "translatedName": "الشمس",
+                    "slug": "ash-shams",
+                    "id": 91
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الليل",
+                    "versesCount": 21,
+                    "translatedName": "الليل",
+                    "slug": "al-layl",
+                    "id": 92
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الضحى",
+                    "versesCount": 11,
+                    "translatedName": "الضحى",
+                    "slug": "ad-duhaa",
+                    "id": 93
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الشرح",
+                    "versesCount": 8,
+                    "translatedName": "الشرح",
+                    "slug": "ash-sharh",
+                    "id": 94
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "التين",
+                    "versesCount": 8,
+                    "translatedName": "التين",
+                    "slug": "at-tin",
+                    "id": 95
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "العلق",
+                    "versesCount": 19,
+                    "translatedName": "العلق",
+                    "slug": "al-alaq",
+                    "id": 96
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "القدر",
+                    "versesCount": 5,
+                    "translatedName": "القدر",
+                    "slug": "al-qadr",
+                    "id": 97
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "البينة",
+                    "versesCount": 8,
+                    "translatedName": "البينة",
+                    "slug": "al-bayyinah",
+                    "id": 98
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "الزلزلة",
+                    "versesCount": 8,
+                    "translatedName": "الزلزلة",
+                    "slug": "az-zalzalah",
+                    "id": 99
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "العاديات",
+                    "versesCount": 11,
+                    "translatedName": "العاديات",
+                    "slug": "al-adiyat",
+                    "id": 100
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "القارعة",
+                    "versesCount": 11,
+                    "translatedName": "القارعة",
+                    "slug": "al-qariah",
+                    "id": 101
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "التكاثر",
+                    "versesCount": 8,
+                    "translatedName": "التكاثر",
+                    "slug": "at-takathur",
+                    "id": 102
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "العصر",
+                    "versesCount": 3,
+                    "translatedName": "العصر",
+                    "slug": "al-asr",
+                    "id": 103
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الهمزة",
+                    "versesCount": 9,
+                    "translatedName": "الهمزة",
+                    "slug": "al-humazah",
+                    "id": 104
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الفيل",
+                    "versesCount": 5,
+                    "translatedName": "الفيل",
+                    "slug": "al-fil",
+                    "id": 105
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "قريش",
+                    "versesCount": 4,
+                    "translatedName": "قريش",
+                    "slug": "quraysh",
+                    "id": 106
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الماعون",
+                    "versesCount": 7,
+                    "translatedName": "الماعون",
+                    "slug": "al-maun",
+                    "id": 107
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الكوثر",
+                    "versesCount": 3,
+                    "translatedName": "الكوثر",
+                    "slug": "al-kawthar",
+                    "id": 108
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الكافرون",
+                    "versesCount": 6,
+                    "translatedName": "الكافرون",
+                    "slug": "al-kafirun",
+                    "id": 109
+                },
+                {
+                    "revelationPlace": "madinah",
+                    "transliteratedName": "النصر",
+                    "versesCount": 3,
+                    "translatedName": "النصر",
+                    "slug": "an-nasr",
+                    "id": 110
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "المسد",
+                    "versesCount": 5,
+                    "translatedName": "المسد",
+                    "slug": "al-masad",
+                    "id": 111
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الإخلاص",
+                    "versesCount": 4,
+                    "translatedName": "الإخلاص",
+                    "slug": "al-ikhlas",
+                    "id": 112
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الفلق",
+                    "versesCount": 5,
+                    "translatedName": "الفلق",
+                    "slug": "al-falaq",
+                    "id": 113
+                },
+                {
+                    "revelationPlace": "makkah",
+                    "transliteratedName": "الناس",
+                    "versesCount": 6,
+                    "translatedName": "الناس",
+                    "slug": "an-nas",
+                    "id": 114
+                }
+            ]
+        },
+        "__lang": "ar",
+        "__namespaces": {
+            "common": {
+                "about": "معلومات عنا",
+                "allow": "اسمح",
+                "and": "و",
+                "announcements": {
+                    "auth-onboarding": {
+                        "data-sync": {
+                            "action": "التالي",
+                            "description": "سواء كنت تستخدم موقع Quran.com على هاتفك أو حاسوبك المحمول، ستتوفر إشاراتك المرجعية وآخر آيات قرأتها وتفضيلاتك",
+                            "title": "ستتم مزامنة بياناتك <br></br> عبر الأجهزة"
+                        },
+                        "feedback": {
+                            "action": "حسنا، فهمت",
+                            "description": "شكرا لاستخدامك موقع Quran.com ويسعدنا سماع ملاحظاتك على <link> feedback.Quran.com </link>",
+                            "title": "نريد أن نسمع أفكارك"
+                        },
+                        "quran-foundation-link": {
+                            "action": "التالي",
+                            "description": "استخدم تسجيل الدخول الخاص بك إلى موقع قرآن دوت كوم (Quran.com) للوصول إلى موقع تدبرات قرآنية (QuranReflect.com) - مجتمع عالمي مزدهر يشارك في التفكير القرآني.",
+                            "title": "استخدم حسابك عبر تطبيقات Quran.Foundation!"
+                        },
+                        "quran-growth-journey": {
+                            "action": "التالي",
+                            "description": "حافظ على استمراريتك في قراءة القرآن وحقق أهدافك مع بناء عادات جديدة",
+                            "title": "ابدأ رحلتك للارتقاء بالقرآن!"
+                        },
+                        "welcome": {
+                            "action": "أرني ما الجديد",
+                            "title": "مرحبا بكم في حساب المستخدم التجريبي لموقع Quran.com <br></br>"
+                        }
+                    },
+                    "collections-announcement": {
+                        "slide-1": {
+                            "description": "يسعدنا أن نعلن أنه يمكنك الآن تجميع الإشارات المرجعية ضمن \"المجموعات\"! <br/> <br/> <li> أضف أي عدد تريده من المجموعات </li> <li> أضف إشارة مرجعية إلى مجموعة واحدة أو أكثر </li> <li> والمزيد! </li>",
+                            "title": "مجموعات الإشارات المرجعية هنا!"
+                        }
+                    }
+                },
+                "aria": {
+                    "change-settings": "تغيير الإعدادات",
+                    "drawer-close": "أغلق الدرج",
+                    "msg-close": "إغلاق الرسالة",
+                    "nav-drawer-open": "افتح درج التنقل",
+                    "play-surah": "تشغيل السورة {{surahName}}",
+                    "select-lng": "اختر اللغة",
+                    "sidebar-nav-close": "إغلاق شريط التنقل الجانبي"
+                },
+                "audio": {
+                    "auto-scroll": {
+                        "off": "إيقاف",
+                        "on": "تشغيل",
+                        "title": "تحريك تلقائي"
+                    },
+                    "displaying": "العرض",
+                    "exp-tip": "<span>تغيير المحتوى المعروض ضمن</span><br></br> <boldSpan>الإعدادات</boldSpan> > <boldSpan>كلمة بكلمة</boldSpan>",
+                    "exp-tip-no-select": "<span>حدد خيار عرض تلميح الأداة وحدد <br></br> الترجمة و / أو خيار كتابة لغة بأحرف لغة أخرى</span><br></br><span> ضمن </span><boldSpan>الإعدادات</boldSpan> > <boldSpan>كلمة بكلمة</boldSpan><span>، إلى </span><br></br> <span>تمكين هذه الميزة.</span>",
+                    "experience": "النمط",
+                    "play": "تشغيل الصوت",
+                    "playback-normal": "طبيعي",
+                    "playback-speed": "سرعة التشغيل",
+                    "playback-speed-unit": "x",
+                    "player": {
+                        "close-audio-player": "أغلق مشغل الصوت",
+                        "currently-playing": "أنت تقوم بالتشغيل حاليًا",
+                        "delay-verse": "الفاصل بين الآيات",
+                        "download": "تحميل",
+                        "full-surah": "السورة كاملة",
+                        "manage-repeat-settings": "إدارة إعدادات التكرار",
+                        "mismatch": "انقر فوق \"البدء من جديد\" إذا كنت ترغب في تشغيل {{currentReadingChapter}} بدلاً من ذلك",
+                        "pause": "إيقاف",
+                        "pause-audio": "إيقاف الصوت",
+                        "play": "تشغيل",
+                        "play-audio": "تشغيل الصوت",
+                        "play-range": "استمع لمجموعة الآيات",
+                        "previous-ayah": "الآية السابقة",
+                        "repeat-1-verse": "كرر الآية",
+                        "repeat-settings": "إعدادات التكرار",
+                        "repeat-verse": "كرر كل آية",
+                        "search-verse": "ابحث عن آية",
+                        "single-verse": "آية واحدة",
+                        "start-over": "ابدأ من جديد",
+                        "start-playing": "ابدأ التشغيل",
+                        "stop-repeating": "توقف عن التكرار",
+                        "times": "مرات",
+                        "verses-range": "مجموعة الآيات",
+                        "volume-control": "التحكم في مستوى الصوت"
+                    },
+                    "repeat-moved": "تم نقل إعدادات التكرار إلى مشغل الصوت. انقر فوق <0> </0> للوصول إليها",
+                    "select-reciter": "حدد القارئ",
+                    "speed": "السرعة",
+                    "title": "الصوت"
+                },
+                "ayah": "آية",
+                "ayahs": "آيات",
+                "beta": "تجريبي",
+                "beyond-ramadan": "استمرّ في التقدُّم بعد رمضان!",
+                "bookmark": "علامة مرجعية",
+                "bookmarked": "تم وضع علامة مرجعية",
+                "both": "كلاهما",
+                "cancel": "إلغاء",
+                "click-here": "انقر هنا",
+                "close": "أغلِق",
+                "command-bar": {
+                    "navigations": "التنقلات",
+                    "no-nav-results": "لا توجد نتائج تنقل",
+                    "placeholder": "ابحث في القرآن الكريم...",
+                    "recent-navigations": "التنقلات الأخيرة",
+                    "search-by-voice": "البحث عن طريق الصوت",
+                    "try-navigating": "حاول الانتقال إلى"
+                },
+                "community": {
+                    "cta": "تواصل معنا",
+                    "header": "هل تريد أن تساهم بمهاراتك التقنية في تعزيز مهمة القرآن الكريم؟",
+                    "sub-header": "شاركنا اهتمامك من خلال تعبئة هذا النموذج، وسنتواصل معك عندما تتوفر فرصة مناسبة إن شاء الله.",
+                    "title": "المجتمع"
+                },
+                "complete-sign-up": "إتمام عملية التسجيل",
+                "consents": {
+                    "communication": {
+                        "body": "🚀 عزز تقدمك من خلال إشعارات <boldSpan> المخصصة </boldSpan> حول تقدم هدفك، والحفاظ على الخطوط، وتحسين استخدامك لميزاتنا الحالية. <br></br> <br></br> هل يمكننا أن نبقيك على اطلاع دائم عبر البريد الإلكتروني والقنوات الأخرى؟ أنت المتحكم، فلا تتردد في تعديل هذه التفضيلات في أي وقت من خلال إعدادات حسابك. <br></br> <br></br> ما عليك سوى تحديد \"السماح\" لتذكيرات <boldSpan> الملهمة </boldSpan> أو \"ليس الآن\" للرفض.",
+                        "header": "نود أن نساعدك على البقاء <boldSpan> ملتزمًا ومداومًا </boldSpan> في رحلة ارتقائك بالقرآن! 📖🌟"
+                    }
+                },
+                "continue": "أكمل",
+                "contribute-to-our-mission": "ساهم في مهمتنا",
+                "copied": "نُسِخ",
+                "copied-to-clipboard": "نُسِخَ إلى الحافظة",
+                "copy": "نَسْخ",
+                "copylink": "نسخ الرابط",
+                "counter": {
+                    "decrease": "انقُصْ",
+                    "increase": "زِدْ"
+                },
+                "default-description": "القرآن مترجم إلى العديد من اللغات في واجهة بسيطة وسهلة",
+                "delete": "حذف",
+                "developers": "المطورون",
+                "display": "عرض",
+                "donate": "تبرع",
+                "donate-now": "تبرع الآن",
+                "donate_monthly": "تبرع شهريا",
+                "donate_once": "تبرع مرة واحدة",
+                "edit": "تعديل",
+                "email-verification": {
+                    "check-spam": "ألم تتلق رسالة التحقق؟ تحقق من البريد الإلكتروني العشوائي",
+                    "email-sent": "لقد أرسلنا للتو بريدًا إلكترونيًا إلى <strong> {{email}} </strong>",
+                    "email-verification": "تأكيد بواسطة البريد الالكتروني",
+                    "resend-email": "إعادة إرسال البريد الإلكتروني",
+                    "resend-email-in": "إعادة إرسال رسالة التحقق في غضون {{remainingTime}} ثانية ...",
+                    "verify-code": "التحقق من الرمز"
+                },
+                "end-year-donate": "اجعل ختام 2024 صدقة ❤️",
+                "error": {
+                    "MediaVersesRangeLimitExceeded": "لا يمكنك اختيار أكثر من {{limit}} آية في نفس الوقت. يرجى اختيار نطاق أصغر.",
+                    "bookmark-sync": "الإشارة المرجعية غير متزامنة.",
+                    "email-login-fail": "فشل تسجيل الدخول بالبريد الإلكتروني. يرجى المحاولة مرة أخرى",
+                    "general": "هناك خطأ ما. حاول مرة أخرى.",
+                    "offline": "يبدو أنك فقدت الاتصال. يرجى التحقق من ذلك وحاول مرة أخرى.",
+                    "pref-persist-fail": "فشلت مزامنة إعداداتك مع السحابة.",
+                    "ranges-no-value": "يجب تحديد بداية ونهاية النطاق",
+                    "ranges-too-many-verses": "بحد أقصى {{maxNumberOfVerses}} آيات",
+                    "ranges-wrong-order": "يجب أن تكون الآية الابتدائية قبل الآية الختامية."
+                },
+                "errors": {
+                    "account-banned": "عذرا، تم حظر حسابك. تواصل مع مؤسسة القرآن الكريم",
+                    "badRequest": "*طلب غير صالح",
+                    "banned": "*عذرا، حسابك محظور. تواصل مع مؤسسة القرآن الكريم",
+                    "confirm": "*تأكيد كلمة المرور لا تتطابق مع كلمة المرور",
+                    "email": "*تنسيق البريد الإلكتروني غير صحيح!",
+                    "exactLength": "*يجب أن تكون القيمة بالطول الدقيق",
+                    "expiredToken": "*هذه الرمزية انتهت صلاحيتها",
+                    "forgot-password-failed": "فشل إرسال رسالة البريد الإلكتروني لإعادة تعيين كلمة المرور. يرجى المحاولة مرة أخرى.",
+                    "immutable": "*لا يمكن تغيير هذه القيمة",
+                    "invalid": "*هذا {{fieldName}} غير صالح",
+                    "invalidEmailOrPassword": "*البريد الإلكتروني أو كلمة المرور غير صالحة",
+                    "max": "* يجب أن يكون {{fieldName}} أقل من أو يساوي {{max}} رقمًا",
+                    "min": "* يجب أن يكون {{fieldName}} أكبر من أو يساوي {{min}} رقمًا",
+                    "name": "* يجب أن يتكون {{fieldName}} من أحرف وأرقام فقط",
+                    "notFound": "*لم يتم العثور عليه",
+                    "required": "* {{fieldName}} مفقود!",
+                    "reset-password-failed": "تعذر إعادة تعيين كلمة المرور. يرجى المحاولة مرة أخرى.",
+                    "signin-failed": "فشل تسجيل الدخول. يرجى المحاولة مرة أخرى.",
+                    "signup-failed": "فشل التسجيل. يرجى المحاولة مرة أخرى.",
+                    "taken": "* {{fieldName}} موجود بالفعل!",
+                    "usedToken": "*تم استخدام هذا الرمز بالفعل",
+                    "username": "* {{fieldName}} يقبل الشرطة السفلية والأحرف فقط",
+                    "verification-code-invalid": "هذا رمز التحقق غير صالح",
+                    "verification-code-length": "يجب أن يكون رمز التحقق مكونًا {{length}} رقمًا",
+                    "verification-failed": "فشلت عملية التحقق. يرجى المحاولة مرة أخرى.",
+                    "verification-resend-failed": "فشل إعادة إرسال رمز التحقق"
+                },
+                "exciting-updates": "تحديثات رائعة",
+                "feedback": "التعليقات",
+                "fonts": {
+                    "15_lines": "15 سطرًا",
+                    "16_lines": "16 سطرًا",
+                    "code_v1": "مجمع الملك فهد الإصدار 1",
+                    "code_v2": "مجمع الملك فهد الإصدار 2",
+                    "font-size": "حجم الخط",
+                    "lines": "الأسطر",
+                    "qcf-desc": "توفر خطوط مجمع الملك فهد (الإصدارين 1 و 2) جودة أعلى ولكنها تستغرق وقتًا أطول للتحميل.",
+                    "qcf-v4-desc": "تم إنشاء خطوط التجويد باستخدام خطوط Easy Quran - دار المعرفة لتجويد المصحف الشريف وخطوط مجمع الملك فهد لطباعة المصحف الشريف - رواية عثمانية حفص الإصدار الرابع بعد الحصول على الإذن من كليهما.",
+                    "qpc_uthmani_hafs": "خط الرسم العثماني - حفص - مجمع الملك فهد",
+                    "quran-font": "خط القرآن",
+                    "quran-font-size": "حجم خط القرآن الكريم",
+                    "tajweed": "التجويد",
+                    "tajweed-desc": "يظهر خط التجويد مصحف التجويد الملون. يمكنك قراءة المزيد عن قواعد ألوان التجويد <0>هنا</0>",
+                    "tajweed_v4": "مجمع الملك فهد – الإصدار الرابع",
+                    "text_indopak": "نستعليق",
+                    "text_uthmani": "نسخ",
+                    "translation-font-size": "حجم خط الترجمة"
+                },
+                "footer": {
+                    "description": "يعد موقع Quran.com منصة موثوقة يستخدمها ملايين الأشخاص حول العالم لقراءة القرآن الكريم والبحث فيه والاستماع إليه والتدبر فيه بعدة لغات. كما يوفر الموقع ترجمات وتفسيرات وتلاوات وترجمة كلمة بكلمة وأدوات للدراسة العميقة، مما يجعل القرآن الكريم في متناول الجميع. <br/> <br/> بصفته مؤسسة صدقة جارية، يكرس موقع Quran.com نفسه لمساعدة الناس على التواصل بعمق مع القرآن الكريم. بدعم من مؤسسة <link>Quran.Foundation</link>، وهي منظمة غير ربحية 501(c)(3)، يواصل موقع Quran.com النمو كمورد مجاني وقيم للجميع، الحمد لله",
+                    "hiring": "نحن نوظف! انضم إلى فريق مؤسسة القرآن وساهم في مهمتنا. <link> تقدم بطلبك الآن! </link>",
+                    "rights": "كل الحقوق محفوظة",
+                    "title": "اقرأ واستمع وابحث وتدبر في القرآن الكريم"
+                },
+                "form": {
+                    "body": "المحتوي",
+                    "code": "رمز التحقق",
+                    "confirm-password": "تأكيد كلمة المرور",
+                    "email": "البريد الإلكتروني",
+                    "firstName": "الاسم الأول",
+                    "lastName": "الاسم الأخير",
+                    "password": "كلمة المرور",
+                    "title": "عنوان",
+                    "username": "اسم المستخدم",
+                    "verification-code": "رمز التحقق"
+                },
+                "from": "من",
+                "fundraising-share-title": "شارك في جمع التبرعات لصالح موقع Quran.com",
+                "fundraising-sticky-banner": {
+                    "cta": "تبرع",
+                    "title": "تبرع في أفضل الأيام!"
+                },
+                "fundraising": {
+                    "description": "تساعدنا التبرعات الشهرية على تحسين موقع Quran.com واستدامة العمليات حتى نركز بشكل أقل على جمع التبرعات وأكثر على خلق التأثير.",
+                    "title": "كن متبرعا شهريا"
+                },
+                "get-started": "البدء",
+                "hear-it-pronounced": "انقر على الكلمات القرآنية للاستماع إلى نطقها",
+                "help": "مساعدة",
+                "hizb": "حزب",
+                "home": "الصفحة الرئيسة",
+                "hours": "ساعات",
+                "inline": "ضمن السطر",
+                "input": {
+                    "clear": "مسح"
+                },
+                "juz": "جزء",
+                "language": "لغة",
+                "languages": "اللغات",
+                "learn-more": "تعرف على المزيد",
+                "learning-plans": "خطط التعلم",
+                "less": "أقل",
+                "lessons": "الدروس",
+                "loading": "التحميل جارٍ",
+                "login": "تسجيل الدخول",
+                "logout": "تسجيل الخروج",
+                "meccan": "مكية",
+                "medinan": "مدنية",
+                "menu": "القائمة",
+                "minutes": "دقائق",
+                "mobile-apps": "تطبيقات المحمول",
+                "mode": "الوضع",
+                "more": "المزيد",
+                "my-learning-plans": "خطط التعلم الخاصة بي",
+                "navigate": "التنقل",
+                "network": "الشبكة",
+                "new": "جديد!",
+                "newest": "الأحدث",
+                "next": "التالي",
+                "next-ayah": "الآية التالية",
+                "no": "لا",
+                "no-notifications": "لا توجد إشعارات حتى الآن",
+                "none": "لا شيء",
+                "not-now": "ليس الآن",
+                "notes": {
+                    "title": "ملاحظاتي وتدبراتي"
+                },
+                "notification-settings": "إعدادات الإشعارات",
+                "notification": {
+                    "mark-all-as-read": "ضع إشارة مقروء على الكل",
+                    "mark-as-read": "ضع إشارة مقروء"
+                },
+                "notifications": "إشعارات",
+                "off": "إيقاف",
+                "oldest": "الأقدم",
+                "on": "تشغيل",
+                "our-projects": "مشاريعنا",
+                "page": "صفحة",
+                "pages": "الصفحات",
+                "pagination-summary": "{{currentResultNumber}} - {{endOfResultNumber}} من {{totalNumberOfResults}} نتيجة للبحث",
+                "pbuh": "صلى الله عليه وسلم",
+                "popular-links": "روابط شائعة",
+                "popup": {
+                    "companion-title": "يا رفيق القرآن العزيز",
+                    "footnote": "التبرعات الشهرية تمكننا من التركيز بشكل أقل على جمع التبرعات",
+                    "subtitle": "«ما من أيام العمل الصالح فيها أحب إلى الله من هذه الأيام» [البخاري 969]",
+                    "text-1": "نحن ملتزمون بخدمة العالم المعرفة القرآنية والتقنية بالمجان دائماً",
+                    "text-2": "فرصة مثالية للصدقة الجارية. استثمرها في آخرتك بتبرع شهري (أو لمرة واحدة).",
+                    "title": "تبرع في أفضل الأيام!"
+                },
+                "powered-by": "مشغل بواسطة",
+                "prepare-hearts": {
+                    "cta": "تعرف على المزيد",
+                    "title": "استمر بعد رمضان!"
+                },
+                "prev": "السابق",
+                "previous-ayah": "الآية السابقة",
+                "privacy": "الخصوصية",
+                "product-updates": "تحديثات المنتج",
+                "profile": "الملف الشخصي",
+                "projects-desc": "المشاريع غير الربحية التي تملكها أو تديرها أو ترعاها مؤسسة <link>Quran.Foundation</link>",
+                "q-reflect": "QuranReflect",
+                "quran-com": "Quran.com",
+                "quran-radio": "راديو القرآن",
+                "reading-history": "سجل القراءة",
+                "reading-preference": {
+                    "reading": "القراءة",
+                    "translation": "الترجمة"
+                },
+                "ready-for-ramadan": "هل أنت مستعد لرمضان؟",
+                "recitation": "التلاوة",
+                "reciter": "القارئ",
+                "reciter-summary": "(بإذن كريم من مركز التفسير)",
+                "reciters": "القراء",
+                "reflect": "تدبر",
+                "reflections": "تدبرات",
+                "reflections-and-lessons": "تدبرات ودروس",
+                "remove": "إزالة",
+                "rename": "إعادة تسمية",
+                "retry": "أعد المحاولة",
+                "revelation_order": "ترتيب نزول الوحي",
+                "rub": "ربع الحزب",
+                "save": "إحفظ",
+                "save-to-collection": "حفظ في المجموعة",
+                "search-for": "ابحث عن '{{searchQuery}}'",
+                "search-results": "نتائج البحث: {{count}}",
+                "search-results-no-count": "نتائج البحث",
+                "search": {
+                    "filters": "تصفية البحث",
+                    "hint": "حاول البحث عن",
+                    "jump-to": "انتقل إلى",
+                    "more-results": "المزيد من النتائج",
+                    "no-results": "لم يتم العثور على نتائج",
+                    "no-results-suggestion": "لم نتمكن من العثور على أي نتائج بحث مطابقة لـ \"{{searchQuery}}\". حاول البحث عن كلمة مختلفة.",
+                    "popular": "عمليات البحث الشائعة",
+                    "recent": "عمليات البحث الأخيرة",
+                    "results": "النتائج",
+                    "show-all": "عرض كل النتائج",
+                    "switch-mode": "تحول إلى البحث التقدم",
+                    "title": "بحث"
+                },
+                "seconds": "ثواني",
+                "see-new": "اطّلع على الجديد",
+                "settings": {
+                    "no-tafsir-selected": "لم يتم اختيار تفسير",
+                    "no-translation-selected": "لم يتم اختيار ترجمة",
+                    "reading-experience": "تجربة القراءة",
+                    "reset": "إعادة تعيين",
+                    "reset-cta": "استعادة الإعدادات المحددة مسبقًا",
+                    "reset-notif": "تمت إعادة تعيين إعداداتك إلى الإعدادات المحددة مسبقًا",
+                    "search-reciter": "ابحث عن قارئ",
+                    "search-tafsirs": "ابحث عن التفاسير",
+                    "search-translations": "ابحث عن ترجمة",
+                    "selected-reciter": "القارئ المختار",
+                    "selected-tafsirs": "التفاسير المختارة",
+                    "selected-translations": "الترجمات المختارة",
+                    "show-tooltip-when-playing-audio": "إظهار تلميح الأداة عند تشغيل الصوت",
+                    "title": "الإعدادات",
+                    "tooltip-playing-audio-helper": "إظهار ترجمة الكلمات في تلميح الأداة أثناء تشغيل الآية",
+                    "value-and-other": "{{value}} وترجمة أخرى",
+                    "value-and-others": "{{value}} و {{othersCount}} أخرى",
+                    "wbw-helper": "اعرض الترجمة أو النقل الحرفي مباشرة تحت الكلمة",
+                    "word-tooltip-helper": "اعرض الترجمة أو النقل الحرفي (النقحرة) عند التمرير أو النقر فوق الكلمة"
+                },
+                "share": "شارك",
+                "shared": "تم نسخ الرابط إلى الحافظة!",
+                "show-more": "أظهر المزيد",
+                "sidebar": {
+                    "search-hizb": "بحث عن حزب",
+                    "search-juz": "ابحث عن جزء",
+                    "search-page": "ابحث عن صفحة",
+                    "search-surah": "ابحث عن سورة",
+                    "search-verse": "ابحث عن آية",
+                    "try-navigating-with": "نصيحة: حاول التنقل باستخدام"
+                },
+                "sign-in": "تسجيل الدخول",
+                "sitemap": "خريطة الموقع",
+                "sort": {
+                    "ascending": "تصاعديًا",
+                    "by": "رتب",
+                    "descending": "تنازليًا"
+                },
+                "style": "نمط",
+                "submit": "إرسال",
+                "subscribe": "اشترك",
+                "subscribed": "مشترك",
+                "surah": "سورة",
+                "tafsir": {
+                    "font-size": "حجم خط التفسير",
+                    "group-message": "أنت تقرأ التفسير لمجموعة الآيات {{from}} إلى {{to}}",
+                    "no-text": "{{tafsirName}} غير متوفر للآية الحالية.",
+                    "surah": "تفسير سورة",
+                    "tafsir-desc": "اقرأ {{tafsirName}} عن آية {{verseNumber}} من سورة {{surahName}}",
+                    "tafsirs-desc": "اقرأ العديد من التفسيرات للآية {{ayahNumber}} من سورة {{surahName}} لعلماء تفسير موثوقين",
+                    "title": "التفسير"
+                },
+                "terms-and-conditions": "الشروط والأحكام",
+                "theme": "السمة",
+                "themes": {
+                    "auto": "آلي",
+                    "dark": "داكن",
+                    "light": "فاتح",
+                    "sepia": "بني داكن",
+                    "system": "نظام",
+                    "system-desc": "تعتمد سمة النظام تلقائيًا على إعدادات الوضع الفاتح / الداكن لدى جهازك"
+                },
+                "to": "إلى",
+                "tooltip": "أداة إرشادية",
+                "tooltip-trans-lang": "لغة الأداة الإرشادية",
+                "trans-lang": "لغة الترجمة",
+                "translation": "الترجمة",
+                "translations": "الترجمات",
+                "transliteration": "النقل الحرفي",
+                "type": "النوع",
+                "unavailable": "غير متاح حاليا",
+                "undo": "تراجع",
+                "validation": {
+                    "invalid-email": "{{field}} يجب أن يكون عنوان بريد إلكتروني صالحًا",
+                    "invalid-field": "الرجاء إدخال قيمة صالحة {{field}}",
+                    "maximum-length": "لا يمكن أن يتجاوز {{field}} {{value}} حرفًا",
+                    "minimum-length": "يجب أن يكون {{field}} {{value}} حرفًا على الأقل",
+                    "required-field": "{{field}} مطلوب"
+                },
+                "verse": "آية",
+                "verse-bookmark-removed": "تمت إزالة إشارة مرجعية الآية!",
+                "verse-bookmarked": "تم وضع إشارة مرجعية على الآية!",
+                "verse-copied": "تم نسخ الآية إلى الحافظة!",
+                "verses": "آيات",
+                "view": "عرض",
+                "voice": {
+                    "ask-permission": "الرجاء السماح باستخدام الميكروفون لبدء استخدام البحث الصوتي",
+                    "error": "حدث خطأ، يرجى المحاولة مرة أخرى ({{errorCode}}).",
+                    "language-unavailable": "المتصفح الذي تستخدمه لا يدعم اللغة العربية.",
+                    "network": "خطأ في الشبكة. يُرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى.",
+                    "no-microphone": "لم يتم العثور على ميكروفون. يُرجى توصيل ميكروفون والمحاولة مرة أخرى.",
+                    "no-permission": "يبدو أنك لم تقم بتمكين أذونات الميكروفون. يُرجى تفعيل أذونات الميكروفون ثم المحاولة مرة أخرى.",
+                    "no-speech": "لم يتم اكتشاف صوت. يرجى المحاولة مرة أخرى.",
+                    "not-supported": "يبدو أن متصفحك لا يدعم الميكروفون. يرجى تجربة متصفح آخر.",
+                    "suggest": "يرجى البدء في التلاوة وستظهر آياتك.",
+                    "suggest-subtitle": "اقرأ أي آية باللغة العربية، وستظهر الآية",
+                    "suggest-title": "اقرأ الآن",
+                    "voice-search-powered-by": "البحث الصوتي مدعوم بواسطة"
+                },
+                "wbw": "كلمة بكلمة",
+                "wbw-lang-summary": "مصدر الترجمة كلمة بكلمة: <link> {{source}} </link> . هذا المصدر مستقل عن اختيار ترجمة الآية.",
+                "wbw-trans-lang": "لغة الترجمة كلمة بكلمة",
+                "wbw-translation": "ترجمة الكلمات",
+                "wbw-transliteration": "النقل الحرفي للكلمات",
+                "word-click": {
+                    "no-audio": "لا صوت",
+                    "play-audio": "تشغيل الصوت",
+                    "title": "نطق الكلمة عند النقر عليها"
+                },
+                "word-tooltip": "الأداة الإرشادية للكلمات",
+                "yes": "نعم",
+                "back": "عودة"
+            },
+            "error": {
+                "go-back": "الرجوع للخلف",
+                "if-persist": "إذا استمرت المشكلة، من فضلك",
+                "report-cta": "أبلغ عن المشكلة",
+                "title": "عذرا، حدث خطأ ما"
+            },
+            "radio": {
+                "change": "غَيِّر",
+                "curated-station": {
+                    "juz-amma": {
+                        "description": "استمع إلى الجزء الأخير من القرآن",
+                        "title": "جزء عم"
+                    },
+                    "popular-recitations": {
+                        "description": "تلاوات يومية منتقاة",
+                        "title": "التلاوات الشائعة"
+                    },
+                    "surah-al-kahf": {
+                        "description": "استمع لسورة الكهف على التكرار",
+                        "title": "سورة الكهف"
+                    },
+                    "yaseen-alwaqiah-al-mulk": {
+                        "description": "السور لقراء مختارين",
+                        "title": "سور يس والواقعة والملك"
+                    }
+                },
+                "curated-stations": "المحطات المنسقة",
+                "pause-radio": "إيقاف الراديو",
+                "play-radio": "تشغيل الراديو",
+                "radio-desc": "الاستماع إلى تلاوات جميلة من القرآن الكريم بدون توقف من قبل مختلف القراء.",
+                "reciter-stations": "محطات القراء",
+                "station": "محطة"
+            },
+            "quick-links": {
+                "about-quran": "عن القرآن",
+                "ayat-ul-kursi": "آية الكرسي",
+                "jesus-in-quran": "عيسى في القرآن",
+                "kahf": "سورة الكهف",
+                "mulk": "سورة الملك",
+                "muzzammil": "سورة المزّمّل",
+                "qr": "انضم إلى رمضان التدبر",
+                "rahman": "سورة الرّحمن",
+                "sunnah": "آيات عن السنة النبوية",
+                "waqiah": "سورة الواقعة",
+                "what-is-ramadan": "ما هو رمضان؟",
+                "yaseen": "سورة يس"
+            },
+            "onboarding": {
+                "checklist": {
+                    "1": "ميزات الصفحة الرئيسية",
+                    "2": "تخصيص الإعدادات الخاصة بك",
+                    "3": "إثراء تجربة قراءة الآية الخاصة بك",
+                    "4": "ميزات شخصية"
+                },
+                "finish": "إنهاء",
+                "onboarding-checklist": "قائمة التحقق من الإعداد",
+                "onboarding-title": "تعظيم تجربتك مع موقع Quran.com! <br></br> ابدأ جولتك الآن:",
+                "previous": "سابق",
+                "skip": "تخطى",
+                "steps": {
+                    "3-dot-menu": {
+                        "description": "انقر على قائمة الثلاث نقاط لاكتشاف خيارات النسخ والإشارات المرجعية وتكرار الآيات. اكتشف مجموعة متنوعة من الخيارات لتكرار الآيات.",
+                        "title": "قائمة الثلاث نقاط"
+                    },
+                    "ayah-reflection": {
+                        "description": "اقرأ تدبرات (تدبر) من العلماء وطلبة العلم والناس العاديين لمساعدتك على تطوير علاقة شخصية أكثر مع القرآن",
+                        "title": "قراءة التدبرات على مستوى الآية"
+                    },
+                    "ayah-tafsir": {
+                        "description": "استكشف التفسير على مستوى الآية، حيث يقدم رؤى تفصيلية لتعزيز فهمك أثناء القراءة. (يمكن تجميع التفسير لآيات متعددة عندما يكون ذلك مناسبا)",
+                        "title": "قراءة التفسير على مستوى الآية"
+                    },
+                    "font-size": {
+                        "description": "قم بتخصيص قراءة القرآن الكريم باستخدام أحجام الخطوط سهلة الضبط للحصول على تجربة قراءة مريحة",
+                        "title": "حجم الخط"
+                    },
+                    "font-style": {
+                        "description": "تشمل الخيارات العثماني - مجمع الملك فهد الإصدار 1، العثماني - مجمع الملك فهد الإصدار 2، العثماني QPC حفص، إندوباك 15 سطرًا، إندوباك 16 سطرًا",
+                        "title": "اختر نص القراءة المفضل لديك"
+                    },
+                    "inline-wbw": {
+                        "description": "عرض ترجمة كل كلمة في السطر (تحت الكلمة) أو في فقاعة فوق الكلمة أثناء الاستماع إلى القرآن الكريم",
+                        "title": "عرض الترجمة كلمة بكلمة في السطر (تحت الكلمة) أو عرض تلميح الأدوات"
+                    },
+                    "juz": {
+                        "description": "عرض القرآن حسب الجزء",
+                        "title": "عرض القرآن حسب الجزء"
+                    },
+                    "listen": {
+                        "description": "قم بتشغيل مشغل الصوت للاستماع إلى التلاوة",
+                        "title": "استمع إلى السورة أو الآية"
+                    },
+                    "login": {
+                        "description": "قم بتسجيل الدخول وحفظ الإعدادات عبر الأجهزة والوصول إلى ميزات إضافية.",
+                        "title": "تسجيل الدخول"
+                    },
+                    "quran-radio": {
+                        "description": "استمع إلى إذاعة القرآن - بث القرآن الكريم بدون إعلانات",
+                        "title": "إذاعة القرآن الكريم"
+                    },
+                    "reading-sessions": {
+                        "description": "قم بمراجعة رحلتك القرآنية بسهولة بإلقاء نظرة سريعة على سجل القراءة المخصص لك، وتتبع الآيات التي استكشفتها على موقع Quran.com.",
+                        "title": "عرض سجل القراءة"
+                    },
+                    "reading-view": {
+                        "description": "عرض القرآن في وضع قراءة المصحف",
+                        "title": "وضع القراءة"
+                    },
+                    "search-bar": {
+                        "description": "ابحث عن الآيات والسور والكلمات الرئيسية والأجزاء والموضوعات التي تبحث عنها باستخدام شريط البحث الخاص بنا",
+                        "title": "شريط البحث"
+                    },
+                    "select-reciter": {
+                        "description": "قم بتخصيص تجربة الاستماع الخاصة بك عن طريق اختيار القارئ الذي تستمتع بالاستماع إليه أكثر!",
+                        "title": "اختر من بين مجموعة متنوعة من القراء للاستماع إليهم"
+                    },
+                    "settings": {
+                        "description": "التحكم في تفضيلاتك",
+                        "title": "إعدادات"
+                    },
+                    "streak": {
+                        "description": "حدد أهدافًا مخصصة للقراءة، وتتبع تقدمك، وابني عادة قراءة قرآنية متسقة من خلال ميزة \"شرائط القراءة والخطط\" الخاصة بنا.",
+                        "title": "تتبع استمرارية القراءة وخطط القراءة"
+                    },
+                    "surah-info": {
+                        "description": "احصل على رؤى حول كل سورة - يقع في مكان مناسب في بداية كل سورة",
+                        "title": "إقرأ عن السورة"
+                    },
+                    "theme": {
+                        "description": "اختر مظهرك المفضل - الوضع الفاتح أو البني الداكن أو الداكن - للحصول على تجربة قراءة مريحة وشخصية للقرآن.",
+                        "title": "اقرأ القرآن في الوضع الفاتح أو البني الداكن أو المظلم"
+                    },
+                    "translations": {
+                        "description": "اختر من بين مجموعة متنوعة من الترجمات بلغات متعددة. نصيحة: قارن الترجمات عن طريق تحديد خيارات متعددة",
+                        "title": "ترجمات"
+                    },
+                    "wbw-audio": {
+                        "description": "حدد هذا الخيار للاستماع إلى كل كلمة على حدة بمجرد النقر على الكلمة!",
+                        "title": "استمع إلى النقل الحرفي كلمة بكلمة من خلال النقر على كلمة"
+                    },
+                    "wbw-translation": {
+                        "description": "عرض معنى الكلمات الفردية أثناء قراءة القرآن أو الاستماع إليه لمساعدتك على تعزيز مفرداتك القرآنية",
+                        "title": "قراءة الترجمة كلمة بكلمة"
+                    },
+                    "wbw-transliteration": {
+                        "description": "عرض النقل الحرفي لكل كلمة لمساعدتك في رحلة قراءة القرآن",
+                        "title": "قراءة النقل الحرفي كلمة بكلمة"
+                    }
+                }
+            },
+            "login": {
+                "awaiting-confirmation": "بانتظار التأكيد",
+                "back": "خلف",
+                "back-to-login": "العودة إلى تسجيل الدخول",
+                "check-email-title": "تحقق من البريد الإلكتروني لإكمال التسجيل",
+                "confirm": "يتأكد",
+                "confirm-new-password-placeholder": "تأكيد كلمة المرور الجديدة",
+                "confirm-password-placeholder": "تأكيد كلمة المرور",
+                "continue": "يكمل",
+                "continue-apple": "ادخل عبر أبل",
+                "continue-email": "ادخل عبر البريد الإلكتروني",
+                "continue-facebook": "ادخل عبر فيسبوك",
+                "continue-google": "ادخل عبر جوجل",
+                "email-placeholder": "عنوان البريد الإلكتروني",
+                "error": {
+                    "email-required": "البريد الإلكتروني مفقود!",
+                    "invalid-credentials": "البريد الإلكتروني أو كلمة المرور غير صالحة",
+                    "invalid-email": "تنسيق البريد الإلكتروني غير صالح!",
+                    "login-failed": "فشل تسجيل الدخول. يرجى المحاولة مرة أخرى.",
+                    "password-required": "كلمة المرور مفقودة!"
+                },
+                "errors": {
+                    "account-banned": "عذرا، حسابك محظور. تواصل مع مؤسسة القرآن الكريم",
+                    "badRequest": "*طلب غير صالح",
+                    "banned": "*عذرا، حسابك محظور. تواصل مع مؤسسة القرآن الكريم",
+                    "confirm": "*تأكيد كلمة المرور لا تتطابق مع كلمة المرور",
+                    "email": "*تنسيق البريد الإلكتروني غير صالح!",
+                    "exactLength": "*يجب أن تكون القيمة بالطول الدقيق",
+                    "expiredToken": "*هذه الرمزية انتهت صلاحيتها",
+                    "forgot-password-failed": "فشل إرسال رسالة البريد الإلكتروني لإعادة تعيين كلمة المرور. يرجى المحاولة مرة أخرى.",
+                    "immutable": "*لا يمكن تغيير هذه القيمة",
+                    "invalid": "*هذا {{fieldName}} غير صالح",
+                    "invalidEmailOrPassword": "*البريد الإلكتروني أو كلمة المرور غير صالحة",
+                    "max": "* يجب أن يكون {{fieldName}} أقل من أو يساوي {{max}} رقمًا",
+                    "min": "* يجب أن يكون {{fieldName}} أكبر من أو يساوي {{min}} رقمًا",
+                    "name": "* يجب أن يتكون {{fieldName}} من أحرف وأرقام فقط",
+                    "notFound": "*لم يتم العثور عليه",
+                    "required": "* {{fieldName}} مفقود!",
+                    "reset-password-failed": "فشلت عملية إعادة تعيين كلمة المرور. يرجى المحاولة مرة أخرى.",
+                    "signin-failed": "فشل تسجيل الدخول. يرجى المحاولة مرة أخرى.",
+                    "signup-failed": "فشل التسجيل. يرجى المحاولة مرة أخرى.",
+                    "taken": "* {{fieldName}} موجود بالفعل!",
+                    "usedToken": "*تم استخدام هذا الرمز بالفعل",
+                    "username": "* {{fieldName}} يقبل الشرطة السفلية والأحرف فقط",
+                    "verification-code-invalid": "هذا رمز التحقق غير صالح",
+                    "verification-code-length": "يجب أن يكون رمز التحقق مكونًا {{length}} رقمًا",
+                    "verification-failed": "فشلت عملية التحقق. يرجى المحاولة مرة أخرى.",
+                    "verification-resend-failed": "فشل إعادة إرسال رمز التحقق"
+                },
+                "feature-1": "تتبع أهدافك",
+                "feature-2": "حافظ على استمرارية القراءة",
+                "feature-3": "إنشاء مجموعات",
+                "feature-4": "مزامنة بياناتك عبر المتصفحات",
+                "feature-5": "و اكثر!",
+                "feature-6": "<b> جديد! </b> ملاحظات وتدبرات",
+                "first-name-placeholder": "الاسم الأول",
+                "forgot-password": "هل نسيت كلمة السر",
+                "forgot-password-description": "أدخل عنوان بريدك الإلكتروني وسنرسل إليك تعليمات لإعادة تعيين كلمة المرور الخاصة بك.",
+                "forgot-password-success": "تم إرسال رسالة البريد الإلكتروني لإعادة تعيين كلمة المرور! يرجى التحقق من صندوق الوارد الخاص بك.",
+                "forgot-password-title": "هل نسيت كلمة السر؟",
+                "last-name-placeholder": "اسم العائلة",
+                "login-cta": "تسجيل الدخول أو الاشتراك الآن:",
+                "login-error": {
+                    "AuthenticationError": "المصادقة فشلت. الرجاء معاودة المحاولة في وقت لاحق",
+                    "BannedUserError": "عذرا، تم حظر حسابك. تواصل مع مؤسسة القرآن الكريم.",
+                    "TokenExpiredError": "لقد تم تسجيل خروجك، يرجى تسجيل الدخول مرة أخرى."
+                },
+                "login-title": "تسجيل الدخول إلى موقع Quran.com",
+                "new-password-placeholder": "كلمة المرور الجديدة",
+                "other-options": "خيارات تسجيل الدخول الأخرى",
+                "password-placeholder": "كلمة المرور",
+                "password-reset-success": "تم إعادة تعيين كلمة المرور بنجاح!",
+                "password-rules": {
+                    "lowercase": "حرف صغير واحد على الأقل",
+                    "max-length": "الحد الأقصى 20 حرفًا",
+                    "min-length": "الحد الأدنى 8 أحرف",
+                    "number": "على الأقل رقم واحد",
+                    "special": "على الأقل حرف خاص واحد (!@#$%^&*_-)",
+                    "uppercase": "حرف كبير واحد على الأقل"
+                },
+                "privacy-policy": "حماية خصوصيتك هي أولويتنا - من خلال التسجيل، فإنك توافق على <link> سياسة الخصوصية </link> و <link1> الشروط والأحكام </link1> الخاصة بنا.",
+                "quran-text": "القرآن الكريم",
+                "quran-title": "قرآن.كوم",
+                "reflect-feature-1": "تأمل في القرآن الكريم",
+                "reflect-feature-2": "انضم إلى المجموعات",
+                "reflect-feature-3": "التفاعل مع الآخرين",
+                "reflect-feature-4": "و اكثر!",
+                "reset-password": "إعادة تعيين كلمة المرور",
+                "reset-password-success": "تم إعادة تعيين كلمة المرور بنجاح!",
+                "set-new-password": "تعيين كلمة مرور جديدة",
+                "sign-in": "تسجيل الدخول",
+                "sign-in-or-sign-up": "تسجيل الدخول أو التسجيل",
+                "sign-up": "اشتراك",
+                "unified-registration-1": "التسجيل الموحد لـ ",
+                "unified-registration-2": "مؤسسة القرآن الكريم",
+                "unified-registration-3": "سيكون لديك إمكانية الوصول إلى المواقع التالية ",
+                "unified-registration-4": "من خلال تفاصيل تسجيل الدخول الخاصة بك.",
+                "username-placeholder": "اسم المستخدم",
+                "verification-code-instruction": "الرجاء إدخال الرمز الموجود في البريد الإلكتروني لإكمال التسجيل",
+                "verification-code-resend": "إعادة إرسال البريد الإلكتروني",
+                "verification-code-resend-countdown": "إعادة إرسال رسالة التحقق في {{seconds}} ثانية...",
+                "verification-code-sent": "تم إرسال رمز التحقق!",
+                "verification-code-sent-to": "لقد أرسلنا للتو بريدًا إلكترونيًا إلى",
+                "verification-code-spam-note": "لم تتلق بريدًا إلكترونيًا؟ تحقق من مجلد البريد العشوائي",
+                "verify-code": "تحقق من أن رمز الحماية المقدم يطابق النص التالي:",
+                "welcome-description-1": "التسجيل الموحد لـ",
+                "welcome-description-2": ".مؤسسة",
+                "welcome-description-3": "سيكون لديك إمكانية الوصول إلى مواقع الويب التالية من خلال تفاصيل تسجيل الدخول الخاصة بك.",
+                "welcome-title": "مرحبا بكم في"
+            },
+            "home": {
+                "achieve-quran-goals": "حقق أهدافك القرآنية",
+                "begin": "ابدأ",
+                "calendar-cta": "تقويم",
+                "chapters-and-verses": "السور والآيات",
+                "continue-read": "متابعة القراءة",
+                "explore-topics": "استكشاف المواضيع",
+                "first-time-reading": "هل أنت جديد على القرآن الكريم؟ <link> ابدأ من هنا </link>",
+                "grow-beyond-ramadan": "استمرّ في التقدُّم معنا <modalLink> بعد رمضان </modalLink>",
+                "know-someone": "ارتقِ معنا هذا <modalLink>رمضان</modalLink>",
+                "learning-plan": "خطط التعلم",
+                "listen-to-radio": "استمع إلى راديو القرآن الكريم",
+                "my-quran": "قرآني",
+                "navigate-quran": "تصفح القرآن الكريم",
+                "no-bookmarks": "ليس لديك أي إشارات مرجعية حتى الآن",
+                "no-recently-read": "ليس لديك أي جلسات قراءة بعد",
+                "noble-quran": "القرآن الكريم",
+                "popular": "رائج",
+                "qgj": {
+                    "learning-plans": {
+                        "cta": {
+                            "all-plans": "شاهد جميع الخطط",
+                            "my-plans": "خططي"
+                        },
+                        "desc": {
+                            "logged-in": "هل سبق لك أن بدأت برنامجًا تعليميًا وخرجت عن المسار الصحيح في منتصف الطريق؟ تنقسم خطط التعلم إلى أجزاء يمكن التحكم فيها ونقوم بتتبع تقدمك حتى تصل إلى خط النهاية. استكشف عروضنا الحالية للدورات التدريبية اليوم",
+                            "logged-in-no-plans": "هل سبق لك أن بدأت برنامجًا تعليميًا وخرجت عن المسار الصحيح في منتصف الطريق؟ تنقسم خطط التعلم إلى أجزاء يمكن التحكم فيها ونقوم بتتبع تقدمك حتى تصل إلى خط النهاية. استكشف عروضنا الحالية للدورات التدريبية اليوم",
+                            "logged-out": "هل سبق لك أن بدأت برنامجًا تعليميًا وخرجت عن المسار الصحيح في منتصف الطريق؟ تنقسم خطط التعلم إلى أجزاء يمكن التحكم فيها ونقوم بتتبع تقدمك حتى تصل إلى خط النهاية. استكشف عروضنا الحالية للدورات التدريبية اليوم"
+                        },
+                        "title": "خطط التعلم"
+                    },
+                    "quran-reading-goals": {
+                        "desc": {
+                            "logged-out": "هل تريد أن تقرأ 10 دقائق يومياً، أو تكمل جزءاً في شهر، أو تختم القرآن كاملاً في سنة؟ من السهل إنشاء هدف مخصص وتتبع تقدمك"
+                        },
+                        "title": "أهداف قراءة القرآن المخصصة"
+                    },
+                    "title": "رحلة نمو القرآن"
+                },
+                "qr-community": "اقرأ الآيات والتدبرات المميزة لهذا اليوم",
+                "quran-in-year": "القرآن في عام",
+                "quran-in-year-cta": "قراءة هذا الأسبوع",
+                "ramadan-activities-cta": "<link> تابع <b>التقويم القرآني العالمي</b> للقراءات الأسبوعية، والبودكاست الملهم، والدعوة للتدبر! </link>",
+                "ramadan": {
+                    "header": "أدوات لتعميق علاقتك بالقرآن الكريم",
+                    "title": "هل أنت مستعد لرمضان؟"
+                },
+                "read-juz": "اقرأ الجزء",
+                "recently-read": "قرئ مؤخرًا",
+                "revelation-order-disclaimer": "يُظهر هذا المنظر الترتيب الزمني للسور في القرآن بناءً على وقت نزولها على النبي محمد <hover> ﷺ </hover> . التسلسل الزمني هو موضوع رأي العلماء وبعض السور نزلت مجزئة في أوقات مختلفة. الترتيب هنا يعتمد على عمل <link> Tanzil.net </link> . [ملحوظة: ترتيب المصحف المجمّع من سورة الفاتحة إلى سورة الناس محل إجماع.]",
+                "see-more-learning-plans": "عرض المزيد",
+                "set-custom-goal": "حدد هدفا",
+                "share-quran": {
+                    "description": "ساعد في نشر القرآن الكريم للمتعلمين الجدد",
+                    "title": "شارك القرآن!"
+                },
+                "start-read": "ابدأ القراءة",
+                "stay-consistent": "تتبع الاستمرارية، وأنشئ أهدافًا مخصصة، وداوم على الالتزام.",
+                "tab": {
+                    "bookmarks": "إشارات مرجعية",
+                    "popular": "شائع"
+                },
+                "take-notes": "هل فاتتك <modalLink> ملاحظات؟ </modalLink>",
+                "view-all-bookmarks": "عرض كل الإشارات المرجعية",
+                "voice": {
+                    "trigger": "الوصول السريع إلى أي شيء"
+                },
+                "welcome": {
+                    "title": "إنه شهر القرآن! ساعد الملايين من المستخدمين في الوصول إلى هدى القرآن."
+                }
+            },
+            "collection": {
+                "all-saved-verses": "جميع الآيات المحفوظة",
+                "alphabetical": "AZ",
+                "back-to-collection-list": "العودة إلى قائمة المجموعة",
+                "collapse-all": "إخفاء جميع الآيات",
+                "collection-list-empty": "قائمة المجموعة فارغة. لم تقم بإنشاء أي مجموعة حتى الآن",
+                "collections": "المجموعات",
+                "delete-bookmark": {
+                    "subtitle": "هل تريد بالتأكيد حذف {{bookmarkName}} من {{collectionName}} ؟",
+                    "title": "حذف الإشارة المرجعية"
+                },
+                "delete-collection": {
+                    "subtitle": "هل تريد بالتأكيد حذف {{collectionName}} ؟",
+                    "title": "حذف المجموعة"
+                },
+                "empty": "المجموعة فارغة",
+                "expand-all": "عرض جميع الآيات",
+                "go-to-ayah": "اذهب إلى الآية",
+                "load-more": "تحميل المزيد",
+                "recently-added": "أضيف مؤخرا",
+                "recently-updated": "تم تحديثه مؤخرا",
+                "verse-key": "رقم السورة والآية"
+            },
+            "reading-goal": {
+                "continue-reading": "أكمل القراءة",
+                "continuous": {
+                    "description": "سيحسب هدفك تقدمك على مدار أيام",
+                    "title": "على مدى فترة"
+                },
+                "create-plan": "ضع خطة",
+                "create-reading-goal": "إنشاء هدف",
+                "daily-progress": "التقدم اليومي",
+                "daily-progress-completed": "تم الانتهاء! 🎉",
+                "daily": {
+                    "description": "سيتم إعادة تعيين هدفك كل يوم",
+                    "title": "الهدف اليومي"
+                },
+                "day-x": "اليوم {{day}}",
+                "days": "أيام",
+                "duration": "المدة (أيام)",
+                "ending-chapter": "سورة الختام",
+                "ending-verse": "آية الختام",
+                "examples-subtitle": "فيما يلي قائمة بالأهداف المشتركة. يمكنك أيضًا إنشاء هدفك الخاص.",
+                "examples-title": "اختر هدفًا محددًا مسبقًا أو أنشئ هدفك الخاص",
+                "examples": {
+                    "custom": {
+                        "description": "حدد هدفًا مخصصًا يناسبك",
+                        "title": "مخصص"
+                    },
+                    "khatm": {
+                        "description": "هدف ختمة تلاوة. اقرأ جزءا واحدا في اليوم",
+                        "title": "اقرأ القرآن في 30 يومًا"
+                    },
+                    "time": {
+                        "description": "هدف سهل مناسب للمبتدئين",
+                        "title": "اقرأ 10 دقائق في اليوم"
+                    },
+                    "year": {
+                        "description": "اقرأ القرآن على وتيرتك الخاصة خلال العام المقبل",
+                        "title": "اقرأ القرآن في عام"
+                    }
+                },
+                "frequency-tab": {
+                    "description": "هل يجب إعادة تعيين هدفك كل يوم أم كل عدد من الأيام؟ لا تقلق، سنتتبع تقدمك بغض النظر عن التكرار الذي تختاره.",
+                    "title": "اختر وتيرة لهدفك"
+                },
+                "goal-completed": "تم تحقيق الهدف! 🎉 ",
+                "goal-done": {
+                    "description": "سيتم تسجيل أي قراءة إضافية",
+                    "title": "لقد أكملت هدف اليوم"
+                },
+                "goal-target": {
+                    "description": "كم من الوقت أو الصفحات أو الآيات يجب أن تقرأها لإكمال هدفك؟",
+                    "title": "حدد هدفًا لهدفك"
+                },
+                "goal-type": {
+                    "description": "هل يجب أن يعتمد هدفك على الوقت أو الصفحات أو نطاق مخصص (على سبيل المثال، 3 أجزاء من القرآن)؟",
+                    "title": "اختر معيارًا لهدفك"
+                },
+                "goal-types": {
+                    "pages": {
+                        "description": "سوف يعتمد هدفك على الصفحات",
+                        "title": "الصفحات"
+                    },
+                    "range": {
+                        "description": "سيعتمد هدفك على مجموعة مخصصة من الآيات (يمكن أن تكون هذه سورة أو جزء أو حتى القرآن بأكمله)",
+                        "title": "نطاق مخصص"
+                    },
+                    "time": {
+                        "description": "سوف يعتمد هدفك على الوقت",
+                        "title": "وقت"
+                    }
+                },
+                "plus-x-more-days": {
+                    "zero": "ليس هناك أيام أخرى",
+                    "one": "يوم آخر",
+                    "two": "يومان آخران",
+                    "few": "+{{days}} أيام أخرى",
+                    "many": "+{{days}} أيام أخرى",
+                    "other": "+{{days}} أيام أخرى"
+                },
+                "preview-schedule": {
+                    "description": "هكذا سيبدو هدفك. يمكنك دائما تغييره لاحقا.",
+                    "title": "هنا معاينة لجدولك الزمني"
+                },
+                "progress": {
+                    "complete": "هدف اليوم مكتمل 🎉",
+                    "goal-complete": "لقد تم اكمال هدفك بالكامل 🎉",
+                    "pages-goal": "اقرأ {{pages}} صفحة/صفحات من القرآن",
+                    "range-goal": "قراءة {{from}} إلى {{to}}",
+                    "time-goal": "اقرأ {{time}} من القرآن"
+                },
+                "reading-goal": "هدف القراءة",
+                "reading-goal-description": "هل تجد صعوبة في الحفاظ على الاتساق مع أهدافك في قراءة القرآن؟ <br/> <br/> رحلة نمو القرآن هي ميزة ديناميكية تم تطويرها لمساعدتك على البقاء ثابتًا في رحلتك مع القرآن. سواء كنت تهدف إلى القراءة لمدة 10 دقائق يوميًا، أو إكمال جزء في شهر، أو إنهاء القرآن بالكامل في عام، وما إلى ذلك، يمكن أن يساعدك Quran.com الآن في تحديد هدف مخصص وتتبع سلاسل القراءة اليومية الخاصة بك، مع التعديل مع إحراز تقدم. إنه مجاني تمامًا للاستخدام ونأمل أن يساعدك في البقاء متحفزًا للوصول إلى هدفك!",
+                "reading-goal-label": "أنت على",
+                "reading-goal-title": "تعريف برحلة نمو القرآن الكريم",
+                "recommended": "مُستَحسَن",
+                "remaining": "المتبقي لهذا اليوم",
+                "remaining-base": "متبقي",
+                "remaining-days": {
+                    "zero": "بقي صفر يوم",
+                    "one": "بقي يوم واحد",
+                    "two": "بقي يومان",
+                    "few": "بقي {{days}} أيام",
+                    "many": "بقي {{days}} يوما",
+                    "other": "بقي {{days}} يوم"
+                },
+                "set-a-new-goal": "حدد هدفا جديدا",
+                "set-reading-goal-success": "تم تعيين هدف القراءة الخاص بك بنجاح.",
+                "start-journey": "ابدأ رحلتك!",
+                "start-reading": "ابدأ القراءة",
+                "starting-chapter": "سورة البدء",
+                "starting-verse": "آية البدء",
+                "streak": "الاستمرارية",
+                "streak-definition": "الاستمرارية هو عدد الأيام المتتالية التي قرأت فيها القرآن.",
+                "timeline-meaning": "ماذا يعني جدولك الزمني؟",
+                "timeline-states": {
+                    "checked": "لقد أكملت هدفك",
+                    "filled": "لقد قرأت شيئًا ولكن ليس بالقدر الكافي لإكمال هدفك",
+                    "none": "لم تقرأ شيئا بعد في ذلك اليوم",
+                    "stroked": "لم تقرأ شيئا اليوم"
+                },
+                "todays-goal": "هدف اليوم",
+                "view-progress": "مشاهدة التقدم",
+                "week-progress": "تقدم هذا الأسبوع",
+                "x-days": {
+                    "zero": "صفر يوم",
+                    "one": "يوم",
+                    "two": "يومان",
+                    "few": "{{days}} أيام",
+                    "many": "{{days}} يوما",
+                    "other": "{{days}} يوما"
+                },
+                "x-days-streak": "استمرارية لمدة {{days}}",
+                "x-hours": {
+                    "zero": "صفر ساعة",
+                    "one": "ساعة",
+                    "two": "ساعتان",
+                    "few": "{{hours}} ساعات",
+                    "many": "{{hours}} ساعة",
+                    "other": "{{hours}} ساعة"
+                },
+                "x-minutes": {
+                    "zero": "صفر دقيقة",
+                    "one": "دقيقة",
+                    "two": "دقيقتان",
+                    "few": "{{minutes}} دقائق",
+                    "many": "{{minutes}} دقيقة",
+                    "other": "{{minutes}} دقائق"
+                },
+                "x-pages": {
+                    "zero": "صفر صفحة",
+                    "one": "صفحة",
+                    "two": "صفحتان",
+                    "few": "{{pages}} صفحات",
+                    "many": "{{pages}} صفحة",
+                    "other": "{{pages}} صفحات"
+                },
+                "x-seconds": {
+                    "zero": "صفر ثانية",
+                    "one": "ثانية",
+                    "two": "ثانيتان",
+                    "few": "{{seconds}} ثوان",
+                    "many": "{{seconds}} ثانية",
+                    "other": "{{seconds}} ثانية"
+                }
+            },
+            "reciter": {
+                "copy-link": "نسخ الوصلة",
+                "quran-reciters": "قراء القرآن",
+                "read": "اقرأ",
+                "reciter-desc": "استماع وتحميل تلاوات جميلة من القرآن الكريم للقارئ {{reciterName}}.",
+                "reciters-desc": "الاستماع إلى تلاوات القرآن الكريم الجميلة من مختلف القراء وتحميلها.",
+                "search-chapter": "ابحث عن سورة"
+            },
+            "learn": {
+                "about-author": "عن المؤلف",
+                "add-reflection": "إضافة تدبر",
+                "all-learning-plans": "جميع خطط التعلم",
+                "author": "المؤلف",
+                "back-to-learning-plan": "العودة إلى خطة التعلم",
+                "back-to-learning-plans": "العودة إلى خطط التعلم",
+                "category": "الفئة",
+                "coming-soon": "قريباً...",
+                "completed": "مكتمل",
+                "continue-learning": "مواصلة التعلم",
+                "contributors": "المساهمون",
+                "day": "اليوم",
+                "description": "الوصف",
+                "duration-daily": "يستغرق كل درس قصير أقل من {{dailyMins}} دقيقة لإكمال {{days}} دروس إجمالية",
+                "empty-learning-plans": "أنت غير مسجل في أي <link> خطط للتعلم </link> حتى الآن.",
+                "enroll": "سجل",
+                "enroll-success": "تهانينا، لقد أضفت {{title}} إلى قائمتك!",
+                "enrolled": "المقيدين",
+                "feedback": {
+                    "add-feedback": "إضافة تعليقات",
+                    "desc": "تهانينا! لقد أكملت خطة التعلم ' {{courseName}} '. <br></br> يرجى مراجعة خطة التعلم ومشاركة تعليقاتك لمساعدتنا في تحسين المحتوى.",
+                    "feedback-placeholder": "اكتب تعليقاتك",
+                    "feedback-success": "شكرا لك على تعليقاتك!",
+                    "your-feedback": "تعليقاتك"
+                },
+                "help-about-reflection": "مساعدة حول ميزة الانعكاس",
+                "learn-duration": "المدة",
+                "learn-more": "يتعلم أكثر",
+                "learning-plan-material": "مواد خطة التعلم",
+                "learning-plan-meta-desc": "ستساعدك خطة التعلم هذه على تغيير الطريقة التي تتعامل بها مع القرآن، ابدأ رحلتك اليوم!",
+                "learning-plans-desc": "عزز معرفتك بدروس سهلة المتابعة تساعدك على الارتقاء في رحلتك مع القرآن. <br></br> ابدأ خطة التعلم اليوم! يتم متابعة تقدمك حتى تصل إلى خط النهاية.",
+                "learning-plans-meta-desc": "ستساعدك خطط التعلم الخاصة بـ Quran.com على تغيير الطريقة التي تتعامل بها مع القرآن. استكشف مجموعتنا من الدروس المنسقة وابدأ رحلتك اليوم!",
+                "mark-complete": "وضع علامة كمكتمل",
+                "mark-complete-success": "تم وضع علامة على الدرس كمكتمل بنجاح!",
+                "next-lesson": "الدرس التالي",
+                "not-enrolled": "أنت غير مسجل في <link>خطة التعلم</link> حتى الآن.",
+                "prev-lesson": "الدرس السابق",
+                "reflection-description-1": "عند النقر على \"إضافة تأمل\" سيتم نقلك إلى QuranReflect، وهي منصة لمشاركة التأملات الشخصية حول القرآن الكريم. وعلى عكس التفسير العلمي، فإن التأملات هي رؤى وتجارب شخصية تتعلق بالآيات.",
+                "reflection-description-2": "إذا قمت بالنشر علنًا، فسيتم مراجعة تأملاتك بواسطة فريق الإشراف وستصبح مرئية لمجتمع QuranReflect.",
+                "start-learning": "ابدا بالتعلم",
+                "tabs": {
+                    "main": "التفاصيل الرئيسة",
+                    "syllabus": "المنهج"
+                },
+                "what-happens-when-you-click-add-reflection": "ماذا يحدث عند النقر فوق \"إضافة انعكاس\"؟"
+            }
+        }
+    },
+    "__N_SSG": true
+}

@@ -1,0 +1,1045 @@
+{
+    "audio": {
+        "audio_files": [
+            {
+                "id": 1033,
+                "chapter_id": 62,
+                "file_size": 3428480.0,
+                "format": "mp3",
+                "audio_url": "https://download.quranicaudio.com/qdc/mishari_al_afasy/murattal/62.mp3",
+                "duration": 208000,
+                "verse_timings": [
+                    {
+                        "verse_key": "62:1",
+                        "timestamp_from": 0,
+                        "timestamp_to": 10740,
+                        "duration": 10740,
+                        "segments": [
+                            [
+                                1,
+                                0,
+                                930
+                            ],
+                            [
+                                2,
+                                930,
+                                1850
+                            ],
+                            [
+                                3,
+                                1850,
+                                2180
+                            ],
+                            [
+                                4,
+                                2180,
+                                2370
+                            ],
+                            [
+                                5,
+                                2370,
+                                3620
+                            ],
+                            [
+                                6,
+                                3620,
+                                4100
+                            ],
+                            [
+                                7,
+                                4100,
+                                4340
+                            ],
+                            [
+                                8,
+                                4340,
+                                5110
+                            ],
+                            [
+                                9,
+                                5110,
+                                5810
+                            ],
+                            [
+                                10,
+                                5810,
+                                6960
+                            ],
+                            [
+                                11,
+                                6960,
+                                7940
+                            ],
+                            [
+                                12,
+                                7940,
+                                10655
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "62:2",
+                        "timestamp_from": 10740,
+                        "timestamp_to": 34510,
+                        "duration": 23770,
+                        "segments": [
+                            [
+                                1,
+                                10655,
+                                10925
+                            ],
+                            [
+                                2,
+                                10925,
+                                11775
+                            ],
+                            [
+                                3,
+                                11775,
+                                12305
+                            ],
+                            [
+                                4,
+                                12305,
+                                12505
+                            ],
+                            [
+                                5,
+                                12505,
+                                14465
+                            ],
+                            [
+                                6,
+                                14465,
+                                15205
+                            ],
+                            [
+                                7,
+                                15205,
+                                16545
+                            ],
+                            [
+                                8,
+                                16545,
+                                17235
+                            ],
+                            [
+                                9,
+                                17235,
+                                18145
+                            ],
+                            [
+                                10,
+                                18145,
+                                19455
+                            ],
+                            [
+                                11,
+                                19455,
+                                20915
+                            ],
+                            [
+                                11,
+                                20915,
+                                22845
+                            ],
+                            [
+                                12,
+                                22845,
+                                24275
+                            ],
+                            [
+                                13,
+                                24275,
+                                25265
+                            ],
+                            [
+                                14,
+                                25265,
+                                26335
+                            ],
+                            [
+                                15,
+                                26335,
+                                27385
+                            ],
+                            [
+                                16,
+                                27385,
+                                29115
+                            ],
+                            [
+                                17,
+                                29115,
+                                29195
+                            ],
+                            [
+                                18,
+                                29195,
+                                29725
+                            ],
+                            [
+                                19,
+                                29725,
+                                30205
+                            ],
+                            [
+                                20,
+                                30205,
+                                31075
+                            ],
+                            [
+                                21,
+                                31075,
+                                34330
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "62:3",
+                        "timestamp_from": 34510,
+                        "timestamp_to": 43990,
+                        "duration": 9480,
+                        "segments": [
+                            [
+                                1,
+                                34415,
+                                35785
+                            ],
+                            [
+                                2,
+                                35785,
+                                36455
+                            ],
+                            [
+                                3,
+                                36455,
+                                37845
+                            ],
+                            [
+                                4,
+                                37845,
+                                38785
+                            ],
+                            [
+                                5,
+                                38785,
+                                39425
+                            ],
+                            [
+                                6,
+                                39425,
+                                40305
+                            ],
+                            [
+                                7,
+                                40305,
+                                41315
+                            ],
+                            [
+                                8,
+                                41315,
+                                43820
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "62:4",
+                        "timestamp_from": 43990,
+                        "timestamp_to": 55590,
+                        "duration": 11600,
+                        "segments": [
+                            [
+                                1,
+                                43915,
+                                44745
+                            ],
+                            [
+                                2,
+                                44745,
+                                45325
+                            ],
+                            [
+                                3,
+                                45325,
+                                46185
+                            ],
+                            [
+                                4,
+                                46185,
+                                47065
+                            ],
+                            [
+                                5,
+                                47065,
+                                47375
+                            ],
+                            [
+                                6,
+                                47375,
+                                51175
+                            ],
+                            [
+                                7,
+                                51175,
+                                52115
+                            ],
+                            [
+                                8,
+                                52115,
+                                52295
+                            ],
+                            [
+                                9,
+                                52295,
+                                53065
+                            ],
+                            [
+                                10,
+                                53065,
+                                55460
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "62:5",
+                        "timestamp_from": 55590,
+                        "timestamp_to": 79200,
+                        "duration": 23620,
+                        "segments": [
+                            [
+                                1,
+                                55535,
+                                56175
+                            ],
+                            [
+                                2,
+                                56175,
+                                57045
+                            ],
+                            [
+                                3,
+                                57045,
+                                58305
+                            ],
+                            [
+                                4,
+                                58305,
+                                59485
+                            ],
+                            [
+                                5,
+                                59485,
+                                60565
+                            ],
+                            [
+                                6,
+                                60565,
+                                60985
+                            ],
+                            [
+                                7,
+                                60985,
+                                62255
+                            ],
+                            [
+                                8,
+                                62255,
+                                63045
+                            ],
+                            [
+                                9,
+                                63045,
+                                63995
+                            ],
+                            [
+                                10,
+                                63995,
+                                64715
+                            ],
+                            [
+                                11,
+                                64715,
+                                66515
+                            ],
+                            [
+                                12,
+                                66515,
+                                67055
+                            ],
+                            [
+                                13,
+                                67055,
+                                67545
+                            ],
+                            [
+                                14,
+                                67545,
+                                68325
+                            ],
+                            [
+                                15,
+                                68325,
+                                69245
+                            ],
+                            [
+                                16,
+                                69245,
+                                70225
+                            ],
+                            [
+                                17,
+                                70225,
+                                71445
+                            ],
+                            [
+                                18,
+                                71445,
+                                73735
+                            ],
+                            [
+                                19,
+                                73735,
+                                74635
+                            ],
+                            [
+                                20,
+                                74635,
+                                75005
+                            ],
+                            [
+                                21,
+                                75005,
+                                75615
+                            ],
+                            [
+                                22,
+                                75615,
+                                76335
+                            ],
+                            [
+                                23,
+                                76335,
+                                79070
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "62:6",
+                        "timestamp_from": 79200,
+                        "timestamp_to": 104510,
+                        "duration": 25310,
+                        "segments": [
+                            [
+                                1,
+                                79115,
+                                79475
+                            ],
+                            [
+                                2,
+                                79475,
+                                82055
+                            ],
+                            [
+                                3,
+                                82055,
+                                83005
+                            ],
+                            [
+                                4,
+                                83005,
+                                84795
+                            ],
+                            [
+                                5,
+                                84795,
+                                85735
+                            ],
+                            [
+                                6,
+                                85735,
+                                86715
+                            ],
+                            [
+                                7,
+                                86715,
+                                88225
+                            ],
+                            [
+                                8,
+                                88225,
+                                90654
+                            ],
+                            [
+                                9,
+                                90655,
+                                91595
+                            ],
+                            [
+                                10,
+                                91595,
+                                92465
+                            ],
+                            [
+                                11,
+                                92465,
+                                93085
+                            ],
+                            [
+                                12,
+                                93085,
+                                94445
+                            ],
+                            [
+                                13,
+                                94445,
+                                96225
+                            ],
+                            [
+                                13,
+                                96225,
+                                98385
+                            ],
+                            [
+                                14,
+                                98385,
+                                99235
+                            ],
+                            [
+                                15,
+                                99235,
+                                100195
+                            ],
+                            [
+                                16,
+                                100195,
+                                101625
+                            ],
+                            [
+                                17,
+                                101625,
+                                104270
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "62:7",
+                        "timestamp_from": 104510,
+                        "timestamp_to": 119300,
+                        "duration": 14790,
+                        "segments": [
+                            [
+                                1,
+                                104355,
+                                104965
+                            ],
+                            [
+                                2,
+                                104965,
+                                108855
+                            ],
+                            [
+                                3,
+                                108855,
+                                110145
+                            ],
+                            [
+                                4,
+                                110145,
+                                110715
+                            ],
+                            [
+                                5,
+                                110715,
+                                111795
+                            ],
+                            [
+                                6,
+                                111795,
+                                113305
+                            ],
+                            [
+                                7,
+                                113305,
+                                114225
+                            ],
+                            [
+                                8,
+                                114225,
+                                115835
+                            ],
+                            [
+                                9,
+                                115835,
+                                119030
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "62:8",
+                        "timestamp_from": 119300,
+                        "timestamp_to": 141010,
+                        "duration": 21710,
+                        "segments": [
+                            [
+                                1,
+                                119185,
+                                119545
+                            ],
+                            [
+                                2,
+                                119545,
+                                120645
+                            ],
+                            [
+                                3,
+                                120645,
+                                121455
+                            ],
+                            [
+                                4,
+                                121455,
+                                122235
+                            ],
+                            [
+                                5,
+                                122235,
+                                123325
+                            ],
+                            [
+                                6,
+                                123325,
+                                123945
+                            ],
+                            [
+                                7,
+                                123945,
+                                125705
+                            ],
+                            [
+                                8,
+                                125705,
+                                127655
+                            ],
+                            [
+                                9,
+                                127655,
+                                129025
+                            ],
+                            [
+                                10,
+                                129025,
+                                130195
+                            ],
+                            [
+                                11,
+                                130195,
+                                130775
+                            ],
+                            [
+                                12,
+                                130775,
+                                131555
+                            ],
+                            [
+                                13,
+                                131555,
+                                132425
+                            ],
+                            [
+                                14,
+                                132425,
+                                133755
+                            ],
+                            [
+                                15,
+                                133755,
+                                135735
+                            ],
+                            [
+                                16,
+                                135735,
+                                136245
+                            ],
+                            [
+                                17,
+                                136245,
+                                137885
+                            ],
+                            [
+                                18,
+                                137885,
+                                140830
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "62:9",
+                        "timestamp_from": 141010,
+                        "timestamp_to": 166430,
+                        "duration": 25420,
+                        "segments": [
+                            [
+                                1,
+                                140945,
+                                143815
+                            ],
+                            [
+                                2,
+                                143815,
+                                144675
+                            ],
+                            [
+                                3,
+                                144675,
+                                147195
+                            ],
+                            [
+                                4,
+                                147195,
+                                147745
+                            ],
+                            [
+                                5,
+                                147745,
+                                148515
+                            ],
+                            [
+                                6,
+                                148515,
+                                149685
+                            ],
+                            [
+                                7,
+                                149685,
+                                150735
+                            ],
+                            [
+                                8,
+                                150735,
+                                151315
+                            ],
+                            [
+                                9,
+                                151315,
+                                152295
+                            ],
+                            [
+                                10,
+                                152295,
+                                153065
+                            ],
+                            [
+                                11,
+                                153065,
+                                153595
+                            ],
+                            [
+                                12,
+                                153595,
+                                154055
+                            ],
+                            [
+                                13,
+                                154055,
+                                154885
+                            ],
+                            [
+                                14,
+                                154885,
+                                155535
+                            ],
+                            [
+                                15,
+                                155535,
+                                157675
+                            ],
+                            [
+                                16,
+                                157675,
+                                159015
+                            ],
+                            [
+                                17,
+                                159015,
+                                159715
+                            ],
+                            [
+                                18,
+                                159715,
+                                160365
+                            ],
+                            [
+                                19,
+                                160365,
+                                161495
+                            ],
+                            [
+                                20,
+                                161495,
+                                163065
+                            ],
+                            [
+                                21,
+                                163065,
+                                166270
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "62:10",
+                        "timestamp_from": 166430,
+                        "timestamp_to": 181350,
+                        "duration": 14920,
+                        "segments": [
+                            [
+                                1,
+                                166335,
+                                167065
+                            ],
+                            [
+                                2,
+                                167065,
+                                167855
+                            ],
+                            [
+                                3,
+                                167855,
+                                168785
+                            ],
+                            [
+                                4,
+                                168785,
+                                170545
+                            ],
+                            [
+                                5,
+                                170545,
+                                170785
+                            ],
+                            [
+                                6,
+                                170785,
+                                171605
+                            ],
+                            [
+                                7,
+                                171605,
+                                172475
+                            ],
+                            [
+                                8,
+                                172475,
+                                172845
+                            ],
+                            [
+                                9,
+                                172845,
+                                174035
+                            ],
+                            [
+                                10,
+                                174035,
+                                174755
+                            ],
+                            [
+                                11,
+                                174755,
+                                175745
+                            ],
+                            [
+                                12,
+                                175745,
+                                176285
+                            ],
+                            [
+                                13,
+                                176285,
+                                177105
+                            ],
+                            [
+                                14,
+                                177105,
+                                178415
+                            ],
+                            [
+                                15,
+                                178415,
+                                181150
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "62:11",
+                        "timestamp_from": 181350,
+                        "timestamp_to": 208410,
+                        "duration": 27060,
+                        "segments": [
+                            [
+                                1,
+                                181245,
+                                182075
+                            ],
+                            [
+                                2,
+                                182075,
+                                182605
+                            ],
+                            [
+                                3,
+                                182605,
+                                183855
+                            ],
+                            [
+                                4,
+                                183855,
+                                184215
+                            ],
+                            [
+                                5,
+                                184215,
+                                184905
+                            ],
+                            [
+                                6,
+                                184905,
+                                188215
+                            ],
+                            [
+                                7,
+                                188215,
+                                189275
+                            ],
+                            [
+                                8,
+                                189275,
+                                190525
+                            ],
+                            [
+                                9,
+                                190525,
+                                193054
+                            ],
+                            [
+                                10,
+                                193054,
+                                193835
+                            ],
+                            [
+                                11,
+                                193835,
+                                194245
+                            ],
+                            [
+                                12,
+                                194245,
+                                195425
+                            ],
+                            [
+                                13,
+                                195425,
+                                196235
+                            ],
+                            [
+                                14,
+                                196235,
+                                196845
+                            ],
+                            [
+                                15,
+                                196845,
+                                197985
+                            ],
+                            [
+                                16,
+                                197985,
+                                198905
+                            ],
+                            [
+                                17,
+                                198905,
+                                199375
+                            ],
+                            [
+                                18,
+                                199375,
+                                201175
+                            ],
+                            [
+                                19,
+                                201175,
+                                202185
+                            ],
+                            [
+                                20,
+                                202185,
+                                202935
+                            ],
+                            [
+                                21,
+                                202935,
+                                207640
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "surah_info": {
+        "surah_name": "Surah Al-Jumu'ah",
+        "ayah_count": "11",
+        "revelation_place": "Medina",
+        "description": "Name\nIt is derived from the sentence idha nudiya-lis-salat-imin-yaum-il- Jumu'ati of verse 9. Although in this Surah injunctions about the Friday congregational Prayer also have been given, yet \"Jumu'ah \" is not the title of its subject-matter as a whole, but this name too, like the names of other Surahs, is only a symbolic title.\nPeriod of Revelation\nThe period of the revelation of the first section (vv. 1-8) is A. H. 7, and probably it was sent down, on the occasion of the conquest of Khaiber or soon after it. Bukhari, Muslim, Tirmidhi, Nasa'i and Ibn Jarir have related on the authority of Hadrat Abu Hurairah that he and other Companions were sitting in the Holy Prophet's assembly when these verses were revealed. About Abu Hurairah it is confirmed historically that he entered Islam after the truce of Hudaibiyah and before the conquest of Khaiber, and Khaiber was conquered, according to Ibn Hisham, in Muharram, and, according to Ibn Sa\\`d, in Jamadi al-Awwal, A.H. 7. Thus presumably Allah might have sent down these verses, addressing the Jews, when their last stronghold had fallen to the Muslims, or these might have been revealed when, seeing the fate of Khaiber, all the Jewish settlements of northern Hijaz had surrendered to the Islamic government.\nThe second section (vv. 9-11) was sent down shortly after the emigration, for the Holy Prophet (upon whom be Allah's peace) had established the Friday congregational Prayer on the 5th day after his arrival at Madinah. The incident that has been referred to in the last verse of this section must have occurred at a time when the people had not yet received full training in the etiquette of religious congregations.\nTheme and Subject Matter\nAs we have explained above, the two sections of this Surah were sent down in two different periods. That is why their themes as well as their audiences are different. Although there is a kind of harmony between them on account of which they have been put together in one Surah, yet we should understand their themes separately before we consider the question of their harmony.\nThe first section was sent down at a time when all Jewish efforts to obstruct the message of Islam during the past six years had failed. First. in Madinah as many as three of their powerful tribes had done whatever they could to frustrate the mission of the Holy Prophet, with the result that one of the tribes was completely exterminated and the other two were exiled. Then by intrigue and conspiracy they brought many of the Arab tribes together to advance on Madinah, but in the Battle of the Trench they were all repulsed. After this, Khaiber had become their stronghold, where a large number of the Jews expelled from Madinah also had taken refuge. At the time these verses were revealed, that too was taken without any extraordinary effort, and the Jews at their own request agreed to live there as tenants of the Muslims. After this final defeat the Jewish power in Arabia came to an end. Then, Wad-il-Qura, Fadak, Taima', Tabuk, all surrendered one after the other, so much so that all\r\nArabian Jews became subdued to the same Islam which they were not prepared to tolerate before. This was the occasion when Allah Almighty once again addressed them in this Surah, and probably this was the last and final address that was directed to them in the Qur'an. In this they have been reminded of three things:\n\n\n\"You refused to believe in this Messenger only because he was born among a people whom you contemptuously call the \"gentiles.\" You were under the false delusion that the Messenger must necessarily belong to your own community. You seemed to have been convinced that anyone who claimed to be a prophet from outside your community, must be an impostor, for this office had been reserved for your race, and a messenger could never be raised among the \"gentiles.\" But among the same gentiles Allah has raised a Messenger who is reciting His Book in front of your very eyes, is purifying souls, and showing the Right Way to the people whose misdeeds are well known to you. This is Allah's bounty, which He may bestow on anyone He may please. You have no monopoly over it so that He may bestow it over whomever you may please and may withhold it from whomever you may desire it to be withheld\".\n\n\n\"You had been made bearers of the Torah, but you did not understand your responsibility for it nor discharged it as you should have. You are like the donkey which is loaded with books, and which does not know what burden it is bearing. Rather you are worse than the donkey, for the donkey is devoid of sense, but you are intelligent. You not only shirk your responsibility of being bearers of Allah's revelations deliberately, Yet, you are under the delusion that you are Allah's favorites and the blessing of apostleship has been reserved for you alone. More than that, you seem to entertain the notion that whether you fulfill the demands of Allah's message or not, Allah In any case is bound not to make any other than you the bearer of His message.\"\n\n\n\"If you really were Allah's favorites and you were sure of having a p!ace of honor and high rank reserved with Him, you would not have feared death so much as to prefer a life of disgrace to death. It is only because of this fear of death that you have suffered humiliation after humiliation during the past few years. Your this condition is by itself a proof that you are fully conscious of your misdeeds, and your conscience is aware that if you die with these misdeeds, you will meet with a greater disgrace before Allah in the Hereafter than in this world.\"\n\n\nThis is the subject-matter of the first section. The second section that was sent down many years later, was appended to this Surah because in it Allah has bestowed Friday on the Muslims as against the Sabbath of the Jews, and Allah wanted to warn the Muslims not to treat their Friday as the Jews had treated their Sabbath. This section was sent down on an occasion when a trade caravan arrived in Madinah right at the time of the Friday congregational service and hearing its din and drum the audience, except for 12 men, left the Prophet's Mosque and rushed out to the caravan, although the Holy Prophet (upon whom be Allah's peace) at that time was delivering the Sermon. Thereupon it was enjoined that after the call is sounded for the Friday Prayer all trade and business and other occupations become forbidden. The believers should then suspend every kind of transaction and hasten to the remembrance of Allah. However, when the Prayer is over, they have the right to disperse in the\r\nland to resume their normal occupations. This section could be made an independent Surah in view of the commandments that it contains about the congregational service on Friday, and could also be included in some other Surah, but, instead, it has been included here particularly in the verses in which the Jews have been warned of the causes of their evil end. Its wisdom in our opinion is the same as we have explained above."
+    },
+    "surah_verses": [
+        {
+            "verse_key": "62:1",
+            "verse_num": "62:1",
+            "arabic_text": " يُسَبِّحُ لِلَّهِ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ٱلْمَلِكِ ٱلْقُدُّوسِ ٱلْعَزِيزِ ٱلْحَكِيمِ",
+            "en_text": "Whatever is in the heavens and whatever is on the earth ˹constantly˺ glorifies Allah—the King, the Most Holy, the Almighty, the All-Wise."
+        },
+        {
+            "verse_key": "62:2",
+            "verse_num": "62:2",
+            "arabic_text": "هُوَ ٱلَّذِى بَعَثَ فِى ٱلْأُمِّيِّـۧنَ رَسُولًا مِّنْهُمْ يَتْلُوا۟ عَلَيْهِمْ ءَايَـٰتِهِۦ وَيُزَكِّيهِمْ وَيُعَلِّمُهُمُ ٱلْكِتَـٰبَ وَٱلْحِكْمَةَ وَإِن كَانُوا۟ مِن قَبْلُ لَفِى ضَلَـٰلٍ مُّبِينٍ",
+            "en_text": "He is the One Who raised for the illiterate ˹people˺ a messenger from among themselves—reciting to them His revelations, purifying them, and teaching them the Book and wisdom, for indeed they had previously been clearly astray—"
+        },
+        {
+            "verse_key": "62:3",
+            "verse_num": "62:3",
+            "arabic_text": "وَءَاخَرِينَ مِنْهُمْ لَمَّا يَلْحَقُوا۟ بِهِمْ ۚ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ",
+            "en_text": "along with others of them who have not yet joined them ˹in faith˺. For He is the Almighty, All-Wise."
+        },
+        {
+            "verse_key": "62:4",
+            "verse_num": "62:4",
+            "arabic_text": "ذَٰلِكَ فَضْلُ ٱللَّهِ يُؤْتِيهِ مَن يَشَآءُ ۚ وَٱللَّهُ ذُو ٱلْفَضْلِ ٱلْعَظِيمِ",
+            "en_text": "This is the favour of Allah. He grants it to whoever He wills. And Allah is the Lord of infinite bounty."
+        },
+        {
+            "verse_key": "62:5",
+            "verse_num": "62:5",
+            "arabic_text": "مَثَلُ ٱلَّذِينَ حُمِّلُوا۟ ٱلتَّوْرَىٰةَ ثُمَّ لَمْ يَحْمِلُوهَا كَمَثَلِ ٱلْحِمَارِ يَحْمِلُ أَسْفَارًۢا ۚ بِئْسَ مَثَلُ ٱلْقَوْمِ ٱلَّذِينَ كَذَّبُوا۟ بِـَٔايَـٰتِ ٱللَّهِ ۚ وَٱللَّهُ لَا يَهْدِى ٱلْقَوْمَ ٱلظَّـٰلِمِينَ",
+            "en_text": "The example of those who were entrusted with ˹observing˺ the Torah but failed to do so, is that of a donkey carrying books.<sup foot_note=77516>1</sup> How evil is the example of those who reject Allah’s signs! For Allah does not guide the wrongdoing people."
+        },
+        {
+            "verse_key": "62:6",
+            "verse_num": "62:6",
+            "arabic_text": "قُلْ يَـٰٓأَيُّهَا ٱلَّذِينَ هَادُوٓا۟ إِن زَعَمْتُمْ أَنَّكُمْ أَوْلِيَآءُ لِلَّهِ مِن دُونِ ٱلنَّاسِ فَتَمَنَّوُا۟ ٱلْمَوْتَ إِن كُنتُمْ صَـٰدِقِينَ",
+            "en_text": "Say, ˹O Prophet,˺ “O Jews! If you claim to be Allah’s chosen ˹people˺ out of all humanity, then wish for death, if what you say is true.”"
+        },
+        {
+            "verse_key": "62:7",
+            "verse_num": "62:7",
+            "arabic_text": "وَلَا يَتَمَنَّوْنَهُۥٓ أَبَدًۢا بِمَا قَدَّمَتْ أَيْدِيهِمْ ۚ وَٱللَّهُ عَلِيمٌۢ بِٱلظَّـٰلِمِينَ",
+            "en_text": "But they will never wish for that because of what their hands have done.<sup foot_note=77517>1</sup> And Allah has ˹perfect˺ knowledge of the wrongdoers."
+        },
+        {
+            "verse_key": "62:8",
+            "verse_num": "62:8",
+            "arabic_text": "قُلْ إِنَّ ٱلْمَوْتَ ٱلَّذِى تَفِرُّونَ مِنْهُ فَإِنَّهُۥ مُلَـٰقِيكُمْ ۖ ثُمَّ تُرَدُّونَ إِلَىٰ عَـٰلِمِ ٱلْغَيْبِ وَٱلشَّهَـٰدَةِ فَيُنَبِّئُكُم بِمَا كُنتُمْ تَعْمَلُونَ",
+            "en_text": "Say, “The death you are running away from will inevitably come to you. Then you will be returned to the Knower of the seen and unseen, and He will inform you of what you used to do.”"
+        }
+    ]
+}

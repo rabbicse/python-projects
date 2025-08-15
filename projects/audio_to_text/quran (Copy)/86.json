@@ -1,0 +1,567 @@
+{
+    "audio": {
+        "audio_files": [
+            {
+                "id": 1081,
+                "chapter_id": 86,
+                "file_size": 1613952.0,
+                "format": "mp3",
+                "audio_url": "https://download.quranicaudio.com/qdc/mishari_al_afasy/murattal/86.mp3",
+                "duration": 88000,
+                "verse_timings": [
+                    {
+                        "verse_key": "86:1",
+                        "timestamp_from": 0,
+                        "timestamp_to": 5250,
+                        "duration": 5250,
+                        "segments": [
+                            [
+                                1,
+                                0,
+                                3260
+                            ],
+                            [
+                                2,
+                                3260,
+                                5165
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "86:2",
+                        "timestamp_from": 5250,
+                        "timestamp_to": 10340,
+                        "duration": 5090,
+                        "segments": [
+                            [
+                                1,
+                                5165,
+                                7325
+                            ],
+                            [
+                                2,
+                                7325,
+                                8405
+                            ],
+                            [
+                                3,
+                                8405,
+                                8515
+                            ],
+                            [
+                                4,
+                                8515,
+                                10190
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "86:3",
+                        "timestamp_from": 10340,
+                        "timestamp_to": 14020,
+                        "duration": 3680,
+                        "segments": [
+                            [
+                                1,
+                                10275,
+                                12235
+                            ],
+                            [
+                                2,
+                                12235,
+                                13850
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "86:4",
+                        "timestamp_from": 14020,
+                        "timestamp_to": 21020,
+                        "duration": 7000,
+                        "segments": [
+                            [
+                                1,
+                                13915,
+                                14815
+                            ],
+                            [
+                                2,
+                                14815,
+                                15645
+                            ],
+                            [
+                                3,
+                                15645,
+                                16395
+                            ],
+                            [
+                                4,
+                                16395,
+                                18265
+                            ],
+                            [
+                                5,
+                                18265,
+                                19345
+                            ],
+                            [
+                                6,
+                                19345,
+                                20790
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "86:5",
+                        "timestamp_from": 21020,
+                        "timestamp_to": 27990,
+                        "duration": 6980,
+                        "segments": [
+                            [
+                                1,
+                                20895,
+                                23035
+                            ],
+                            [
+                                2,
+                                23035,
+                                25055
+                            ],
+                            [
+                                3,
+                                25055,
+                                26575
+                            ],
+                            [
+                                4,
+                                26575,
+                                27800
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "86:6",
+                        "timestamp_from": 27990,
+                        "timestamp_to": 34180,
+                        "duration": 6190,
+                        "segments": [
+                            [
+                                1,
+                                27915,
+                                28625
+                            ],
+                            [
+                                2,
+                                28625,
+                                28895
+                            ],
+                            [
+                                3,
+                                28895,
+                                32735
+                            ],
+                            [
+                                4,
+                                32735,
+                                33960
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "86:7",
+                        "timestamp_from": 34180,
+                        "timestamp_to": 41600,
+                        "duration": 7420,
+                        "segments": [
+                            [
+                                1,
+                                34035,
+                                34945
+                            ],
+                            [
+                                2,
+                                34945,
+                                36025
+                            ],
+                            [
+                                3,
+                                36025,
+                                36705
+                            ],
+                            [
+                                4,
+                                36705,
+                                37605
+                            ],
+                            [
+                                5,
+                                37605,
+                                41400
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "86:8",
+                        "timestamp_from": 41600,
+                        "timestamp_to": 46930,
+                        "duration": 5330,
+                        "segments": [
+                            [
+                                1,
+                                41545,
+                                43395
+                            ],
+                            [
+                                2,
+                                43395,
+                                44135
+                            ],
+                            [
+                                3,
+                                44135,
+                                45255
+                            ],
+                            [
+                                4,
+                                45255,
+                                46820
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "86:9",
+                        "timestamp_from": 46930,
+                        "timestamp_to": 51450,
+                        "duration": 4520,
+                        "segments": [
+                            [
+                                1,
+                                46875,
+                                47435
+                            ],
+                            [
+                                2,
+                                47435,
+                                48145
+                            ],
+                            [
+                                3,
+                                48145,
+                                51320
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "86:10",
+                        "timestamp_from": 51450,
+                        "timestamp_to": 57980,
+                        "duration": 6530,
+                        "segments": [
+                            [
+                                1,
+                                51375,
+                                51965
+                            ],
+                            [
+                                2,
+                                51965,
+                                52585
+                            ],
+                            [
+                                3,
+                                52585,
+                                53935
+                            ],
+                            [
+                                4,
+                                53935,
+                                55675
+                            ],
+                            [
+                                5,
+                                55675,
+                                56265
+                            ],
+                            [
+                                6,
+                                56265,
+                                57760
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "86:11",
+                        "timestamp_from": 57980,
+                        "timestamp_to": 62790,
+                        "duration": 4810,
+                        "segments": [
+                            [
+                                1,
+                                57835,
+                                60515
+                            ],
+                            [
+                                2,
+                                60515,
+                                61135
+                            ],
+                            [
+                                3,
+                                61135,
+                                62560
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "86:12",
+                        "timestamp_from": 62790,
+                        "timestamp_to": 65920,
+                        "duration": 3140,
+                        "segments": [
+                            [
+                                1,
+                                62705,
+                                63835
+                            ],
+                            [
+                                2,
+                                63835,
+                                64435
+                            ],
+                            [
+                                3,
+                                64435,
+                                65790
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "86:13",
+                        "timestamp_from": 65920,
+                        "timestamp_to": 70700,
+                        "duration": 4780,
+                        "segments": [
+                            [
+                                1,
+                                65865,
+                                67685
+                            ],
+                            [
+                                2,
+                                67685,
+                                69585
+                            ],
+                            [
+                                3,
+                                69585,
+                                70520
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "86:14",
+                        "timestamp_from": 70700,
+                        "timestamp_to": 73260,
+                        "duration": 2560,
+                        "segments": [
+                            [
+                                1,
+                                70575,
+                                71245
+                            ],
+                            [
+                                2,
+                                71245,
+                                71655
+                            ],
+                            [
+                                3,
+                                71655,
+                                72760
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "86:15",
+                        "timestamp_from": 73260,
+                        "timestamp_to": 78010,
+                        "duration": 4760,
+                        "segments": [
+                            [
+                                1,
+                                72885,
+                                74735
+                            ],
+                            [
+                                2,
+                                74735,
+                                76115
+                            ],
+                            [
+                                3,
+                                76115,
+                                77140
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "86:16",
+                        "timestamp_from": 78010,
+                        "timestamp_to": 80780,
+                        "duration": 2770,
+                        "segments": [
+                            [
+                                1,
+                                77505,
+                                78675
+                            ],
+                            [
+                                2,
+                                78675,
+                                79740
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "86:17",
+                        "timestamp_from": 80780,
+                        "timestamp_to": 88020,
+                        "duration": 7240,
+                        "segments": [
+                            [
+                                1,
+                                80245,
+                                81315
+                            ],
+                            [
+                                2,
+                                81315,
+                                82965
+                            ],
+                            [
+                                3,
+                                82965,
+                                84455
+                            ],
+                            [
+                                4,
+                                84455,
+                                87120
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "surah_info": {
+        "surah_name": "Surah At-Tariq",
+        "ayah_count": "17",
+        "revelation_place": "Mecca",
+        "description": "Name\nThe Surah taken its name from the word at-tariq in its first verse.\nPeriod of Revelation\nThe style of its subject matter resembles that of the earliest Surahs revealed at Makkah, but this surah was sent down at a stage when the disbelievers of Makkah were employing all sorts of devices and plans to defeat and frustrate the message of the Qur'an and Muhammad (upon whom be Allah's peace and blessings).\nTheme and Subject Matter\nIt discuses two themes: first that man has to appear before God after death; second, that the Qur'an is a decisive Word which no plan or device of the disbelievers can defeat or frustrate.\nFirst of all, the stars of the heavens have been cited as an evidence that there is nothing in the universe which may continue to exist and survive without guardian over it. Then man has been asked to consider his own self as to how he has been brought into existence from a mere sperm drop and shaped into a living human being. Then it has been said that the God, Who has so brought him into existence, has certainly the power to create him once again, and this resurrection will be for the purpose to subject to scrutiny all the secrets of man which remained hidden in the world. At that time, man will neither be able to escape the consequences of his deeds by his own power, nor will anyone else come to his rescue.\nIn conclusion, it has been pointed out that just as the falling of rain from the sky and the sprouting of plants and crops from the earth is no child's play but a serious task, so also the truths expressed in the Qur'an are no jest but a firm and unchangeable reality. The disbelievers are involved in the misunderstanding that their plans and devices will defeat the invitation of the Qur'an, but they do not know that Allah too is devising a plan which will bring to naught all their scheming and planning. Than in one sentence the discourse has been summed up, with a word of consolation to the Holy Prophet (upon whom be peace) and a tacit warning to the disbelievers, saying: \"Have patience for a while: let the disbelievers do their worst. Before long they will themselves realize whether they have been able to defeat the Qur'an by their scheming or the Qur'an has dominated them in the very place where they are exerting their utmost to defeat it.\""
+    },
+    "surah_verses": [
+        {
+            "verse_key": "86:1",
+            "verse_num": "86:1",
+            "arabic_text": " وَٱلسَّمَآءِ وَٱلطَّارِقِ",
+            "en_text": "By the heaven and the nightly star!"
+        },
+        {
+            "verse_key": "86:2",
+            "verse_num": "86:2",
+            "arabic_text": "وَمَآ أَدْرَىٰكَ مَا ٱلطَّارِقُ",
+            "en_text": "And what will make you realize what the nightly star is?"
+        },
+        {
+            "verse_key": "86:3",
+            "verse_num": "86:3",
+            "arabic_text": "ٱلنَّجْمُ ٱلثَّاقِبُ",
+            "en_text": "˹It is˺ the star of piercing brightness."
+        },
+        {
+            "verse_key": "86:4",
+            "verse_num": "86:4",
+            "arabic_text": "إِن كُلُّ نَفْسٍ لَّمَّا عَلَيْهَا حَافِظٌ",
+            "en_text": "There is no soul without a vigilant angel ˹recording everything˺."
+        },
+        {
+            "verse_key": "86:5",
+            "verse_num": "86:5",
+            "arabic_text": "فَلْيَنظُرِ ٱلْإِنسَـٰنُ مِمَّ خُلِقَ",
+            "en_text": "Let people then consider what they were created from!"
+        },
+        {
+            "verse_key": "86:6",
+            "verse_num": "86:6",
+            "arabic_text": "خُلِقَ مِن مَّآءٍ دَافِقٍ",
+            "en_text": "˹They were˺ created from a spurting fluid,"
+        },
+        {
+            "verse_key": "86:7",
+            "verse_num": "86:7",
+            "arabic_text": "يَخْرُجُ مِنۢ بَيْنِ ٱلصُّلْبِ وَٱلتَّرَآئِبِ",
+            "en_text": "stemming from between the backbone and the ribcage.<sup foot_note=77611>1</sup>"
+        },
+        {
+            "verse_key": "86:8",
+            "verse_num": "86:8",
+            "arabic_text": "إِنَّهُۥ عَلَىٰ رَجْعِهِۦ لَقَادِرٌ",
+            "en_text": "Surely He is fully capable of bringing them back ˹to life˺"
+        },
+        {
+            "verse_key": "86:9",
+            "verse_num": "86:9",
+            "arabic_text": "يَوْمَ تُبْلَى ٱلسَّرَآئِرُ",
+            "en_text": "on the Day all secrets will be disclosed."
+        },
+        {
+            "verse_key": "86:10",
+            "verse_num": "86:10",
+            "arabic_text": "فَمَا لَهُۥ مِن قُوَّةٍ وَلَا نَاصِرٍ",
+            "en_text": "Then one will have neither power nor ˹any˺ helper."
+        },
+        {
+            "verse_key": "86:11",
+            "verse_num": "86:11",
+            "arabic_text": "وَٱلسَّمَآءِ ذَاتِ ٱلرَّجْعِ",
+            "en_text": "By the sky with its recurring cycles,"
+        },
+        {
+            "verse_key": "86:12",
+            "verse_num": "86:12",
+            "arabic_text": "وَٱلْأَرْضِ ذَاتِ ٱلصَّدْعِ",
+            "en_text": "and the earth with its sprouting plants!"
+        },
+        {
+            "verse_key": "86:13",
+            "verse_num": "86:13",
+            "arabic_text": "إِنَّهُۥ لَقَوْلٌ فَصْلٌ",
+            "en_text": "Surely this ˹Quran˺ is a decisive word,"
+        },
+        {
+            "verse_key": "86:14",
+            "verse_num": "86:14",
+            "arabic_text": "وَمَا هُوَ بِٱلْهَزْلِ",
+            "en_text": "and is not to be taken lightly."
+        },
+        {
+            "verse_key": "86:15",
+            "verse_num": "86:15",
+            "arabic_text": "إِنَّهُمْ يَكِيدُونَ كَيْدًا",
+            "en_text": "They are certainly devising ˹evil˺ plans,"
+        },
+        {
+            "verse_key": "86:16",
+            "verse_num": "86:16",
+            "arabic_text": "وَأَكِيدُ كَيْدًا",
+            "en_text": "but I too am planning."
+        },
+        {
+            "verse_key": "86:17",
+            "verse_num": "86:17",
+            "arabic_text": "فَمَهِّلِ ٱلْكَـٰفِرِينَ أَمْهِلْهُمْ رُوَيْدًۢا",
+            "en_text": "So bear with the disbelievers ˹O Prophet˺. Let them be for ˹just˺ a little while."
+        }
+    ]
+}

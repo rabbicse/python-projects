@@ -1,0 +1,909 @@
+{
+    "audio": {
+        "audio_files": [
+            {
+                "id": 1077,
+                "chapter_id": 84,
+                "file_size": 2572416.0,
+                "format": "mp3",
+                "audio_url": "https://download.quranicaudio.com/qdc/mishari_al_afasy/murattal/84.mp3",
+                "duration": 145000,
+                "verse_timings": [
+                    {
+                        "verse_key": "84:1",
+                        "timestamp_from": 0,
+                        "timestamp_to": 5560,
+                        "duration": 5570,
+                        "segments": [
+                            [
+                                1,
+                                0,
+                                400
+                            ],
+                            [
+                                2,
+                                400,
+                                3560
+                            ],
+                            [
+                                3,
+                                3560,
+                                5515
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:2",
+                        "timestamp_from": 5560,
+                        "timestamp_to": 9270,
+                        "duration": 3710,
+                        "segments": [
+                            [
+                                1,
+                                5505,
+                                6565
+                            ],
+                            [
+                                2,
+                                6565,
+                                7715
+                            ],
+                            [
+                                3,
+                                7715,
+                                9160
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:3",
+                        "timestamp_from": 9270,
+                        "timestamp_to": 12010,
+                        "duration": 2740,
+                        "segments": [
+                            [
+                                1,
+                                9215,
+                                9825
+                            ],
+                            [
+                                2,
+                                9825,
+                                10725
+                            ],
+                            [
+                                3,
+                                10725,
+                                11930
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:4",
+                        "timestamp_from": 12010,
+                        "timestamp_to": 16030,
+                        "duration": 4020,
+                        "segments": [
+                            [
+                                1,
+                                11985,
+                                13055
+                            ],
+                            [
+                                2,
+                                13055,
+                                13415
+                            ],
+                            [
+                                3,
+                                13415,
+                                14245
+                            ],
+                            [
+                                4,
+                                14245,
+                                15950
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:5",
+                        "timestamp_from": 16030,
+                        "timestamp_to": 19900,
+                        "duration": 3870,
+                        "segments": [
+                            [
+                                1,
+                                15975,
+                                17015
+                            ],
+                            [
+                                2,
+                                17015,
+                                18195
+                            ],
+                            [
+                                3,
+                                18195,
+                                19780
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:6",
+                        "timestamp_from": 19900,
+                        "timestamp_to": 33510,
+                        "duration": 13610,
+                        "segments": [
+                            [
+                                1,
+                                19835,
+                                22435
+                            ],
+                            [
+                                2,
+                                22435,
+                                24685
+                            ],
+                            [
+                                3,
+                                24685,
+                                26065
+                            ],
+                            [
+                                4,
+                                26065,
+                                27185
+                            ],
+                            [
+                                5,
+                                27185,
+                                27725
+                            ],
+                            [
+                                6,
+                                27725,
+                                28585
+                            ],
+                            [
+                                7,
+                                28585,
+                                30055
+                            ],
+                            [
+                                8,
+                                30055,
+                                33420
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:7",
+                        "timestamp_from": 33510,
+                        "timestamp_to": 39620,
+                        "duration": 6110,
+                        "segments": [
+                            [
+                                1,
+                                33485,
+                                35325
+                            ],
+                            [
+                                2,
+                                35325,
+                                35695
+                            ],
+                            [
+                                3,
+                                35695,
+                                36475
+                            ],
+                            [
+                                4,
+                                36475,
+                                37745
+                            ],
+                            [
+                                5,
+                                37745,
+                                39540
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:8",
+                        "timestamp_from": 39620,
+                        "timestamp_to": 44920,
+                        "duration": 5300,
+                        "segments": [
+                            [
+                                1,
+                                39565,
+                                40385
+                            ],
+                            [
+                                2,
+                                40385,
+                                41455
+                            ],
+                            [
+                                3,
+                                41455,
+                                42645
+                            ],
+                            [
+                                4,
+                                42645,
+                                44840
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:9",
+                        "timestamp_from": 44920,
+                        "timestamp_to": 51790,
+                        "duration": 6870,
+                        "segments": [
+                            [
+                                1,
+                                44895,
+                                46885
+                            ],
+                            [
+                                2,
+                                46885,
+                                48715
+                            ],
+                            [
+                                3,
+                                48715,
+                                49775
+                            ],
+                            [
+                                4,
+                                49775,
+                                51740
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:10",
+                        "timestamp_from": 51790,
+                        "timestamp_to": 59940,
+                        "duration": 8150,
+                        "segments": [
+                            [
+                                1,
+                                51765,
+                                53675
+                            ],
+                            [
+                                2,
+                                53675,
+                                54065
+                            ],
+                            [
+                                3,
+                                54065,
+                                54855
+                            ],
+                            [
+                                4,
+                                54855,
+                                56215
+                            ],
+                            [
+                                5,
+                                56215,
+                                58545
+                            ],
+                            [
+                                6,
+                                58545,
+                                59870
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:11",
+                        "timestamp_from": 59940,
+                        "timestamp_to": 63210,
+                        "duration": 3270,
+                        "segments": [
+                            [
+                                1,
+                                59895,
+                                60695
+                            ],
+                            [
+                                2,
+                                60695,
+                                61445
+                            ],
+                            [
+                                3,
+                                61445,
+                                63110
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:12",
+                        "timestamp_from": 63210,
+                        "timestamp_to": 65930,
+                        "duration": 2720,
+                        "segments": [
+                            [
+                                1,
+                                63155,
+                                64125
+                            ],
+                            [
+                                2,
+                                64125,
+                                65850
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:13",
+                        "timestamp_from": 65930,
+                        "timestamp_to": 72900,
+                        "duration": 6980,
+                        "segments": [
+                            [
+                                1,
+                                65905,
+                                67595
+                            ],
+                            [
+                                2,
+                                67595,
+                                68305
+                            ],
+                            [
+                                3,
+                                68305,
+                                69895
+                            ],
+                            [
+                                4,
+                                69895,
+                                70925
+                            ],
+                            [
+                                5,
+                                70925,
+                                72830
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:14",
+                        "timestamp_from": 72900,
+                        "timestamp_to": 80840,
+                        "duration": 7940,
+                        "segments": [
+                            [
+                                1,
+                                72845,
+                                74385
+                            ],
+                            [
+                                2,
+                                74385,
+                                75975
+                            ],
+                            [
+                                3,
+                                75975,
+                                76305
+                            ],
+                            [
+                                4,
+                                76305,
+                                76745
+                            ],
+                            [
+                                5,
+                                76745,
+                                80760
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:15",
+                        "timestamp_from": 80840,
+                        "timestamp_to": 87340,
+                        "duration": 6510,
+                        "segments": [
+                            [
+                                1,
+                                80815,
+                                81545
+                            ],
+                            [
+                                2,
+                                81545,
+                                83295
+                            ],
+                            [
+                                3,
+                                83295,
+                                84285
+                            ],
+                            [
+                                4,
+                                84285,
+                                84945
+                            ],
+                            [
+                                5,
+                                84945,
+                                85595
+                            ],
+                            [
+                                6,
+                                85595,
+                                87300
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:16",
+                        "timestamp_from": 87340,
+                        "timestamp_to": 91680,
+                        "duration": 4340,
+                        "segments": [
+                            [
+                                1,
+                                87315,
+                                89385
+                            ],
+                            [
+                                2,
+                                89385,
+                                90205
+                            ],
+                            [
+                                3,
+                                90205,
+                                91610
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:17",
+                        "timestamp_from": 91680,
+                        "timestamp_to": 94400,
+                        "duration": 2720,
+                        "segments": [
+                            [
+                                1,
+                                91635,
+                                92685
+                            ],
+                            [
+                                2,
+                                92685,
+                                93295
+                            ],
+                            [
+                                3,
+                                93295,
+                                94330
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:18",
+                        "timestamp_from": 94400,
+                        "timestamp_to": 97010,
+                        "duration": 2610,
+                        "segments": [
+                            [
+                                1,
+                                94375,
+                                95505
+                            ],
+                            [
+                                2,
+                                95505,
+                                95825
+                            ],
+                            [
+                                3,
+                                95825,
+                                96960
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:19",
+                        "timestamp_from": 97010,
+                        "timestamp_to": 102440,
+                        "duration": 5430,
+                        "segments": [
+                            [
+                                1,
+                                96985,
+                                99325
+                            ],
+                            [
+                                2,
+                                99325,
+                                100105
+                            ],
+                            [
+                                3,
+                                100105,
+                                101395
+                            ],
+                            [
+                                4,
+                                101395,
+                                102380
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:20",
+                        "timestamp_from": 102440,
+                        "timestamp_to": 107480,
+                        "duration": 5040,
+                        "segments": [
+                            [
+                                1,
+                                102405,
+                                103035
+                            ],
+                            [
+                                2,
+                                103035,
+                                103565
+                            ],
+                            [
+                                3,
+                                103565,
+                                104085
+                            ],
+                            [
+                                4,
+                                104085,
+                                107420
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:21",
+                        "timestamp_from": 107480,
+                        "timestamp_to": 115530,
+                        "duration": 8050,
+                        "segments": [
+                            [
+                                1,
+                                107455,
+                                108295
+                            ],
+                            [
+                                2,
+                                108295,
+                                108995
+                            ],
+                            [
+                                3,
+                                108995,
+                                110035
+                            ],
+                            [
+                                4,
+                                110035,
+                                111505
+                            ],
+                            [
+                                5,
+                                111505,
+                                111985
+                            ],
+                            [
+                                6,
+                                111985,
+                                115480
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:22",
+                        "timestamp_from": 115530,
+                        "timestamp_to": 121620,
+                        "duration": 6090,
+                        "segments": [
+                            [
+                                1,
+                                115505,
+                                115955
+                            ],
+                            [
+                                2,
+                                115955,
+                                116925
+                            ],
+                            [
+                                3,
+                                116925,
+                                117755
+                            ],
+                            [
+                                4,
+                                117755,
+                                121530
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:23",
+                        "timestamp_from": 121620,
+                        "timestamp_to": 126710,
+                        "duration": 5090,
+                        "segments": [
+                            [
+                                1,
+                                121555,
+                                122505
+                            ],
+                            [
+                                2,
+                                122505,
+                                123305
+                            ],
+                            [
+                                3,
+                                123305,
+                                123895
+                            ],
+                            [
+                                4,
+                                123895,
+                                126620
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:24",
+                        "timestamp_from": 126710,
+                        "timestamp_to": 132800,
+                        "duration": 6090,
+                        "segments": [
+                            [
+                                1,
+                                126685,
+                                128775
+                            ],
+                            [
+                                2,
+                                128775,
+                                129925
+                            ],
+                            [
+                                3,
+                                129925,
+                                132750
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "84:25",
+                        "timestamp_from": 132800,
+                        "timestamp_to": 145390,
+                        "duration": 12590,
+                        "segments": [
+                            [
+                                1,
+                                132775,
+                                133375
+                            ],
+                            [
+                                2,
+                                133375,
+                                134295
+                            ],
+                            [
+                                3,
+                                134295,
+                                135445
+                            ],
+                            [
+                                4,
+                                135445,
+                                136175
+                            ],
+                            [
+                                5,
+                                136175,
+                                137735
+                            ],
+                            [
+                                6,
+                                137735,
+                                138395
+                            ],
+                            [
+                                7,
+                                138395,
+                                139145
+                            ],
+                            [
+                                8,
+                                139145,
+                                139925
+                            ],
+                            [
+                                9,
+                                139925,
+                                145310
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "surah_info": {
+        "surah_name": "Surah Al-Inshiqaq",
+        "ayah_count": "25",
+        "revelation_place": "Mecca",
+        "description": "Name\nIt is derived from the word inshaqqat in the first verse. Inshaqqat is infinitive which means to split asunder, thereby implying that it is the Surah in which mention has been made of the splitting asunder of the heavens.\nPeriod of Revelation\nThis too is one of the earliest Surahs to be revealed at Makkah. The internal evidence of its subject matter indicates that persecution of the Muslims had not yet started; however, the message of the Qur'an was being openly repudiated at Makkah and the people were refusing to acknowledge that Resurrection would ever take place when they would have to appear before their God to render an account of their deeds.\nTheme and Subject Matter\nIts theme is the Resurrection and Hereafter.\nIn the first five verses not only have the state of Resurrection been described vividly but an argument of its being true and certain also have been given. It has been stated that the heavens on that Day will split asunder, the earth will be spread out plain and smooth, and it will throw out whatever lies inside it of the dead bodies of men and evidences of their deeds so as to become completely empty from within. The argument given for it is that such will be the Command of their Lord for the heavens and the earth; since both are His creation. they cannot dare disobey His Command. For them the only right and proper course is that they should obey the Command of their Lord.\nThen, in vv. 6-19 it has been said that whether man Is conscious of this fact or not, he in any case is moving willy nilly to the destination when he will appear and stand before his Lord. At that time all human beings will divide into two parts: first those whose records will be given in their right hands: they will be forgiven without any severe reckoning; second those whose records will be given them behind their back. They will wish that they should die somehow, but they will not die; instead they will be cast into Hell. They will meet with this fate because in the world they remained lost in the misunderstanding that they would never have to appear before God to render an account of their deeds, whereas their Lord was watching whatever they were doing, and there was no reason why they should escape the accountability for their deeds. Their moving gradual]y from the life of the world to the meting out of rewards and punishments in the Hereafter was as certain as the\r\nappearance of twilight after sunset, the coming of the night after the day, the returning of men and animals to their respective abodes at night, and the growing of the crescent into full moon.\nIn conclusion, the disbelievers who repudiate the Qur'an instead of bowing down to God when they hear it, have been forewarned of a grievous punishment and the good news of limitless rewards has been given to the believers and the righteous."
+    },
+    "surah_verses": [
+        {
+            "verse_key": "84:1",
+            "verse_num": "84:1",
+            "arabic_text": " إِذَا ٱلسَّمَآءُ ٱنشَقَّتْ",
+            "en_text": "When the sky bursts open,"
+        },
+        {
+            "verse_key": "84:2",
+            "verse_num": "84:2",
+            "arabic_text": "وَأَذِنَتْ لِرَبِّهَا وَحُقَّتْ",
+            "en_text": "obeying its Lord as it must,"
+        },
+        {
+            "verse_key": "84:3",
+            "verse_num": "84:3",
+            "arabic_text": "وَإِذَا ٱلْأَرْضُ مُدَّتْ",
+            "en_text": "and when the earth is flattened out,"
+        },
+        {
+            "verse_key": "84:4",
+            "verse_num": "84:4",
+            "arabic_text": "وَأَلْقَتْ مَا فِيهَا وَتَخَلَّتْ",
+            "en_text": "and ejects ˹all˺ its contents<sup foot_note=77607>1</sup> and becomes empty,"
+        },
+        {
+            "verse_key": "84:5",
+            "verse_num": "84:5",
+            "arabic_text": "وَأَذِنَتْ لِرَبِّهَا وَحُقَّتْ",
+            "en_text": "obeying its Lord as it must, ˹surely you will all be judged˺."
+        },
+        {
+            "verse_key": "84:6",
+            "verse_num": "84:6",
+            "arabic_text": "يَـٰٓأَيُّهَا ٱلْإِنسَـٰنُ إِنَّكَ كَادِحٌ إِلَىٰ رَبِّكَ كَدْحًا فَمُلَـٰقِيهِ",
+            "en_text": "O humanity! Indeed, you are labouring restlessly towards your Lord, and will ˹eventually˺ meet the consequences."
+        },
+        {
+            "verse_key": "84:7",
+            "verse_num": "84:7",
+            "arabic_text": "فَأَمَّا مَنْ أُوتِىَ كِتَـٰبَهُۥ بِيَمِينِهِۦ",
+            "en_text": "As for those who are given their record in their right hand,"
+        },
+        {
+            "verse_key": "84:8",
+            "verse_num": "84:8",
+            "arabic_text": "فَسَوْفَ يُحَاسَبُ حِسَابًا يَسِيرًا",
+            "en_text": "they will have an easy reckoning,"
+        },
+        {
+            "verse_key": "84:9",
+            "verse_num": "84:9",
+            "arabic_text": "وَيَنقَلِبُ إِلَىٰٓ أَهْلِهِۦ مَسْرُورًا",
+            "en_text": "and will return to their people joyfully."
+        },
+        {
+            "verse_key": "84:10",
+            "verse_num": "84:10",
+            "arabic_text": "وَأَمَّا مَنْ أُوتِىَ كِتَـٰبَهُۥ وَرَآءَ ظَهْرِهِۦ",
+            "en_text": "And as for those who are given their record ˹in their left hand˺ from behind their backs,"
+        },
+        {
+            "verse_key": "84:11",
+            "verse_num": "84:11",
+            "arabic_text": "فَسَوْفَ يَدْعُوا۟ ثُبُورًا",
+            "en_text": "they will cry for ˹instant˺ destruction,"
+        },
+        {
+            "verse_key": "84:12",
+            "verse_num": "84:12",
+            "arabic_text": "وَيَصْلَىٰ سَعِيرًا",
+            "en_text": "and will burn in the blazing Fire."
+        },
+        {
+            "verse_key": "84:13",
+            "verse_num": "84:13",
+            "arabic_text": "إِنَّهُۥ كَانَ فِىٓ أَهْلِهِۦ مَسْرُورًا",
+            "en_text": "For they used to be prideful among their people,"
+        },
+        {
+            "verse_key": "84:14",
+            "verse_num": "84:14",
+            "arabic_text": "إِنَّهُۥ ظَنَّ أَن لَّن يَحُورَ",
+            "en_text": "thinking they would never return ˹to Allah˺."
+        },
+        {
+            "verse_key": "84:15",
+            "verse_num": "84:15",
+            "arabic_text": "بَلَىٰٓ إِنَّ رَبَّهُۥ كَانَ بِهِۦ بَصِيرًا",
+            "en_text": "Yes ˹they would˺! Surely their Lord has always been All-Seeing of them."
+        },
+        {
+            "verse_key": "84:16",
+            "verse_num": "84:16",
+            "arabic_text": "فَلَآ أُقْسِمُ بِٱلشَّفَقِ",
+            "en_text": "So, I do swear by the twilight!"
+        },
+        {
+            "verse_key": "84:17",
+            "verse_num": "84:17",
+            "arabic_text": "وَٱلَّيْلِ وَمَا وَسَقَ",
+            "en_text": "And by the night and whatever it envelops!"
+        },
+        {
+            "verse_key": "84:18",
+            "verse_num": "84:18",
+            "arabic_text": "وَٱلْقَمَرِ إِذَا ٱتَّسَقَ",
+            "en_text": "And by the moon when it waxes full!"
+        },
+        {
+            "verse_key": "84:19",
+            "verse_num": "84:19",
+            "arabic_text": "لَتَرْكَبُنَّ طَبَقًا عَن طَبَقٍ",
+            "en_text": "You will certainly pass from one state to another.<sup foot_note=77608>1</sup>"
+        },
+        {
+            "verse_key": "84:20",
+            "verse_num": "84:20",
+            "arabic_text": "فَمَا لَهُمْ لَا يُؤْمِنُونَ",
+            "en_text": "So what is the matter with them that they do not believe,"
+        },
+        {
+            "verse_key": "84:21",
+            "verse_num": "84:21",
+            "arabic_text": "وَإِذَا قُرِئَ عَلَيْهِمُ ٱلْقُرْءَانُ لَا يَسْجُدُونَ ۩",
+            "en_text": "and when the Quran is recited to them, they do not bow down ˹in submission˺?<sup foot_note=77609>1</sup>"
+        },
+        {
+            "verse_key": "84:22",
+            "verse_num": "84:22",
+            "arabic_text": "بَلِ ٱلَّذِينَ كَفَرُوا۟ يُكَذِّبُونَ",
+            "en_text": "In fact, the disbelievers persist in denial."
+        },
+        {
+            "verse_key": "84:23",
+            "verse_num": "84:23",
+            "arabic_text": "وَٱللَّهُ أَعْلَمُ بِمَا يُوعُونَ",
+            "en_text": "But Allah knows best whatever they hide."
+        },
+        {
+            "verse_key": "84:24",
+            "verse_num": "84:24",
+            "arabic_text": "فَبَشِّرْهُم بِعَذَابٍ أَلِيمٍ",
+            "en_text": "So give them good news of a painful punishment."
+        },
+        {
+            "verse_key": "84:25",
+            "verse_num": "84:25",
+            "arabic_text": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ لَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍۭ",
+            "en_text": "But those who believe and do good will have a never-ending reward."
+        }
+    ]
+}

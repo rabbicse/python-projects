@@ -1,0 +1,504 @@
+{
+    "audio": {
+        "audio_files": [
+            {
+                "id": 1091,
+                "chapter_id": 91,
+                "file_size": 1360000.0,
+                "format": "mp3",
+                "audio_url": "https://download.quranicaudio.com/qdc/mishari_al_afasy/murattal/91.mp3",
+                "duration": 73000,
+                "verse_timings": [
+                    {
+                        "verse_key": "91:1",
+                        "timestamp_from": 0,
+                        "timestamp_to": 3110,
+                        "duration": 3110,
+                        "segments": [
+                            [
+                                1,
+                                0,
+                                1070
+                            ],
+                            [
+                                2,
+                                1070,
+                                2575
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "91:2",
+                        "timestamp_from": 3110,
+                        "timestamp_to": 6610,
+                        "duration": 3500,
+                        "segments": [
+                            [
+                                1,
+                                2575,
+                                3625
+                            ],
+                            [
+                                2,
+                                3625,
+                                4205
+                            ],
+                            [
+                                3,
+                                4205,
+                                5670
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "91:3",
+                        "timestamp_from": 6610,
+                        "timestamp_to": 11360,
+                        "duration": 4760,
+                        "segments": [
+                            [
+                                1,
+                                6205,
+                                8445
+                            ],
+                            [
+                                2,
+                                8445,
+                                9075
+                            ],
+                            [
+                                3,
+                                9075,
+                                10550
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "91:4",
+                        "timestamp_from": 11360,
+                        "timestamp_to": 15040,
+                        "duration": 3680,
+                        "segments": [
+                            [
+                                1,
+                                10945,
+                                12075
+                            ],
+                            [
+                                2,
+                                12075,
+                                12695
+                            ],
+                            [
+                                3,
+                                12695,
+                                14260
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "91:5",
+                        "timestamp_from": 15040,
+                        "timestamp_to": 20030,
+                        "duration": 4990,
+                        "segments": [
+                            [
+                                1,
+                                14675,
+                                17345
+                            ],
+                            [
+                                2,
+                                17345,
+                                18015
+                            ],
+                            [
+                                3,
+                                18015,
+                                19250
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "91:6",
+                        "timestamp_from": 20030,
+                        "timestamp_to": 23370,
+                        "duration": 3340,
+                        "segments": [
+                            [
+                                1,
+                                19615,
+                                20695
+                            ],
+                            [
+                                2,
+                                20695,
+                                21265
+                            ],
+                            [
+                                3,
+                                21265,
+                                22550
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "91:7",
+                        "timestamp_from": 23370,
+                        "timestamp_to": 27710,
+                        "duration": 4340,
+                        "segments": [
+                            [
+                                1,
+                                22965,
+                                24715
+                            ],
+                            [
+                                2,
+                                24715,
+                                25225
+                            ],
+                            [
+                                3,
+                                25225,
+                                26800
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "91:8",
+                        "timestamp_from": 27710,
+                        "timestamp_to": 32880,
+                        "duration": 5170,
+                        "segments": [
+                            [
+                                1,
+                                27205,
+                                28665
+                            ],
+                            [
+                                2,
+                                28665,
+                                29945
+                            ],
+                            [
+                                3,
+                                29945,
+                                31780
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "91:9",
+                        "timestamp_from": 32880,
+                        "timestamp_to": 37010,
+                        "duration": 4130,
+                        "segments": [
+                            [
+                                1,
+                                32285,
+                                32685
+                            ],
+                            [
+                                2,
+                                32685,
+                                33565
+                            ],
+                            [
+                                3,
+                                33565,
+                                34505
+                            ],
+                            [
+                                4,
+                                34505,
+                                35990
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "91:10",
+                        "timestamp_from": 37010,
+                        "timestamp_to": 41350,
+                        "duration": 4340,
+                        "segments": [
+                            [
+                                1,
+                                36585,
+                                37125
+                            ],
+                            [
+                                2,
+                                37125,
+                                37875
+                            ],
+                            [
+                                3,
+                                37875,
+                                38915
+                            ],
+                            [
+                                4,
+                                38915,
+                                40420
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "91:11",
+                        "timestamp_from": 41350,
+                        "timestamp_to": 45400,
+                        "duration": 4050,
+                        "segments": [
+                            [
+                                1,
+                                40845,
+                                41895
+                            ],
+                            [
+                                2,
+                                41895,
+                                42765
+                            ],
+                            [
+                                3,
+                                42765,
+                                44430
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "91:12",
+                        "timestamp_from": 45400,
+                        "timestamp_to": 49210,
+                        "duration": 3810,
+                        "segments": [
+                            [
+                                1,
+                                44935,
+                                45435
+                            ],
+                            [
+                                2,
+                                45435,
+                                46905
+                            ],
+                            [
+                                3,
+                                46905,
+                                48300
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "91:13",
+                        "timestamp_from": 49210,
+                        "timestamp_to": 56500,
+                        "duration": 7290,
+                        "segments": [
+                            [
+                                1,
+                                48765,
+                                49625
+                            ],
+                            [
+                                2,
+                                49625,
+                                50185
+                            ],
+                            [
+                                3,
+                                50185,
+                                51105
+                            ],
+                            [
+                                4,
+                                51105,
+                                52035
+                            ],
+                            [
+                                5,
+                                52035,
+                                52835
+                            ],
+                            [
+                                6,
+                                52835,
+                                53795
+                            ],
+                            [
+                                7,
+                                53795,
+                                55510
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "91:14",
+                        "timestamp_from": 56500,
+                        "timestamp_to": 67450,
+                        "duration": 10950,
+                        "segments": [
+                            [
+                                1,
+                                55955,
+                                57435
+                            ],
+                            [
+                                2,
+                                57435,
+                                58935
+                            ],
+                            [
+                                3,
+                                58935,
+                                60035
+                            ],
+                            [
+                                4,
+                                60035,
+                                61035
+                            ],
+                            [
+                                5,
+                                61035,
+                                62745
+                            ],
+                            [
+                                6,
+                                62745,
+                                64635
+                            ],
+                            [
+                                7,
+                                64635,
+                                66510
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "91:15",
+                        "timestamp_from": 67450,
+                        "timestamp_to": 73090,
+                        "duration": 5640,
+                        "segments": [
+                            [
+                                1,
+                                67055,
+                                67575
+                            ],
+                            [
+                                2,
+                                67575,
+                                68795
+                            ],
+                            [
+                                3,
+                                68795,
+                                72420
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "surah_info": {
+        "surah_name": "Surah Ash-Shams",
+        "ayah_count": "15",
+        "revelation_place": "Mecca",
+        "description": "Name\nThe Surah has been so designated after the word ash-shams with which it opens.\nPeriod of Revelation\nThe subject matter and the style show that this Surah too was revealed in the earliest period at Makkah at a stage when opposition to the Holy Prophet (upon whom be Allah's peace) had grown very strong and intense.\nTheme and Subject Matter\nIts theme is to distinguish the good from the evil and to warn the people, who were refusing to understand this distinction and insisting on following the evil way, of the evil end.\nIn view of the subject matter, this Surah consists of two parts. The first part consists of vv. 1-10, and the second of vv. 11-15. The first part deals with three things:\n\n\nThat just as the sun and the moon, the day and the night, the earth and the sky, are different from each other and contradictory in their effects and results, so are the good and the evil different from each other and contradictory in their effects and results; they are neither alike in their outward appearance nor can they be alike in their results.\n\n\nThat Allah after giving the human self powers of the body, sense and mind has not left it uninformed in the world, but has instilled into his unconscious by means of a natural inspiration the distinction between good and evil, right and wrong, and the sense of the good to be good and of the evil to be evil.\n\n\nThat the future of man depends on how by using the powers of discrimination, will and judgment that Allah has endowed him with, he develops the good and suppresses the evil tendencies of the self. If he develops the good inclination and frees his self of the evil inclinations, he will attain to eternal success, and if, on the contrary, he suppresses the good and promotes the evil, he will meet with disappointment and failure.\n\n\nIn the second part citing the historical precedent of the people of Thamud the significance of Prophethood has been brought out. A Messenger is raised in the world, because the inspirational knowledge of good and evil that Allah has placed in human nature, is by itself not enough for the guidance of man, but on account of his failure to understand it fully man has been proposing wrong criteria and theories of good and evil and thus going astray. That is why Allah sent down clear and definite Revelation to the Prophets (peace be upon them) to augment man's natural inspiration so that they may expound to the people as to what is good and what is evil. Likewise, the Prophet Salih (peace be upon him) was sent to the people of Thamud, but the people overwhelmed by the evil of their self had become so rebellious that they rejected him. And when he presented before them the miracle of the she-camel, as demanded by themselves, the most wretched one of them, despite his warning, hamstrung it, in accordance with the will and desire of the people. Consequently, the entire tribe was overtaken by a disaster.\nWhile narrating this story of the Thamud nowhere in the Surah has it been said \"O people of Quraish, if you rejected your Prophet, Muhammad (upon whom be Allah's peace and blessings), as the Thamud had rejected theirs, you too would meet with the same fate as they met.\" The conditions at that time in Makkah were similar to those that had been created by the wicked among the people of Thamud against the Prophet Salih (peace be upon him). Therefore, the narration of this story in those conditions was by itself enough to suggest to the people of Makkah how precisely this historical precedent applied to them."
+    },
+    "surah_verses": [
+        {
+            "verse_key": "91:1",
+            "verse_num": "91:1",
+            "arabic_text": " وَٱلشَّمْسِ وَضُحَىٰهَا",
+            "en_text": "By the sun and its brightness,"
+        },
+        {
+            "verse_key": "91:2",
+            "verse_num": "91:2",
+            "arabic_text": "وَٱلْقَمَرِ إِذَا تَلَىٰهَا",
+            "en_text": "and the moon as it follows it,<sup foot_note=77623>1</sup>"
+        },
+        {
+            "verse_key": "91:3",
+            "verse_num": "91:3",
+            "arabic_text": "وَٱلنَّهَارِ إِذَا جَلَّىٰهَا",
+            "en_text": "and the day as it unveils it,"
+        },
+        {
+            "verse_key": "91:4",
+            "verse_num": "91:4",
+            "arabic_text": "وَٱلَّيْلِ إِذَا يَغْشَىٰهَا",
+            "en_text": "and the night as it conceals it!"
+        },
+        {
+            "verse_key": "91:5",
+            "verse_num": "91:5",
+            "arabic_text": "وَٱلسَّمَآءِ وَمَا بَنَىٰهَا",
+            "en_text": "And by heaven and ˹the One˺ Who built it,"
+        },
+        {
+            "verse_key": "91:6",
+            "verse_num": "91:6",
+            "arabic_text": "وَٱلْأَرْضِ وَمَا طَحَىٰهَا",
+            "en_text": "and the earth and ˹the One˺ Who spread it!"
+        },
+        {
+            "verse_key": "91:7",
+            "verse_num": "91:7",
+            "arabic_text": "وَنَفْسٍ وَمَا سَوَّىٰهَا",
+            "en_text": "And by the soul and ˹the One˺ Who fashioned it,"
+        },
+        {
+            "verse_key": "91:8",
+            "verse_num": "91:8",
+            "arabic_text": "فَأَلْهَمَهَا فُجُورَهَا وَتَقْوَىٰهَا",
+            "en_text": "then with ˹the knowledge of˺ right and wrong inspired it!"
+        },
+        {
+            "verse_key": "91:9",
+            "verse_num": "91:9",
+            "arabic_text": "قَدْ أَفْلَحَ مَن زَكَّىٰهَا",
+            "en_text": "Successful indeed is the one who purifies their soul,"
+        },
+        {
+            "verse_key": "91:10",
+            "verse_num": "91:10",
+            "arabic_text": "وَقَدْ خَابَ مَن دَسَّىٰهَا",
+            "en_text": "and doomed is the one who corrupts it!"
+        },
+        {
+            "verse_key": "91:11",
+            "verse_num": "91:11",
+            "arabic_text": "كَذَّبَتْ ثَمُودُ بِطَغْوَىٰهَآ",
+            "en_text": "Thamûd rejected ˹the truth˺ out of arrogance,"
+        },
+        {
+            "verse_key": "91:12",
+            "verse_num": "91:12",
+            "arabic_text": "إِذِ ٱنۢبَعَثَ أَشْقَىٰهَا",
+            "en_text": "when the most wicked of them was roused ˹to kill the she-camel˺."
+        },
+        {
+            "verse_key": "91:13",
+            "verse_num": "91:13",
+            "arabic_text": "فَقَالَ لَهُمْ رَسُولُ ٱللَّهِ نَاقَةَ ٱللَّهِ وَسُقْيَـٰهَا",
+            "en_text": "But the messenger of Allah warned them, “˹Do not disturb˺ Allah’s camel and her ˹turn to˺ drink!”"
+        },
+        {
+            "verse_key": "91:14",
+            "verse_num": "91:14",
+            "arabic_text": "فَكَذَّبُوهُ فَعَقَرُوهَا فَدَمْدَمَ عَلَيْهِمْ رَبُّهُم بِذَنۢبِهِمْ فَسَوَّىٰهَا",
+            "en_text": "Still they defied him and slaughtered her. So their Lord crushed them for their crime, levelling all to the ground.<sup foot_note=77624>1</sup>"
+        },
+        {
+            "verse_key": "91:15",
+            "verse_num": "91:15",
+            "arabic_text": "وَلَا يَخَافُ عُقْبَـٰهَا",
+            "en_text": "He has no fear of consequences."
+        }
+    ]
+}

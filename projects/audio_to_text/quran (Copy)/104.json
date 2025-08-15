@@ -1,0 +1,315 @@
+{
+    "audio": {
+        "audio_files": [
+            {
+                "id": 1117,
+                "chapter_id": 104,
+                "file_size": 938112.0,
+                "format": "mp3",
+                "audio_url": "https://download.quranicaudio.com/qdc/mishari_al_afasy/murattal/104.mp3",
+                "duration": 47000,
+                "verse_timings": [
+                    {
+                        "verse_key": "104:1",
+                        "timestamp_from": 0,
+                        "timestamp_to": 4600,
+                        "duration": 4600,
+                        "segments": [
+                            [
+                                1,
+                                0,
+                                690
+                            ],
+                            [
+                                2,
+                                690,
+                                1860
+                            ],
+                            [
+                                3,
+                                1860,
+                                2810
+                            ],
+                            [
+                                4,
+                                2810,
+                                4535
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "104:2",
+                        "timestamp_from": 4600,
+                        "timestamp_to": 9980,
+                        "duration": 5380,
+                        "segments": [
+                            [
+                                1,
+                                4535,
+                                5655
+                            ],
+                            [
+                                2,
+                                5655,
+                                6365
+                            ],
+                            [
+                                3,
+                                6365,
+                                7485
+                            ],
+                            [
+                                4,
+                                7485,
+                                9840
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "104:3",
+                        "timestamp_from": 9980,
+                        "timestamp_to": 16640,
+                        "duration": 6660,
+                        "segments": [
+                            [
+                                1,
+                                9905,
+                                10815
+                            ],
+                            [
+                                2,
+                                10815,
+                                12315
+                            ],
+                            [
+                                3,
+                                12315,
+                                14795
+                            ],
+                            [
+                                4,
+                                14795,
+                                16480
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "104:4",
+                        "timestamp_from": 16640,
+                        "timestamp_to": 23380,
+                        "duration": 6740,
+                        "segments": [
+                            [
+                                1,
+                                16555,
+                                17525
+                            ],
+                            [
+                                2,
+                                17525,
+                                21355
+                            ],
+                            [
+                                3,
+                                21355,
+                                21645
+                            ],
+                            [
+                                4,
+                                21645,
+                                23220
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "104:5",
+                        "timestamp_from": 23380,
+                        "timestamp_to": 28400,
+                        "duration": 5020,
+                        "segments": [
+                            [
+                                1,
+                                23305,
+                                25295
+                            ],
+                            [
+                                2,
+                                25295,
+                                26425
+                            ],
+                            [
+                                3,
+                                26425,
+                                26615
+                            ],
+                            [
+                                4,
+                                26615,
+                                28250
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "104:6",
+                        "timestamp_from": 28400,
+                        "timestamp_to": 31900,
+                        "duration": 3500,
+                        "segments": [
+                            [
+                                1,
+                                28325,
+                                29025
+                            ],
+                            [
+                                2,
+                                29025,
+                                29965
+                            ],
+                            [
+                                3,
+                                29965,
+                                31750
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "104:7",
+                        "timestamp_from": 31900,
+                        "timestamp_to": 36340,
+                        "duration": 4440,
+                        "segments": [
+                            [
+                                1,
+                                31825,
+                                32925
+                            ],
+                            [
+                                2,
+                                32925,
+                                34035
+                            ],
+                            [
+                                3,
+                                34035,
+                                34375
+                            ],
+                            [
+                                4,
+                                34375,
+                                36140
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "104:8",
+                        "timestamp_from": 36340,
+                        "timestamp_to": 42010,
+                        "duration": 5670,
+                        "segments": [
+                            [
+                                1,
+                                36215,
+                                38065
+                            ],
+                            [
+                                2,
+                                38065,
+                                39505
+                            ],
+                            [
+                                3,
+                                39505,
+                                41800
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "104:9",
+                        "timestamp_from": 42010,
+                        "timestamp_to": 47680,
+                        "duration": 5670,
+                        "segments": [
+                            [
+                                1,
+                                41925,
+                                42375
+                            ],
+                            [
+                                2,
+                                42375,
+                                43025
+                            ],
+                            [
+                                3,
+                                43025,
+                                46790
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "surah_info": {
+        "surah_name": "Surah Al-Humazah",
+        "ayah_count": "9",
+        "revelation_place": "Mecca",
+        "description": "NameThe Surah takes its name from the word humazah occurring in the first verse.Period of RevelationAll commentators are agreed that it is a Makki Surah; a study of its subject matter and style shows that this too is one of the earliest Surahs to be revealed in Makkah.Theme and Subject MatterIn the surah, some of the evils prevalent among the materialistic hoarders of wealth in the pre-Islamic days have been condemned. Every Arab knew that these evils genuinely existed in their society; they regarded them as evils and nobody thought they were good. After Allah calls attention to this kind of ugly character, the ultimate end in the Hereafter of the people with this kind of character has been stated. Both these things (i.e. the character and his fate in the Hereafter) have been depicted in a way which makes the listener automatically reach the conclusion that such a man deserves to meet such an end, and since people of such character do not suffer any punishment in the world, but seem to be thriving instead, the occurrence of the Hereafter becomes absolutely inevitable.If this Surah is read in the sequence of the Surahs beginning with Az-Zilzal, one can fully understand how the fundamental beliefs of Islam and its teachings were impressed on the people's minds in the earliest stages in Makkah. In Surah Az-Zilzal, it was said that in the Hereafter man's full record will be placed before him and not an atom's weight of good or evil done by him in the world will have been left unrecorded. In Surah Al-Adiyat, attention was drawn to the plunder and loot, bloodshed and vandalism, prevailing in Arabia before Islam; making the people realize that the way the powers given by God were being abused was indeed an expression of sheer ingratitude to Him. They were told that the matter would not end up in the world, but in the second life after death with not only their deeds but their intentions and motives also being examined. They were informed that their Lord fully well knows which of them deserves reward or punishment. In Surah Al-Qariah after depicting Resurrection, the people were warned that in the Hereafter a man's good or evil end will be dependent on whether the scale of his good deeds was heavier, or the scale of his evil deeds was; in Surah At-Takathur the people were taken to task for the materialistic mentality due to which they remained occupied in seeking increase in worldly benefits, pleasures, comforts and position, and in vying with one another for abundance of everything until death overtook them. Then, warning them of the evil consequences of their heedlessness, they were told that the world was not an open table of food for them to pick and choose whatever they pleased, but for every single blessing that they were enjoying in the world, they would have to render an account to their Lord and Sustainer as to how they obtained it and how they used it. In Surah Al-Asr, it was declared that each member, each group and each community of mankind, even the entire world of humanity, was in manifest loss, if its members were devoid of Faith and righteous deeds and of the practice of exhorting others to truth and patience. Immediately after this comes Surah Al-Humazah, in which after presenting a specimen of leadership of the pre-Islamic age of ignorance, the people have been asked the question: \"What should such a character deserve if not loss and perdition?\""
+    },
+    "surah_verses": [
+        {
+            "verse_key": "104:1",
+            "verse_num": "104:1",
+            "arabic_text": " وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ",
+            "en_text": "Woe to every backbiter, slanderer,"
+        },
+        {
+            "verse_key": "104:2",
+            "verse_num": "104:2",
+            "arabic_text": "ٱلَّذِى جَمَعَ مَالًا وَعَدَّدَهُۥ",
+            "en_text": "who amasses wealth ˹greedily˺ and counts it ˹repeatedly˺,"
+        },
+        {
+            "verse_key": "104:3",
+            "verse_num": "104:3",
+            "arabic_text": "يَحْسَبُ أَنَّ مَالَهُۥٓ أَخْلَدَهُۥ",
+            "en_text": "thinking that their wealth will make them immortal!"
+        },
+        {
+            "verse_key": "104:4",
+            "verse_num": "104:4",
+            "arabic_text": "كَلَّا ۖ لَيُنۢبَذَنَّ فِى ٱلْحُطَمَةِ",
+            "en_text": "Not at all! Such a person will certainly be tossed into the Crusher."
+        },
+        {
+            "verse_key": "104:5",
+            "verse_num": "104:5",
+            "arabic_text": "وَمَآ أَدْرَىٰكَ مَا ٱلْحُطَمَةُ",
+            "en_text": "And what will make you realize what the Crusher is?"
+        },
+        {
+            "verse_key": "104:6",
+            "verse_num": "104:6",
+            "arabic_text": "نَارُ ٱللَّهِ ٱلْمُوقَدَةُ",
+            "en_text": "˹It is˺ Allah’s kindled Fire,"
+        },
+        {
+            "verse_key": "104:7",
+            "verse_num": "104:7",
+            "arabic_text": "ٱلَّتِى تَطَّلِعُ عَلَى ٱلْأَفْـِٔدَةِ",
+            "en_text": "which rages over the hearts."
+        },
+        {
+            "verse_key": "104:8",
+            "verse_num": "104:8",
+            "arabic_text": "إِنَّهَا عَلَيْهِم مُّؤْصَدَةٌ",
+            "en_text": "It will be sealed over them,"
+        },
+        {
+            "verse_key": "104:9",
+            "verse_num": "104:9",
+            "arabic_text": "فِى عَمَدٍ مُّمَدَّدَةٍۭ",
+            "en_text": "˹tightly secured˺ with long braces.<sup foot_note=77638>1</sup> "
+        }
+    ]
+}

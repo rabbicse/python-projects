@@ -1,0 +1,247 @@
+{
+    "audio": {
+        "audio_files": [
+            {
+                "id": 1123,
+                "chapter_id": 107,
+                "file_size": 929920.0,
+                "format": "mp3",
+                "audio_url": "https://download.quranicaudio.com/qdc/mishari_al_afasy/murattal/107.mp3",
+                "duration": 48000,
+                "verse_timings": [
+                    {
+                        "verse_key": "107:1",
+                        "timestamp_from": 0,
+                        "timestamp_to": 6270,
+                        "duration": 6270,
+                        "segments": [
+                            [
+                                1,
+                                0,
+                                1010
+                            ],
+                            [
+                                2,
+                                1010,
+                                1670
+                            ],
+                            [
+                                3,
+                                1670,
+                                2990
+                            ],
+                            [
+                                4,
+                                2990,
+                                6185
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "107:2",
+                        "timestamp_from": 6270,
+                        "timestamp_to": 12800,
+                        "duration": 6530,
+                        "segments": [
+                            [
+                                1,
+                                6185,
+                                7335
+                            ],
+                            [
+                                2,
+                                7335,
+                                8185
+                            ],
+                            [
+                                3,
+                                8185,
+                                8955
+                            ],
+                            [
+                                4,
+                                8955,
+                                12620
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "107:3",
+                        "timestamp_from": 12800,
+                        "timestamp_to": 20010,
+                        "duration": 7210,
+                        "segments": [
+                            [
+                                1,
+                                12705,
+                                13465
+                            ],
+                            [
+                                2,
+                                13465,
+                                14435
+                            ],
+                            [
+                                3,
+                                14435,
+                                14945
+                            ],
+                            [
+                                4,
+                                14945,
+                                15855
+                            ],
+                            [
+                                5,
+                                15855,
+                                19850
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "107:4",
+                        "timestamp_from": 20010,
+                        "timestamp_to": 25730,
+                        "duration": 5720,
+                        "segments": [
+                            [
+                                1,
+                                19945,
+                                20875
+                            ],
+                            [
+                                2,
+                                20875,
+                                25310
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "107:5",
+                        "timestamp_from": 25730,
+                        "timestamp_to": 33280,
+                        "duration": 7550,
+                        "segments": [
+                            [
+                                1,
+                                25375,
+                                26665
+                            ],
+                            [
+                                2,
+                                26665,
+                                27055
+                            ],
+                            [
+                                3,
+                                27055,
+                                27805
+                            ],
+                            [
+                                4,
+                                27805,
+                                29465
+                            ],
+                            [
+                                5,
+                                29465,
+                                32850
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "107:6",
+                        "timestamp_from": 33280,
+                        "timestamp_to": 40910,
+                        "duration": 7630,
+                        "segments": [
+                            [
+                                1,
+                                33205,
+                                34435
+                            ],
+                            [
+                                2,
+                                34435,
+                                34895
+                            ],
+                            [
+                                3,
+                                34895,
+                                40660
+                            ]
+                        ]
+                    },
+                    {
+                        "verse_key": "107:7",
+                        "timestamp_from": 40910,
+                        "timestamp_to": 48170,
+                        "duration": 7260,
+                        "segments": [
+                            [
+                                1,
+                                40735,
+                                42235
+                            ],
+                            [
+                                2,
+                                42235,
+                                47260
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "surah_info": {
+        "surah_name": "Surah Al-Ma'un",
+        "ayah_count": "7",
+        "revelation_place": "Mecca",
+        "description": "NameThe Surah has been titled so after the word al-ma'un occurring at the end of the last verse.Period of RevelationIbn Marduyah has cited Ibn Abbas (may Allah bless them both) as saying that this Surah is Makki, and the same is also the view of Ata and Jabir but Abu Hayyan in Al-Bahr al-Muhit has cited Ibn Abbas, Qatadah and Dahhak as saying that this Surah was revealed in Madinah. In our opinion there is an internal piece of evidence in the Surah itself which points to it being a Madani Revelation. It holds out a threat of destruction to those praying ones who are unmindful of their Prayers and who pray only to be seen. This kind of hypocrites were found only at Madinah, for it was there that Islam and the Muslims gained such strength that many people were compelled to believe from expedience, had to visit the Mosque, join the congregational Prayer and prayed only to be seen of others, so as to be counted among the Muslims.Contrary to this is, in Makkah, conditions were altogether different. No one had to pray to be seen. There, it was difficult even for the believers to pray in congregation; they prayed secretly and if a person prayed openly he did so at the risk of his life. The kind of hypocrites found in Makkah did not comprise of those who believed and prayed to be seen but those who in their hearts had known and acknowledged the Holy Messenger of Allah (upon whom be peace) to be on the true path, but were avoiding accepting Islam in order to maintain their position of leadership and authority, or were not prepared to take the risk of being afflicted with the kind of hardships with which they found the believers afflicted in the society around them. This condition of the hypocrites at Makkah has been described in verses 10-11 of Surah Al- Ankabut. (For explanation, see footnotes 13 to 16 of Surah Al-'Ankabut).Theme and Subject MatterIts theme is to point out what kind of morals a man develops when he refuses to believe in the Hereafter. In verses 2-3, the condition of the disbelievers who openly belie the Hereafter has been described, and in the last four verses the state of those hypocrites who apparently are Muslims but have no idea of the Hereafter, its judgment, and the meting out of rewards and punishments accordingly has been described. On the whole, the object of depicting the attitude and conduct of two kinds of people is to impress the point that man cannot develop a strong, stable and pure character in himself unless he believes in the Hereafter."
+    },
+    "surah_verses": [
+        {
+            "verse_key": "107:1",
+            "verse_num": "107:1",
+            "arabic_text": " أَرَءَيْتَ ٱلَّذِى يُكَذِّبُ بِٱلدِّينِ",
+            "en_text": "Have you seen the one who denies the ˹final˺ Judgment?"
+        },
+        {
+            "verse_key": "107:2",
+            "verse_num": "107:2",
+            "arabic_text": "فَذَٰلِكَ ٱلَّذِى يَدُعُّ ٱلْيَتِيمَ",
+            "en_text": "That is the one who repulses the orphan,"
+        },
+        {
+            "verse_key": "107:3",
+            "verse_num": "107:3",
+            "arabic_text": "وَلَا يَحُضُّ عَلَىٰ طَعَامِ ٱلْمِسْكِينِ",
+            "en_text": "and does not encourage the feeding of the poor."
+        },
+        {
+            "verse_key": "107:4",
+            "verse_num": "107:4",
+            "arabic_text": "فَوَيْلٌ لِّلْمُصَلِّينَ",
+            "en_text": "So woe to those ˹hypocrites˺ who pray"
+        },
+        {
+            "verse_key": "107:5",
+            "verse_num": "107:5",
+            "arabic_text": "ٱلَّذِينَ هُمْ عَن صَلَاتِهِمْ سَاهُونَ",
+            "en_text": "yet are unmindful of their prayers;"
+        },
+        {
+            "verse_key": "107:6",
+            "verse_num": "107:6",
+            "arabic_text": "ٱلَّذِينَ هُمْ يُرَآءُونَ",
+            "en_text": "those who ˹only˺ show off,"
+        },
+        {
+            "verse_key": "107:7",
+            "verse_num": "107:7",
+            "arabic_text": "وَيَمْنَعُونَ ٱلْمَاعُونَ",
+            "en_text": "and refuse to give ˹even the simplest˺ aid.<sup foot_note=77641>1</sup> "
+        }
+    ]
+}
