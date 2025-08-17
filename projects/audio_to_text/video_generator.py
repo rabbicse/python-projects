@@ -158,6 +158,7 @@ def process_subtitle_line(line, font, color, is_arabic=False):
     draw.text((10, 10), line, font=font, fill=color)
     return img, total_width, total_height
 
+
 def create_subtitle_clips(video, subs, font_english, font_arabic):
     """Generate animated subtitle clips"""
     subtitle_clips = []
@@ -181,19 +182,63 @@ def create_subtitle_clips(video, subs, font_english, font_arabic):
 
             if is_arabic:
                 # working
-                line_img, total_width, _ = process_subtitle_line(line, font, color, True)
-                line_clip = ImageClip(np.array(line_img), duration=end_time - start_time)
+                # line_img, total_width, _ = process_subtitle_line(line, font, color, True)
+                # line_clip = ImageClip(np.array(line_img), duration=end_time - start_time)
+                # y_pos = video.h - SUBTITLE_HEIGHT - line_idx * LINE_SPACING
+                # x_pos = (video.w - total_width) / 2
+                # line_clip = (
+                #     line_clip
+                #     .with_position((x_pos, y_pos))
+                #     .with_start(start_time)
+                #     .with_end(end_time)
+                #     .with_effects([vfx.FadeIn(FADE_DURATION)])
+                # )
+                # subtitle_clips.append(line_clip)
+                #endworking
+
+
+                # new working
+                line_img, total_width, total_height = process_subtitle_line(line, font, color, True)
+
                 y_pos = video.h - SUBTITLE_HEIGHT - line_idx * LINE_SPACING
                 x_pos = (video.w - total_width) / 2
-                line_clip = (
-                    line_clip
-                    .with_position((x_pos, y_pos))
-                    .with_start(start_time)
-                    .with_end(end_time)
-                    .with_effects([vfx.FadeIn(FADE_DURATION)])
-                )
-                subtitle_clips.append(line_clip)
-                #endworking
+
+                def get_frame(t):
+                    """
+                    Function to generate a frame at time 't'.
+                    """
+                    # Calculate how many characters to show based on time 't'
+                    # Animation is linear over the duration
+                    chars_to_show = int(len(line) * (t / duration))
+
+                    # --- THIS LINE IS THE FIX ---
+                    # Use the already correctly ordered string.
+                    animated_text = line
+
+                    # Calculate the width of the portion of text that should be visible
+                    visible_text_width = font_arabic.getlength(animated_text[:chars_to_show])
+
+                    # Create a transparent image for the frame
+                    frame_img = Image.new('RGBA', (total_width, total_height), (0, 0, 0, 0))
+                    draw = ImageDraw.Draw(frame_img)
+
+                    # Draw a semi-transparent background box
+                    # draw.rounded_rectangle([(0, 0), (final_width, final_height)], radius=20, fill=BG_COLOR)
+
+                    # Draw the full, correctly-shaped text
+                    # But we'll crop it using the background box as a mask
+                    x_pos = total_width - visible_text_width - 20
+
+                    print(f"{x_pos}, {y_pos}")
+
+                    # Draw the full string, but only the part that is within the visible area will be seen
+                    draw.text((x_pos, y_pos), animated_text, font=font_arabic, fill=COLOR_ARABIC)
+
+                    return np.array(frame_img)
+
+                video_clip = VideoClip(get_frame, duration=duration)
+                subtitle_clips.append(video_clip)
+                # end new working
 
 
                 # total_width, total_height = preprocess_subtitle(line, font, is_arabic=True)
@@ -290,11 +335,11 @@ def main():
 
 
     try:
-        # # Step 1: Download MP3 file from JSON
-        # print("Step 1: Downloading MP3 file...")
-        # if not download_audio(JSON_PATH, AUDIO_PATH):
-        #     return
-        #
+        # Step 1: Download MP3 file from JSON
+        print("Step 1: Downloading MP3 file...")
+        if not os.path.exists(AUDIO_PATH) and not download_audio(JSON_PATH, AUDIO_PATH):
+            return
+
         # Step 2: Merge Canva video and audio using ffmpeg-python
         print("Step 1: Merging video and audio...")
 
@@ -317,9 +362,10 @@ def main():
         print("Video and audio merged successfully.")
 
         # Step 3: Generate SRT subtitles
-        print("Step 2: Generating SRT subtitles...")
-        json_to_srt(JSON_PATH, SUBS_PATH)
-        print("SRT subtitles generated successfully.")
+        if not os.path.exists(SUBS_PATH):
+            print("Step 2: Generating SRT subtitles...")
+            json_to_srt(JSON_PATH, SUBS_PATH)
+            print("SRT subtitles generated successfully.")
 
         # Step 4: Add subtitles to the merged video
         print("Step 3: Adding subtitles to the video...")
@@ -340,14 +386,14 @@ def main():
 
     except Exception as e:
         print(f"Error: {e}")
-    finally:
-        # Clean up temporary files
-        if os.path.exists(TEMP_DIR):
-            shutil.rmtree(TEMP_DIR)
-        if os.path.exists(TEMP_MERGED_PATH):
-            os.remove(TEMP_MERGED_PATH)
-        if os.path.exists(SUBS_PATH):
-            os.remove(SUBS_PATH)
+    # finally:
+    #     # Clean up temporary files
+    #     if os.path.exists(TEMP_DIR):
+    #         shutil.rmtree(TEMP_DIR)
+    #     if os.path.exists(TEMP_MERGED_PATH):
+    #         os.remove(TEMP_MERGED_PATH)
+    #     if os.path.exists(SUBS_PATH):
+    #         os.remove(SUBS_PATH)
 
 
 if __name__ == "__main__":

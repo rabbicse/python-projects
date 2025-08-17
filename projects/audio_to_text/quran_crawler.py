@@ -16,6 +16,43 @@ HEADERS = {
 
 session = requests.Session()
 
+
+def get_all_surah_info():
+    """Scrape Surah details like name, meaning, revelation type, and ayah count."""
+    url = f"https://quran.com/_next/data/aU_WE3nqYKk2YCDt4qgcc/ar/1.json"
+    response = session.get(url, headers=HEADERS)
+
+    if response.status_code != 200:
+        print(f"⚠️ Failed to fetch All Surah info")
+        return {}
+
+    json_data = response.json()
+
+    arabic_chapters = json_data["pageProps"]["chaptersData"]
+
+    url = f"https://quran.com/_next/data/aU_WE3nqYKk2YCDt4qgcc/en/1.json"
+    response = session.get(url, headers=HEADERS)
+
+    if response.status_code != 200:
+        print(f"⚠️ Failed to fetch All Surah info")
+        return {}
+
+    json_data = response.json()
+
+    en_chapters = json_data["pageProps"]["chaptersData"]
+
+    data = {
+        "en": en_chapters,
+        "ar": arabic_chapters
+    }
+
+    # Save to JSON
+    with open(f"quran/chapters.json", "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
+
+    print("✅ Quran data saved successfully!")
+
+
 def get_surah_info(surah_number):
     """Scrape Surah details like name, meaning, revelation type, and ayah count."""
     url = f"{BASE_URL}/surah/{surah_number}/info"
@@ -41,11 +78,11 @@ def get_surah_info(surah_number):
 
         basic["description"] = "".join(
             [str(content) for content in soup.find('div', class_=re.compile(r"Info_textBody__.*")).text.strip()])
-
-        return basic
     except Exception as ex:
         print(ex)
-        return {}
+
+    return basic
+
 
 def get_audio_segments(surah_number):
     """Scrape Ayahs from a given Surah page."""
@@ -89,7 +126,8 @@ def get_surah_ayahs(surah_number):
         })
     return ayahs_data
 
-def get_surah_ayahs_by_page(surah_number, page=1,per_page=5):
+
+def get_surah_ayahs_by_page(surah_number, page=1, per_page=5):
     """Scrape Ayahs from a given Surah page."""
     url = f'https://quran.com/api/proxy/content/api/qdc/verses/by_chapter/{surah_number}?words=true&translation_fields=resource_name%2Clanguage_id&per_page={per_page}&fields=text_uthmani%2Cchapter_id%2Chizb_number%2Ctext_imlaei_simple&translations=131&reciter=7&word_translation_language=en&page={page}&word_fields=verse_key%2Cverse_id%2Cpage_number%2Clocation%2Ctext_uthmani%2Ctext_imlaei_simple%2Ccode_v1%2Cqpc_uthmani_hafs&mushaf=2'
     response = session.get(url, headers=HEADERS)
@@ -112,6 +150,7 @@ def get_surah_ayahs_by_page(surah_number, page=1,per_page=5):
             "en_text": "".join([translation["text"] for translation in verse["translations"]]),
         })
     return ayahs_data
+
 
 def crawl_quran():
     """Crawl all 114 Surahs (info + Ayahs) and save them in JSON."""
@@ -139,6 +178,7 @@ def crawl_quran():
         json.dump(quran_data, f, ensure_ascii=False, indent=4)
 
     print("✅ Quran data saved successfully!")
+
 
 def crawl_quran_by_surah(surah_number):
     """Crawl all 114 Surahs (info + Ayahs) and save them in JSON."""
@@ -174,7 +214,10 @@ def crawl_quran_by_surah(surah_number):
 
 # Run the crawler
 # crawl_quran()
-crawl_quran_by_surah(2)
+# crawl_quran_by_surah(2) # download by surah
+
+get_all_surah_info()
+
 # get_surah_info(45)
 # ayah_data = get_surah_ayahs(45)
 # print(ayah_data)
