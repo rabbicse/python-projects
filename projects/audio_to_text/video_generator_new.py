@@ -149,7 +149,8 @@ def setup_environment():
         font_arabic_header = ImageFont.truetype(FONT_ARABIC_HEADER_PATH, FONT_HEADER_SIZE_ARABIC)
     except IOError:
         print("Warning: Specified fonts not found. Using fallback font.")
-        font_english = font_arabic = font_arabic_header = font_english_header = ImageFont.truetype(FALLBACK_FONT_PATH, FONT_SIZE)
+        font_english = font_arabic = font_arabic_header = font_english_header = ImageFont.truetype(FALLBACK_FONT_PATH,
+                                                                                                   FONT_SIZE)
 
     return font_english, font_arabic, font_english_header, font_arabic_header
 
@@ -186,7 +187,7 @@ def create_arabic_animation(line, font, color, duration, total_width, total_heig
     # display_text = get_display(reshaped_text)
     # display_text = display_text[::-1] # for linux we need to add it
 
-    display_text = line#[::-1]
+    display_text = line  # [::-1]
 
     # Create background image with consistent dimensions
     bg_img = Image.new('RGBA', (total_width + 20, total_height + 20), (0, 0, 0, 0))
@@ -400,7 +401,6 @@ def create_header_clips(video, surah_no, font_english, font_arabic):
     )
     header_clips.append(line_clip)
 
-
     # english header
     # draw arabic surah name
     line, total_width, total_height = preprocess_subtitle(surah_name_en, font_english, is_arabic=False)
@@ -423,8 +423,236 @@ def create_header_clips(video, surah_no, font_english, font_arabic):
 
     return header_clips
 
+
+# def create_header_clips_updated(video, surah_no, font_english, font_arabic):
+#     """Generate letter-by-letter animated header clips with fade + slide effect"""
+#     header_clips = []
+#
+#     with open(CHAPTERS_PATH, 'r', encoding='utf-8') as f:
+#         data = json.load(f)
+#
+#     data_en = data["en"][f"{surah_no}"]
+#     data_ar = data["ar"][f"{surah_no}"]
+#
+#     surah_name_en = data_en["transliteratedName"]
+#     surah_name_ar = data_ar["transliteratedName"]
+#
+#     total_duration = video.duration
+#
+#     def make_letter_animation(text, font, color, y_final, is_arabic=False):
+#         """Create left-to-right animation for English text"""
+#         line, total_width, total_height = preprocess_subtitle(text, font, is_arabic)
+#         bg_img = Image.new('RGBA', (total_width + 20, total_height + 20), (0, 0, 0, 0))
+#
+#         display_text = line
+#         if is_arabic:
+#             # # Reshape and get display text
+#             # configuration = {
+#             #     'delete_harakat': False,
+#             #     'support_ligatures': True,
+#             #     'RIAL SIGN': True,
+#             # }
+#             # reshaper = arabic_reshaper.ArabicReshaper(configuration=configuration)
+#             # reshaped_text = reshaper.reshape(line)
+#             # display_text = get_display(reshaped_text)
+#             display_text = line[::-1] # for linux we need to add it
+#
+#         # Step 3: Create a full pre-rendered image of the RTL text
+#         draw = ImageDraw.Draw(bg_img)
+#         draw.text((10, 10), display_text, font=font, fill=color)
+#         full_text_array = np.array(bg_img)
+#
+#         def make_frame(t):
+#             # progress = min(1.0, max(0.0, t / duration))
+#             frame_img = bg_img.copy()
+#             draw = ImageDraw.Draw(frame_img)
+#
+#             # chars_to_show = int(len(line) * progress)
+#             chars_to_show = int(len(line) * min(1, t / (len(line) * HEADER_CHAR_ANIMATION_DELAY)))
+#             visible_text = display_text[:chars_to_show]
+#
+#             # Left-aligned for English
+#             draw.text((10, 0), visible_text, font=font, fill=color)
+#
+#             frame_array = np.array(frame_img)
+#             if frame_array.shape[2] == 3:
+#                 alpha = np.full(frame_array.shape[:2], 255, dtype=np.uint8)
+#                 frame_array = np.dstack((frame_array, alpha))
+#             return frame_array
+#
+#         def make_frame_arabic(t):
+#             """Generate frame at time t with animated text"""
+#             # Calculate progress (0 to 1)
+#             # progress = min(1.0, max(0.0, t / duration))
+#
+#             # Create a new image with the background
+#             frame_img = bg_img.copy()
+#             draw = ImageDraw.Draw(frame_img)
+#
+#             # Calculate how many characters to show
+#             # chars_to_show = int(len(display_text) * progress)
+#             chars_to_show = int(len(display_text) * min(1, t / (len(display_text) * HEADER_CHAR_ANIMATION_DELAY)))
+#             visible_text = display_text[:chars_to_show]
+#
+#             # Calculate text position (right-aligned)
+#             text_width = font.getlength(visible_text)
+#             x_pos = (total_width + 20) - text_width - 10  # Right padding
+#             y_pos = 10
+#
+#             print(f"x: {x_pos} y: {y_pos} => {visible_text}")
+#
+#             # Draw the visible portion of the text
+#             draw.text((x_pos, y_pos), visible_text, font=font, fill=color)
+#
+#             # Convert to numpy array and ensure RGBA format
+#             frame_array = np.array(frame_img)
+#             if frame_array.shape[2] == 3:  # If RGB, add alpha channel
+#                 alpha = np.full(frame_array.shape[:2], 255, dtype=np.uint8)
+#                 frame_array = np.dstack((frame_array, alpha))
+#             return frame_array
+#
+#         def make_frame_arabic_updated(t):
+#             """Generate frame at time t with animated text"""
+#             # Calculate progress (0 to 1)
+#             progress = min(1.0, max(0.0, t / total_duration))
+#             visible_width = int(total_width * progress)
+#
+#             # Crop the visible portion (right side)
+#             cropped = full_text_array[:, -visible_width:] if visible_width > 0 else full_text_array[:, :0]
+#
+#             # Pad to maintain canvas dimensions
+#             if visible_width < total_width:
+#                 padding = np.zeros((total_height, total_width - visible_width, 4), dtype=np.uint8)
+#                 frame = np.hstack([padding, cropped])
+#             else:
+#                 frame = full_text_array
+#
+#             return frame
+#
+#         return VideoClip(make_frame_arabic_updated if is_arabic else make_frame, duration=total_duration, is_mask=False), total_width, total_height
+#
+#
+#     # Arabic header
+#     arabic_animation, total_width, total_height = make_letter_animation(surah_name_ar, font_arabic, COLOR_ARABIC, y_final=136, is_arabic=True)
+#     x_pos = (video.w - total_width) / 2
+#     y_pos = 136
+#     positioned_clip = arabic_animation.with_position((x_pos, y_pos)) \
+#         .with_start(0) \
+#         .with_duration(video.duration)
+#     header_clips.append(positioned_clip)
+#
+#     # English header
+#     # header_clips.append(make_letter_animation(surah_name_en, font_english, COLOR_ENGLISH, y_final=331, is_arabic=False))
+#     english_animation, total_width, total_height = make_letter_animation(surah_name_en, font_english, COLOR_ENGLISH, y_final=331, is_arabic=False)
+#     x_pos = (video.w - total_width) / 2
+#     y_pos = 331
+#     positioned_clip = english_animation.with_position((x_pos, y_pos)) \
+#         .with_start(0) \
+#         .with_duration(video.duration)
+#     header_clips.append(positioned_clip)
+#
+#     return header_clips
+
+
+def create_rtl_arabic_animation(text, font_path, font_size=40, duration=5, bg_color=(0, 0, 0, 0)):
+    # Step 1: Reshape and force RTL
+    reshaped_text = arabic_reshaper.reshape(text)
+    display_text = get_display(reshaped_text)  # Correct RTL order
+
+    # Step 2: Pre-render the full text to get dimensions
+    font = ImageFont.truetype(font_path, font_size)
+    text_bbox = font.getbbox(display_text)
+    text_width, text_height = text_bbox[2] - text_bbox[0], text_bbox[3] - text_bbox[1]
+    canvas_width = text_width + 100  # Add padding
+    canvas_height = text_height + 40
+
+    # Step 3: Create a full pre-rendered image of the RTL text
+    full_text_img = Image.new("RGBA", (canvas_width, canvas_height), bg_color)
+    draw = ImageDraw.Draw(full_text_img)
+    draw.text((canvas_width - text_width - 20, 20), display_text, font=font, fill="white")
+    full_text_array = np.array(full_text_img)
+
+    # Step 4: Animate by sliding a window (right-to-left)
+    def make_frame(t):
+        progress = min(1.0, t / duration)
+        visible_width = int(canvas_width * progress)
+
+        # Crop the visible portion (right side)
+        cropped = full_text_array[:, -visible_width:] if visible_width > 0 else full_text_array[:, :0]
+
+        # Pad to maintain canvas dimensions
+        if visible_width < canvas_width:
+            padding = np.zeros((canvas_height, canvas_width - visible_width, 4), dtype=np.uint8)
+            frame = np.hstack([padding, cropped])
+        else:
+            frame = full_text_array
+
+        return frame
+
+    return VideoClip(make_frame, duration=duration)
+
+
+def create_slide_animation(text, font_path, font_size, duration, bg_color, is_rtl=True):
+    """Create sliding animation that completes within 5 seconds max and stays visible"""
+    # Calculate animation duration (min of 5 seconds or total_duration)
+    anim_duration = min(5.0, duration)
+
+    # Prepare text (RTL for Arabic)
+    if is_rtl:
+        reshaped_text = arabic_reshaper.reshape(text)
+        display_text = get_display(reshaped_text)
+    else:
+        display_text = text
+
+    # Load font
+    try:
+        font = ImageFont.truetype(font_path, font_size)
+    except:
+        font = ImageFont.truetype(FALLBACK_FONT_PATH, font_size)
+
+    # Calculate dimensions
+    text_bbox = font.getbbox(display_text)
+    text_width = text_bbox[2] - text_bbox[0]
+    text_height = text_bbox[3] - text_bbox[1]
+
+    # Create canvas
+    canvas_width = text_width + 40
+    canvas_height = text_height + 40
+    bg_img = Image.new("RGBA", (canvas_width, canvas_height), bg_color)
+    draw = ImageDraw.Draw(bg_img)
+
+    # # Draw background
+    # draw.rounded_rectangle([(0, 0), (canvas_width, canvas_height)],
+    #                        radius=15, fill=BG_COLOR)
+
+    # Position text
+    x_pos = canvas_width - text_width - 10 if is_rtl else 10
+    draw.text((x_pos, 10), display_text, font=font, fill="white")
+    full_text_array = np.array(bg_img)
+
+    def make_frame(t):
+        if t < anim_duration:  # Animation phase
+            progress = min(1.0, t / anim_duration)
+            visible_width = int(canvas_width * progress)
+
+            if is_rtl:  # RTL: crop from right
+                cropped = full_text_array[:, -visible_width:] if visible_width > 0 else full_text_array[:, :0]
+                padding = np.zeros((canvas_height, canvas_width - visible_width, 4), dtype=np.uint8)
+                frame = np.hstack([padding, cropped])
+            else:  # LTR: crop from left
+                cropped = full_text_array[:, :visible_width] if visible_width > 0 else full_text_array[:, :0]
+                padding = np.zeros((canvas_height, canvas_width - visible_width, 4), dtype=np.uint8)
+                frame = np.hstack([cropped, padding])
+        else:  # After animation - show full text
+            frame = full_text_array
+
+        return frame
+
+    return VideoClip(make_frame, duration=duration)
+
+
 def create_header_clips_updated(video, surah_no, font_english, font_arabic):
-    """Generate letter-by-letter animated header clips with fade + slide effect"""
+    """Generate header clips using the new RTL animation approach"""
     header_clips = []
 
     with open(CHAPTERS_PATH, 'r', encoding='utf-8') as f:
@@ -436,136 +664,60 @@ def create_header_clips_updated(video, surah_no, font_english, font_arabic):
     surah_name_en = data_en["transliteratedName"]
     surah_name_ar = data_ar["transliteratedName"]
 
-    total_duration = video.duration
-
-    # def make_letter_animation(text, font, color, y_final, is_arabic=False):
-    #     # Preprocess text
-    #     line, total_width, total_height = preprocess_subtitle(text, font, is_arabic)
-    #     img_bg = Image.new('RGBA', (total_width + 30, total_height + 30), (0, 0, 0, 0))
-    #
-    #     def make_frame(t):
-    #         # Number of letters to show
-    #         chars_to_show = min(len(line), int(t / anim_speed))
-    #         visible_text = line[:chars_to_show]
-    #
-    #         # Create frame
-    #         frame_img = img_bg.copy()
-    #         draw = ImageDraw.Draw(frame_img)
-    #         draw.text((10, 10), visible_text, font=font, fill=color)
-    #
-    #         # Convert to numpy array
-    #         frame_array = np.array(frame_img)
-    #
-    #         # Ensure we have 4 channels (RGBA)
-    #         if frame_array.shape[2] == 3:  # If RGB
-    #             alpha = np.full(frame_array.shape[:2], 255, dtype=np.uint8)
-    #             frame_array = np.dstack((frame_array, alpha))
-    #         elif frame_array.shape[2] == 4:  # If RGBA
-    #             pass  # Already has alpha channel
-    #         else:
-    #             raise ValueError("Unexpected number of channels in image array")
-    #
-    #         return frame_array
-    #
-    #     x_pos = (video.w - total_width) / 2
-    #     animated_clip = VideoClip(make_frame, duration=total_duration, is_mask=False)
-    #     # Slide from above with fade
-    #     return animated_clip.with_position(lambda t: (x_pos, -total_height + min(1, t) * (y_final + total_height))) \
-    #                         .with_effects([vfx.FadeIn(anim_speed * len(line))])
-
-    def make_letter_animation(text, font, color, y_final, is_arabic=False):
-        """Create left-to-right animation for English text"""
-        line, total_width, total_height = preprocess_subtitle(text, font, is_arabic)
-        bg_img = Image.new('RGBA', (total_width + 20, total_height + 20), (0, 0, 0, 0))
-        # draw_bg = ImageDraw.Draw(bg_img)
-        # draw_bg.rounded_rectangle([(0, 0), (total_width + 20, total_height + 30)],
-        #                           radius=15, fill=BG_COLOR)
-
-        display_text = line
-        if is_arabic:
-            # # Reshape and get display text
-            # configuration = {
-            #     'delete_harakat': False,
-            #     'support_ligatures': True,
-            #     'RIAL SIGN': True,
-            # }
-            # reshaper = arabic_reshaper.ArabicReshaper(configuration=configuration)
-            # reshaped_text = reshaper.reshape(line)
-            # display_text = get_display(reshaped_text)
-            display_text = line[::-1] # for linux we need to add it
-
-        def make_frame(t):
-            # progress = min(1.0, max(0.0, t / duration))
-            frame_img = bg_img.copy()
-            draw = ImageDraw.Draw(frame_img)
-
-            # chars_to_show = int(len(line) * progress)
-            chars_to_show = int(len(line) * min(1, t / (len(line) * HEADER_CHAR_ANIMATION_DELAY)))
-            visible_text = display_text[:chars_to_show]
-
-            # Left-aligned for English
-            draw.text((10, 0), visible_text, font=font, fill=color)
-
-            frame_array = np.array(frame_img)
-            if frame_array.shape[2] == 3:
-                alpha = np.full(frame_array.shape[:2], 255, dtype=np.uint8)
-                frame_array = np.dstack((frame_array, alpha))
-            return frame_array
-
-        def make_frame_arabic(t):
-            """Generate frame at time t with animated text"""
-            # Calculate progress (0 to 1)
-            # progress = min(1.0, max(0.0, t / duration))
-
-            # Create a new image with the background
-            frame_img = bg_img.copy()
-            draw = ImageDraw.Draw(frame_img)
-
-            # Calculate how many characters to show
-            # chars_to_show = int(len(display_text) * progress)
-            chars_to_show = int(len(display_text) * min(1, t / (len(display_text) * HEADER_CHAR_ANIMATION_DELAY)))
-            visible_text = display_text[:chars_to_show]
-
-            # Calculate text position (right-aligned)
-            text_width = font.getlength(visible_text)
-            x_pos = (total_width + 20) - text_width - 10  # Right padding
-            y_pos = 10
-
-            print(f"x: {x_pos} y: {y_pos} => {visible_text}")
-
-            # Draw the visible portion of the text
-            draw.text((x_pos, y_pos), visible_text, font=font, fill=color)
-
-            # Convert to numpy array and ensure RGBA format
-            frame_array = np.array(frame_img)
-            if frame_array.shape[2] == 3:  # If RGB, add alpha channel
-                alpha = np.full(frame_array.shape[:2], 255, dtype=np.uint8)
-                frame_array = np.dstack((frame_array, alpha))
-            return frame_array
-
-        return VideoClip(make_frame_arabic if is_arabic else make_frame, duration=total_duration, is_mask=False), total_width, total_height
-
-
     # Arabic header
-    arabic_animation, total_width, total_height = make_letter_animation(surah_name_ar, font_arabic, COLOR_ARABIC, y_final=136, is_arabic=True)
-    x_pos = (video.w - total_width) / 2
-    y_pos = 136
-    positioned_clip = arabic_animation.with_position((x_pos, y_pos)) \
-        .with_start(0) \
-        .with_duration(video.duration)
-    header_clips.append(positioned_clip)
+    arabic_clip = create_slide_animation(
+        text=surah_name_ar,
+        font_path=FONT_ARABIC_HEADER_PATH,
+        font_size=FONT_HEADER_SIZE_ARABIC,
+        duration=video.duration,
+        bg_color=(0, 0, 0, 0),
+        is_rtl=True)
 
-    # English header
-    # header_clips.append(make_letter_animation(surah_name_en, font_english, COLOR_ENGLISH, y_final=331, is_arabic=False))
-    english_animation, total_width, total_height = make_letter_animation(surah_name_en, font_english, COLOR_ENGLISH, y_final=331, is_arabic=False)
-    x_pos = (video.w - total_width) / 2
-    y_pos = 331
-    positioned_clip = english_animation.with_position((x_pos, y_pos)) \
-        .with_start(0) \
-        .with_duration(video.duration)
-    header_clips.append(positioned_clip)
+    # Get dimensions for positioning
+    _, width_ar, height_ar = preprocess_subtitle(surah_name_ar, font_arabic, is_arabic=True)
+    header_clips.append(arabic_clip.with_position(((video.w - width_ar) / 2, 136)))
+
+    # English header (using same approach but left-to-right)
+    english_clip = create_slide_animation(
+        text=surah_name_en,
+        font_path=FONT_ENGLISH_HEADER_PATH,
+        font_size=FONT_HEADER_SIZE,
+        duration=video.duration,
+        bg_color=(0, 0, 0, 0),
+        is_rtl=False)
+
+    _, width_en, height_en = preprocess_subtitle(surah_name_en, font_english, is_arabic=False)
+    header_clips.append(english_clip.with_position(((video.w - width_en) / 2, 331)))
 
     return header_clips
+
+
+def create_arabic_animation_new(line, font, color, duration, total_width, total_height):
+    """Create Arabic animation using the new RTL approach"""
+    return create_rtl_arabic_animation(
+        text=line,
+        font_path=FONT_ARABIC_PATH,
+        font_size=FONT_SIZE_ARABIC,
+        duration=duration,
+        bg_color=BG_COLOR)
+
+
+def create_english_animation_new(line, font, color, duration, total_width, total_height):
+    """Create LTR animation using slide effect"""
+    # Create static text image
+    bg_img = Image.new('RGBA', (total_width + 40, total_height + 40), BG_COLOR)
+    draw = ImageDraw.Draw(bg_img)
+    draw.rounded_rectangle([(0, 0), (total_width + 40, total_height + 40)],
+                           radius=15, fill=BG_COLOR)
+    draw.text((20, 20), line, font=font, fill=color)
+
+    static_clip = ImageClip(np.array(bg_img)).with_duration(duration)
+
+    # Slide in from left
+    return static_clip.with_effects([
+        vfx.SlideIn(duration / 2, 'left'),
+        vfx.FadeIn(FADE_DURATION)
+    ])
 
 
 # --- MAIN EXECUTION ---
@@ -622,7 +774,6 @@ def main():
         font_english, font_arabic, font_english_header, font_arabic_header = setup_environment()
         video = VideoFileClip(TEMP_MERGED_PATH)
         subs = pysrt.open(SUBS_PATH)
-
 
         header_clips = create_header_clips_updated(video, surah_number, font_english_header, font_arabic_header)
 
