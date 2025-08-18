@@ -18,28 +18,41 @@ import argparse
 # Base paths that will be formatted with the surah number
 BASE_JSON_PATH = "quran/{}.json"
 BASE_AUDIO_PATH = "data/{}.mp3"
-BASE_INIT_VIDEO_PATH = "data/{}.mp4"
-BASE_TEMP_MERGED_PATH = "data/temp_merged_{}.mp4"
+BASE_INIT_VIDEO_PATH = "data/quran.mp4"
+BASE_TEMP_MERGED_PATH = "data/{}-init.mp4"
 BASE_SUBS_PATH = "data/{}_subtitles.srt"
-BASE_OUTPUT_VIDEO_PATH = "data/{}-video-temp.mp4"
+BASE_OUTPUT_VIDEO_PATH = "data/{}-video.mp4"
 TEMP_DIR = "data/temp_subtitle_images"
+CHAPTERS_PATH = "quran/chapters.json"
 
 # Font configuration
-FONT_ENGLISH_PATH = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
-FONT_ARABIC_PATH = "/usr/share/fonts/truetype/noto/NotoSansArabic-Regular.ttf"
-FALLBACK_FONT_PATH = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+FONT_ENGLISH_HEADER_PATH = "fonts/DejaVuSans.ttf"
+FONT_ENGLISH_PATH = "fonts/DejaVuSans.ttf"
+FONT_ARABIC_HEADER_PATH = "fonts/Amiri-Regular.ttf"
+FONT_ARABIC_PATH = "fonts/NotoSansArabic-Regular.ttf"
+FALLBACK_FONT_PATH = "fonts/DejaVuSans.ttf"
 
 # Style configuration
 FONT_SIZE = 30
 FONT_SIZE_ARABIC = 50
+FONT_HEADER_SIZE = 100
+FONT_HEADER_SIZE_ARABIC = 100
 COLOR_ENGLISH = "#E0E0E0"
 COLOR_ARABIC = "#E0E0E0"
 BG_COLOR = (0, 0, 0, 200)
 LINE_SPACING = 80
 SUBTITLE_HEIGHT = 120
-CHAR_ANIMATION_DELAY = 0.02
+CHAR_ANIMATION_DELAY = 0.05
+HEADER_CHAR_ANIMATION_DELAY = 0.5
 FADE_DURATION = 0.01
-ARABIC_ANIMATION_SPEED = 0.02  # Speed of Arabic text reveal (lower is faster)
+ARABIC_ANIMATION_SPEED = 0.05  # Speed of Arabic text reveal (lower is faster)
+
+
+# arabic text
+# x = w/2 y = 136, font size 101
+
+# english text
+# x = w/2, y = 331
 
 
 # --- DOWNLOAD FUNCTION ---
@@ -75,11 +88,13 @@ def ms_to_srt_time(ms):
     return f"{hours:02}:{minutes:02}:{seconds:02},{millis:03}"
 
 
-def clean_html_tags(text):
+def clean_html_tags(text: str) -> str:
     """Remove HTML tags like <sup ...> from text"""
-    text = re.sub(r'<[^>]*>', '', text)
-    text = re.sub(r'[˹˺]', '', text)
-    text = re.sub(r'<[^>]*>', '', text)
+    # Remove tags like <sup foot_note=77642>1</sup>
+    text = re.sub(r'<sup[^>]*>.*?</sup>', '', text, flags=re.DOTALL)
+    # Remove any remaining generic tags
+    text = re.sub(r'<[^>]+>', '', text)
+    # Remove special bracket-like characters
     return re.sub(r'[˹˺]', '', text).strip()
 
 
@@ -130,11 +145,13 @@ def setup_environment():
     try:
         font_english = ImageFont.truetype(FONT_ENGLISH_PATH, FONT_SIZE)
         font_arabic = ImageFont.truetype(FONT_ARABIC_PATH, FONT_SIZE_ARABIC)
+        font_english_header = ImageFont.truetype(FONT_ENGLISH_HEADER_PATH, FONT_HEADER_SIZE)
+        font_arabic_header = ImageFont.truetype(FONT_ARABIC_HEADER_PATH, FONT_HEADER_SIZE_ARABIC)
     except IOError:
         print("Warning: Specified fonts not found. Using fallback font.")
-        font_english = font_arabic = ImageFont.truetype(FALLBACK_FONT_PATH, FONT_SIZE)
+        font_english = font_arabic = font_arabic_header = font_english_header = ImageFont.truetype(FALLBACK_FONT_PATH, FONT_SIZE)
 
-    return font_english, font_arabic
+    return font_english, font_arabic, font_english_header, font_arabic_header
 
 
 def preprocess_subtitle(line, font, is_arabic=False):
@@ -159,15 +176,17 @@ def preprocess_subtitle(line, font, is_arabic=False):
 def create_arabic_animation(line, font, color, duration, total_width, total_height):
     """Create an animated Arabic text clip with proper channel handling"""
     # Reshape and get display text
-    configuration = {
-        'delete_harakat': False,
-        'support_ligatures': True,
-        'RIAL SIGN': True,
-    }
-    reshaper = arabic_reshaper.ArabicReshaper(configuration=configuration)
-    reshaped_text = reshaper.reshape(line)
-    display_text = get_display(reshaped_text)
-    display_text = display_text[::-1]
+    # configuration = {
+    #     'delete_harakat': False,
+    #     'support_ligatures': True,
+    #     'RIAL SIGN': True,
+    # }
+    # reshaper = arabic_reshaper.ArabicReshaper(configuration=configuration)
+    # reshaped_text = reshaper.reshape(line)
+    # display_text = get_display(reshaped_text)
+    # display_text = display_text[::-1] # for linux we need to add it
+
+    display_text = line#[::-1]
 
     # Create background image with consistent dimensions
     bg_img = Image.new('RGBA', (total_width + 20, total_height + 20), (0, 0, 0, 0))
@@ -193,6 +212,8 @@ def create_arabic_animation(line, font, color, duration, total_width, total_heig
         text_width = font.getlength(visible_text)
         x_pos = (total_width + 20) - text_width - 10  # Right padding
         y_pos = 10
+
+        # print(f"x: {x_pos} y: {y_pos} => {visible_text}")
 
         # Draw the visible portion of the text
         draw.text((x_pos, y_pos), visible_text, font=font, fill=color)
@@ -241,10 +262,10 @@ def process_subtitle_line(line, font, color, is_arabic=False, duration=5.0):
     processed_line, total_width, total_height = preprocess_subtitle(line, font, is_arabic)
 
     if is_arabic:
-        return create_arabic_animation(line, font, color, duration, total_width, total_height)
+        return create_arabic_animation(processed_line, font, color, duration, total_width, total_height)
     else:
         # English animation (left-to-right)
-        return create_english_animation(line, font, color, duration, total_width, total_height)
+        return create_english_animation(processed_line, font, color, duration, total_width, total_height)
 
 
 def apply_fade_effects(clip, fade_duration):
@@ -347,6 +368,206 @@ def create_subtitle_clips(video, subs, font_english, font_arabic):
     return subtitle_clips
 
 
+def create_header_clips(video, surah_no, font_english, font_arabic):
+    """Generate subtitle clips with proper compositing"""
+    header_clips = []
+
+    with open(CHAPTERS_PATH, 'r+', encoding='utf-8') as f:
+        data = json.load(f)
+
+    data_en = data["en"][f"{surah_no}"]
+    data_ar = data["ar"][f"{surah_no}"]
+
+    surah_name_en = data_en["transliteratedName"]
+    surah_name_ar = data_ar["transliteratedName"]
+
+    # draw arabic surah name
+    line, total_width, total_height = preprocess_subtitle(surah_name_ar, font_arabic, is_arabic=True)
+    img = Image.new('RGBA', (total_width + 30, total_height + 30), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(img)
+    draw.text((10, 10), line, font=font_arabic, fill=COLOR_ARABIC)
+    line_clip = ImageClip(np.array(img))
+    y_pos = 136
+    x_pos = (video.w - total_width) / 2
+    duration = video.duration
+    line_clip = (
+        line_clip
+        .with_duration(duration=duration)
+        .with_position((x_pos, y_pos))
+        .with_start(0)
+        .with_end(duration)
+        .with_effects([vfx.FadeIn(FADE_DURATION)])
+    )
+    header_clips.append(line_clip)
+
+
+    # english header
+    # draw arabic surah name
+    line, total_width, total_height = preprocess_subtitle(surah_name_en, font_english, is_arabic=False)
+    img = Image.new('RGBA', (total_width + 30, total_height + 30), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(img)
+    draw.text((10, 10), line, font=font_english, fill=COLOR_ENGLISH)
+    line_clip = ImageClip(np.array(img))
+    y_pos = 331
+    x_pos = (video.w - total_width) / 2
+    duration = video.duration
+    line_clip = (
+        line_clip
+        .with_duration(duration=duration)
+        .with_position((x_pos, y_pos))
+        .with_start(0)
+        .with_end(duration)
+        .with_effects([vfx.FadeIn(FADE_DURATION)])
+    )
+    header_clips.append(line_clip)
+
+    return header_clips
+
+def create_header_clips_updated(video, surah_no, font_english, font_arabic):
+    """Generate letter-by-letter animated header clips with fade + slide effect"""
+    header_clips = []
+
+    with open(CHAPTERS_PATH, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    data_en = data["en"][f"{surah_no}"]
+    data_ar = data["ar"][f"{surah_no}"]
+
+    surah_name_en = data_en["transliteratedName"]
+    surah_name_ar = data_ar["transliteratedName"]
+
+    total_duration = video.duration
+
+    # def make_letter_animation(text, font, color, y_final, is_arabic=False):
+    #     # Preprocess text
+    #     line, total_width, total_height = preprocess_subtitle(text, font, is_arabic)
+    #     img_bg = Image.new('RGBA', (total_width + 30, total_height + 30), (0, 0, 0, 0))
+    #
+    #     def make_frame(t):
+    #         # Number of letters to show
+    #         chars_to_show = min(len(line), int(t / anim_speed))
+    #         visible_text = line[:chars_to_show]
+    #
+    #         # Create frame
+    #         frame_img = img_bg.copy()
+    #         draw = ImageDraw.Draw(frame_img)
+    #         draw.text((10, 10), visible_text, font=font, fill=color)
+    #
+    #         # Convert to numpy array
+    #         frame_array = np.array(frame_img)
+    #
+    #         # Ensure we have 4 channels (RGBA)
+    #         if frame_array.shape[2] == 3:  # If RGB
+    #             alpha = np.full(frame_array.shape[:2], 255, dtype=np.uint8)
+    #             frame_array = np.dstack((frame_array, alpha))
+    #         elif frame_array.shape[2] == 4:  # If RGBA
+    #             pass  # Already has alpha channel
+    #         else:
+    #             raise ValueError("Unexpected number of channels in image array")
+    #
+    #         return frame_array
+    #
+    #     x_pos = (video.w - total_width) / 2
+    #     animated_clip = VideoClip(make_frame, duration=total_duration, is_mask=False)
+    #     # Slide from above with fade
+    #     return animated_clip.with_position(lambda t: (x_pos, -total_height + min(1, t) * (y_final + total_height))) \
+    #                         .with_effects([vfx.FadeIn(anim_speed * len(line))])
+
+    def make_letter_animation(text, font, color, y_final, is_arabic=False):
+        """Create left-to-right animation for English text"""
+        line, total_width, total_height = preprocess_subtitle(text, font, is_arabic)
+        bg_img = Image.new('RGBA', (total_width + 20, total_height + 20), (0, 0, 0, 0))
+        # draw_bg = ImageDraw.Draw(bg_img)
+        # draw_bg.rounded_rectangle([(0, 0), (total_width + 20, total_height + 30)],
+        #                           radius=15, fill=BG_COLOR)
+
+        display_text = line
+        if is_arabic:
+            # # Reshape and get display text
+            # configuration = {
+            #     'delete_harakat': False,
+            #     'support_ligatures': True,
+            #     'RIAL SIGN': True,
+            # }
+            # reshaper = arabic_reshaper.ArabicReshaper(configuration=configuration)
+            # reshaped_text = reshaper.reshape(line)
+            # display_text = get_display(reshaped_text)
+            display_text = line[::-1] # for linux we need to add it
+
+        def make_frame(t):
+            # progress = min(1.0, max(0.0, t / duration))
+            frame_img = bg_img.copy()
+            draw = ImageDraw.Draw(frame_img)
+
+            # chars_to_show = int(len(line) * progress)
+            chars_to_show = int(len(line) * min(1, t / (len(line) * HEADER_CHAR_ANIMATION_DELAY)))
+            visible_text = display_text[:chars_to_show]
+
+            # Left-aligned for English
+            draw.text((10, 0), visible_text, font=font, fill=color)
+
+            frame_array = np.array(frame_img)
+            if frame_array.shape[2] == 3:
+                alpha = np.full(frame_array.shape[:2], 255, dtype=np.uint8)
+                frame_array = np.dstack((frame_array, alpha))
+            return frame_array
+
+        def make_frame_arabic(t):
+            """Generate frame at time t with animated text"""
+            # Calculate progress (0 to 1)
+            # progress = min(1.0, max(0.0, t / duration))
+
+            # Create a new image with the background
+            frame_img = bg_img.copy()
+            draw = ImageDraw.Draw(frame_img)
+
+            # Calculate how many characters to show
+            # chars_to_show = int(len(display_text) * progress)
+            chars_to_show = int(len(display_text) * min(1, t / (len(display_text) * HEADER_CHAR_ANIMATION_DELAY)))
+            visible_text = display_text[:chars_to_show]
+
+            # Calculate text position (right-aligned)
+            text_width = font.getlength(visible_text)
+            x_pos = (total_width + 20) - text_width - 10  # Right padding
+            y_pos = 10
+
+            print(f"x: {x_pos} y: {y_pos} => {visible_text}")
+
+            # Draw the visible portion of the text
+            draw.text((x_pos, y_pos), visible_text, font=font, fill=color)
+
+            # Convert to numpy array and ensure RGBA format
+            frame_array = np.array(frame_img)
+            if frame_array.shape[2] == 3:  # If RGB, add alpha channel
+                alpha = np.full(frame_array.shape[:2], 255, dtype=np.uint8)
+                frame_array = np.dstack((frame_array, alpha))
+            return frame_array
+
+        return VideoClip(make_frame_arabic if is_arabic else make_frame, duration=total_duration, is_mask=False), total_width, total_height
+
+
+    # Arabic header
+    arabic_animation, total_width, total_height = make_letter_animation(surah_name_ar, font_arabic, COLOR_ARABIC, y_final=136, is_arabic=True)
+    x_pos = (video.w - total_width) / 2
+    y_pos = 136
+    positioned_clip = arabic_animation.with_position((x_pos, y_pos)) \
+        .with_start(0) \
+        .with_duration(video.duration)
+    header_clips.append(positioned_clip)
+
+    # English header
+    # header_clips.append(make_letter_animation(surah_name_en, font_english, COLOR_ENGLISH, y_final=331, is_arabic=False))
+    english_animation, total_width, total_height = make_letter_animation(surah_name_en, font_english, COLOR_ENGLISH, y_final=331, is_arabic=False)
+    x_pos = (video.w - total_width) / 2
+    y_pos = 331
+    positioned_clip = english_animation.with_position((x_pos, y_pos)) \
+        .with_start(0) \
+        .with_duration(video.duration)
+    header_clips.append(positioned_clip)
+
+    return header_clips
+
+
 # --- MAIN EXECUTION ---
 def main():
     # Setup argparse
@@ -398,11 +619,16 @@ def main():
 
         # Step 4: Add subtitles to the merged video
         print("Step 4: Adding subtitles to the video...")
-        font_english, font_arabic = setup_environment()
+        font_english, font_arabic, font_english_header, font_arabic_header = setup_environment()
         video = VideoFileClip(TEMP_MERGED_PATH)
         subs = pysrt.open(SUBS_PATH)
+
+
+        header_clips = create_header_clips_updated(video, surah_number, font_english_header, font_arabic_header)
+
         subtitle_clips = create_subtitle_clips(video, subs, font_english, font_arabic)
-        final = CompositeVideoClip([video] + subtitle_clips)
+        # final = CompositeVideoClip([video] + header_clips + subtitle_clips)
+        final = CompositeVideoClip([video] + header_clips)
         final.write_videofile(
             OUTPUT_VIDEO_PATH,
             fps=video.fps,

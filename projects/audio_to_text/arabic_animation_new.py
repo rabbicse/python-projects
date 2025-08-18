@@ -1,3 +1,5 @@
+import os
+
 import numpy as np
 from moviepy import *
 from PIL import Image, ImageDraw, ImageFont
@@ -5,8 +7,8 @@ import arabic_reshaper
 from bidi.algorithm import get_display
 
 # --- CONFIGURATION ---
-FONT_ARABIC_PATH = "/usr/share/fonts/truetype/noto/NotoSansArabic-Regular.ttf"
-FALLBACK_FONT_PATH = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+FONT_ARABIC_PATH = os.path.join(os.path.dirname(__file__), "fonts/NotoSansArabic-Regular.ttf") #"fonts/NotoSansArabic-Regular.ttf"
+FALLBACK_FONT_PATH = "fonts/dejavu/DejaVuSans.ttf"
 
 FONT_SIZE_ARABIC = 80
 COLOR_ARABIC = "#FFFFFF"
@@ -60,6 +62,7 @@ def animate_arabic_text(text, duration=10):
 
         # Draw the full, correctly-shaped text
         # But we'll crop it using the background box as a mask
+        # x_pos = final_width - visible_text_width - 20
         x_pos = final_width - visible_text_width - 20
         y_pos = 10
 
