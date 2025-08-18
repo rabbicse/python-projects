@@ -187,7 +187,7 @@ def create_arabic_animation(line, font, color, duration, total_width, total_heig
     # display_text = get_display(reshaped_text)
     # display_text = display_text[::-1] # for linux we need to add it
 
-    display_text = line  # [::-1]
+    display_text = line[::-1]
 
     # Create background image with consistent dimensions
     bg_img = Image.new('RGBA', (total_width + 20, total_height + 20), (0, 0, 0, 0))
@@ -558,6 +558,7 @@ def create_rtl_arabic_animation(text, font_path, font_size=40, duration=5, bg_co
     # Step 1: Reshape and force RTL
     reshaped_text = arabic_reshaper.reshape(text)
     display_text = get_display(reshaped_text)  # Correct RTL order
+    display_text = display_text[::-1]
 
     # Step 2: Pre-render the full text to get dimensions
     font = ImageFont.truetype(font_path, font_size)
@@ -601,6 +602,7 @@ def create_slide_animation(text, font_path, font_size, duration, bg_color, is_rt
     if is_rtl:
         reshaped_text = arabic_reshaper.reshape(text)
         display_text = get_display(reshaped_text)
+        display_text = display_text[::-1]
     else:
         display_text = text
 
@@ -778,28 +780,28 @@ def main():
         header_clips = create_header_clips_updated(video, surah_number, font_english_header, font_arabic_header)
 
         subtitle_clips = create_subtitle_clips(video, subs, font_english, font_arabic)
-        # final = CompositeVideoClip([video] + header_clips + subtitle_clips)
-        final = CompositeVideoClip([video] + header_clips)
+        final = CompositeVideoClip([video] + header_clips + subtitle_clips)
+        # final = CompositeVideoClip([video] + header_clips)
         final.write_videofile(
             OUTPUT_VIDEO_PATH,
             fps=video.fps,
             codec="libx264",
             audio_codec="aac",
-            threads=4,
+            threads=8,
             preset="medium"
         )
         print(f"Final video created at {OUTPUT_VIDEO_PATH}")
 
     except Exception as e:
         print(f"Error: {e}")
-    # finally:
-    #     # Clean up temporary files
-    #     if os.path.exists(TEMP_DIR):
-    #         shutil.rmtree(TEMP_DIR)
-    #     if os.path.exists(TEMP_MERGED_PATH):
-    #         os.remove(TEMP_MERGED_PATH)
-    #     if os.path.exists(SUBS_PATH):
-    #         os.remove(SUBS_PATH)
+    finally:
+        # Clean up temporary files
+        if os.path.exists(TEMP_DIR):
+            shutil.rmtree(TEMP_DIR)
+        if os.path.exists(TEMP_MERGED_PATH):
+            os.remove(TEMP_MERGED_PATH)
+        if os.path.exists(SUBS_PATH):
+            os.remove(SUBS_PATH)
 
 
 if __name__ == "__main__":
