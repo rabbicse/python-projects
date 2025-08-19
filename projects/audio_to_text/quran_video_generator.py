@@ -283,7 +283,7 @@ def create_slide_animation(text, font_path, font_size, duration, bg_color, is_rt
         reshaper = arabic_reshaper.ArabicReshaper(configuration=configuration)
         reshaped_text = reshaper.reshape(text)
         display_text = get_display(reshaped_text)
-        display_text = display_text[::-1]
+        # display_text = display_text[::-1] # set it for linux
     else:
         display_text = text
 
@@ -490,20 +490,24 @@ def main(surah_number):
             return
 
         # Step 2: Merge Canva video and audio using ffmpeg-python
-        print("Step 1: Merging video and audio...")
         if not os.path.exists(TEMP_MERGED_PATH):
+            # Step 2: Merge Canva video and audio using ffmpeg-python
+            print("Step 1: Merging video and audio...")
+
             (
                 ffmpeg
-                .input(INIT_VIDEO_PATH, stream_loop=-1)
+                .input(INIT_VIDEO_PATH, stream_loop=-1)  # Loop video indefinitely
                 .video
                 .output(
                     ffmpeg.input(AUDIO_PATH).audio,
                     TEMP_MERGED_PATH,
-                    vcodec="libx264",
-                    acodec="aac",
-                    pix_fmt="yuv420p",
-                    shortest=None,
-                    map_metadata="-1"
+                    vcodec="libx264",  # Video codec
+                    acodec="aac",  # Audio codec
+                    audio_bitrate="192k",  # Set audio bitrate to 192kbps
+                    pix_fmt="yuv420p",  # Pixel format (for compatibility)
+                    shortest=None,  # End when shortest stream ends
+                    map_metadata="-1",  # Strip metadata
+                    #**{'map': ['0:v:0', '1:a:0']}  # Explicit stream mapping (video from 1st input, audio from 2nd)
                 )
                 .run(overwrite_output=True)
             )
@@ -555,5 +559,6 @@ if __name__ == "__main__":
     # parser.add_argument("surah_number", type=int, help="The number of the surah (e.g., 113)")
     # args = parser.parse_args()
     # surah_number = args.surah_number
-    for surah_number in range(101, 115):
-        main(surah_number)
+    # for surah_number in range(101, 115):
+    #     main(surah_number)
+    main(101)
