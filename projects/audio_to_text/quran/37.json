@@ -5866,106 +5866,952 @@
             "en_text": "and ˹for˺ protection from every rebellious devil."
         },
         {
-            "verse_key": "37:8",
-            "verse_num": "37:8",
-            "arabic_text": "لَّا يَسَّمَّعُونَ إِلَى ٱلْمَلَإِ ٱلْأَعْلَىٰ وَيُقْذَفُونَ مِن كُلِّ جَانِبٍ",
-            "en_text": "They cannot listen to the highest assembly ˹of angels˺ for they are pelted from every side,"
+            "verse_key": "37:25",
+            "verse_num": "37:25",
+            "arabic_text": "مَا لَكُمْ لَا تَنَاصَرُونَ",
+            "en_text": "˹Then they will be asked,˺ “What is the matter with you that you can no longer help each other?”"
         },
         {
-            "verse_key": "37:9",
-            "verse_num": "37:9",
-            "arabic_text": "دُحُورًا ۖ وَلَهُمْ عَذَابٌ وَاصِبٌ",
-            "en_text": "˹fiercely˺ driven away. And they will suffer an everlasting torment."
+            "verse_key": "37:26",
+            "verse_num": "37:26",
+            "arabic_text": "بَلْ هُمُ ٱلْيَوْمَ مُسْتَسْلِمُونَ",
+            "en_text": "In fact, on that Day they will be ˹fully˺ submissive."
         },
         {
-            "verse_key": "37:10",
-            "verse_num": "37:10",
-            "arabic_text": "إِلَّا مَنْ خَطِفَ ٱلْخَطْفَةَ فَأَتْبَعَهُۥ شِهَابٌ ثَاقِبٌ",
-            "en_text": "But whoever manages to stealthily eavesdrop is ˹instantly˺ pursued by a piercing flare."
+            "verse_key": "37:27",
+            "verse_num": "37:27",
+            "arabic_text": "وَأَقْبَلَ بَعْضُهُمْ عَلَىٰ بَعْضٍ يَتَسَآءَلُونَ",
+            "en_text": "They will turn on each other, throwing blame."
         },
         {
-            "verse_key": "37:11",
-            "verse_num": "37:11",
-            "arabic_text": "فَٱسْتَفْتِهِمْ أَهُمْ أَشَدُّ خَلْقًا أَم مَّنْ خَلَقْنَآ ۚ إِنَّا خَلَقْنَـٰهُم مِّن طِينٍ لَّازِبٍۭ",
-            "en_text": "So ask them ˹O Prophet˺, which is harder to create: them or other marvels of Our creation?<sup foot_note=77239>1</sup> Indeed, We created them from a sticky clay.<sup foot_note=77240>2</sup>"
+            "verse_key": "37:28",
+            "verse_num": "37:28",
+            "arabic_text": "قَالُوٓا۟ إِنَّكُمْ كُنتُمْ تَأْتُونَنَا عَنِ ٱلْيَمِينِ",
+            "en_text": "The misled will say, “It was you who deluded us away from what is right.”<sup foot_note=77242>1</sup>"
         },
         {
-            "verse_key": "37:12",
-            "verse_num": "37:12",
-            "arabic_text": "بَلْ عَجِبْتَ وَيَسْخَرُونَ",
-            "en_text": "In fact, you are astonished ˹by their denial˺, while they ridicule ˹you˺."
+            "verse_key": "37:29",
+            "verse_num": "37:29",
+            "arabic_text": "قَالُوا۟ بَل لَّمْ تَكُونُوا۟ مُؤْمِنِينَ",
+            "en_text": "The misleaders will reply, “No! You disbelieved on your own."
         },
         {
-            "verse_key": "37:13",
-            "verse_num": "37:13",
-            "arabic_text": "وَإِذَا ذُكِّرُوا۟ لَا يَذْكُرُونَ",
-            "en_text": "When they are reminded, they are never mindful."
+            "verse_key": "37:30",
+            "verse_num": "37:30",
+            "arabic_text": "وَمَا كَانَ لَنَا عَلَيْكُم مِّن سُلْطَـٰنٍۭ ۖ بَلْ كُنتُمْ قَوْمًا طَـٰغِينَ",
+            "en_text": "We had no authority over you. In fact, you yourselves were a transgressing people."
         },
         {
-            "verse_key": "37:14",
-            "verse_num": "37:14",
-            "arabic_text": "وَإِذَا رَأَوْا۟ ءَايَةً يَسْتَسْخِرُونَ",
-            "en_text": "And whenever they see a sign, they make fun of it,"
+            "verse_key": "37:31",
+            "verse_num": "37:31",
+            "arabic_text": "فَحَقَّ عَلَيْنَا قَوْلُ رَبِّنَآ ۖ إِنَّا لَذَآئِقُونَ",
+            "en_text": "The decree of our Lord has come to pass against us ˹all˺: we will certainly taste ˹the punishment˺."
         },
         {
-            "verse_key": "37:15",
-            "verse_num": "37:15",
-            "arabic_text": "وَقَالُوٓا۟ إِنْ هَـٰذَآ إِلَّا سِحْرٌ مُّبِينٌ",
-            "en_text": "saying, “This is nothing but pure magic."
+            "verse_key": "37:32",
+            "verse_num": "37:32",
+            "arabic_text": "فَأَغْوَيْنَـٰكُمْ إِنَّا كُنَّا غَـٰوِينَ",
+            "en_text": "We caused you to deviate, for we ourselves were deviant.”"
         },
         {
-            "verse_key": "37:16",
-            "verse_num": "37:16",
-            "arabic_text": "أَءِذَا مِتْنَا وَكُنَّا تُرَابًا وَعِظَـٰمًا أَءِنَّا لَمَبْعُوثُونَ",
-            "en_text": "When we are dead and reduced to dust and bones, will we really be resurrected?"
+            "verse_key": "37:33",
+            "verse_num": "37:33",
+            "arabic_text": "فَإِنَّهُمْ يَوْمَئِذٍ فِى ٱلْعَذَابِ مُشْتَرِكُونَ",
+            "en_text": "Surely on that Day they will ˹all˺ share in the punishment."
         },
         {
-            "verse_key": "37:17",
-            "verse_num": "37:17",
-            "arabic_text": "أَوَءَابَآؤُنَا ٱلْأَوَّلُونَ",
-            "en_text": "And our forefathers as well?”"
+            "verse_key": "37:34",
+            "verse_num": "37:34",
+            "arabic_text": "إِنَّا كَذَٰلِكَ نَفْعَلُ بِٱلْمُجْرِمِينَ",
+            "en_text": "That is certainly how We deal with the wicked."
         },
         {
-            "verse_key": "37:18",
-            "verse_num": "37:18",
-            "arabic_text": "قُلْ نَعَمْ وَأَنتُمْ دَٰخِرُونَ",
-            "en_text": "Say, “Yes! And you will be fully humbled.”"
+            "verse_key": "37:35",
+            "verse_num": "37:35",
+            "arabic_text": "إِنَّهُمْ كَانُوٓا۟ إِذَا قِيلَ لَهُمْ لَآ إِلَـٰهَ إِلَّا ٱللَّهُ يَسْتَكْبِرُونَ",
+            "en_text": "For whenever it was said to them ˹in the world˺, “There is no god ˹worthy of worship˺ except Allah,” they acted arrogantly"
         },
         {
-            "verse_key": "37:19",
-            "verse_num": "37:19",
-            "arabic_text": "فَإِنَّمَا هِىَ زَجْرَةٌ وَٰحِدَةٌ فَإِذَا هُمْ يَنظُرُونَ",
-            "en_text": "It will only take one Blast,<sup foot_note=77241>1</sup> then at once they will see ˹it all˺."
+            "verse_key": "37:36",
+            "verse_num": "37:36",
+            "arabic_text": "وَيَقُولُونَ أَئِنَّا لَتَارِكُوٓا۟ ءَالِهَتِنَا لِشَاعِرٍ مَّجْنُونٍۭ",
+            "en_text": "and argued, “Should we really abandon our gods for a mad poet?”"
         },
         {
-            "verse_key": "37:20",
-            "verse_num": "37:20",
-            "arabic_text": "وَقَالُوا۟ يَـٰوَيْلَنَا هَـٰذَا يَوْمُ ٱلدِّينِ",
-            "en_text": "They will cry, “Oh, woe to us! This is the Day of Judgment!”"
+            "verse_key": "37:37",
+            "verse_num": "37:37",
+            "arabic_text": "بَلْ جَآءَ بِٱلْحَقِّ وَصَدَّقَ ٱلْمُرْسَلِينَ",
+            "en_text": "In fact, he came with the truth, confirming ˹earlier˺ messengers."
         },
         {
-            "verse_key": "37:21",
-            "verse_num": "37:21",
-            "arabic_text": "هَـٰذَا يَوْمُ ٱلْفَصْلِ ٱلَّذِى كُنتُم بِهِۦ تُكَذِّبُونَ",
-            "en_text": "˹They will be told,˺ “This is the Day of ˹Final˺ Decision which you used to deny.”"
+            "verse_key": "37:38",
+            "verse_num": "37:38",
+            "arabic_text": "إِنَّكُمْ لَذَآئِقُوا۟ ٱلْعَذَابِ ٱلْأَلِيمِ",
+            "en_text": "You will certainly taste the painful torment,"
         },
         {
-            "verse_key": "37:22",
-            "verse_num": "37:22",
-            "arabic_text": "۞ ٱحْشُرُوا۟ ٱلَّذِينَ ظَلَمُوا۟ وَأَزْوَٰجَهُمْ وَمَا كَانُوا۟ يَعْبُدُونَ",
-            "en_text": "˹Allah will say to the angels,˺ “Gather ˹all˺ the wrongdoers along with their peers, and whatever they used to worship"
+            "verse_key": "37:39",
+            "verse_num": "37:39",
+            "arabic_text": "وَمَا تُجْزَوْنَ إِلَّا مَا كُنتُمْ تَعْمَلُونَ",
+            "en_text": "and will only be rewarded for what you used to do."
         },
         {
-            "verse_key": "37:23",
-            "verse_num": "37:23",
-            "arabic_text": "مِن دُونِ ٱللَّهِ فَٱهْدُوهُمْ إِلَىٰ صِرَٰطِ ٱلْجَحِيمِ",
-            "en_text": "instead of Allah, then lead them ˹all˺ to the path of Hell."
+            "verse_key": "37:40",
+            "verse_num": "37:40",
+            "arabic_text": "إِلَّا عِبَادَ ٱللَّهِ ٱلْمُخْلَصِينَ",
+            "en_text": "But not the chosen servants of Allah."
         },
         {
-            "verse_key": "37:24",
-            "verse_num": "37:24",
-            "arabic_text": "وَقِفُوهُمْ ۖ إِنَّهُم مَّسْـُٔولُونَ",
-            "en_text": "And detain them, for they must be questioned.”"
+            "verse_key": "37:41",
+            "verse_num": "37:41",
+            "arabic_text": "أُو۟لَـٰٓئِكَ لَهُمْ رِزْقٌ مَّعْلُومٌ",
+            "en_text": "They will have a known provision:"
+        },
+        {
+            "verse_key": "37:42",
+            "verse_num": "37:42",
+            "arabic_text": "فَوَٰكِهُ ۖ وَهُم مُّكْرَمُونَ",
+            "en_text": "fruits ˹of every type˺.<sup foot_note=77243>1</sup> And they will be honoured"
+        },
+        {
+            "verse_key": "37:43",
+            "verse_num": "37:43",
+            "arabic_text": "فِى جَنَّـٰتِ ٱلنَّعِيمِ",
+            "en_text": "in the Gardens of Bliss,"
+        },
+        {
+            "verse_key": "37:44",
+            "verse_num": "37:44",
+            "arabic_text": "عَلَىٰ سُرُرٍ مُّتَقَـٰبِلِينَ",
+            "en_text": "facing each other on thrones.<sup foot_note=77244>1</sup>"
+        },
+        {
+            "verse_key": "37:45",
+            "verse_num": "37:45",
+            "arabic_text": "يُطَافُ عَلَيْهِم بِكَأْسٍ مِّن مَّعِينٍۭ",
+            "en_text": "A drink ˹of pure wine˺ will be passed around to them from a flowing stream:"
+        },
+        {
+            "verse_key": "37:46",
+            "verse_num": "37:46",
+            "arabic_text": "بَيْضَآءَ لَذَّةٍ لِّلشَّـٰرِبِينَ",
+            "en_text": "crystal-white, delicious to drink."
+        },
+        {
+            "verse_key": "37:47",
+            "verse_num": "37:47",
+            "arabic_text": "لَا فِيهَا غَوْلٌ وَلَا هُمْ عَنْهَا يُنزَفُونَ",
+            "en_text": "It will neither harm ˹them˺, nor will they be intoxicated by it."
+        },
+        {
+            "verse_key": "37:48",
+            "verse_num": "37:48",
+            "arabic_text": "وَعِندَهُمْ قَـٰصِرَٰتُ ٱلطَّرْفِ عِينٌ",
+            "en_text": "And with them will be maidens of modest gaze and gorgeous eyes,"
+        },
+        {
+            "verse_key": "37:49",
+            "verse_num": "37:49",
+            "arabic_text": "كَأَنَّهُنَّ بَيْضٌ مَّكْنُونٌ",
+            "en_text": "as if they were pristine pearls.<sup foot_note=77245>1</sup> "
+        },
+        {
+            "verse_key": "37:50",
+            "verse_num": "37:50",
+            "arabic_text": "فَأَقْبَلَ بَعْضُهُمْ عَلَىٰ بَعْضٍ يَتَسَآءَلُونَ",
+            "en_text": "Then they will turn to one another inquisitively.<sup foot_note=77246>1</sup>"
+        },
+        {
+            "verse_key": "37:51",
+            "verse_num": "37:51",
+            "arabic_text": "قَالَ قَآئِلٌ مِّنْهُمْ إِنِّى كَانَ لِى قَرِينٌ",
+            "en_text": "One of them will say, “I once had a companion ˹in the world˺"
+        },
+        {
+            "verse_key": "37:52",
+            "verse_num": "37:52",
+            "arabic_text": "يَقُولُ أَءِنَّكَ لَمِنَ ٱلْمُصَدِّقِينَ",
+            "en_text": "who used to ask ˹me˺, ‘Do you actually believe ˹in resurrection˺?"
+        },
+        {
+            "verse_key": "37:53",
+            "verse_num": "37:53",
+            "arabic_text": "أَءِذَا مِتْنَا وَكُنَّا تُرَابًا وَعِظَـٰمًا أَءِنَّا لَمَدِينُونَ",
+            "en_text": "When we are dead and reduced to dust and bones, will we really be brought to judgment?’”"
+        },
+        {
+            "verse_key": "37:54",
+            "verse_num": "37:54",
+            "arabic_text": "قَالَ هَلْ أَنتُم مُّطَّلِعُونَ",
+            "en_text": "He will ˹then˺ ask, “Would you care to see ˹his fate˺?”"
+        },
+        {
+            "verse_key": "37:55",
+            "verse_num": "37:55",
+            "arabic_text": "فَٱطَّلَعَ فَرَءَاهُ فِى سَوَآءِ ٱلْجَحِيمِ",
+            "en_text": "Then he ˹and the others˺ will look and spot him in the midst of the Hellfire."
+        },
+        {
+            "verse_key": "37:56",
+            "verse_num": "37:56",
+            "arabic_text": "قَالَ تَٱللَّهِ إِن كِدتَّ لَتُرْدِينِ",
+            "en_text": "He will ˹then˺ say, “By Allah! You nearly ruined me."
+        },
+        {
+            "verse_key": "37:57",
+            "verse_num": "37:57",
+            "arabic_text": "وَلَوْلَا نِعْمَةُ رَبِّى لَكُنتُ مِنَ ٱلْمُحْضَرِينَ",
+            "en_text": "Had it not been for the grace of my Lord, I ˹too˺ would have certainly been among those brought ˹to Hell˺.”"
+        },
+        {
+            "verse_key": "37:58",
+            "verse_num": "37:58",
+            "arabic_text": "أَفَمَا نَحْنُ بِمَيِّتِينَ",
+            "en_text": "˹Then he will ask his fellow believers,˺ “Can you imagine that we will never die,"
+        },
+        {
+            "verse_key": "37:59",
+            "verse_num": "37:59",
+            "arabic_text": "إِلَّا مَوْتَتَنَا ٱلْأُولَىٰ وَمَا نَحْنُ بِمُعَذَّبِينَ",
+            "en_text": "except our first death, nor be punished ˹like the others˺?”"
+        },
+        {
+            "verse_key": "37:60",
+            "verse_num": "37:60",
+            "arabic_text": "إِنَّ هَـٰذَا لَهُوَ ٱلْفَوْزُ ٱلْعَظِيمُ",
+            "en_text": "This is truly the ultimate triumph."
+        },
+        {
+            "verse_key": "37:61",
+            "verse_num": "37:61",
+            "arabic_text": "لِمِثْلِ هَـٰذَا فَلْيَعْمَلِ ٱلْعَـٰمِلُونَ",
+            "en_text": "For such ˹honour˺ all should strive."
+        },
+        {
+            "verse_key": "37:62",
+            "verse_num": "37:62",
+            "arabic_text": "أَذَٰلِكَ خَيْرٌ نُّزُلًا أَمْ شَجَرَةُ ٱلزَّقُّومِ",
+            "en_text": "Is this ˹bliss˺ a better accommodation or the tree of Zaqqûm?<sup foot_note=77247>1</sup>"
+        },
+        {
+            "verse_key": "37:63",
+            "verse_num": "37:63",
+            "arabic_text": "إِنَّا جَعَلْنَـٰهَا فِتْنَةً لِّلظَّـٰلِمِينَ",
+            "en_text": "We have surely made it a test for the wrongdoers."
+        },
+        {
+            "verse_key": "37:64",
+            "verse_num": "37:64",
+            "arabic_text": "إِنَّهَا شَجَرَةٌ تَخْرُجُ فِىٓ أَصْلِ ٱلْجَحِيمِ",
+            "en_text": "Indeed, it is a tree that grows in the depths of Hell,"
+        },
+        {
+            "verse_key": "37:65",
+            "verse_num": "37:65",
+            "arabic_text": "طَلْعُهَا كَأَنَّهُۥ رُءُوسُ ٱلشَّيَـٰطِينِ",
+            "en_text": "bearing fruit like devils’ heads."
+        },
+        {
+            "verse_key": "37:66",
+            "verse_num": "37:66",
+            "arabic_text": "فَإِنَّهُمْ لَـَٔاكِلُونَ مِنْهَا فَمَالِـُٔونَ مِنْهَا ٱلْبُطُونَ",
+            "en_text": "The evildoers will certainly ˹be left to˺ eat from it, filling up their bellies with it."
+        },
+        {
+            "verse_key": "37:67",
+            "verse_num": "37:67",
+            "arabic_text": "ثُمَّ إِنَّ لَهُمْ عَلَيْهَا لَشَوْبًا مِّنْ حَمِيمٍ",
+            "en_text": "Then on top of that they will be given a blend of boiling drink."
+        },
+        {
+            "verse_key": "37:68",
+            "verse_num": "37:68",
+            "arabic_text": "ثُمَّ إِنَّ مَرْجِعَهُمْ لَإِلَى ٱلْجَحِيمِ",
+            "en_text": "Then they will ultimately return to ˹their place in˺ Hell."
+        },
+        {
+            "verse_key": "37:69",
+            "verse_num": "37:69",
+            "arabic_text": "إِنَّهُمْ أَلْفَوْا۟ ءَابَآءَهُمْ ضَآلِّينَ",
+            "en_text": "Indeed, they found their forefathers astray,"
+        },
+        {
+            "verse_key": "37:70",
+            "verse_num": "37:70",
+            "arabic_text": "فَهُمْ عَلَىٰٓ ءَاثَـٰرِهِمْ يُهْرَعُونَ",
+            "en_text": "so they rushed in their footsteps!"
+        },
+        {
+            "verse_key": "37:71",
+            "verse_num": "37:71",
+            "arabic_text": "وَلَقَدْ ضَلَّ قَبْلَهُمْ أَكْثَرُ ٱلْأَوَّلِينَ",
+            "en_text": "And surely most of the earlier generations had strayed before them,"
+        },
+        {
+            "verse_key": "37:72",
+            "verse_num": "37:72",
+            "arabic_text": "وَلَقَدْ أَرْسَلْنَا فِيهِم مُّنذِرِينَ",
+            "en_text": "although We had certainly sent warners among them."
+        },
+        {
+            "verse_key": "37:73",
+            "verse_num": "37:73",
+            "arabic_text": "فَٱنظُرْ كَيْفَ كَانَ عَـٰقِبَةُ ٱلْمُنذَرِينَ",
+            "en_text": "See then what was the end of those who had been warned."
+        },
+        {
+            "verse_key": "37:74",
+            "verse_num": "37:74",
+            "arabic_text": "إِلَّا عِبَادَ ٱللَّهِ ٱلْمُخْلَصِينَ",
+            "en_text": "But not the chosen servants of Allah."
+        },
+        {
+            "verse_key": "37:75",
+            "verse_num": "37:75",
+            "arabic_text": "وَلَقَدْ نَادَىٰنَا نُوحٌ فَلَنِعْمَ ٱلْمُجِيبُونَ",
+            "en_text": "Indeed, Noah cried out to Us, and how excellent are We in responding!"
+        },
+        {
+            "verse_key": "37:76",
+            "verse_num": "37:76",
+            "arabic_text": "وَنَجَّيْنَـٰهُ وَأَهْلَهُۥ مِنَ ٱلْكَرْبِ ٱلْعَظِيمِ",
+            "en_text": "We delivered him and his family<sup foot_note=77248>1</sup> from the great distress,"
+        },
+        {
+            "verse_key": "37:77",
+            "verse_num": "37:77",
+            "arabic_text": "وَجَعَلْنَا ذُرِّيَّتَهُۥ هُمُ ٱلْبَاقِينَ",
+            "en_text": "and made his descendants the sole survivors.<sup foot_note=77249>1</sup>"
+        },
+        {
+            "verse_key": "37:78",
+            "verse_num": "37:78",
+            "arabic_text": "وَتَرَكْنَا عَلَيْهِ فِى ٱلْـَٔاخِرِينَ",
+            "en_text": "And We blessed him ˹with honourable mention˺ among later generations:"
+        },
+        {
+            "verse_key": "37:79",
+            "verse_num": "37:79",
+            "arabic_text": "سَلَـٰمٌ عَلَىٰ نُوحٍ فِى ٱلْعَـٰلَمِينَ",
+            "en_text": "“Peace be upon Noah among all peoples.”"
+        },
+        {
+            "verse_key": "37:80",
+            "verse_num": "37:80",
+            "arabic_text": "إِنَّا كَذَٰلِكَ نَجْزِى ٱلْمُحْسِنِينَ",
+            "en_text": "Indeed, this is how We reward the good-doers."
+        },
+        {
+            "verse_key": "37:81",
+            "verse_num": "37:81",
+            "arabic_text": "إِنَّهُۥ مِنْ عِبَادِنَا ٱلْمُؤْمِنِينَ",
+            "en_text": "˹For˺ he was truly one of Our faithful servants."
+        },
+        {
+            "verse_key": "37:82",
+            "verse_num": "37:82",
+            "arabic_text": "ثُمَّ أَغْرَقْنَا ٱلْـَٔاخَرِينَ",
+            "en_text": "Then We drowned the others."
+        },
+        {
+            "verse_key": "37:83",
+            "verse_num": "37:83",
+            "arabic_text": "۞ وَإِنَّ مِن شِيعَتِهِۦ لَإِبْرَٰهِيمَ",
+            "en_text": "And indeed, one of those who followed his way was Abraham."
+        },
+        {
+            "verse_key": "37:84",
+            "verse_num": "37:84",
+            "arabic_text": "إِذْ جَآءَ رَبَّهُۥ بِقَلْبٍ سَلِيمٍ",
+            "en_text": "˹Remember˺ when he came to his Lord with a pure heart,"
+        },
+        {
+            "verse_key": "37:85",
+            "verse_num": "37:85",
+            "arabic_text": "إِذْ قَالَ لِأَبِيهِ وَقَوْمِهِۦ مَاذَا تَعْبُدُونَ",
+            "en_text": "and said to his father and his people, “What are you worshipping?"
+        },
+        {
+            "verse_key": "37:86",
+            "verse_num": "37:86",
+            "arabic_text": "أَئِفْكًا ءَالِهَةً دُونَ ٱللَّهِ تُرِيدُونَ",
+            "en_text": "Is it false gods that you desire instead of Allah?"
+        },
+        {
+            "verse_key": "37:87",
+            "verse_num": "37:87",
+            "arabic_text": "فَمَا ظَنُّكُم بِرَبِّ ٱلْعَـٰلَمِينَ",
+            "en_text": "What then do you expect from the Lord of all worlds?”"
+        },
+        {
+            "verse_key": "37:88",
+            "verse_num": "37:88",
+            "arabic_text": "فَنَظَرَ نَظْرَةً فِى ٱلنُّجُومِ",
+            "en_text": "He later looked up to the stars ˹in contemplation˺,<sup foot_note=77250>1</sup>"
+        },
+        {
+            "verse_key": "37:89",
+            "verse_num": "37:89",
+            "arabic_text": "فَقَالَ إِنِّى سَقِيمٌ",
+            "en_text": "then said, “I am really sick.”<sup foot_note=77251>1</sup>"
+        },
+        {
+            "verse_key": "37:90",
+            "verse_num": "37:90",
+            "arabic_text": "فَتَوَلَّوْا۟ عَنْهُ مُدْبِرِينَ",
+            "en_text": "So they turned their backs on him and went away."
+        },
+        {
+            "verse_key": "37:91",
+            "verse_num": "37:91",
+            "arabic_text": "فَرَاغَ إِلَىٰٓ ءَالِهَتِهِمْ فَقَالَ أَلَا تَأْكُلُونَ",
+            "en_text": "Then he ˹stealthily˺ advanced towards their gods, and said ˹mockingly˺, “Will you not eat ˹your offerings˺?"
+        },
+        {
+            "verse_key": "37:92",
+            "verse_num": "37:92",
+            "arabic_text": "مَا لَكُمْ لَا تَنطِقُونَ",
+            "en_text": "What is wrong with you that you cannot speak?”"
+        },
+        {
+            "verse_key": "37:93",
+            "verse_num": "37:93",
+            "arabic_text": "فَرَاغَ عَلَيْهِمْ ضَرْبًۢا بِٱلْيَمِينِ",
+            "en_text": "Then he swiftly turned on them, striking ˹them˺ with his right hand."
+        },
+        {
+            "verse_key": "37:94",
+            "verse_num": "37:94",
+            "arabic_text": "فَأَقْبَلُوٓا۟ إِلَيْهِ يَزِفُّونَ",
+            "en_text": "Later, his people came rushing towards him ˹furiously˺."
+        },
+        {
+            "verse_key": "37:95",
+            "verse_num": "37:95",
+            "arabic_text": "قَالَ أَتَعْبُدُونَ مَا تَنْحِتُونَ",
+            "en_text": "He argued, “How can you worship what you carve ˹with your own hands˺,"
+        },
+        {
+            "verse_key": "37:96",
+            "verse_num": "37:96",
+            "arabic_text": "وَٱللَّهُ خَلَقَكُمْ وَمَا تَعْمَلُونَ",
+            "en_text": "when it is Allah Who created you and whatever you do?”"
+        },
+        {
+            "verse_key": "37:97",
+            "verse_num": "37:97",
+            "arabic_text": "قَالُوا۟ ٱبْنُوا۟ لَهُۥ بُنْيَـٰنًا فَأَلْقُوهُ فِى ٱلْجَحِيمِ",
+            "en_text": "They said ˹to one another˺, “Build him a furnace and cast him into the blazing fire.”"
+        },
+        {
+            "verse_key": "37:98",
+            "verse_num": "37:98",
+            "arabic_text": "فَأَرَادُوا۟ بِهِۦ كَيْدًا فَجَعَلْنَـٰهُمُ ٱلْأَسْفَلِينَ",
+            "en_text": "And so they sought to harm him, but We made them inferior."
+        },
+        {
+            "verse_key": "37:99",
+            "verse_num": "37:99",
+            "arabic_text": "وَقَالَ إِنِّى ذَاهِبٌ إِلَىٰ رَبِّى سَيَهْدِينِ",
+            "en_text": "He later said, “I am leaving ˹in obedience˺ to my Lord. He will guide me."
+        },
+        {
+            "verse_key": "37:100",
+            "verse_num": "37:100",
+            "arabic_text": "رَبِّ هَبْ لِى مِنَ ٱلصَّـٰلِحِينَ",
+            "en_text": "My Lord! Bless me with righteous offspring.”"
+        },
+        {
+            "verse_key": "37:101",
+            "verse_num": "37:101",
+            "arabic_text": "فَبَشَّرْنَـٰهُ بِغُلَـٰمٍ حَلِيمٍ",
+            "en_text": "So We gave him good news of a forbearing son."
+        },
+        {
+            "verse_key": "37:102",
+            "verse_num": "37:102",
+            "arabic_text": "فَلَمَّا بَلَغَ مَعَهُ ٱلسَّعْىَ قَالَ يَـٰبُنَىَّ إِنِّىٓ أَرَىٰ فِى ٱلْمَنَامِ أَنِّىٓ أَذْبَحُكَ فَٱنظُرْ مَاذَا تَرَىٰ ۚ قَالَ يَـٰٓأَبَتِ ٱفْعَلْ مَا تُؤْمَرُ ۖ سَتَجِدُنِىٓ إِن شَآءَ ٱللَّهُ مِنَ ٱلصَّـٰبِرِينَ",
+            "en_text": "Then when the boy reached the age to work with him, Abraham said, “O my dear son! I have seen in a dream that I ˹must˺ sacrifice you. So tell me what you think.” He replied, “O my dear father! Do as you are commanded. Allah willing, you will find me steadfast.”"
+        },
+        {
+            "verse_key": "37:103",
+            "verse_num": "37:103",
+            "arabic_text": "فَلَمَّآ أَسْلَمَا وَتَلَّهُۥ لِلْجَبِينِ",
+            "en_text": "Then when they submitted ˹to Allah’s Will˺, and Abraham laid him on the side of his forehead ˹for sacrifice˺,"
+        },
+        {
+            "verse_key": "37:104",
+            "verse_num": "37:104",
+            "arabic_text": "وَنَـٰدَيْنَـٰهُ أَن يَـٰٓإِبْرَٰهِيمُ",
+            "en_text": "We called out to him, “O Abraham!"
+        },
+        {
+            "verse_key": "37:105",
+            "verse_num": "37:105",
+            "arabic_text": "قَدْ صَدَّقْتَ ٱلرُّءْيَآ ۚ إِنَّا كَذَٰلِكَ نَجْزِى ٱلْمُحْسِنِينَ",
+            "en_text": "You have already fulfilled the vision.” Indeed, this is how We reward the good-doers."
+        },
+        {
+            "verse_key": "37:106",
+            "verse_num": "37:106",
+            "arabic_text": "إِنَّ هَـٰذَا لَهُوَ ٱلْبَلَـٰٓؤُا۟ ٱلْمُبِينُ",
+            "en_text": "That was truly a revealing test."
+        },
+        {
+            "verse_key": "37:107",
+            "verse_num": "37:107",
+            "arabic_text": "وَفَدَيْنَـٰهُ بِذِبْحٍ عَظِيمٍ",
+            "en_text": "And We ransomed his son with a great sacrifice,<sup foot_note=77252>1</sup>"
+        },
+        {
+            "verse_key": "37:108",
+            "verse_num": "37:108",
+            "arabic_text": "وَتَرَكْنَا عَلَيْهِ فِى ٱلْـَٔاخِرِينَ",
+            "en_text": "and blessed Abraham ˹with honourable mention˺ among later generations:"
+        },
+        {
+            "verse_key": "37:109",
+            "verse_num": "37:109",
+            "arabic_text": "سَلَـٰمٌ عَلَىٰٓ إِبْرَٰهِيمَ",
+            "en_text": "“Peace be upon Abraham.”"
+        },
+        {
+            "verse_key": "37:110",
+            "verse_num": "37:110",
+            "arabic_text": "كَذَٰلِكَ نَجْزِى ٱلْمُحْسِنِينَ",
+            "en_text": "This is how We reward the good-doers."
+        },
+        {
+            "verse_key": "37:111",
+            "verse_num": "37:111",
+            "arabic_text": "إِنَّهُۥ مِنْ عِبَادِنَا ٱلْمُؤْمِنِينَ",
+            "en_text": "He was truly one of Our faithful servants."
+        },
+        {
+            "verse_key": "37:112",
+            "verse_num": "37:112",
+            "arabic_text": "وَبَشَّرْنَـٰهُ بِإِسْحَـٰقَ نَبِيًّا مِّنَ ٱلصَّـٰلِحِينَ",
+            "en_text": "We ˹later˺ gave him good news of Isaac—a prophet, and one of the righteous.<sup foot_note=77253>1</sup>"
+        },
+        {
+            "verse_key": "37:113",
+            "verse_num": "37:113",
+            "arabic_text": "وَبَـٰرَكْنَا عَلَيْهِ وَعَلَىٰٓ إِسْحَـٰقَ ۚ وَمِن ذُرِّيَّتِهِمَا مُحْسِنٌ وَظَالِمٌ لِّنَفْسِهِۦ مُبِينٌ",
+            "en_text": "We blessed him<sup foot_note=77254>1</sup> and Isaac as well. Some of their descendants did good, while others clearly wronged themselves."
+        },
+        {
+            "verse_key": "37:114",
+            "verse_num": "37:114",
+            "arabic_text": "وَلَقَدْ مَنَنَّا عَلَىٰ مُوسَىٰ وَهَـٰرُونَ",
+            "en_text": "And We certainly showed favour to Moses and Aaron,"
+        },
+        {
+            "verse_key": "37:115",
+            "verse_num": "37:115",
+            "arabic_text": "وَنَجَّيْنَـٰهُمَا وَقَوْمَهُمَا مِنَ ٱلْكَرْبِ ٱلْعَظِيمِ",
+            "en_text": "and delivered them and their people from the great distress."
+        },
+        {
+            "verse_key": "37:116",
+            "verse_num": "37:116",
+            "arabic_text": "وَنَصَرْنَـٰهُمْ فَكَانُوا۟ هُمُ ٱلْغَـٰلِبِينَ",
+            "en_text": "We helped them so it was they who prevailed."
+        },
+        {
+            "verse_key": "37:117",
+            "verse_num": "37:117",
+            "arabic_text": "وَءَاتَيْنَـٰهُمَا ٱلْكِتَـٰبَ ٱلْمُسْتَبِينَ",
+            "en_text": "We gave them the clear Scripture,"
+        },
+        {
+            "verse_key": "37:118",
+            "verse_num": "37:118",
+            "arabic_text": "وَهَدَيْنَـٰهُمَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ",
+            "en_text": "and guided them to the Straight Path."
+        },
+        {
+            "verse_key": "37:119",
+            "verse_num": "37:119",
+            "arabic_text": "وَتَرَكْنَا عَلَيْهِمَا فِى ٱلْـَٔاخِرِينَ",
+            "en_text": "And We blessed them ˹with honourable mention˺ among later generations:"
+        },
+        {
+            "verse_key": "37:120",
+            "verse_num": "37:120",
+            "arabic_text": "سَلَـٰمٌ عَلَىٰ مُوسَىٰ وَهَـٰرُونَ",
+            "en_text": "“Peace be upon Moses and Aaron.”"
+        },
+        {
+            "verse_key": "37:121",
+            "verse_num": "37:121",
+            "arabic_text": "إِنَّا كَذَٰلِكَ نَجْزِى ٱلْمُحْسِنِينَ",
+            "en_text": "Indeed, this is how We reward the good-doers."
+        },
+        {
+            "verse_key": "37:122",
+            "verse_num": "37:122",
+            "arabic_text": "إِنَّهُمَا مِنْ عِبَادِنَا ٱلْمُؤْمِنِينَ",
+            "en_text": "They were truly ˹two˺ of Our faithful servants."
+        },
+        {
+            "verse_key": "37:123",
+            "verse_num": "37:123",
+            "arabic_text": "وَإِنَّ إِلْيَاسَ لَمِنَ ٱلْمُرْسَلِينَ",
+            "en_text": "And Elias was indeed one of the messengers."
+        },
+        {
+            "verse_key": "37:124",
+            "verse_num": "37:124",
+            "arabic_text": "إِذْ قَالَ لِقَوْمِهِۦٓ أَلَا تَتَّقُونَ",
+            "en_text": "˹Remember˺ when he said to his people, “Will you not fear ˹Allah˺?"
+        },
+        {
+            "verse_key": "37:125",
+            "verse_num": "37:125",
+            "arabic_text": "أَتَدْعُونَ بَعْلًا وَتَذَرُونَ أَحْسَنَ ٱلْخَـٰلِقِينَ",
+            "en_text": "Do you call upon ˹the idol of˺ Ba’l and abandon the Best of Creators—"
+        },
+        {
+            "verse_key": "37:126",
+            "verse_num": "37:126",
+            "arabic_text": "ٱللَّهَ رَبَّكُمْ وَرَبَّ ءَابَآئِكُمُ ٱلْأَوَّلِينَ",
+            "en_text": "Allah, your Lord and the Lord of your forefathers?”"
+        },
+        {
+            "verse_key": "37:127",
+            "verse_num": "37:127",
+            "arabic_text": "فَكَذَّبُوهُ فَإِنَّهُمْ لَمُحْضَرُونَ",
+            "en_text": "But they rejected him, so they will certainly be brought ˹for punishment˺."
+        },
+        {
+            "verse_key": "37:128",
+            "verse_num": "37:128",
+            "arabic_text": "إِلَّا عِبَادَ ٱللَّهِ ٱلْمُخْلَصِينَ",
+            "en_text": "But not the chosen servants of Allah."
+        },
+        {
+            "verse_key": "37:129",
+            "verse_num": "37:129",
+            "arabic_text": "وَتَرَكْنَا عَلَيْهِ فِى ٱلْـَٔاخِرِينَ",
+            "en_text": "We blessed him ˹with honourable mention˺ among later generations:"
+        },
+        {
+            "verse_key": "37:130",
+            "verse_num": "37:130",
+            "arabic_text": "سَلَـٰمٌ عَلَىٰٓ إِلْ يَاسِينَ",
+            "en_text": "“Peace be upon Elias.”"
+        },
+        {
+            "verse_key": "37:131",
+            "verse_num": "37:131",
+            "arabic_text": "إِنَّا كَذَٰلِكَ نَجْزِى ٱلْمُحْسِنِينَ",
+            "en_text": "Indeed, this is how We reward the good-doers."
+        },
+        {
+            "verse_key": "37:132",
+            "verse_num": "37:132",
+            "arabic_text": "إِنَّهُۥ مِنْ عِبَادِنَا ٱلْمُؤْمِنِينَ",
+            "en_text": "He was truly one of Our faithful servants."
+        },
+        {
+            "verse_key": "37:133",
+            "verse_num": "37:133",
+            "arabic_text": "وَإِنَّ لُوطًا لَّمِنَ ٱلْمُرْسَلِينَ",
+            "en_text": "And Lot was indeed one of the messengers."
+        },
+        {
+            "verse_key": "37:134",
+            "verse_num": "37:134",
+            "arabic_text": "إِذْ نَجَّيْنَـٰهُ وَأَهْلَهُۥٓ أَجْمَعِينَ",
+            "en_text": "˹Remember˺ when We delivered him and all of his family,"
+        },
+        {
+            "verse_key": "37:135",
+            "verse_num": "37:135",
+            "arabic_text": "إِلَّا عَجُوزًا فِى ٱلْغَـٰبِرِينَ",
+            "en_text": "except an old woman,<sup foot_note=77255>1</sup> who was one of the doomed."
+        },
+        {
+            "verse_key": "37:136",
+            "verse_num": "37:136",
+            "arabic_text": "ثُمَّ دَمَّرْنَا ٱلْـَٔاخَرِينَ",
+            "en_text": "Then We ˹utterly˺ destroyed the rest."
+        },
+        {
+            "verse_key": "37:137",
+            "verse_num": "37:137",
+            "arabic_text": "وَإِنَّكُمْ لَتَمُرُّونَ عَلَيْهِم مُّصْبِحِينَ",
+            "en_text": "You ˹Meccans˺ certainly pass by their ruins day"
+        },
+        {
+            "verse_key": "37:138",
+            "verse_num": "37:138",
+            "arabic_text": "وَبِٱلَّيْلِ ۗ أَفَلَا تَعْقِلُونَ",
+            "en_text": "and night. Will you not then understand?"
+        },
+        {
+            "verse_key": "37:139",
+            "verse_num": "37:139",
+            "arabic_text": "وَإِنَّ يُونُسَ لَمِنَ ٱلْمُرْسَلِينَ",
+            "en_text": "And Jonah was indeed one of the messengers."
+        },
+        {
+            "verse_key": "37:140",
+            "verse_num": "37:140",
+            "arabic_text": "إِذْ أَبَقَ إِلَى ٱلْفُلْكِ ٱلْمَشْحُونِ",
+            "en_text": "˹Remember˺ when he fled to the overloaded ship."
+        },
+        {
+            "verse_key": "37:141",
+            "verse_num": "37:141",
+            "arabic_text": "فَسَاهَمَ فَكَانَ مِنَ ٱلْمُدْحَضِينَ",
+            "en_text": "Then ˹to save it from sinking,˺ he drew straws ˹with other passengers˺. He lost ˹and was thrown overboard˺."
+        },
+        {
+            "verse_key": "37:142",
+            "verse_num": "37:142",
+            "arabic_text": "فَٱلْتَقَمَهُ ٱلْحُوتُ وَهُوَ مُلِيمٌ",
+            "en_text": "Then the whale engulfed him while he was blameworthy.<sup foot_note=77256>1</sup>"
+        },
+        {
+            "verse_key": "37:143",
+            "verse_num": "37:143",
+            "arabic_text": "فَلَوْلَآ أَنَّهُۥ كَانَ مِنَ ٱلْمُسَبِّحِينَ",
+            "en_text": "Had he not ˹constantly˺ glorified ˹Allah˺,<sup foot_note=77257>1</sup>"
+        },
+        {
+            "verse_key": "37:144",
+            "verse_num": "37:144",
+            "arabic_text": "لَلَبِثَ فِى بَطْنِهِۦٓ إِلَىٰ يَوْمِ يُبْعَثُونَ",
+            "en_text": "he would have certainly remained in its belly until the Day of Resurrection.<sup foot_note=77258>1</sup>"
+        },
+        {
+            "verse_key": "37:145",
+            "verse_num": "37:145",
+            "arabic_text": "۞ فَنَبَذْنَـٰهُ بِٱلْعَرَآءِ وَهُوَ سَقِيمٌ",
+            "en_text": "But We cast him onto the open ˹shore˺, ˹totally˺ worn out,"
+        },
+        {
+            "verse_key": "37:146",
+            "verse_num": "37:146",
+            "arabic_text": "وَأَنۢبَتْنَا عَلَيْهِ شَجَرَةً مِّن يَقْطِينٍ",
+            "en_text": "and caused a squash plant to grow over him.<sup foot_note=77259>1</sup>"
+        },
+        {
+            "verse_key": "37:147",
+            "verse_num": "37:147",
+            "arabic_text": "وَأَرْسَلْنَـٰهُ إِلَىٰ مِا۟ئَةِ أَلْفٍ أَوْ يَزِيدُونَ",
+            "en_text": "We ˹later˺ sent him ˹back˺ to ˹his city of˺ at least one hundred thousand people,"
+        },
+        {
+            "verse_key": "37:148",
+            "verse_num": "37:148",
+            "arabic_text": "فَـَٔامَنُوا۟ فَمَتَّعْنَـٰهُمْ إِلَىٰ حِينٍ",
+            "en_text": "who then believed ˹in him˺, so We allowed them enjoyment for a while."
+        },
+        {
+            "verse_key": "37:149",
+            "verse_num": "37:149",
+            "arabic_text": "فَٱسْتَفْتِهِمْ أَلِرَبِّكَ ٱلْبَنَاتُ وَلَهُمُ ٱلْبَنُونَ",
+            "en_text": "Ask them ˹O Prophet˺ if your Lord has daughters,<sup foot_note=77260>1</sup> while the pagans ˹prefer to˺ have sons."
+        },
+        {
+            "verse_key": "37:150",
+            "verse_num": "37:150",
+            "arabic_text": "أَمْ خَلَقْنَا ٱلْمَلَـٰٓئِكَةَ إِنَـٰثًا وَهُمْ شَـٰهِدُونَ",
+            "en_text": "Or ˹ask them˺ if We created the angels as females right before their eyes."
+        },
+        {
+            "verse_key": "37:151",
+            "verse_num": "37:151",
+            "arabic_text": "أَلَآ إِنَّهُم مِّنْ إِفْكِهِمْ لَيَقُولُونَ",
+            "en_text": "Indeed, it is one of their ˹outrageous˺ fabrications to say,"
+        },
+        {
+            "verse_key": "37:152",
+            "verse_num": "37:152",
+            "arabic_text": "وَلَدَ ٱللَّهُ وَإِنَّهُمْ لَكَـٰذِبُونَ",
+            "en_text": "“Allah has children.” They are simply liars."
+        },
+        {
+            "verse_key": "37:153",
+            "verse_num": "37:153",
+            "arabic_text": "أَصْطَفَى ٱلْبَنَاتِ عَلَى ٱلْبَنِينَ",
+            "en_text": "Has He chosen daughters over sons?<sup foot_note=77261>1</sup>"
+        },
+        {
+            "verse_key": "37:154",
+            "verse_num": "37:154",
+            "arabic_text": "مَا لَكُمْ كَيْفَ تَحْكُمُونَ",
+            "en_text": "What is the matter with you? How do you judge?"
+        },
+        {
+            "verse_key": "37:155",
+            "verse_num": "37:155",
+            "arabic_text": "أَفَلَا تَذَكَّرُونَ",
+            "en_text": "Will you not then be mindful?"
+        },
+        {
+            "verse_key": "37:156",
+            "verse_num": "37:156",
+            "arabic_text": "أَمْ لَكُمْ سُلْطَـٰنٌ مُّبِينٌ",
+            "en_text": "Or do you have ˹any˺ compelling proof?"
+        },
+        {
+            "verse_key": "37:157",
+            "verse_num": "37:157",
+            "arabic_text": "فَأْتُوا۟ بِكِتَـٰبِكُمْ إِن كُنتُمْ صَـٰدِقِينَ",
+            "en_text": "Then bring ˹us˺ your scripture, if what you say is true!"
+        },
+        {
+            "verse_key": "37:158",
+            "verse_num": "37:158",
+            "arabic_text": "وَجَعَلُوا۟ بَيْنَهُۥ وَبَيْنَ ٱلْجِنَّةِ نَسَبًا ۚ وَلَقَدْ عَلِمَتِ ٱلْجِنَّةُ إِنَّهُمْ لَمُحْضَرُونَ",
+            "en_text": "They have also established a ˹marital˺ relationship between Him and the jinn. Yet the jinn ˹themselves˺ know well that such people will certainly be brought ˹for punishment˺.<sup foot_note=77262>1</sup>"
+        },
+        {
+            "verse_key": "37:159",
+            "verse_num": "37:159",
+            "arabic_text": "سُبْحَـٰنَ ٱللَّهِ عَمَّا يَصِفُونَ",
+            "en_text": "Glorified is Allah far above what they claim!"
+        },
+        {
+            "verse_key": "37:160",
+            "verse_num": "37:160",
+            "arabic_text": "إِلَّا عِبَادَ ٱللَّهِ ٱلْمُخْلَصِينَ",
+            "en_text": "But not the chosen servants of Allah."
+        },
+        {
+            "verse_key": "37:161",
+            "verse_num": "37:161",
+            "arabic_text": "فَإِنَّكُمْ وَمَا تَعْبُدُونَ",
+            "en_text": "Surely you ˹pagans˺ and whatever ˹idols˺ you worship"
+        },
+        {
+            "verse_key": "37:162",
+            "verse_num": "37:162",
+            "arabic_text": "مَآ أَنتُمْ عَلَيْهِ بِفَـٰتِنِينَ",
+            "en_text": "can never lure ˹anyone˺ away from Him"
+        },
+        {
+            "verse_key": "37:163",
+            "verse_num": "37:163",
+            "arabic_text": "إِلَّا مَنْ هُوَ صَالِ ٱلْجَحِيمِ",
+            "en_text": "except those ˹destined˺ to burn in Hell."
+        },
+        {
+            "verse_key": "37:164",
+            "verse_num": "37:164",
+            "arabic_text": "وَمَا مِنَّآ إِلَّا لَهُۥ مَقَامٌ مَّعْلُومٌ",
+            "en_text": "˹The angels respond,˺ “There is not one of us without an assigned station ˹of worship˺."
+        },
+        {
+            "verse_key": "37:165",
+            "verse_num": "37:165",
+            "arabic_text": "وَإِنَّا لَنَحْنُ ٱلصَّآفُّونَ",
+            "en_text": "We are indeed the ones lined up in ranks ˹for Allah˺."
+        },
+        {
+            "verse_key": "37:166",
+            "verse_num": "37:166",
+            "arabic_text": "وَإِنَّا لَنَحْنُ ٱلْمُسَبِّحُونَ",
+            "en_text": "And we are indeed the ones ˹constantly˺ glorifying ˹His praise˺.”"
+        },
+        {
+            "verse_key": "37:167",
+            "verse_num": "37:167",
+            "arabic_text": "وَإِن كَانُوا۟ لَيَقُولُونَ",
+            "en_text": "They certainly used to say,"
+        },
+        {
+            "verse_key": "37:168",
+            "verse_num": "37:168",
+            "arabic_text": "لَوْ أَنَّ عِندَنَا ذِكْرًا مِّنَ ٱلْأَوَّلِينَ",
+            "en_text": "“If only we had a Reminder like ˹those of˺ earlier peoples,<sup foot_note=77263>1</sup>"
+        },
+        {
+            "verse_key": "37:169",
+            "verse_num": "37:169",
+            "arabic_text": "لَكُنَّا عِبَادَ ٱللَّهِ ٱلْمُخْلَصِينَ",
+            "en_text": "we would have truly been Allah’s devoted servants.”"
+        },
+        {
+            "verse_key": "37:170",
+            "verse_num": "37:170",
+            "arabic_text": "فَكَفَرُوا۟ بِهِۦ ۖ فَسَوْفَ يَعْلَمُونَ",
+            "en_text": "But ˹now˺ they reject it, so they will soon know."
+        },
+        {
+            "verse_key": "37:171",
+            "verse_num": "37:171",
+            "arabic_text": "وَلَقَدْ سَبَقَتْ كَلِمَتُنَا لِعِبَادِنَا ٱلْمُرْسَلِينَ",
+            "en_text": "Our Word has already gone forth to Our servants, the messengers,"
+        },
+        {
+            "verse_key": "37:172",
+            "verse_num": "37:172",
+            "arabic_text": "إِنَّهُمْ لَهُمُ ٱلْمَنصُورُونَ",
+            "en_text": "that they would surely be helped,"
+        },
+        {
+            "verse_key": "37:173",
+            "verse_num": "37:173",
+            "arabic_text": "وَإِنَّ جُندَنَا لَهُمُ ٱلْغَـٰلِبُونَ",
+            "en_text": "and that Our forces will certainly prevail."
+        },
+        {
+            "verse_key": "37:174",
+            "verse_num": "37:174",
+            "arabic_text": "فَتَوَلَّ عَنْهُمْ حَتَّىٰ حِينٍ",
+            "en_text": "So turn away from the deniers for a while ˹O Prophet˺."
+        },
+        {
+            "verse_key": "37:175",
+            "verse_num": "37:175",
+            "arabic_text": "وَأَبْصِرْهُمْ فَسَوْفَ يُبْصِرُونَ",
+            "en_text": "You will see ˹what will happen to˺ them, and they too will see!"
+        },
+        {
+            "verse_key": "37:176",
+            "verse_num": "37:176",
+            "arabic_text": "أَفَبِعَذَابِنَا يَسْتَعْجِلُونَ",
+            "en_text": "Do they ˹really˺ wish to hasten Our punishment?"
+        },
+        {
+            "verse_key": "37:177",
+            "verse_num": "37:177",
+            "arabic_text": "فَإِذَا نَزَلَ بِسَاحَتِهِمْ فَسَآءَ صَبَاحُ ٱلْمُنذَرِينَ",
+            "en_text": "Yet when it descends upon them:<sup foot_note=77264>1</sup> how evil will that morning be for those who had been warned!"
+        },
+        {
+            "verse_key": "37:178",
+            "verse_num": "37:178",
+            "arabic_text": "وَتَوَلَّ عَنْهُمْ حَتَّىٰ حِينٍ",
+            "en_text": "And turn away from them for a while."
+        },
+        {
+            "verse_key": "37:179",
+            "verse_num": "37:179",
+            "arabic_text": "وَأَبْصِرْ فَسَوْفَ يُبْصِرُونَ",
+            "en_text": "You will see, and they too will see!"
+        },
+        {
+            "verse_key": "37:180",
+            "verse_num": "37:180",
+            "arabic_text": "سُبْحَـٰنَ رَبِّكَ رَبِّ ٱلْعِزَّةِ عَمَّا يَصِفُونَ",
+            "en_text": "Glorified is your Lord—the Lord of Honour and Power—above what they claim!"
+        },
+        {
+            "verse_key": "37:181",
+            "verse_num": "37:181",
+            "arabic_text": "وَسَلَـٰمٌ عَلَى ٱلْمُرْسَلِينَ",
+            "en_text": "Peace be upon the messengers."
+        },
+        {
+            "verse_key": "37:182",
+            "verse_num": "37:182",
+            "arabic_text": "وَٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
+            "en_text": "And praise be to Allah—Lord of all worlds."
         }
     ]
 }

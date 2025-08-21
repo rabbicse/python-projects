@@ -4898,6 +4898,264 @@
             "verse_num": "42:10",
             "arabic_text": "وَمَا ٱخْتَلَفْتُمْ فِيهِ مِن شَىْءٍ فَحُكْمُهُۥٓ إِلَى ٱللَّهِ ۚ ذَٰلِكُمُ ٱللَّهُ رَبِّى عَلَيْهِ تَوَكَّلْتُ وَإِلَيْهِ أُنِيبُ",
             "en_text": "˹Say to the believers, O  Prophet,˺ “Whatever you may differ about, its judgment rests with Allah. That is Allah—my Lord. In Him I put my trust, and to Him I ˹always˺ turn.”"
+        },
+        {
+            "verse_key": "42:11",
+            "verse_num": "42:11",
+            "arabic_text": "فَاطِرُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ جَعَلَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًا وَمِنَ ٱلْأَنْعَـٰمِ أَزْوَٰجًا ۖ يَذْرَؤُكُمْ فِيهِ ۚ لَيْسَ كَمِثْلِهِۦ شَىْءٌ ۖ وَهُوَ ٱلسَّمِيعُ ٱلْبَصِيرُ",
+            "en_text": "˹He is˺ the Originator of the heavens and the earth. He has made for you spouses from among yourselves, and ˹made˺ mates for cattle ˹as well˺—multiplying you ˹both˺. There is nothing like Him, for He ˹alone˺ is the All-Hearing, All-Seeing."
+        },
+        {
+            "verse_key": "42:12",
+            "verse_num": "42:12",
+            "arabic_text": "لَهُۥ مَقَالِيدُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۖ يَبْسُطُ ٱلرِّزْقَ لِمَن يَشَآءُ وَيَقْدِرُ ۚ إِنَّهُۥ بِكُلِّ شَىْءٍ عَلِيمٌ",
+            "en_text": "To Him belong the keys ˹of the treasuries˺ of the heavens and the earth. He gives abundant or limited provisions to whoever He wills. Indeed, He has ˹perfect˺ knowledge of all things."
+        },
+        {
+            "verse_key": "42:13",
+            "verse_num": "42:13",
+            "arabic_text": "۞ شَرَعَ لَكُم مِّنَ ٱلدِّينِ مَا وَصَّىٰ بِهِۦ نُوحًا وَٱلَّذِىٓ أَوْحَيْنَآ إِلَيْكَ وَمَا وَصَّيْنَا بِهِۦٓ إِبْرَٰهِيمَ وَمُوسَىٰ وَعِيسَىٰٓ ۖ أَنْ أَقِيمُوا۟ ٱلدِّينَ وَلَا تَتَفَرَّقُوا۟ فِيهِ ۚ كَبُرَ عَلَى ٱلْمُشْرِكِينَ مَا تَدْعُوهُمْ إِلَيْهِ ۚ ٱللَّهُ يَجْتَبِىٓ إِلَيْهِ مَن يَشَآءُ وَيَهْدِىٓ إِلَيْهِ مَن يُنِيبُ",
+            "en_text": "He has ordained for you ˹believers˺ the Way which He decreed for Noah, and what We have revealed to you ˹O Prophet˺ and what We decreed for Abraham, Moses, and Jesus,<sup foot_note=77321>1</sup> ˹commanding:˺ “Uphold the faith, and make no divisions in it.” What you call the polytheists to is unbearable for them. Allah chooses for Himself whoever He wills, and guides to Himself whoever turns ˹to Him˺."
+        },
+        {
+            "verse_key": "42:14",
+            "verse_num": "42:14",
+            "arabic_text": "وَمَا تَفَرَّقُوٓا۟ إِلَّا مِنۢ بَعْدِ مَا جَآءَهُمُ ٱلْعِلْمُ بَغْيًۢا بَيْنَهُمْ ۚ وَلَوْلَا كَلِمَةٌ سَبَقَتْ مِن رَّبِّكَ إِلَىٰٓ أَجَلٍ مُّسَمًّى لَّقُضِىَ بَيْنَهُمْ ۚ وَإِنَّ ٱلَّذِينَ أُورِثُوا۟ ٱلْكِتَـٰبَ مِنۢ بَعْدِهِمْ لَفِى شَكٍّ مِّنْهُ مُرِيبٍ",
+            "en_text": "They did not split ˹into sects˺ out of mutual envy until knowledge came to them.<sup foot_note=77322>1</sup> Had it not been for a prior decree from your Lord for an appointed term,<sup foot_note=77323>2</sup> the matter would have certainly been settled between them ˹at once˺. And surely those who were made to inherit the Scripture<sup foot_note=77324>3</sup> after them are truly in alarming doubt about this ˹Quran˺."
+        },
+        {
+            "verse_key": "42:15",
+            "verse_num": "42:15",
+            "arabic_text": "فَلِذَٰلِكَ فَٱدْعُ ۖ وَٱسْتَقِمْ كَمَآ أُمِرْتَ ۖ وَلَا تَتَّبِعْ أَهْوَآءَهُمْ ۖ وَقُلْ ءَامَنتُ بِمَآ أَنزَلَ ٱللَّهُ مِن كِتَـٰبٍ ۖ وَأُمِرْتُ لِأَعْدِلَ بَيْنَكُمُ ۖ ٱللَّهُ رَبُّنَا وَرَبُّكُمْ ۖ لَنَآ أَعْمَـٰلُنَا وَلَكُمْ أَعْمَـٰلُكُمْ ۖ لَا حُجَّةَ بَيْنَنَا وَبَيْنَكُمُ ۖ ٱللَّهُ يَجْمَعُ بَيْنَنَا ۖ وَإِلَيْهِ ٱلْمَصِيرُ",
+            "en_text": "Because of that, you ˹O Prophet˺ will invite ˹all˺. Be steadfast as you are commanded, and do not follow their desires. And say, “I believe in every Scripture Allah has revealed. And I am commanded to judge fairly among you. Allah is our Lord and your Lord. We will be accountable for our deeds and you for yours. There is no ˹need for˺ contention between us. Allah will gather us together ˹for judgment˺. And to Him is the final return.”"
+        },
+        {
+            "verse_key": "42:16",
+            "verse_num": "42:16",
+            "arabic_text": "وَٱلَّذِينَ يُحَآجُّونَ فِى ٱللَّهِ مِنۢ بَعْدِ مَا ٱسْتُجِيبَ لَهُۥ حُجَّتُهُمْ دَاحِضَةٌ عِندَ رَبِّهِمْ وَعَلَيْهِمْ غَضَبٌ وَلَهُمْ عَذَابٌ شَدِيدٌ",
+            "en_text": "As for those who dispute about Allah after He is ˹already˺ acknowledged ˹by many˺, their argument is futile in the sight of their Lord. Upon them is wrath, and they will suffer a severe punishment."
+        },
+        {
+            "verse_key": "42:17",
+            "verse_num": "42:17",
+            "arabic_text": "ٱللَّهُ ٱلَّذِىٓ أَنزَلَ ٱلْكِتَـٰبَ بِٱلْحَقِّ وَٱلْمِيزَانَ ۗ وَمَا يُدْرِيكَ لَعَلَّ ٱلسَّاعَةَ قَرِيبٌ",
+            "en_text": "It is Allah Who has revealed the Book with the truth and the balance ˹of justice˺. You never know, perhaps the Hour is near."
+        },
+        {
+            "verse_key": "42:18",
+            "verse_num": "42:18",
+            "arabic_text": "يَسْتَعْجِلُ بِهَا ٱلَّذِينَ لَا يُؤْمِنُونَ بِهَا ۖ وَٱلَّذِينَ ءَامَنُوا۟ مُشْفِقُونَ مِنْهَا وَيَعْلَمُونَ أَنَّهَا ٱلْحَقُّ ۗ أَلَآ إِنَّ ٱلَّذِينَ يُمَارُونَ فِى ٱلسَّاعَةِ لَفِى ضَلَـٰلٍۭ بَعِيدٍ",
+            "en_text": "Those who disbelieve in it ˹ask to˺ hasten it ˹mockingly˺. But the believers are fearful of it, knowing that it is the truth. Surely those who dispute about the Hour have gone far astray."
+        },
+        {
+            "verse_key": "42:19",
+            "verse_num": "42:19",
+            "arabic_text": "ٱللَّهُ لَطِيفٌۢ بِعِبَادِهِۦ يَرْزُقُ مَن يَشَآءُ ۖ وَهُوَ ٱلْقَوِىُّ ٱلْعَزِيزُ",
+            "en_text": "Allah is Ever Kind to His servants. He provides ˹abundantly˺ to whoever He wills. And He is the All-Powerful, Almighty."
+        },
+        {
+            "verse_key": "42:20",
+            "verse_num": "42:20",
+            "arabic_text": "مَن كَانَ يُرِيدُ حَرْثَ ٱلْـَٔاخِرَةِ نَزِدْ لَهُۥ فِى حَرْثِهِۦ ۖ وَمَن كَانَ يُرِيدُ حَرْثَ ٱلدُّنْيَا نُؤْتِهِۦ مِنْهَا وَمَا لَهُۥ فِى ٱلْـَٔاخِرَةِ مِن نَّصِيبٍ",
+            "en_text": "Whoever desires the harvest of the Hereafter, We will increase their harvest. And whoever desires ˹only˺ the harvest of this world, We will give them some of it, but they will have no share in the Hereafter."
+        },
+        {
+            "verse_key": "42:21",
+            "verse_num": "42:21",
+            "arabic_text": "أَمْ لَهُمْ شُرَكَـٰٓؤُا۟ شَرَعُوا۟ لَهُم مِّنَ ٱلدِّينِ مَا لَمْ يَأْذَنۢ بِهِ ٱللَّهُ ۚ وَلَوْلَا كَلِمَةُ ٱلْفَصْلِ لَقُضِىَ بَيْنَهُمْ ۗ وَإِنَّ ٱلظَّـٰلِمِينَ لَهُمْ عَذَابٌ أَلِيمٌ",
+            "en_text": "Or do they have associate-gods who have ordained for them some ˹polytheistic˺ beliefs, which Allah has not authorized? Had it not been for ˹prior˺ decree on Judgment, the matter would have certainly been settled between them ˹at once˺. And surely the wrongdoers will suffer a painful punishment."
+        },
+        {
+            "verse_key": "42:22",
+            "verse_num": "42:22",
+            "arabic_text": "تَرَى ٱلظَّـٰلِمِينَ مُشْفِقِينَ مِمَّا كَسَبُوا۟ وَهُوَ وَاقِعٌۢ بِهِمْ ۗ وَٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ فِى رَوْضَاتِ ٱلْجَنَّاتِ ۖ لَهُم مَّا يَشَآءُونَ عِندَ رَبِّهِمْ ۚ ذَٰلِكَ هُوَ ٱلْفَضْلُ ٱلْكَبِيرُ",
+            "en_text": "You will see the wrongdoers fearful ˹of the punishment˺ for what they committed but it will be inevitable for them, whereas those who believe and do good will be in the lush Gardens of Paradise. They will have whatever they desire from their Lord. That is ˹truly˺ the greatest bounty."
+        },
+        {
+            "verse_key": "42:23",
+            "verse_num": "42:23",
+            "arabic_text": "ذَٰلِكَ ٱلَّذِى يُبَشِّرُ ٱللَّهُ عِبَادَهُ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ ۗ قُل لَّآ أَسْـَٔلُكُمْ عَلَيْهِ أَجْرًا إِلَّا ٱلْمَوَدَّةَ فِى ٱلْقُرْبَىٰ ۗ وَمَن يَقْتَرِفْ حَسَنَةً نَّزِدْ لَهُۥ فِيهَا حُسْنًا ۚ إِنَّ ٱللَّهَ غَفُورٌ شَكُورٌ",
+            "en_text": "That ˹reward˺ is the good news which Allah gives to His servants who believe and do good. Say, ˹O Prophet,˺ “I do not ask you for a reward for this ˹message˺—only honour for ˹our˺ kinship.”<sup foot_note=77325>1</sup> Whoever earns a good deed, We will increase it in goodness for them. Surely Allah is All-Forgiving, Most Appreciative."
+        },
+        {
+            "verse_key": "42:24",
+            "verse_num": "42:24",
+            "arabic_text": "أَمْ يَقُولُونَ ٱفْتَرَىٰ عَلَى ٱللَّهِ كَذِبًا ۖ فَإِن يَشَإِ ٱللَّهُ يَخْتِمْ عَلَىٰ قَلْبِكَ ۗ وَيَمْحُ ٱللَّهُ ٱلْبَـٰطِلَ وَيُحِقُّ ٱلْحَقَّ بِكَلِمَـٰتِهِۦٓ ۚ إِنَّهُۥ عَلِيمٌۢ بِذَاتِ ٱلصُّدُورِ",
+            "en_text": "Or do they say, “He has fabricated a lie about Allah!”? ˹If you had,˺ Allah would have sealed your heart, if He willed. And Allah wipes out falsehood and establishes the truth by His Words. He certainly knows best what is ˹hidden˺ in the heart."
+        },
+        {
+            "verse_key": "42:25",
+            "verse_num": "42:25",
+            "arabic_text": "وَهُوَ ٱلَّذِى يَقْبَلُ ٱلتَّوْبَةَ عَنْ عِبَادِهِۦ وَيَعْفُوا۟ عَنِ ٱلسَّيِّـَٔاتِ وَيَعْلَمُ مَا تَفْعَلُونَ",
+            "en_text": "He is the One Who accepts repentance from His servants and pardons ˹their˺ sins. And He knows whatever you do."
+        },
+        {
+            "verse_key": "42:26",
+            "verse_num": "42:26",
+            "arabic_text": "وَيَسْتَجِيبُ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ وَيَزِيدُهُم مِّن فَضْلِهِۦ ۚ وَٱلْكَـٰفِرُونَ لَهُمْ عَذَابٌ شَدِيدٌ",
+            "en_text": "He responds to those who believe and do good, and increases their reward out of His grace. As for the disbelievers, they will suffer a severe punishment."
+        },
+        {
+            "verse_key": "42:27",
+            "verse_num": "42:27",
+            "arabic_text": "۞ وَلَوْ بَسَطَ ٱللَّهُ ٱلرِّزْقَ لِعِبَادِهِۦ لَبَغَوْا۟ فِى ٱلْأَرْضِ وَلَـٰكِن يُنَزِّلُ بِقَدَرٍ مَّا يَشَآءُ ۚ إِنَّهُۥ بِعِبَادِهِۦ خَبِيرٌۢ بَصِيرٌ",
+            "en_text": "Had Allah given abundant provisions to ˹all˺ His servants, they would have certainly transgressed throughout the land. But He sends down whatever He wills in perfect measure. He is truly All-Aware, All-Seeing of His servants."
+        },
+        {
+            "verse_key": "42:28",
+            "verse_num": "42:28",
+            "arabic_text": "وَهُوَ ٱلَّذِى يُنَزِّلُ ٱلْغَيْثَ مِنۢ بَعْدِ مَا قَنَطُوا۟ وَيَنشُرُ رَحْمَتَهُۥ ۚ وَهُوَ ٱلْوَلِىُّ ٱلْحَمِيدُ",
+            "en_text": "He is the One Who sends down rain after people have given up hope, spreading out His mercy. He is the Guardian, the Praiseworthy."
+        },
+        {
+            "verse_key": "42:29",
+            "verse_num": "42:29",
+            "arabic_text": "وَمِنْ ءَايَـٰتِهِۦ خَلْقُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَمَا بَثَّ فِيهِمَا مِن دَآبَّةٍ ۚ وَهُوَ عَلَىٰ جَمْعِهِمْ إِذَا يَشَآءُ قَدِيرٌ",
+            "en_text": "And among His signs is the creation of the heavens and the earth, and all living beings He dispersed throughout both. And He is Most Capable of bringing all together whenever He wills."
+        },
+        {
+            "verse_key": "42:30",
+            "verse_num": "42:30",
+            "arabic_text": "وَمَآ أَصَـٰبَكُم مِّن مُّصِيبَةٍ فَبِمَا كَسَبَتْ أَيْدِيكُمْ وَيَعْفُوا۟ عَن كَثِيرٍ",
+            "en_text": "Whatever affliction befalls you is because of what your own hands have committed. And He pardons much."
+        },
+        {
+            "verse_key": "42:31",
+            "verse_num": "42:31",
+            "arabic_text": "وَمَآ أَنتُم بِمُعْجِزِينَ فِى ٱلْأَرْضِ ۖ وَمَا لَكُم مِّن دُونِ ٱللَّهِ مِن وَلِىٍّ وَلَا نَصِيرٍ",
+            "en_text": "You can never escape ˹Him˺ on earth, nor do you have any protector or helper besides Allah."
+        },
+        {
+            "verse_key": "42:32",
+            "verse_num": "42:32",
+            "arabic_text": "وَمِنْ ءَايَـٰتِهِ ٱلْجَوَارِ فِى ٱلْبَحْرِ كَٱلْأَعْلَـٰمِ",
+            "en_text": "And among His signs are the ships like mountains ˹sailing˺ in the sea."
+        },
+        {
+            "verse_key": "42:33",
+            "verse_num": "42:33",
+            "arabic_text": "إِن يَشَأْ يُسْكِنِ ٱلرِّيحَ فَيَظْلَلْنَ رَوَاكِدَ عَلَىٰ ظَهْرِهِۦٓ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍ لِّكُلِّ صَبَّارٍ شَكُورٍ",
+            "en_text": "If He wills, He can calm the wind, leaving the ships motionless on the water. Surely in this are signs for whoever is steadfast, grateful."
+        },
+        {
+            "verse_key": "42:34",
+            "verse_num": "42:34",
+            "arabic_text": "أَوْ يُوبِقْهُنَّ بِمَا كَسَبُوا۟ وَيَعْفُ عَن كَثِيرٍ",
+            "en_text": "Or He can wreck the ships for what the people have committed—though He forgives much—"
+        },
+        {
+            "verse_key": "42:35",
+            "verse_num": "42:35",
+            "arabic_text": "وَيَعْلَمَ ٱلَّذِينَ يُجَـٰدِلُونَ فِىٓ ءَايَـٰتِنَا مَا لَهُم مِّن مَّحِيصٍ",
+            "en_text": "so those who dispute about Our signs may know that they have no refuge."
+        },
+        {
+            "verse_key": "42:36",
+            "verse_num": "42:36",
+            "arabic_text": "فَمَآ أُوتِيتُم مِّن شَىْءٍ فَمَتَـٰعُ ٱلْحَيَوٰةِ ٱلدُّنْيَا ۖ وَمَا عِندَ ٱللَّهِ خَيْرٌ وَأَبْقَىٰ لِلَّذِينَ ءَامَنُوا۟ وَعَلَىٰ رَبِّهِمْ يَتَوَكَّلُونَ",
+            "en_text": "Whatever ˹pleasure˺ you have been given is ˹no more than a fleeting˺ enjoyment of this worldly life. But what is with Allah is far better and more lasting for those who believe and put their trust in their Lord;"
+        },
+        {
+            "verse_key": "42:37",
+            "verse_num": "42:37",
+            "arabic_text": "وَٱلَّذِينَ يَجْتَنِبُونَ كَبَـٰٓئِرَ ٱلْإِثْمِ وَٱلْفَوَٰحِشَ وَإِذَا مَا غَضِبُوا۟ هُمْ يَغْفِرُونَ",
+            "en_text": "who avoid major sins and shameful deeds, and forgive when angered;"
+        },
+        {
+            "verse_key": "42:38",
+            "verse_num": "42:38",
+            "arabic_text": "وَٱلَّذِينَ ٱسْتَجَابُوا۟ لِرَبِّهِمْ وَأَقَامُوا۟ ٱلصَّلَوٰةَ وَأَمْرُهُمْ شُورَىٰ بَيْنَهُمْ وَمِمَّا رَزَقْنَـٰهُمْ يُنفِقُونَ",
+            "en_text": "who respond to their Lord, establish prayer, conduct their affairs by mutual consultation, and donate from what We have provided for them;"
+        },
+        {
+            "verse_key": "42:39",
+            "verse_num": "42:39",
+            "arabic_text": "وَٱلَّذِينَ إِذَآ أَصَابَهُمُ ٱلْبَغْىُ هُمْ يَنتَصِرُونَ",
+            "en_text": "and who enforce justice when wronged."
+        },
+        {
+            "verse_key": "42:40",
+            "verse_num": "42:40",
+            "arabic_text": "وَجَزَٰٓؤُا۟ سَيِّئَةٍ سَيِّئَةٌ مِّثْلُهَا ۖ فَمَنْ عَفَا وَأَصْلَحَ فَأَجْرُهُۥ عَلَى ٱللَّهِ ۚ إِنَّهُۥ لَا يُحِبُّ ٱلظَّـٰلِمِينَ",
+            "en_text": "The reward of an evil deed is its equivalent. But whoever pardons and seeks reconciliation, then their reward is with Allah. He certainly does not like the wrongdoers."
+        },
+        {
+            "verse_key": "42:41",
+            "verse_num": "42:41",
+            "arabic_text": "وَلَمَنِ ٱنتَصَرَ بَعْدَ ظُلْمِهِۦ فَأُو۟لَـٰٓئِكَ مَا عَلَيْهِم مِّن سَبِيلٍ",
+            "en_text": "There is no blame on those who enforce justice after being wronged."
+        },
+        {
+            "verse_key": "42:42",
+            "verse_num": "42:42",
+            "arabic_text": "إِنَّمَا ٱلسَّبِيلُ عَلَى ٱلَّذِينَ يَظْلِمُونَ ٱلنَّاسَ وَيَبْغُونَ فِى ٱلْأَرْضِ بِغَيْرِ ٱلْحَقِّ ۚ أُو۟لَـٰٓئِكَ لَهُمْ عَذَابٌ أَلِيمٌ",
+            "en_text": "Blame is only on those who wrong people and transgress in the land unjustly. It is they who will suffer a painful punishment."
+        },
+        {
+            "verse_key": "42:43",
+            "verse_num": "42:43",
+            "arabic_text": "وَلَمَن صَبَرَ وَغَفَرَ إِنَّ ذَٰلِكَ لَمِنْ عَزْمِ ٱلْأُمُورِ",
+            "en_text": "And whoever endures patiently and forgives—surely this is a resolve to aspire to."
+        },
+        {
+            "verse_key": "42:44",
+            "verse_num": "42:44",
+            "arabic_text": "وَمَن يُضْلِلِ ٱللَّهُ فَمَا لَهُۥ مِن وَلِىٍّ مِّنۢ بَعْدِهِۦ ۗ وَتَرَى ٱلظَّـٰلِمِينَ لَمَّا رَأَوُا۟ ٱلْعَذَابَ يَقُولُونَ هَلْ إِلَىٰ مَرَدٍّ مِّن سَبِيلٍ",
+            "en_text": "And whoever Allah leaves to stray will have no guide after Him. You will see the wrongdoers, when they face the torment, pleading, “Is there any way back ˹to the world˺?”"
+        },
+        {
+            "verse_key": "42:45",
+            "verse_num": "42:45",
+            "arabic_text": "وَتَرَىٰهُمْ يُعْرَضُونَ عَلَيْهَا خَـٰشِعِينَ مِنَ ٱلذُّلِّ يَنظُرُونَ مِن طَرْفٍ خَفِىٍّ ۗ وَقَالَ ٱلَّذِينَ ءَامَنُوٓا۟ إِنَّ ٱلْخَـٰسِرِينَ ٱلَّذِينَ خَسِرُوٓا۟ أَنفُسَهُمْ وَأَهْلِيهِمْ يَوْمَ ٱلْقِيَـٰمَةِ ۗ أَلَآ إِنَّ ٱلظَّـٰلِمِينَ فِى عَذَابٍ مُّقِيمٍ",
+            "en_text": "And you will see them exposed to the Fire, fully humbled out of disgrace, stealing glances ˹at it˺. And the believers will say, “The ˹true˺ losers are those who have lost themselves and their families on Judgment Day.” The wrongdoers will certainly be in everlasting torment."
+        },
+        {
+            "verse_key": "42:46",
+            "verse_num": "42:46",
+            "arabic_text": "وَمَا كَانَ لَهُم مِّنْ أَوْلِيَآءَ يَنصُرُونَهُم مِّن دُونِ ٱللَّهِ ۗ وَمَن يُضْلِلِ ٱللَّهُ فَمَا لَهُۥ مِن سَبِيلٍ",
+            "en_text": "They will have no protectors to help them against Allah. And whoever Allah leaves to stray, for them there is no way."
+        },
+        {
+            "verse_key": "42:47",
+            "verse_num": "42:47",
+            "arabic_text": "ٱسْتَجِيبُوا۟ لِرَبِّكُم مِّن قَبْلِ أَن يَأْتِىَ يَوْمٌ لَّا مَرَدَّ لَهُۥ مِنَ ٱللَّهِ ۚ مَا لَكُم مِّن مَّلْجَإٍ يَوْمَئِذٍ وَمَا لَكُم مِّن نَّكِيرٍ",
+            "en_text": "Respond to your Lord before the coming of a Day from Allah that cannot be averted. There will be no refuge for you then, nor ˹grounds for˺ denial ˹of sins˺.<sup foot_note=77326>1</sup>"
+        },
+        {
+            "verse_key": "42:48",
+            "verse_num": "42:48",
+            "arabic_text": "فَإِنْ أَعْرَضُوا۟ فَمَآ أَرْسَلْنَـٰكَ عَلَيْهِمْ حَفِيظًا ۖ إِنْ عَلَيْكَ إِلَّا ٱلْبَلَـٰغُ ۗ وَإِنَّآ إِذَآ أَذَقْنَا ٱلْإِنسَـٰنَ مِنَّا رَحْمَةً فَرِحَ بِهَا ۖ وَإِن تُصِبْهُمْ سَيِّئَةٌۢ بِمَا قَدَّمَتْ أَيْدِيهِمْ فَإِنَّ ٱلْإِنسَـٰنَ كَفُورٌ",
+            "en_text": "But if they turn away, We have not sent you ˹O Prophet˺ as a keeper over them. Your duty is only to deliver ˹the message˺. And indeed, when We let someone taste a mercy from Us, they become prideful ˹because˺ of it. But when afflicted with evil because of what their hands have done, then one becomes totally ungrateful.<sup foot_note=77327>1</sup> "
+        },
+        {
+            "verse_key": "42:49",
+            "verse_num": "42:49",
+            "arabic_text": "لِّلَّهِ مُلْكُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ يَخْلُقُ مَا يَشَآءُ ۚ يَهَبُ لِمَن يَشَآءُ إِنَـٰثًا وَيَهَبُ لِمَن يَشَآءُ ٱلذُّكُورَ",
+            "en_text": "To Allah ˹alone˺ belongs the kingdom of the heavens and the earth. He creates whatever He wills. He blesses whoever He wills with daughters, and blesses whoever He wills with sons,"
+        },
+        {
+            "verse_key": "42:50",
+            "verse_num": "42:50",
+            "arabic_text": "أَوْ يُزَوِّجُهُمْ ذُكْرَانًا وَإِنَـٰثًا ۖ وَيَجْعَلُ مَن يَشَآءُ عَقِيمًا ۚ إِنَّهُۥ عَلِيمٌ قَدِيرٌ",
+            "en_text": "or grants both, sons and daughters, ˹to whoever He wills˺, and leaves whoever He wills infertile. He is indeed All-Knowing, Most Capable."
+        },
+        {
+            "verse_key": "42:51",
+            "verse_num": "42:51",
+            "arabic_text": "۞ وَمَا كَانَ لِبَشَرٍ أَن يُكَلِّمَهُ ٱللَّهُ إِلَّا وَحْيًا أَوْ مِن وَرَآئِ حِجَابٍ أَوْ يُرْسِلَ رَسُولًا فَيُوحِىَ بِإِذْنِهِۦ مَا يَشَآءُ ۚ إِنَّهُۥ عَلِىٌّ حَكِيمٌ",
+            "en_text": "It is not ˹possible˺ for a human being to have Allah communicate with them, except through inspiration, or from behind a veil, or by sending a messenger-angel to reveal whatever He wills by His permission. He is surely Most High, All-Wise."
+        },
+        {
+            "verse_key": "42:52",
+            "verse_num": "42:52",
+            "arabic_text": "وَكَذَٰلِكَ أَوْحَيْنَآ إِلَيْكَ رُوحًا مِّنْ أَمْرِنَا ۚ مَا كُنتَ تَدْرِى مَا ٱلْكِتَـٰبُ وَلَا ٱلْإِيمَـٰنُ وَلَـٰكِن جَعَلْنَـٰهُ نُورًا نَّهْدِى بِهِۦ مَن نَّشَآءُ مِنْ عِبَادِنَا ۚ وَإِنَّكَ لَتَهْدِىٓ إِلَىٰ صِرَٰطٍ مُّسْتَقِيمٍ",
+            "en_text": "And so We have sent to you ˹O Prophet˺ a revelation by Our command. You did not know of ˹this˺ Book and faith ˹before˺. But We have made it a light, by which We guide whoever We will of Our servants. And you are truly leading ˹all˺ to the Straight Path—"
+        },
+        {
+            "verse_key": "42:53",
+            "verse_num": "42:53",
+            "arabic_text": "صِرَٰطِ ٱللَّهِ ٱلَّذِى لَهُۥ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ أَلَآ إِلَى ٱللَّهِ تَصِيرُ ٱلْأُمُورُ",
+            "en_text": "the Path of Allah, to Whom belongs whatever is in the heavens and whatever is on the earth. Surely to Allah all matters will return ˹for judgment˺."
         }
     ]
 }

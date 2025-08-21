@@ -1462,22 +1462,112 @@
             "en_text": "And whenever I invite them to be forgiven by You, they press their fingers into their ears, cover themselves with their clothes, persist ˹in denial˺, and act very arrogantly."
         },
         {
-            "verse_key": "71:8",
-            "verse_num": "71:8",
-            "arabic_text": "ثُمَّ إِنِّى دَعَوْتُهُمْ جِهَارًا",
-            "en_text": "Then I certainly called them openly,"
+            "verse_key": "71:11",
+            "verse_num": "71:11",
+            "arabic_text": "يُرْسِلِ ٱلسَّمَآءَ عَلَيْكُم مِّدْرَارًا",
+            "en_text": "He will shower you with abundant rain,"
         },
         {
-            "verse_key": "71:9",
-            "verse_num": "71:9",
-            "arabic_text": "ثُمَّ إِنِّىٓ أَعْلَنتُ لَهُمْ وَأَسْرَرْتُ لَهُمْ إِسْرَارًا",
-            "en_text": "then I surely preached to them publicly and privately,"
+            "verse_key": "71:12",
+            "verse_num": "71:12",
+            "arabic_text": "وَيُمْدِدْكُم بِأَمْوَٰلٍ وَبَنِينَ وَيَجْعَل لَّكُمْ جَنَّـٰتٍ وَيَجْعَل لَّكُمْ أَنْهَـٰرًا",
+            "en_text": "supply you with wealth and children, and give you gardens as well as rivers."
         },
         {
-            "verse_key": "71:10",
-            "verse_num": "71:10",
-            "arabic_text": "فَقُلْتُ ٱسْتَغْفِرُوا۟ رَبَّكُمْ إِنَّهُۥ كَانَ غَفَّارًا",
-            "en_text": "saying, ‘Seek your Lord’s forgiveness, ˹for˺ He is truly Most Forgiving."
+            "verse_key": "71:13",
+            "verse_num": "71:13",
+            "arabic_text": "مَّا لَكُمْ لَا تَرْجُونَ لِلَّهِ وَقَارًا",
+            "en_text": "What is the matter with you that you are not in awe of the Majesty of Allah,"
+        },
+        {
+            "verse_key": "71:14",
+            "verse_num": "71:14",
+            "arabic_text": "وَقَدْ خَلَقَكُمْ أَطْوَارًا",
+            "en_text": "when He truly created you in stages ˹of development˺?<sup foot_note=77553>1</sup>"
+        },
+        {
+            "verse_key": "71:15",
+            "verse_num": "71:15",
+            "arabic_text": "أَلَمْ تَرَوْا۟ كَيْفَ خَلَقَ ٱللَّهُ سَبْعَ سَمَـٰوَٰتٍ طِبَاقًا",
+            "en_text": "Do you not see how Allah created seven heavens, one above the other,"
+        },
+        {
+            "verse_key": "71:16",
+            "verse_num": "71:16",
+            "arabic_text": "وَجَعَلَ ٱلْقَمَرَ فِيهِنَّ نُورًا وَجَعَلَ ٱلشَّمْسَ سِرَاجًا",
+            "en_text": "placing the moon within them as a ˹reflected˺ light, and the sun as a ˹radiant˺ lamp?"
+        },
+        {
+            "verse_key": "71:17",
+            "verse_num": "71:17",
+            "arabic_text": "وَٱللَّهُ أَنۢبَتَكُم مِّنَ ٱلْأَرْضِ نَبَاتًا",
+            "en_text": "Allah ˹alone˺ caused you<sup foot_note=77554>1</sup> to grow from the earth like a plant."
+        },
+        {
+            "verse_key": "71:18",
+            "verse_num": "71:18",
+            "arabic_text": "ثُمَّ يُعِيدُكُمْ فِيهَا وَيُخْرِجُكُمْ إِخْرَاجًا",
+            "en_text": "Then He will return you to it, and then simply bring you forth ˹again˺."
+        },
+        {
+            "verse_key": "71:19",
+            "verse_num": "71:19",
+            "arabic_text": "وَٱللَّهُ جَعَلَ لَكُمُ ٱلْأَرْضَ بِسَاطًا",
+            "en_text": "And Allah ˹alone˺ spread out the earth for you"
+        },
+        {
+            "verse_key": "71:20",
+            "verse_num": "71:20",
+            "arabic_text": "لِّتَسْلُكُوا۟ مِنْهَا سُبُلًا فِجَاجًا",
+            "en_text": "to walk along its spacious pathways.’”"
+        },
+        {
+            "verse_key": "71:21",
+            "verse_num": "71:21",
+            "arabic_text": "قَالَ نُوحٌ رَّبِّ إِنَّهُمْ عَصَوْنِى وَٱتَّبَعُوا۟ مَن لَّمْ يَزِدْهُ مَالُهُۥ وَوَلَدُهُۥٓ إِلَّا خَسَارًا",
+            "en_text": "˹Eventually,˺ Noah cried, “My Lord! They have certainly persisted in disobeying me, and followed ˹instead˺ those ˹elite˺ whose ˹abundant˺ wealth and children only increase them in loss,"
+        },
+        {
+            "verse_key": "71:22",
+            "verse_num": "71:22",
+            "arabic_text": "وَمَكَرُوا۟ مَكْرًا كُبَّارًا",
+            "en_text": "and who have devised a tremendous plot,"
+        },
+        {
+            "verse_key": "71:23",
+            "verse_num": "71:23",
+            "arabic_text": "وَقَالُوا۟ لَا تَذَرُنَّ ءَالِهَتَكُمْ وَلَا تَذَرُنَّ وَدًّا وَلَا سُوَاعًا وَلَا يَغُوثَ وَيَعُوقَ وَنَسْرًا",
+            "en_text": "urging ˹their followers˺, ‘Do not abandon your idols—especially Wadd, Suwâ’, Yaghûth, Ya’ûq, and Nasr.’<sup foot_note=77555>1</sup>"
+        },
+        {
+            "verse_key": "71:24",
+            "verse_num": "71:24",
+            "arabic_text": "وَقَدْ أَضَلُّوا۟ كَثِيرًا ۖ وَلَا تَزِدِ ٱلظَّـٰلِمِينَ إِلَّا ضَلَـٰلًا",
+            "en_text": "Those ˹elite˺ have already led many astray. So ˹O Lord˺, only allow the wrongdoers to stray farther away.”"
+        },
+        {
+            "verse_key": "71:25",
+            "verse_num": "71:25",
+            "arabic_text": "مِّمَّا خَطِيٓـَٔـٰتِهِمْ أُغْرِقُوا۟ فَأُدْخِلُوا۟ نَارًا فَلَمْ يَجِدُوا۟ لَهُم مِّن دُونِ ٱللَّهِ أَنصَارًا",
+            "en_text": "So because of their sins, they were drowned, then admitted into the Fire. And they found none to help them against Allah."
+        },
+        {
+            "verse_key": "71:26",
+            "verse_num": "71:26",
+            "arabic_text": "وَقَالَ نُوحٌ رَّبِّ لَا تَذَرْ عَلَى ٱلْأَرْضِ مِنَ ٱلْكَـٰفِرِينَ دَيَّارًا",
+            "en_text": "Noah had prayed, “My Lord! Do not leave a single disbeliever on earth."
+        },
+        {
+            "verse_key": "71:27",
+            "verse_num": "71:27",
+            "arabic_text": "إِنَّكَ إِن تَذَرْهُمْ يُضِلُّوا۟ عِبَادَكَ وَلَا يَلِدُوٓا۟ إِلَّا فَاجِرًا كَفَّارًا",
+            "en_text": "For if You spare ˹any of˺ them, they will certainly mislead Your servants, and give birth only to ˹wicked˺ sinners, staunch disbelievers."
+        },
+        {
+            "verse_key": "71:28",
+            "verse_num": "71:28",
+            "arabic_text": "رَّبِّ ٱغْفِرْ لِى وَلِوَٰلِدَىَّ وَلِمَن دَخَلَ بَيْتِىَ مُؤْمِنًا وَلِلْمُؤْمِنِينَ وَٱلْمُؤْمِنَـٰتِ وَلَا تَزِدِ ٱلظَّـٰلِمِينَ إِلَّا تَبَارًۢا",
+            "en_text": "My Lord! Forgive me, my parents, and whoever enters my house in faith, and ˹all˺ believing men and women. And increase the wrongdoers only in destruction.”"
         }
     ]
 }

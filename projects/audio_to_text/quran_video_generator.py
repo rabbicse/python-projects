@@ -29,7 +29,7 @@ CHAPTERS_PATH = "quran/chapters.json"
 FONT_ENGLISH_HEADER_PATH = "fonts/DejaVuSans.ttf"
 FONT_ENGLISH_PATH = "fonts/DejaVuSans.ttf"
 FONT_ARABIC_HEADER_PATH = "fonts/Amiri-Regular.ttf"
-FONT_ARABIC_PATH = "fonts/NotoSansArabic-Regular.ttf"
+FONT_ARABIC_PATH = "fonts/Amiri-Regular.ttf"#"fonts/NotoSansArabic-Regular.ttf"
 FALLBACK_FONT_PATH = "fonts/DejaVuSans.ttf"
 
 # Style configuration
@@ -253,7 +253,7 @@ def process_subtitle_line(line, font, color, is_arabic=False, duration=5.0):
             bg_color=(0, 0, 0, 0),
             is_rtl=True,
             is_draw_bg=True,
-            h_pad=60)
+            h_pad=40)
     else:
         return create_slide_animation(
             text=line,
@@ -283,7 +283,7 @@ def create_slide_animation(text, font_path, font_size, duration, bg_color, is_rt
         reshaper = arabic_reshaper.ArabicReshaper(configuration=configuration)
         reshaped_text = reshaper.reshape(text)
         display_text = get_display(reshaped_text)
-        # display_text = display_text[::-1] # set it for linux
+        display_text = display_text[::-1] # set it for linux
     else:
         display_text = text
 
@@ -559,6 +559,6 @@ if __name__ == "__main__":
     # parser.add_argument("surah_number", type=int, help="The number of the surah (e.g., 113)")
     # args = parser.parse_args()
     # surah_number = args.surah_number
-    # for surah_number in range(101, 115):
-    #     main(surah_number)
-    main(101)
+    for surah_number in range(71, 81):
+        main(surah_number)
+    # main(93)

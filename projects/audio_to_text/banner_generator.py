@@ -84,6 +84,7 @@ def create_youtube_banner(
         reshaper = arabic_reshaper.ArabicReshaper(configuration=configuration)
         reshaped_text = reshaper.reshape(arabic_text)
         display_text = get_display(reshaped_text)
+        display_text = display_text[::-1]
         arabic_text_bbox = draw.textbbox((0, 0), display_text, font=arabic_font)
         arabic_text_width = arabic_text_bbox[2] - arabic_text_bbox[0]
         arabic_x = (width - arabic_text_width) / 2

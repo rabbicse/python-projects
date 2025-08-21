@@ -29,24 +29,26 @@ CHAPTERS_PATH = "quran/chapters.json"
 FONT_ENGLISH_HEADER_PATH = "fonts/DejaVuSans.ttf"
 FONT_ENGLISH_PATH = "fonts/DejaVuSans.ttf"
 FONT_ARABIC_HEADER_PATH = "fonts/Amiri-Regular.ttf"
-FONT_ARABIC_PATH = "fonts/NotoSansArabic-Regular.ttf"
+FONT_ARABIC_PATH = "fonts/Amiri-Regular.ttf"
 FALLBACK_FONT_PATH = "fonts/DejaVuSans.ttf"
 
 # Style configuration
 FONT_SIZE = 30
+FONT_SIZE_MULTILINE = 15
 FONT_SIZE_ARABIC = 50
+FONT_SIZE_ARABIC_MULTILINE = 25
 FONT_HEADER_SIZE = 100
 FONT_HEADER_MEANING_SIZE = 40
 FONT_HEADER_SIZE_ARABIC = 120
 COLOR_ENGLISH = "#E0E0E0"
 COLOR_ARABIC = "#E0E0E0"
 BG_COLOR = (0, 0, 0, 200)
-LINE_SPACING = 80
-SUBTITLE_HEIGHT = 120
-CHAR_ANIMATION_DELAY = 0.05
-HEADER_CHAR_ANIMATION_DELAY = 0.5
+LINE_SPACING = 130
+SUBTITLE_HEIGHT = 230
+CHAR_ANIMATION_DELAY = 0.02
+HEADER_CHAR_ANIMATION_DELAY = 0.3
 FADE_DURATION = 0.01
-ARABIC_ANIMATION_SPEED = 0.05  # Speed of Arabic text reveal (lower is faster)
+ARABIC_ANIMATION_SPEED = 0.02  # Speed of Arabic text reveal (lower is faster)
 
 
 # --- DOWNLOAD FUNCTION ---
@@ -157,7 +159,7 @@ def wrap_text(text, font, max_width, is_arabic=False):
     return lines
 
 
-def process_subtitle_line(line, font, color, is_arabic=False, duration=5.0, max_width=800):
+def process_subtitle_line(line, font, color, is_arabic=False, duration=5.0, max_width=800, is_draw_bg=True):
     """Process a subtitle line with text wrapping"""
     # Wrap the text into multiple lines
     wrapped_lines = wrap_text(line, font, max_width, is_arabic)
@@ -172,7 +174,7 @@ def process_subtitle_line(line, font, color, is_arabic=False, duration=5.0, max_
                 duration=duration,
                 bg_color=(0, 0, 0, 0),
                 is_rtl=True,
-                is_draw_bg=True,
+                is_draw_bg=is_draw_bg,
                 h_pad=40)
         else:
             return create_slide_animation(
@@ -182,43 +184,505 @@ def process_subtitle_line(line, font, color, is_arabic=False, duration=5.0, max_
                 duration=duration,
                 bg_color=(0, 0, 0, 0),
                 is_rtl=False,
-                is_draw_bg=True,
+                is_draw_bg=is_draw_bg,
                 h_pad=40)
     else:
-        # Multiple lines - create a composite clip
-        line_clips = []
-        total_height = 0
+        # Multiple lines - Create a single image with background and text
+        # Load appropriate font
+        # if is_arabic:
+        #     try:
+        #         font_obj = ImageFont.truetype(FONT_ARABIC_PATH, FONT_SIZE_ARABIC)
+        #     except:
+        #         font_obj = ImageFont.truetype(FALLBACK_FONT_PATH, FONT_SIZE_ARABIC)
+        # else:
+        #     try:
+        #         font_obj = ImageFont.truetype(FONT_ENGLISH_PATH, FONT_SIZE)
+        #     except:
+        #         font_obj = ImageFont.truetype(FALLBACK_FONT_PATH, FONT_SIZE)
+        #
+        # # Calculate dimensions
+        # line_heights = []
+        # max_line_width = 0
+        #
+        # for wrapped_line in wrapped_lines:
+        #     if is_arabic:
+        #         # Process Arabic text for dimension calculation
+        #         configuration = {
+        #             'delete_harakat': False,
+        #             'support_ligatures': True,
+        #             'RIAL SIGN': True,
+        #         }
+        #         reshaper = arabic_reshaper.ArabicReshaper(configuration=configuration)
+        #         reshaped_text = reshaper.reshape(wrapped_line)
+        #         display_text = get_display(reshaped_text)
+        #         display_text = display_text[::-1]
+        #     else:
+        #         display_text = wrapped_line
+        #
+        #     text_bbox = font_obj.getbbox(display_text)
+        #     line_width = text_bbox[2] - text_bbox[0]
+        #     line_height = text_bbox[3] - text_bbox[1] + 10
+        #     line_heights.append(line_height)
+        #     max_line_width = max(max_line_width, line_width)
+        #
+        # # Calculate total dimensions with padding
+        # total_height = sum(line_heights) + 40
+        # total_width = max_line_width + 60
+        #
+        # # Create the image with background and text
+        # bg_img = Image.new('RGBA', (total_width, total_height), (0, 0, 0, 0))
+        # draw = ImageDraw.Draw(bg_img)
+        #
+        # # Draw rounded rectangle background
+        # draw.rounded_rectangle([(0, 0), (total_width, total_height)],
+        #                        radius=15, fill=BG_COLOR)
+        #
+        # # Draw each line of text
+        # y_offset = 20
+        # for i, wrapped_line in enumerate(wrapped_lines):
+        #     if is_arabic:
+        #         # Process Arabic text for display
+        #         configuration = {
+        #             'delete_harakat': False,
+        #             'support_ligatures': True,
+        #             'RIAL SIGN': True,
+        #         }
+        #         reshaper = arabic_reshaper.ArabicReshaper(configuration=configuration)
+        #         reshaped_text = reshaper.reshape(wrapped_line)
+        #         display_text = get_display(reshaped_text)
+        #         display_text = display_text[::-1]
+        #
+        #         # Right-align Arabic text
+        #         text_bbox = font_obj.getbbox(display_text)
+        #         text_width = text_bbox[2] - text_bbox[0]
+        #         x_pos = total_width - text_width - 30
+        #     else:
+        #         display_text = wrapped_line
+        #         x_pos = 30  # Left-align English text
+        #
+        #     draw.text((x_pos, y_offset), display_text, font=font_obj, fill=color)
+        #     y_offset += line_heights[i]
+        #
+        # # Convert to numpy array
+        # bg_array = np.array(bg_img)
+        #
+        # # Create simple animation (just show the complete image)
+        # def make_frame(t):
+        #     if t < anim_duration:  # Animation phase
+        #         progress = min(1.0, t / anim_duration)
+        #         visible_width = int(total_width * progress)
+        #
+        #         if is_arabic:  # RTL: crop from right
+        #             cropped = full_text_array[:, -visible_width:] if visible_width > 0 else full_text_array[:, :0]
+        #             padding = np.zeros((canvas_height, canvas_width - visible_width, 4), dtype=np.uint8)
+        #             frame = np.hstack([padding, cropped])
+        #         else:  # LTR: crop from left
+        #             cropped = full_text_array[:, :visible_width] if visible_width > 0 else full_text_array[:, :0]
+        #             padding = np.zeros((total_height, total_width - visible_width, 4), dtype=np.uint8)
+        #             frame = np.hstack([cropped, padding])
+        #     else:  # After animation - show full text
+        #         frame = full_text_array
+        #
+        #     return frame
+        #
+        # # Create the clip
+        # clip = VideoClip(make_frame, duration=duration)
+        # return clip, total_width, total_height
 
-        for i, wrapped_line in enumerate(wrapped_lines):
+        # else:
+        # Multiple lines - Create single animated image with background AND text
+        # Load appropriate font
+        # working
+        if is_arabic:
+            try:
+                font_obj = ImageFont.truetype(FONT_ARABIC_PATH, FONT_SIZE_ARABIC_MULTILINE)
+            except:
+                font_obj = ImageFont.truetype(FALLBACK_FONT_PATH, FONT_SIZE_ARABIC_MULTILINE)
+        else:
+            try:
+                font_obj = ImageFont.truetype(FONT_ENGLISH_PATH, FONT_SIZE_MULTILINE)
+            except:
+                font_obj = ImageFont.truetype(FALLBACK_FONT_PATH, FONT_SIZE_MULTILINE)
+
+        wrapped_lines = wrap_text(line, font_obj, max_width, is_arabic)
+
+        # Calculate dimensions
+        line_heights = []
+        max_line_width = 0
+
+        for wrapped_line in wrapped_lines:
             if is_arabic:
-                line_clip, line_width, line_height = create_slide_animation(
-                    text=wrapped_line,
-                    font_path=FONT_ARABIC_PATH,
-                    font_size=FONT_SIZE_ARABIC,
-                    duration=duration,
-                    bg_color=(0, 0, 0, 0),
-                    is_rtl=True,
-                    is_draw_bg=True,
-                    h_pad=20)
+                # Process Arabic text for dimension calculation
+                configuration = {
+                    'delete_harakat': False,
+                    'support_ligatures': True,
+                    'RIAL SIGN': True,
+                }
+                reshaper = arabic_reshaper.ArabicReshaper(configuration=configuration)
+                reshaped_text = reshaper.reshape(wrapped_line)
+                display_text = get_display(reshaped_text)
+                display_text = display_text[::-1]
             else:
-                line_clip, line_width, line_height = create_slide_animation(
-                    text=wrapped_line,
-                    font_path=FONT_ENGLISH_PATH,
-                    font_size=FONT_SIZE,
-                    duration=duration,
-                    bg_color=(0, 0, 0, 0),
-                    is_rtl=False,
-                    is_draw_bg=True,
-                    h_pad=20)
+                display_text = wrapped_line
 
-            # Position each line vertically
-            line_clip = line_clip.with_position((0, total_height))
-            line_clips.append(line_clip)
-            total_height += line_height
+            text_bbox = font_obj.getbbox(display_text)
+            line_width = text_bbox[2] - text_bbox[0]
+            line_height = text_bbox[3] - text_bbox[1] + 10
+            line_heights.append(line_height)
+            max_line_width = max(max_line_width, line_width)
 
-        # Create a composite clip of all lines
-        composite_clip = CompositeVideoClip(line_clips)
-        return composite_clip, max_width, total_height
+        # Calculate total dimensions with padding
+        total_height = sum(line_heights) + 40
+        total_width = max_line_width + 60
+
+        # Create animation function that draws everything
+        # Create simple function that shows full text immediately (no animation)
+        def make_frame(t):
+            # Create image with transparent background
+            img = Image.new('RGBA', (total_width, total_height), (0, 0, 0, 0))
+            draw = ImageDraw.Draw(img)
+
+            # Draw rounded rectangle background
+            draw.rounded_rectangle([(0, 0), (total_width, total_height)],
+                                   radius=15, fill=BG_COLOR)
+
+            # Draw each line of text (full text, no animation)
+            y_offset = 20
+            for i, wrapped_line in enumerate(wrapped_lines):
+                if is_arabic:
+                    # Process Arabic text
+                    configuration = {
+                        'delete_harakat': False,
+                        'support_ligatures': True,
+                        'RIAL SIGN': True,
+                    }
+                    reshaper = arabic_reshaper.ArabicReshaper(configuration=configuration)
+                    reshaped_text = reshaper.reshape(wrapped_line)
+                    display_text = get_display(reshaped_text)
+                    display_text = display_text[::-1]
+
+                    # Right-align Arabic text
+                    text_bbox = font_obj.getbbox(display_text)
+                    text_width = text_bbox[2] - text_bbox[0]
+                    x_pos = total_width - text_width - 30
+                else:
+                    display_text = wrapped_line
+                    # Left-align English text
+                    x_pos = 30
+
+                draw.text((x_pos, y_offset), display_text, font=font_obj, fill=color)
+                y_offset += line_heights[i]
+
+            return np.array(img)
+
+        # Create the clip
+        clip = VideoClip(make_frame, duration=duration)
+
+        clip.with_effects([vfx.FadeIn(FADE_DURATION, initial_color=[0, 0, 0, 0])])
+
+        return clip, total_width, total_height
+    #endworking
+
+
+
+
+
+
+
+# def process_subtitle_line(line, font, color, is_arabic=False, duration=5.0, max_width=800, is_draw_bg=True):
+#     """Process a subtitle line with text wrapping"""
+#     # Wrap the text into multiple lines
+#     wrapped_lines = wrap_text(line, font, max_width, is_arabic)
+#
+#     if len(wrapped_lines) == 1:
+#         # Single line - use existing animation
+#         if is_arabic:
+#             return create_slide_animation(
+#                 text=wrapped_lines[0],
+#                 font_path=FONT_ARABIC_PATH,
+#                 font_size=FONT_SIZE_ARABIC,
+#                 duration=duration,
+#                 bg_color=(0, 0, 0, 0),
+#                 is_rtl=True,
+#                 is_draw_bg=is_draw_bg,
+#                 h_pad=40)
+#         else:
+#             return create_slide_animation(
+#                 text=wrapped_lines[0],
+#                 font_path=FONT_ENGLISH_PATH,
+#                 font_size=FONT_SIZE,
+#                 duration=duration,
+#                 bg_color=(0, 0, 0, 0),
+#                 is_rtl=False,
+#                 is_draw_bg=is_draw_bg,
+#                 h_pad=40)
+#     else:
+#         # Multiple lines - create unified background and animated text
+#         line_clips = []
+#         line_heights = []
+#         line_widths = []
+#
+#         # Load appropriate font
+#         if is_arabic:
+#             try:
+#                 font_obj = ImageFont.truetype(FONT_ARABIC_PATH, FONT_SIZE_ARABIC)
+#             except:
+#                 font_obj = ImageFont.truetype(FALLBACK_FONT_PATH, FONT_SIZE_ARABIC)
+#         else:
+#             try:
+#                 font_obj = ImageFont.truetype(FONT_ENGLISH_PATH, FONT_SIZE)
+#             except:
+#                 font_obj = ImageFont.truetype(FALLBACK_FONT_PATH, FONT_SIZE)
+#
+#         # Calculate dimensions first
+#         for wrapped_line in wrapped_lines:
+#             if is_arabic:
+#                 # Process Arabic text for dimension calculation
+#                 configuration = {
+#                     'delete_harakat': False,
+#                     'support_ligatures': True,
+#                     'RIAL SIGN': True,
+#                 }
+#                 reshaper = arabic_reshaper.ArabicReshaper(configuration=configuration)
+#                 reshaped_text = reshaper.reshape(wrapped_line)
+#                 display_text = get_display(reshaped_text)
+#                 display_text = display_text[::-1]
+#             else:
+#                 display_text = wrapped_line
+#
+#             text_bbox = font_obj.getbbox(display_text)
+#             line_width = text_bbox[2] - text_bbox[0]
+#             line_height = text_bbox[3] - text_bbox[1] + 10
+#             line_heights.append(line_height)
+#             line_widths.append(line_width)
+#
+#         max_line_width = max(line_widths)
+#         total_height = sum(line_heights) + 40
+#         total_width = max_line_width + 60
+#
+#         # Create animated text clips (without background)
+#         for i, wrapped_line in enumerate(wrapped_lines):
+#             if is_arabic:
+#                 line_clip, line_width, line_height = create_slide_animation(
+#                     text=wrapped_line,
+#                     font_path=FONT_ARABIC_PATH,
+#                     font_size=FONT_SIZE_ARABIC,
+#                     duration=duration,
+#                     bg_color=(0, 0, 0, 0),
+#                     is_rtl=True,
+#                     is_draw_bg=False,  # No individual background
+#                     h_pad=40)
+#             else:
+#                 line_clip, line_width, line_height = create_slide_animation(
+#                     text=wrapped_line,
+#                     font_path=FONT_ENGLISH_PATH,
+#                     font_size=FONT_SIZE,
+#                     duration=duration,
+#                     bg_color=(0, 0, 0, 0),
+#                     is_rtl=False,
+#                     is_draw_bg=False,  # No individual background
+#                     h_pad=40)
+#
+#             line_clips.append(line_clip)
+#
+#         # Create static background
+#         bg_img = Image.new('RGBA', (total_width, total_height), (0, 0, 0, 0))
+#         draw = ImageDraw.Draw(bg_img)
+#         draw.rounded_rectangle([(0, 0), (total_width, total_height)],
+#                                radius=15, fill=BG_COLOR)
+#
+#         def make_bg_frame(t):
+#             return np.array(bg_img)
+#
+#         bg_clip = VideoClip(make_bg_frame, duration=duration)
+#
+#         # Position text clips
+#         positioned_clips = []
+#         y_offset = 20
+#
+#         for i, (line_clip, line_width, line_height) in enumerate(zip(line_clips, line_widths, line_heights)):
+#             if is_arabic:
+#                 x_pos = total_width - line_width - 30  # Right-align Arabic
+#             else:
+#                 x_pos = 30  # Left-align English
+#
+#             positioned_clip = line_clip.with_position((x_pos, y_offset))
+#             positioned_clips.append(positioned_clip)
+#             y_offset += line_height
+#
+#         # Create final composite
+#         final_clip = CompositeVideoClip([bg_clip] + positioned_clips)
+#         return final_clip, total_width, total_height
+
+
+
+
+# def process_subtitle_line(line, font, color, is_arabic=False, duration=5.0, max_width=800, is_draw_bg=True):
+#     """Process a subtitle line with text wrapping"""
+#     # Wrap the text into multiple lines
+#     wrapped_lines = wrap_text(line, font, max_width, is_arabic)
+#
+#     if len(wrapped_lines) == 1:
+#         # Single line - use existing animation
+#         if is_arabic:
+#             return create_slide_animation(
+#                 text=wrapped_lines[0],
+#                 font_path=FONT_ARABIC_PATH,
+#                 font_size=FONT_SIZE_ARABIC,
+#                 duration=duration,
+#                 bg_color=(0, 0, 0, 0),
+#                 is_rtl=True,
+#                 is_draw_bg=is_draw_bg,
+#                 h_pad=40)
+#         else:
+#             return create_slide_animation(
+#                 text=wrapped_lines[0],
+#                 font_path=FONT_ENGLISH_PATH,
+#                 font_size=FONT_SIZE,
+#                 duration=duration,
+#                 bg_color=(0, 0, 0, 0),
+#                 is_rtl=False,
+#                 is_draw_bg=is_draw_bg,
+#                 h_pad=40)
+#     else:
+#         # Multiple lines - create a composite clip
+#         # line_clips = []
+#         # total_height = 0
+#         # line_heights = []
+#         # max_line_width = 0
+#
+#         # Multiple lines - create a unified background for all lines
+#         line_clips = []
+#         line_heights = []
+#         line_widths = []
+#         total_height = 0
+#
+#         for i, wrapped_line in enumerate(wrapped_lines):
+#             if is_arabic:
+#                 line_clip, line_width, line_height = create_slide_animation(
+#                     text=wrapped_line,
+#                     font_path=FONT_ARABIC_PATH,
+#                     font_size=FONT_SIZE_ARABIC,
+#                     duration=duration,
+#                     bg_color=(0, 0, 0, 0),
+#                     is_rtl=True,
+#                     is_draw_bg=False,
+#                     h_pad=40)
+#             else:
+#                 line_clip, line_width, line_height = create_slide_animation(
+#                     text=wrapped_line,
+#                     font_path=FONT_ENGLISH_PATH,
+#                     font_size=FONT_SIZE,
+#                     duration=duration,
+#                     bg_color=(0, 0, 0, 0),
+#                     is_rtl=False,
+#                     is_draw_bg=False,
+#                     h_pad=40)
+#
+#             # # Position each line vertically
+#             # line_clip = line_clip.with_position((0, total_height))
+#             # line_clips.append(line_clip)
+#             # total_height += line_height
+#             #
+#             # line_heights.append(line_height)
+#             # max_line_width = max(max_line_width, line_width)
+#
+#
+#             # Ensure valid dimensions
+#             if line_width > 0 and line_height > 0:
+#                 line_clips.append(line_clip)
+#                 line_heights.append(line_height)
+#                 line_widths.append(line_width)
+#                 total_height += line_height
+#             else:
+#                 print(f"Warning: Skipping line with zero dimensions: {wrapped_line}")
+#
+#         # Create a composite clip of all lines
+#         # composite_clip = CompositeVideoClip(line_clips)
+#         # return composite_clip, max_width, total_height
+#
+#         # Create unified background
+#         # bg_width = max_line_width #+ 60  # Add padding
+#         # bg_height = total_height #+ 40  # Add padding
+#         #
+#         # # Create background image with rounded corners
+#         # bg_img = Image.new('RGBA', (bg_width, bg_height), (0, 0, 0, 0))
+#         # draw_bg = ImageDraw.Draw(bg_img)
+#         # draw_bg.rounded_rectangle([(0, 0), (bg_width, bg_height)],
+#         #                           radius=15, fill=BG_COLOR)
+#         #
+#         # # Convert background to video clip
+#         # def make_bg_frame(t):
+#         #     return np.array(bg_img)
+#         #
+#         # bg_clip = VideoClip(make_bg_frame, duration=duration)
+#         #
+#         # # Position text clips on top of background
+#         # positioned_clips = []
+#         # y_offset = 20  # Start with top padding
+#         #
+#         # for i, line_clip in enumerate(line_clips):
+#         #     x_pos = 30  # Left padding
+#         #     if is_arabic:
+#         #         # Right-align Arabic text
+#         #         x_pos = bg_width - line_heights[i] - 30
+#         #
+#         #     positioned_clip = line_clip.with_position((x_pos, y_offset))
+#         #     positioned_clips.append(positioned_clip)
+#         #     y_offset += line_heights[i] + 10  # Add line spacing
+#         #
+#         # # Create final composite with background and text
+#         # final_clip = CompositeVideoClip([bg_clip] + positioned_clips)
+#         # return final_clip, bg_width, bg_height
+#
+#         # Check if we have valid clips
+#         if not line_clips:
+#             print("Error: No valid text clips created")
+#             # Return a dummy clip with minimal dimensions
+#             dummy_img = Image.new('RGBA', (10, 10), (0, 0, 0, 0))
+#
+#             def make_dummy_frame(t):
+#                 return np.array(dummy_img)
+#
+#             dummy_clip = VideoClip(make_dummy_frame, duration=0.1)
+#             return dummy_clip, 10, 10
+#
+#         # Create unified background
+#         max_line_width = max(line_widths)
+#         bg_width = max_line_width + 60  # Add padding
+#         bg_height = total_height + 40 + (len(line_clips) * 10)  # Add padding and line spacing
+#
+#         # Create background image with rounded corners
+#         bg_img = Image.new('RGBA', (bg_width, bg_height), (0, 0, 0, 0))
+#         draw_bg = ImageDraw.Draw(bg_img)
+#         draw_bg.rounded_rectangle([(0, 0), (bg_width, bg_height)],
+#                                   radius=15, fill=BG_COLOR)
+#
+#         # Convert background to video clip
+#         def make_bg_frame(t):
+#             return np.array(bg_img)
+#
+#         bg_clip = VideoClip(make_bg_frame, duration=duration, is_mask=False)
+#
+#         # Position text clips on top of background
+#         positioned_clips = []
+#         y_offset = 20  # Start with top padding
+#
+#         for i, (line_clip, line_width, line_height) in enumerate(zip(line_clips, line_widths, line_heights)):
+#             if is_arabic:
+#                 # Right-align Arabic text
+#                 x_pos = bg_width - line_width - 30
+#             else:
+#                 # Left-align English text
+#                 x_pos = 30
+#
+#             positioned_clip = line_clip.with_position((x_pos, y_offset))
+#             positioned_clips.append(positioned_clip)
+#             y_offset += line_height + 10  # Add line spacing
+#
+#         # Create final composite with background and text
+#         final_clip = CompositeVideoClip([bg_clip] + positioned_clips)
+#         return final_clip, bg_width, bg_height
 
 
 def json_to_srt(json_file, srt_file):
@@ -269,109 +733,10 @@ def preprocess_subtitle(line, font, is_arabic=False):
     return line, total_width, total_height
 
 
-def create_arabic_animation(line, font, color, duration, total_width, total_height):
-    """Create an animated Arabic text clip with proper channel handling"""
-    display_text = line
-
-    # Create background image with consistent dimensions
-    bg_img = Image.new('RGBA', (total_width + 20, total_height + 20), (0, 0, 0, 0))
-    draw_bg = ImageDraw.Draw(bg_img)
-    draw_bg.rounded_rectangle([(0, 0), (total_width + 20, total_height + 20)],
-                              radius=15, fill=BG_COLOR)
-
-    def make_frame(t):
-        """Generate frame at time t with animated text"""
-        # Create a new image with the background
-        frame_img = bg_img.copy()
-        draw = ImageDraw.Draw(frame_img)
-
-        # Calculate how many characters to show
-        # chars_to_show = int(len(display_text) * progress)
-        chars_to_show = int(len(line) * min(1, t / (len(line) * ARABIC_ANIMATION_SPEED)))
-        visible_text = display_text[:chars_to_show]
-
-        # Calculate text position (right-aligned)
-        text_width = font.getlength(visible_text)
-        x_pos = (total_width + 20) - text_width - 10  # Right padding
-        y_pos = 10
-
-        # print(f"x: {x_pos} y: {y_pos} => {visible_text}")
-
-        # Draw the visible portion of the text
-        draw.text((x_pos, y_pos), visible_text, font=font, fill=color)
-
-        # Convert to numpy array and ensure RGBA format
-        frame_array = np.array(frame_img)
-        if frame_array.shape[2] == 3:  # If RGB, add alpha channel
-            alpha = np.full(frame_array.shape[:2], 255, dtype=np.uint8)
-            frame_array = np.dstack((frame_array, alpha))
-        return frame_array
-
-    # Create clip with ismask=False to indicate this is not a mask
-    return VideoClip(make_frame, duration=duration, is_mask=False)
-
-
-def create_english_animation(line, font, color, duration, total_width, total_height):
-    """Create left-to-right animation for English text"""
-    bg_img = Image.new('RGBA', (total_width + 20, total_height + 20), (0, 0, 0, 0))
-    draw_bg = ImageDraw.Draw(bg_img)
-    draw_bg.rounded_rectangle([(0, 0), (total_width + 20, total_height + 20)],
-                              radius=15, fill=BG_COLOR)
-
-    def make_frame(t):
-        # progress = min(1.0, max(0.0, t / duration))
-        frame_img = bg_img.copy()
-        draw = ImageDraw.Draw(frame_img)
-
-        # chars_to_show = int(len(line) * progress)
-        chars_to_show = int(len(line) * min(1, t / (len(line) * CHAR_ANIMATION_DELAY)))
-        visible_text = line[:chars_to_show]
-
-        # Left-aligned for English
-        draw.text((10, 10), visible_text, font=font, fill=color)
-
-        frame_array = np.array(frame_img)
-        if frame_array.shape[2] == 3:
-            alpha = np.full(frame_array.shape[:2], 255, dtype=np.uint8)
-            frame_array = np.dstack((frame_array, alpha))
-        return frame_array
-
-    return VideoClip(make_frame, duration=duration, is_mask=False)
-
-
-# def process_subtitle_line(line, font, color, is_arabic=False, duration=5.0):
-#     """Process a subtitle line with proper image format handling"""
-#     # processed_line, total_width, total_height = preprocess_subtitle(line, font, is_arabic)
-#
-#     if is_arabic:
-#         # return create_arabic_animation(processed_line, font, color, duration, total_width, total_height)
-#         return create_slide_animation(
-#             text=line,
-#             font_path=FONT_ARABIC_PATH,
-#             font_size=FONT_SIZE_ARABIC,
-#             duration=duration,
-#             bg_color=(0, 0, 0, 0),
-#             is_rtl=True,
-#             is_draw_bg=True,
-#             h_pad=60)
-#     else:
-#         return create_slide_animation(
-#             text=line,
-#             font_path=FONT_ENGLISH_PATH,
-#             font_size=FONT_SIZE,
-#             duration=duration,
-#             bg_color=(0, 0, 0, 0),
-#             is_rtl=False,
-#             is_draw_bg=True,
-#             h_pad=40)
-#         # English animation (left-to-right)
-#         # return create_english_animation(processed_line, font, color, duration, total_width, total_height)
-
-
 def create_slide_animation(text, font_path, font_size, duration, bg_color, is_rtl=True, is_draw_bg=False, h_pad=40):
     """Create sliding animation that completes within 5 seconds max and stays visible"""
     # Calculate animation duration (min of 5 seconds or total_duration)
-    anim_duration = min(3.0, duration)
+    anim_duration = min(2.0, duration)
 
     # Prepare text (RTL for Arabic)
     if is_rtl:
@@ -383,7 +748,7 @@ def create_slide_animation(text, font_path, font_size, duration, bg_color, is_rt
         reshaper = arabic_reshaper.ArabicReshaper(configuration=configuration)
         reshaped_text = reshaper.reshape(text)
         display_text = get_display(reshaped_text)
-        # display_text = display_text[::-1] # set it for linux
+        display_text = display_text[::-1] # set it for linux
     else:
         display_text = text
 
@@ -435,84 +800,6 @@ def create_slide_animation(text, font_path, font_size, duration, bg_color, is_rt
     return VideoClip(make_frame, duration=duration), canvas_width, canvas_height
 
 
-# def create_subtitle_clips(video, subs, font_english, font_arabic):
-#     """Generate subtitle clips with proper compositing"""
-#     subtitle_clips = []
-#     video_size = video.size
-#
-#     for sub in subs:
-#         lines = sub.text.split('\n')
-#         start_time = sub.start.ordinal / 1000
-#         end_time = sub.end.ordinal / 1000
-#         duration = end_time - start_time
-#
-#         # Separate Arabic and English lines
-#         arabic_lines = []
-#         english_lines = []
-#
-#         for line in lines:
-#             if not line.strip():
-#                 continue
-#             try:
-#                 lang = detect(line)
-#             except:
-#                 lang = "en"
-#             if lang == "ar":
-#                 arabic_lines.append(line)
-#             else:
-#                 english_lines.append(line)
-#
-#         for line_idx, line in enumerate(arabic_lines):
-#             font = font_arabic
-#             color = COLOR_ARABIC
-#             line_clip, canvas_width, canvas_height = process_subtitle_line(line, font, color, True, duration)
-#
-#             # Position the clip
-#             # _, total_width, total_height = preprocess_subtitle(line, font, True)
-#             # y_pos = video_size[1] - SUBTITLE_HEIGHT - line_idx * LINE_SPACING
-#             y_pos = video_size[1] - SUBTITLE_HEIGHT - (len(english_lines) * LINE_SPACING) - line_idx * LINE_SPACING - 80
-#             x_pos = (video_size[0] - canvas_width) / 2
-#
-#             try:
-#                 # Set clip properties
-#                 # Configure clip using current MoviePy API
-#                 positioned_clip = line_clip.with_position((x_pos, y_pos)) \
-#                     .with_start(start_time) \
-#                     .with_duration(duration)
-#
-#                 positioned_clip = positioned_clip.with_effects([vfx.FadeIn(FADE_DURATION, initial_color=[0, 0, 0, 0])])
-#
-#                 subtitle_clips.append(positioned_clip)
-#             except Exception as ex:
-#                 print(ex)
-#
-#         for line_idx, line in enumerate(english_lines):
-#             font = font_english
-#             color = COLOR_ENGLISH
-#             line_clip, canvas_width, canvas_height = process_subtitle_line(line, font, color, False, duration)
-#
-#             # Position the clip
-#             # _, total_width, total_height = preprocess_subtitle(line, font, False)
-#             # y_pos = video_size[1] - SUBTITLE_HEIGHT - line_idx * LINE_SPACING
-#             y_pos = video_size[1] - SUBTITLE_HEIGHT - line_idx * LINE_SPACING
-#             x_pos = (video_size[0] - canvas_width) / 2
-#
-#             try:
-#                 # Set clip properties
-#                 # Configure clip using current MoviePy API
-#                 positioned_clip = line_clip.with_position((x_pos, y_pos)) \
-#                     .with_start(start_time) \
-#                     .with_duration(duration)
-#
-#                 positioned_clip = positioned_clip.with_effects([vfx.FadeIn(FADE_DURATION, initial_color=[0, 0, 0, 0])])
-#
-#                 subtitle_clips.append(positioned_clip)
-#             except Exception as ex:
-#                 print(ex)
-#
-#     return subtitle_clips
-
-
 def create_subtitle_clips(video, subs, font_english, font_arabic):
     """Generate subtitle clips with proper compositing"""
     subtitle_clips = []
@@ -544,35 +831,41 @@ def create_subtitle_clips(video, subs, font_english, font_arabic):
         # Process Arabic lines
         arabic_line_count = 0
         for line in arabic_lines:
-            line_clip, canvas_width, canvas_height = process_subtitle_line(
-                line, font_arabic, COLOR_ARABIC, True, duration, max_width)
+            try:
+                line_clip, canvas_width, canvas_height = process_subtitle_line(
+                    line, font_arabic, COLOR_ARABIC, True, duration, max_width)
 
-            y_pos = video_size[1] - SUBTITLE_HEIGHT - (
-                        len(english_lines) * LINE_SPACING) - arabic_line_count * LINE_SPACING - 80
-            x_pos = (video_size[0] - canvas_width) / 2
+                y_pos = video_size[1] - SUBTITLE_HEIGHT - (
+                            len(english_lines) * LINE_SPACING) - arabic_line_count * LINE_SPACING - 80
+                x_pos = (video_size[0] - canvas_width) / 2
 
-            positioned_clip = line_clip.with_position((x_pos, y_pos)) \
-                .with_start(start_time) \
-                .with_duration(duration)
+                positioned_clip = line_clip.with_position((x_pos, y_pos)) \
+                    .with_start(start_time) \
+                    .with_duration(duration)
 
-            positioned_clip = positioned_clip.with_effects([vfx.FadeIn(FADE_DURATION, initial_color=[0, 0, 0, 0])])
-            subtitle_clips.append(positioned_clip)
-            arabic_line_count += 1
+                positioned_clip = positioned_clip.with_effects([vfx.FadeIn(FADE_DURATION, initial_color=[0, 0, 0, 0])])
+                subtitle_clips.append(positioned_clip)
+                arabic_line_count += 1
+            except Exception as x:
+                print(x)
 
         # Process English lines
         for line_idx, line in enumerate(english_lines):
-            line_clip, canvas_width, canvas_height = process_subtitle_line(
-                line, font_english, COLOR_ENGLISH, False, duration, max_width)
+            try:
+                line_clip, canvas_width, canvas_height = process_subtitle_line(
+                    line, font_english, COLOR_ENGLISH, False, duration, max_width)
 
-            y_pos = video_size[1] - SUBTITLE_HEIGHT - line_idx * LINE_SPACING
-            x_pos = (video_size[0] - canvas_width) / 2
+                y_pos = video_size[1] - SUBTITLE_HEIGHT - line_idx * LINE_SPACING
+                x_pos = (video_size[0] - canvas_width) / 2
 
-            positioned_clip = line_clip.with_position((x_pos, y_pos)) \
-                .with_start(start_time) \
-                .with_duration(duration)
+                positioned_clip = line_clip.with_position((x_pos, y_pos)) \
+                    .with_start(start_time) \
+                    .with_duration(duration)
 
-            positioned_clip = positioned_clip.with_effects([vfx.FadeIn(FADE_DURATION, initial_color=[0, 0, 0, 0])])
-            subtitle_clips.append(positioned_clip)
+                # positioned_clip = positioned_clip.with_effects([vfx.FadeIn(FADE_DURATION, initial_color=[0, 0, 0, 0])])
+                subtitle_clips.append(positioned_clip)
+            except Exception as x:
+                print(x)
 
     return subtitle_clips
 
@@ -587,7 +880,7 @@ def create_header_clips_updated(video, surah_no, font_english, font_arabic):
     data_ar = data["ar"][f"{surah_no}"]
 
     surah_name_en = f'Surah {data_en["transliteratedName"]}'
-    surah_name_ar = data_ar["transliteratedName"]
+    surah_name_ar = "نوح" #data_ar["transliteratedName"]
     surah_meaning_en = data_en["translatedName"]
 
     # Arabic header
@@ -598,13 +891,13 @@ def create_header_clips_updated(video, surah_no, font_english, font_arabic):
         duration=video.duration,
         bg_color=(0, 0, 0, 0),
         is_rtl=True,
-        h_pad=70)
+        h_pad=90)
 
     base_y = 136
     # Get dimensions for positioning
     # _, width_ar, height_ar = preprocess_subtitle(surah_name_ar, font_arabic, is_arabic=True)
     header_clips.append(arabic_clip.with_position(((video.w - canvas_width) / 2, base_y)))
-    base_y += height_ar + 20
+    base_y += height_ar + 30
 
     # English header (using same approach but left-to-right)
     english_clip, canvas_width, height_en = create_slide_animation(
@@ -700,7 +993,7 @@ def main(surah_number):
             codec="libx264",
             audio_codec="aac",
             threads=32,
-            preset="medium"
+            preset="ultrafast"
         )
         print(f"Final video created at {OUTPUT_VIDEO_PATH}")
 

@@ -2301,34 +2301,250 @@
             "en_text": "How can they be reminded when a messenger has already come to them, making things clear,"
         },
         {
-            "verse_key": "44:14",
-            "verse_num": "44:14",
-            "arabic_text": "ثُمَّ تَوَلَّوْا۟ عَنْهُ وَقَالُوا۟ مُعَلَّمٌ مَّجْنُونٌ",
-            "en_text": "then they turned away from him, saying, “A madman, taught by others!”?"
+            "verse_key": "44:19",
+            "verse_num": "44:19",
+            "arabic_text": "وَأَن لَّا تَعْلُوا۟ عَلَى ٱللَّهِ ۖ إِنِّىٓ ءَاتِيكُم بِسُلْطَـٰنٍ مُّبِينٍ",
+            "en_text": "And do not be arrogant with Allah. I have certainly come to you with a compelling proof."
         },
         {
-            "verse_key": "44:15",
-            "verse_num": "44:15",
-            "arabic_text": "إِنَّا كَاشِفُوا۟ ٱلْعَذَابِ قَلِيلًا ۚ إِنَّكُمْ عَآئِدُونَ",
-            "en_text": "Indeed, We will remove ˹that˺ torment for a while, and you ˹Meccans˺ will return ˹to disbelief˺."
+            "verse_key": "44:20",
+            "verse_num": "44:20",
+            "arabic_text": "وَإِنِّى عُذْتُ بِرَبِّى وَرَبِّكُمْ أَن تَرْجُمُونِ",
+            "en_text": "And indeed, I seek refuge with my Lord and your Lord so you do not stone me ˹to death˺."
         },
         {
-            "verse_key": "44:16",
-            "verse_num": "44:16",
-            "arabic_text": "يَوْمَ نَبْطِشُ ٱلْبَطْشَةَ ٱلْكُبْرَىٰٓ إِنَّا مُنتَقِمُونَ",
-            "en_text": "˹Then˺ on the Day We will deal ˹you˺ the fiercest blow, We will surely inflict punishment."
+            "verse_key": "44:21",
+            "verse_num": "44:21",
+            "arabic_text": "وَإِن لَّمْ تُؤْمِنُوا۟ لِى فَٱعْتَزِلُونِ",
+            "en_text": "˹But˺ if you do not believe me, then let me be.”"
         },
         {
-            "verse_key": "44:17",
-            "verse_num": "44:17",
-            "arabic_text": "۞ وَلَقَدْ فَتَنَّا قَبْلَهُمْ قَوْمَ فِرْعَوْنَ وَجَآءَهُمْ رَسُولٌ كَرِيمٌ",
-            "en_text": "Indeed, before them We tested Pharaoh’s people: a noble messenger came to them,"
+            "verse_key": "44:22",
+            "verse_num": "44:22",
+            "arabic_text": "فَدَعَا رَبَّهُۥٓ أَنَّ هَـٰٓؤُلَآءِ قَوْمٌ مُّجْرِمُونَ",
+            "en_text": "Ultimately, he cried out to his Lord, “These are a wicked people!”"
         },
         {
-            "verse_key": "44:18",
-            "verse_num": "44:18",
-            "arabic_text": "أَنْ أَدُّوٓا۟ إِلَىَّ عِبَادَ ٱللَّهِ ۖ إِنِّى لَكُمْ رَسُولٌ أَمِينٌ",
-            "en_text": "˹proclaiming,˺ “Hand over the servants of Allah to me.<sup foot_note=77348>1</sup> I am truly a trustworthy messenger to you."
+            "verse_key": "44:23",
+            "verse_num": "44:23",
+            "arabic_text": "فَأَسْرِ بِعِبَادِى لَيْلًا إِنَّكُم مُّتَّبَعُونَ",
+            "en_text": "˹Allah responded,˺ “Leave with My servants at night, for you will surely be pursued."
+        },
+        {
+            "verse_key": "44:24",
+            "verse_num": "44:24",
+            "arabic_text": "وَٱتْرُكِ ٱلْبَحْرَ رَهْوًا ۖ إِنَّهُمْ جُندٌ مُّغْرَقُونَ",
+            "en_text": "And leave the sea parted, for they are certainly an army bound to drown.”"
+        },
+        {
+            "verse_key": "44:25",
+            "verse_num": "44:25",
+            "arabic_text": "كَمْ تَرَكُوا۟ مِن جَنَّـٰتٍ وَعُيُونٍ",
+            "en_text": "˹Imagine˺ how many gardens and springs the tyrants<sup foot_note=77349>1</sup> left behind,"
+        },
+        {
+            "verse_key": "44:26",
+            "verse_num": "44:26",
+            "arabic_text": "وَزُرُوعٍ وَمَقَامٍ كَرِيمٍ",
+            "en_text": "as well as ˹various˺ crops and splendid residences,"
+        },
+        {
+            "verse_key": "44:27",
+            "verse_num": "44:27",
+            "arabic_text": "وَنَعْمَةٍ كَانُوا۟ فِيهَا فَـٰكِهِينَ",
+            "en_text": "and luxuries which they fully enjoyed."
+        },
+        {
+            "verse_key": "44:28",
+            "verse_num": "44:28",
+            "arabic_text": "كَذَٰلِكَ ۖ وَأَوْرَثْنَـٰهَا قَوْمًا ءَاخَرِينَ",
+            "en_text": "So it was. And We awarded it ˹all˺ to another people."
+        },
+        {
+            "verse_key": "44:29",
+            "verse_num": "44:29",
+            "arabic_text": "فَمَا بَكَتْ عَلَيْهِمُ ٱلسَّمَآءُ وَٱلْأَرْضُ وَمَا كَانُوا۟ مُنظَرِينَ",
+            "en_text": "Neither heaven nor earth wept over them, nor was their fate delayed."
+        },
+        {
+            "verse_key": "44:30",
+            "verse_num": "44:30",
+            "arabic_text": "وَلَقَدْ نَجَّيْنَا بَنِىٓ إِسْرَٰٓءِيلَ مِنَ ٱلْعَذَابِ ٱلْمُهِينِ",
+            "en_text": "And We certainly delivered the Children of Israel from the humiliating torment"
+        },
+        {
+            "verse_key": "44:31",
+            "verse_num": "44:31",
+            "arabic_text": "مِن فِرْعَوْنَ ۚ إِنَّهُۥ كَانَ عَالِيًا مِّنَ ٱلْمُسْرِفِينَ",
+            "en_text": "of Pharaoh. He was truly a tyrant, a transgressor."
+        },
+        {
+            "verse_key": "44:32",
+            "verse_num": "44:32",
+            "arabic_text": "وَلَقَدِ ٱخْتَرْنَـٰهُمْ عَلَىٰ عِلْمٍ عَلَى ٱلْعَـٰلَمِينَ",
+            "en_text": "And indeed, We chose the Israelites knowingly above the others."
+        },
+        {
+            "verse_key": "44:33",
+            "verse_num": "44:33",
+            "arabic_text": "وَءَاتَيْنَـٰهُم مِّنَ ٱلْـَٔايَـٰتِ مَا فِيهِ بَلَـٰٓؤٌا۟ مُّبِينٌ",
+            "en_text": "And We showed them signs in which there was a clear test."
+        },
+        {
+            "verse_key": "44:34",
+            "verse_num": "44:34",
+            "arabic_text": "إِنَّ هَـٰٓؤُلَآءِ لَيَقُولُونَ",
+            "en_text": "Indeed, these ˹Meccans˺ say,"
+        },
+        {
+            "verse_key": "44:35",
+            "verse_num": "44:35",
+            "arabic_text": "إِنْ هِىَ إِلَّا مَوْتَتُنَا ٱلْأُولَىٰ وَمَا نَحْنُ بِمُنشَرِينَ",
+            "en_text": "“There is nothing beyond our first death, and we will never be resurrected."
+        },
+        {
+            "verse_key": "44:36",
+            "verse_num": "44:36",
+            "arabic_text": "فَأْتُوا۟ بِـَٔابَآئِنَآ إِن كُنتُمْ صَـٰدِقِينَ",
+            "en_text": "Bring ˹back˺ our forefathers, if what you say is true.”"
+        },
+        {
+            "verse_key": "44:37",
+            "verse_num": "44:37",
+            "arabic_text": "أَهُمْ خَيْرٌ أَمْ قَوْمُ تُبَّعٍ وَٱلَّذِينَ مِن قَبْلِهِمْ ۚ أَهْلَكْنَـٰهُمْ ۖ إِنَّهُمْ كَانُوا۟ مُجْرِمِينَ",
+            "en_text": "Are they superior to the people of Tubba’<sup foot_note=77350>1</sup> and those before them? We destroyed them ˹all˺, ˹for˺ they were truly wicked."
+        },
+        {
+            "verse_key": "44:38",
+            "verse_num": "44:38",
+            "arabic_text": "وَمَا خَلَقْنَا ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضَ وَمَا بَيْنَهُمَا لَـٰعِبِينَ",
+            "en_text": "We did not create the heavens and the earth and everything in between for sport."
+        },
+        {
+            "verse_key": "44:39",
+            "verse_num": "44:39",
+            "arabic_text": "مَا خَلَقْنَـٰهُمَآ إِلَّا بِٱلْحَقِّ وَلَـٰكِنَّ أَكْثَرَهُمْ لَا يَعْلَمُونَ",
+            "en_text": "We only created them for a purpose, but most of these ˹pagans˺ do not know."
+        },
+        {
+            "verse_key": "44:40",
+            "verse_num": "44:40",
+            "arabic_text": "إِنَّ يَوْمَ ٱلْفَصْلِ مِيقَـٰتُهُمْ أَجْمَعِينَ",
+            "en_text": "Surely the Day of ˹Final˺ Decision is the time appointed for all—"
+        },
+        {
+            "verse_key": "44:41",
+            "verse_num": "44:41",
+            "arabic_text": "يَوْمَ لَا يُغْنِى مَوْلًى عَن مَّوْلًى شَيْـًٔا وَلَا هُمْ يُنصَرُونَ",
+            "en_text": "the Day no kith or kin will be of benefit to another whatsoever, nor will they be helped,"
+        },
+        {
+            "verse_key": "44:42",
+            "verse_num": "44:42",
+            "arabic_text": "إِلَّا مَن رَّحِمَ ٱللَّهُ ۚ إِنَّهُۥ هُوَ ٱلْعَزِيزُ ٱلرَّحِيمُ",
+            "en_text": "except those shown mercy by Allah. He is truly the Almighty, Most Merciful."
+        },
+        {
+            "verse_key": "44:43",
+            "verse_num": "44:43",
+            "arabic_text": "إِنَّ شَجَرَتَ ٱلزَّقُّومِ",
+            "en_text": "Surely ˹the fruit of˺ the tree of Zaqqûm<sup foot_note=77351>1</sup>"
+        },
+        {
+            "verse_key": "44:44",
+            "verse_num": "44:44",
+            "arabic_text": "طَعَامُ ٱلْأَثِيمِ",
+            "en_text": "will be the food of the evildoer."
+        },
+        {
+            "verse_key": "44:45",
+            "verse_num": "44:45",
+            "arabic_text": "كَٱلْمُهْلِ يَغْلِى فِى ٱلْبُطُونِ",
+            "en_text": "Like molten metal, it will boil in the bellies"
+        },
+        {
+            "verse_key": "44:46",
+            "verse_num": "44:46",
+            "arabic_text": "كَغَلْىِ ٱلْحَمِيمِ",
+            "en_text": "like the boiling of hot water."
+        },
+        {
+            "verse_key": "44:47",
+            "verse_num": "44:47",
+            "arabic_text": "خُذُوهُ فَٱعْتِلُوهُ إِلَىٰ سَوَآءِ ٱلْجَحِيمِ",
+            "en_text": "˹It will be said,˺ “Seize them and drag them into the depths of the Hellfire."
+        },
+        {
+            "verse_key": "44:48",
+            "verse_num": "44:48",
+            "arabic_text": "ثُمَّ صُبُّوا۟ فَوْقَ رَأْسِهِۦ مِنْ عَذَابِ ٱلْحَمِيمِ",
+            "en_text": "Then pour over their heads the torment of boiling water.”"
+        },
+        {
+            "verse_key": "44:49",
+            "verse_num": "44:49",
+            "arabic_text": "ذُقْ إِنَّكَ أَنتَ ٱلْعَزِيزُ ٱلْكَرِيمُ",
+            "en_text": "˹The wicked will be told,˺ “Taste this. You mighty, noble one!<sup foot_note=77352>1</sup>"
+        },
+        {
+            "verse_key": "44:50",
+            "verse_num": "44:50",
+            "arabic_text": "إِنَّ هَـٰذَا مَا كُنتُم بِهِۦ تَمْتَرُونَ",
+            "en_text": "This is truly what you ˹all˺ used to doubt.”"
+        },
+        {
+            "verse_key": "44:51",
+            "verse_num": "44:51",
+            "arabic_text": "إِنَّ ٱلْمُتَّقِينَ فِى مَقَامٍ أَمِينٍ",
+            "en_text": "Indeed, the righteous will be in a secure place,"
+        },
+        {
+            "verse_key": "44:52",
+            "verse_num": "44:52",
+            "arabic_text": "فِى جَنَّـٰتٍ وَعُيُونٍ",
+            "en_text": "amid Gardens and springs,"
+        },
+        {
+            "verse_key": "44:53",
+            "verse_num": "44:53",
+            "arabic_text": "يَلْبَسُونَ مِن سُندُسٍ وَإِسْتَبْرَقٍ مُّتَقَـٰبِلِينَ",
+            "en_text": "dressed in fine silk and rich brocade, facing one another."
+        },
+        {
+            "verse_key": "44:54",
+            "verse_num": "44:54",
+            "arabic_text": "كَذَٰلِكَ وَزَوَّجْنَـٰهُم بِحُورٍ عِينٍ",
+            "en_text": "So it will be. And We will pair them to maidens with gorgeous eyes."
+        },
+        {
+            "verse_key": "44:55",
+            "verse_num": "44:55",
+            "arabic_text": "يَدْعُونَ فِيهَا بِكُلِّ فَـٰكِهَةٍ ءَامِنِينَ",
+            "en_text": "There they will call for every fruit in serenity."
+        },
+        {
+            "verse_key": "44:56",
+            "verse_num": "44:56",
+            "arabic_text": "لَا يَذُوقُونَ فِيهَا ٱلْمَوْتَ إِلَّا ٱلْمَوْتَةَ ٱلْأُولَىٰ ۖ وَوَقَىٰهُمْ عَذَابَ ٱلْجَحِيمِ",
+            "en_text": "There they will never taste death, beyond the first death. And He will protect them from the punishment of the Hellfire—"
+        },
+        {
+            "verse_key": "44:57",
+            "verse_num": "44:57",
+            "arabic_text": "فَضْلًا مِّن رَّبِّكَ ۚ ذَٰلِكَ هُوَ ٱلْفَوْزُ ٱلْعَظِيمُ",
+            "en_text": "as ˹an act of˺ grace from your Lord. That is ˹truly˺ the ultimate triumph."
+        },
+        {
+            "verse_key": "44:58",
+            "verse_num": "44:58",
+            "arabic_text": "فَإِنَّمَا يَسَّرْنَـٰهُ بِلِسَانِكَ لَعَلَّهُمْ يَتَذَكَّرُونَ",
+            "en_text": "Indeed, We have made this ˹Quran˺ easy in your own language ˹O Prophet˺ so perhaps they will be mindful."
+        },
+        {
+            "verse_key": "44:59",
+            "verse_num": "44:59",
+            "arabic_text": "فَٱرْتَقِبْ إِنَّهُم مُّرْتَقِبُونَ",
+            "en_text": "Wait then! They too are certainly waiting."
         }
     ]
 }

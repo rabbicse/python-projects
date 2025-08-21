@@ -6946,6 +6946,438 @@
             "verse_num": "40:7",
             "arabic_text": "ٱلَّذِينَ يَحْمِلُونَ ٱلْعَرْشَ وَمَنْ حَوْلَهُۥ يُسَبِّحُونَ بِحَمْدِ رَبِّهِمْ وَيُؤْمِنُونَ بِهِۦ وَيَسْتَغْفِرُونَ لِلَّذِينَ ءَامَنُوا۟ رَبَّنَا وَسِعْتَ كُلَّ شَىْءٍ رَّحْمَةً وَعِلْمًا فَٱغْفِرْ لِلَّذِينَ تَابُوا۟ وَٱتَّبَعُوا۟ سَبِيلَكَ وَقِهِمْ عَذَابَ ٱلْجَحِيمِ",
             "en_text": "Those ˹angels˺ who carry the Throne and those around it glorify the praises of their Lord, have faith in Him, and seek forgiveness for the believers, ˹praying:˺ “Our Lord! You encompass everything in ˹Your˺ mercy and knowledge. So forgive those who repent and follow Your Way, and protect them from the torment of the Hellfire."
+        },
+        {
+            "verse_key": "40:8",
+            "verse_num": "40:8",
+            "arabic_text": "رَبَّنَا وَأَدْخِلْهُمْ جَنَّـٰتِ عَدْنٍ ٱلَّتِى وَعَدتَّهُمْ وَمَن صَلَحَ مِنْ ءَابَآئِهِمْ وَأَزْوَٰجِهِمْ وَذُرِّيَّـٰتِهِمْ ۚ إِنَّكَ أَنتَ ٱلْعَزِيزُ ٱلْحَكِيمُ",
+            "en_text": "Our Lord! Admit them into the Gardens of Eternity which You have promised them, along with the righteous among their parents, spouses, and descendants. You ˹alone˺ are truly the Almighty, All-Wise."
+        },
+        {
+            "verse_key": "40:15",
+            "verse_num": "40:15",
+            "arabic_text": "رَفِيعُ ٱلدَّرَجَـٰتِ ذُو ٱلْعَرْشِ يُلْقِى ٱلرُّوحَ مِنْ أَمْرِهِۦ عَلَىٰ مَن يَشَآءُ مِنْ عِبَادِهِۦ لِيُنذِرَ يَوْمَ ٱلتَّلَاقِ",
+            "en_text": "˹He is˺ Highly Exalted in rank, Lord of the Throne. He sends down the revelation by His command to whoever He wills of His servants to warn ˹all˺ of the Day of Meeting—"
+        },
+        {
+            "verse_key": "40:16",
+            "verse_num": "40:16",
+            "arabic_text": "يَوْمَ هُم بَـٰرِزُونَ ۖ لَا يَخْفَىٰ عَلَى ٱللَّهِ مِنْهُمْ شَىْءٌ ۚ لِّمَنِ ٱلْمُلْكُ ٱلْيَوْمَ ۖ لِلَّهِ ٱلْوَٰحِدِ ٱلْقَهَّارِ",
+            "en_text": "the Day all will appear ˹before Allah˺. Nothing about them will be hidden from Him. ˹He will ask,˺ “Who does all authority belong to this Day? To Allah—the One, the Supreme!<sup foot_note=77296>1</sup>"
+        },
+        {
+            "verse_key": "40:17",
+            "verse_num": "40:17",
+            "arabic_text": "ٱلْيَوْمَ تُجْزَىٰ كُلُّ نَفْسٍۭ بِمَا كَسَبَتْ ۚ لَا ظُلْمَ ٱلْيَوْمَ ۚ إِنَّ ٱللَّهَ سَرِيعُ ٱلْحِسَابِ",
+            "en_text": "Today every soul will be rewarded for what it has done. No injustice Today! Surely Allah is swift in reckoning.”"
+        },
+        {
+            "verse_key": "40:18",
+            "verse_num": "40:18",
+            "arabic_text": "وَأَنذِرْهُمْ يَوْمَ ٱلْـَٔازِفَةِ إِذِ ٱلْقُلُوبُ لَدَى ٱلْحَنَاجِرِ كَـٰظِمِينَ ۚ مَا لِلظَّـٰلِمِينَ مِنْ حَمِيمٍ وَلَا شَفِيعٍ يُطَاعُ",
+            "en_text": "Warn them ˹O Prophet˺ of the approaching Day when the hearts will jump into the throats, suppressing distress. The wrongdoers will have neither a close friend nor intercessor to be heard."
+        },
+        {
+            "verse_key": "40:19",
+            "verse_num": "40:19",
+            "arabic_text": "يَعْلَمُ خَآئِنَةَ ٱلْأَعْيُنِ وَمَا تُخْفِى ٱلصُّدُورُ",
+            "en_text": "Allah ˹even˺ knows the sly glances of the eyes and whatever the hearts conceal."
+        },
+        {
+            "verse_key": "40:20",
+            "verse_num": "40:20",
+            "arabic_text": "وَٱللَّهُ يَقْضِى بِٱلْحَقِّ ۖ وَٱلَّذِينَ يَدْعُونَ مِن دُونِهِۦ لَا يَقْضُونَ بِشَىْءٍ ۗ إِنَّ ٱللَّهَ هُوَ ٱلسَّمِيعُ ٱلْبَصِيرُ",
+            "en_text": "And Allah judges with the truth, while those ˹idols˺ they invoke besides Him cannot judge at all. Indeed, Allah ˹alone˺ is the All-Hearing, All-Seeing."
+        },
+        {
+            "verse_key": "40:21",
+            "verse_num": "40:21",
+            "arabic_text": "۞ أَوَلَمْ يَسِيرُوا۟ فِى ٱلْأَرْضِ فَيَنظُرُوا۟ كَيْفَ كَانَ عَـٰقِبَةُ ٱلَّذِينَ كَانُوا۟ مِن قَبْلِهِمْ ۚ كَانُوا۟ هُمْ أَشَدَّ مِنْهُمْ قُوَّةً وَءَاثَارًا فِى ٱلْأَرْضِ فَأَخَذَهُمُ ٱللَّهُ بِذُنُوبِهِمْ وَمَا كَانَ لَهُم مِّنَ ٱللَّهِ مِن وَاقٍ",
+            "en_text": "Have they not travelled throughout the land to see what was the end of those ˹destroyed˺ before them? They were far superior in might and ˹richer in˺ monuments throughout the land. But Allah seized them for their sins, and they had no protector from Allah."
+        },
+        {
+            "verse_key": "40:22",
+            "verse_num": "40:22",
+            "arabic_text": "ذَٰلِكَ بِأَنَّهُمْ كَانَت تَّأْتِيهِمْ رُسُلُهُم بِٱلْبَيِّنَـٰتِ فَكَفَرُوا۟ فَأَخَذَهُمُ ٱللَّهُ ۚ إِنَّهُۥ قَوِىٌّ شَدِيدُ ٱلْعِقَابِ",
+            "en_text": "That was because their messengers used to come to them with clear proofs, but they persisted in disbelief. So Allah seized them. Surely He is All-Powerful, severe in punishment."
+        },
+        {
+            "verse_key": "40:23",
+            "verse_num": "40:23",
+            "arabic_text": "وَلَقَدْ أَرْسَلْنَا مُوسَىٰ بِـَٔايَـٰتِنَا وَسُلْطَـٰنٍ مُّبِينٍ",
+            "en_text": "Indeed, We sent Moses with Our signs and compelling proof"
+        },
+        {
+            "verse_key": "40:24",
+            "verse_num": "40:24",
+            "arabic_text": "إِلَىٰ فِرْعَوْنَ وَهَـٰمَـٰنَ وَقَـٰرُونَ فَقَالُوا۟ سَـٰحِرٌ كَذَّابٌ",
+            "en_text": "to Pharaoh, Hamân, and Korah. But they responded: “Magician! Total liar!”"
+        },
+        {
+            "verse_key": "40:25",
+            "verse_num": "40:25",
+            "arabic_text": "فَلَمَّا جَآءَهُم بِٱلْحَقِّ مِنْ عِندِنَا قَالُوا۟ ٱقْتُلُوٓا۟ أَبْنَآءَ ٱلَّذِينَ ءَامَنُوا۟ مَعَهُۥ وَٱسْتَحْيُوا۟ نِسَآءَهُمْ ۚ وَمَا كَيْدُ ٱلْكَـٰفِرِينَ إِلَّا فِى ضَلَـٰلٍ",
+            "en_text": "Then, when he came to them with the truth from Us, they said, “Kill the sons of those who believe with him and keep their women.” But the plotting of the disbelievers was only in vain."
+        },
+        {
+            "verse_key": "40:26",
+            "verse_num": "40:26",
+            "arabic_text": "وَقَالَ فِرْعَوْنُ ذَرُونِىٓ أَقْتُلْ مُوسَىٰ وَلْيَدْعُ رَبَّهُۥٓ ۖ إِنِّىٓ أَخَافُ أَن يُبَدِّلَ دِينَكُمْ أَوْ أَن يُظْهِرَ فِى ٱلْأَرْضِ ٱلْفَسَادَ",
+            "en_text": "And Pharaoh said, “Let me kill Moses, and let him call upon his Lord! I truly fear that he may change your traditions or cause mischief in the land.”"
+        },
+        {
+            "verse_key": "40:27",
+            "verse_num": "40:27",
+            "arabic_text": "وَقَالَ مُوسَىٰٓ إِنِّى عُذْتُ بِرَبِّى وَرَبِّكُم مِّن كُلِّ مُتَكَبِّرٍ لَّا يُؤْمِنُ بِيَوْمِ ٱلْحِسَابِ",
+            "en_text": "Moses replied, “I seek refuge in my Lord and your Lord from every arrogant person who does not believe in the Day of Reckoning.”"
+        },
+        {
+            "verse_key": "40:28",
+            "verse_num": "40:28",
+            "arabic_text": "وَقَالَ رَجُلٌ مُّؤْمِنٌ مِّنْ ءَالِ فِرْعَوْنَ يَكْتُمُ إِيمَـٰنَهُۥٓ أَتَقْتُلُونَ رَجُلًا أَن يَقُولَ رَبِّىَ ٱللَّهُ وَقَدْ جَآءَكُم بِٱلْبَيِّنَـٰتِ مِن رَّبِّكُمْ ۖ وَإِن يَكُ كَـٰذِبًا فَعَلَيْهِ كَذِبُهُۥ ۖ وَإِن يَكُ صَادِقًا يُصِبْكُم بَعْضُ ٱلَّذِى يَعِدُكُمْ ۖ إِنَّ ٱللَّهَ لَا يَهْدِى مَنْ هُوَ مُسْرِفٌ كَذَّابٌ",
+            "en_text": "A believing man from Pharaoh’s people, who was hiding his faith, argued, “Will you kill a man<sup foot_note=77297>1</sup> ˹only˺ for saying: ‘My Lord is Allah,’ while he has in fact come to you with clear proofs from your Lord? If he is a liar, it will be to his own loss. But if he is truthful, then you will be afflicted with some of what he is threatening you with. Surely Allah does not guide whoever is a transgressor, a total liar."
+        },
+        {
+            "verse_key": "40:29",
+            "verse_num": "40:29",
+            "arabic_text": "يَـٰقَوْمِ لَكُمُ ٱلْمُلْكُ ٱلْيَوْمَ ظَـٰهِرِينَ فِى ٱلْأَرْضِ فَمَن يَنصُرُنَا مِنۢ بَأْسِ ٱللَّهِ إِن جَآءَنَا ۚ قَالَ فِرْعَوْنُ مَآ أُرِيكُمْ إِلَّا مَآ أَرَىٰ وَمَآ أَهْدِيكُمْ إِلَّا سَبِيلَ ٱلرَّشَادِ",
+            "en_text": "O  my people! Authority belongs to you today, reigning supreme in the land. But who would help us against the torment of Allah, if it were to befall us?” Pharaoh assured ˹his people˺, “I am telling you only what I believe, and I am leading you only to the way of guidance.”"
+        },
+        {
+            "verse_key": "40:30",
+            "verse_num": "40:30",
+            "arabic_text": "وَقَالَ ٱلَّذِىٓ ءَامَنَ يَـٰقَوْمِ إِنِّىٓ أَخَافُ عَلَيْكُم مِّثْلَ يَوْمِ ٱلْأَحْزَابِ",
+            "en_text": "And the man who believed cautioned, “O my people! I truly fear for you the doom of ˹earlier˺ enemy forces—"
+        },
+        {
+            "verse_key": "40:31",
+            "verse_num": "40:31",
+            "arabic_text": "مِثْلَ دَأْبِ قَوْمِ نُوحٍ وَعَادٍ وَثَمُودَ وَٱلَّذِينَ مِنۢ بَعْدِهِمْ ۚ وَمَا ٱللَّهُ يُرِيدُ ظُلْمًا لِّلْعِبَادِ",
+            "en_text": "like the fate of the people of Noah, ’Ȃd, Thamûd, and those after them. For Allah would never will to wrong ˹His˺ servants."
+        },
+        {
+            "verse_key": "40:32",
+            "verse_num": "40:32",
+            "arabic_text": "وَيَـٰقَوْمِ إِنِّىٓ أَخَافُ عَلَيْكُمْ يَوْمَ ٱلتَّنَادِ",
+            "en_text": "O  my people! I truly fear for you the Day all will be crying out ˹to each other˺—"
+        },
+        {
+            "verse_key": "40:33",
+            "verse_num": "40:33",
+            "arabic_text": "يَوْمَ تُوَلُّونَ مُدْبِرِينَ مَا لَكُم مِّنَ ٱللَّهِ مِنْ عَاصِمٍ ۗ وَمَن يُضْلِلِ ٱللَّهُ فَمَا لَهُۥ مِنْ هَادٍ",
+            "en_text": "the Day you will ˹try in vain to˺ turn your backs and run away, with no one to protect you from Allah. And whoever Allah leaves to stray will be left with no guide."
+        },
+        {
+            "verse_key": "40:34",
+            "verse_num": "40:34",
+            "arabic_text": "وَلَقَدْ جَآءَكُمْ يُوسُفُ مِن قَبْلُ بِٱلْبَيِّنَـٰتِ فَمَا زِلْتُمْ فِى شَكٍّ مِّمَّا جَآءَكُم بِهِۦ ۖ حَتَّىٰٓ إِذَا هَلَكَ قُلْتُمْ لَن يَبْعَثَ ٱللَّهُ مِنۢ بَعْدِهِۦ رَسُولًا ۚ كَذَٰلِكَ يُضِلُّ ٱللَّهُ مَنْ هُوَ مُسْرِفٌ مُّرْتَابٌ",
+            "en_text": "Joseph already came to you<sup foot_note=77298>1</sup> earlier with clear proofs, yet you never ceased to doubt what he came to you with. When he died you said, ‘Allah will never send a messenger after him.’ This is how Allah leaves every transgressor and doubter to stray—"
+        },
+        {
+            "verse_key": "40:35",
+            "verse_num": "40:35",
+            "arabic_text": "ٱلَّذِينَ يُجَـٰدِلُونَ فِىٓ ءَايَـٰتِ ٱللَّهِ بِغَيْرِ سُلْطَـٰنٍ أَتَىٰهُمْ ۖ كَبُرَ مَقْتًا عِندَ ٱللَّهِ وَعِندَ ٱلَّذِينَ ءَامَنُوا۟ ۚ كَذَٰلِكَ يَطْبَعُ ٱللَّهُ عَلَىٰ كُلِّ قَلْبِ مُتَكَبِّرٍ جَبَّارٍ",
+            "en_text": "those who dispute Allah’s signs with no proof given to them. How despicable is that for Allah and the believers! This is how Allah seals the heart of every arrogant tyrant.”"
+        },
+        {
+            "verse_key": "40:36",
+            "verse_num": "40:36",
+            "arabic_text": "وَقَالَ فِرْعَوْنُ يَـٰهَـٰمَـٰنُ ٱبْنِ لِى صَرْحًا لَّعَلِّىٓ أَبْلُغُ ٱلْأَسْبَـٰبَ",
+            "en_text": "Pharaoh ordered, “O Hamân! Build me a high tower so I may reach the pathways"
+        },
+        {
+            "verse_key": "40:37",
+            "verse_num": "40:37",
+            "arabic_text": "أَسْبَـٰبَ ٱلسَّمَـٰوَٰتِ فَأَطَّلِعَ إِلَىٰٓ إِلَـٰهِ مُوسَىٰ وَإِنِّى لَأَظُنُّهُۥ كَـٰذِبًا ۚ وَكَذَٰلِكَ زُيِّنَ لِفِرْعَوْنَ سُوٓءُ عَمَلِهِۦ وَصُدَّ عَنِ ٱلسَّبِيلِ ۚ وَمَا كَيْدُ فِرْعَوْنَ إِلَّا فِى تَبَابٍ",
+            "en_text": "leading up to the heavens and look for the God of Moses, although I am sure he is a liar.”<sup foot_note=77299>1</sup> And so Pharaoh’s evil deeds were made so appealing to him that he was hindered from the ˹Right˺ Way. But the plotting of Pharaoh was only in vain."
+        },
+        {
+            "verse_key": "40:38",
+            "verse_num": "40:38",
+            "arabic_text": "وَقَالَ ٱلَّذِىٓ ءَامَنَ يَـٰقَوْمِ ٱتَّبِعُونِ أَهْدِكُمْ سَبِيلَ ٱلرَّشَادِ",
+            "en_text": "And the man who believed urged, “O my people! Follow me, ˹and˺ I will lead you to the Way of Guidance."
+        },
+        {
+            "verse_key": "40:39",
+            "verse_num": "40:39",
+            "arabic_text": "يَـٰقَوْمِ إِنَّمَا هَـٰذِهِ ٱلْحَيَوٰةُ ٱلدُّنْيَا مَتَـٰعٌ وَإِنَّ ٱلْـَٔاخِرَةَ هِىَ دَارُ ٱلْقَرَارِ",
+            "en_text": "O  my people! This worldly life is only ˹a fleeting˺ enjoyment, whereas the Hereafter is truly the home of settlement."
+        },
+        {
+            "verse_key": "40:40",
+            "verse_num": "40:40",
+            "arabic_text": "مَنْ عَمِلَ سَيِّئَةً فَلَا يُجْزَىٰٓ إِلَّا مِثْلَهَا ۖ وَمَنْ عَمِلَ صَـٰلِحًا مِّن ذَكَرٍ أَوْ أُنثَىٰ وَهُوَ مُؤْمِنٌ فَأُو۟لَـٰٓئِكَ يَدْخُلُونَ ٱلْجَنَّةَ يُرْزَقُونَ فِيهَا بِغَيْرِ حِسَابٍ",
+            "en_text": "Whoever does an evil deed will only be paid back with its equivalent. And whoever does good, whether male or female, and is a believer, they will enter Paradise, where they will be provided for without limit."
+        },
+        {
+            "verse_key": "40:41",
+            "verse_num": "40:41",
+            "arabic_text": "۞ وَيَـٰقَوْمِ مَا لِىٓ أَدْعُوكُمْ إِلَى ٱلنَّجَوٰةِ وَتَدْعُونَنِىٓ إِلَى ٱلنَّارِ",
+            "en_text": "O  my people! How is it that I invite you to salvation, while you invite me to the Fire!"
+        },
+        {
+            "verse_key": "40:42",
+            "verse_num": "40:42",
+            "arabic_text": "تَدْعُونَنِى لِأَكْفُرَ بِٱللَّهِ وَأُشْرِكَ بِهِۦ مَا لَيْسَ لِى بِهِۦ عِلْمٌ وَأَنَا۠ أَدْعُوكُمْ إِلَى ٱلْعَزِيزِ ٱلْغَفَّـٰرِ",
+            "en_text": "You invite me to disbelieve in Allah and associate with Him what I have no knowledge of, while I invite you to the Almighty, Most Forgiving."
+        },
+        {
+            "verse_key": "40:43",
+            "verse_num": "40:43",
+            "arabic_text": "لَا جَرَمَ أَنَّمَا تَدْعُونَنِىٓ إِلَيْهِ لَيْسَ لَهُۥ دَعْوَةٌ فِى ٱلدُّنْيَا وَلَا فِى ٱلْـَٔاخِرَةِ وَأَنَّ مَرَدَّنَآ إِلَى ٱللَّهِ وَأَنَّ ٱلْمُسْرِفِينَ هُمْ أَصْحَـٰبُ ٱلنَّارِ",
+            "en_text": "There is no doubt that whatever ˹idols˺ you invite me to ˹worship˺ are not worthy to be invoked either in this world or the Hereafter.<sup foot_note=77300>1</sup> ˹Undoubtedly,˺ our return is to Allah, and the transgressors will be the inmates of the Fire."
+        },
+        {
+            "verse_key": "40:44",
+            "verse_num": "40:44",
+            "arabic_text": "فَسَتَذْكُرُونَ مَآ أَقُولُ لَكُمْ ۚ وَأُفَوِّضُ أَمْرِىٓ إِلَى ٱللَّهِ ۚ إِنَّ ٱللَّهَ بَصِيرٌۢ بِٱلْعِبَادِ",
+            "en_text": "You will remember what I say to you, and I entrust my affairs to Allah. Surely Allah is All-Seeing of all ˹His˺ servants.”"
+        },
+        {
+            "verse_key": "40:45",
+            "verse_num": "40:45",
+            "arabic_text": "فَوَقَىٰهُ ٱللَّهُ سَيِّـَٔاتِ مَا مَكَرُوا۟ ۖ وَحَاقَ بِـَٔالِ فِرْعَوْنَ سُوٓءُ ٱلْعَذَابِ",
+            "en_text": "So Allah protected him from the evil of their schemes. And Pharaoh’s people were overwhelmed by an evil punishment:"
+        },
+        {
+            "verse_key": "40:46",
+            "verse_num": "40:46",
+            "arabic_text": "ٱلنَّارُ يُعْرَضُونَ عَلَيْهَا غُدُوًّا وَعَشِيًّا ۖ وَيَوْمَ تَقُومُ ٱلسَّاعَةُ أَدْخِلُوٓا۟ ءَالَ فِرْعَوْنَ أَشَدَّ ٱلْعَذَابِ",
+            "en_text": "they are exposed to the Fire ˹in their graves˺ morning and evening. And on the Day the Hour will be established ˹it will be said˺, “Admit Pharaoh’s people into the harshest punishment ˹of Hell˺.”"
+        },
+        {
+            "verse_key": "40:47",
+            "verse_num": "40:47",
+            "arabic_text": "وَإِذْ يَتَحَآجُّونَ فِى ٱلنَّارِ فَيَقُولُ ٱلضُّعَفَـٰٓؤُا۟ لِلَّذِينَ ٱسْتَكْبَرُوٓا۟ إِنَّا كُنَّا لَكُمْ تَبَعًا فَهَلْ أَنتُم مُّغْنُونَ عَنَّا نَصِيبًا مِّنَ ٱلنَّارِ",
+            "en_text": "˹Consider the Day˺ when they will dispute in the Fire, and the lowly ˹followers˺ will appeal to the arrogant ˹leaders˺, “We were your ˹dedicated˺ followers, will you then shield us from a portion of the Fire?”"
+        },
+        {
+            "verse_key": "40:48",
+            "verse_num": "40:48",
+            "arabic_text": "قَالَ ٱلَّذِينَ ٱسْتَكْبَرُوٓا۟ إِنَّا كُلٌّ فِيهَآ إِنَّ ٱللَّهَ قَدْ حَكَمَ بَيْنَ ٱلْعِبَادِ",
+            "en_text": "The arrogant will say, “We are all in it! ˹For˺ Allah has already passed judgment over ˹His˺ servants.”"
+        },
+        {
+            "verse_key": "40:49",
+            "verse_num": "40:49",
+            "arabic_text": "وَقَالَ ٱلَّذِينَ فِى ٱلنَّارِ لِخَزَنَةِ جَهَنَّمَ ٱدْعُوا۟ رَبَّكُمْ يُخَفِّفْ عَنَّا يَوْمًا مِّنَ ٱلْعَذَابِ",
+            "en_text": "And those in the Fire will cry out to the keepers of Hell,<sup foot_note=77301>1</sup> “Pray to your Lord to lighten the torment for us ˹even˺ for one day!”"
+        },
+        {
+            "verse_key": "40:50",
+            "verse_num": "40:50",
+            "arabic_text": "قَالُوٓا۟ أَوَلَمْ تَكُ تَأْتِيكُمْ رُسُلُكُم بِٱلْبَيِّنَـٰتِ ۖ قَالُوا۟ بَلَىٰ ۚ قَالُوا۟ فَٱدْعُوا۟ ۗ وَمَا دُعَـٰٓؤُا۟ ٱلْكَـٰفِرِينَ إِلَّا فِى ضَلَـٰلٍ",
+            "en_text": "The keepers will reply, “Did your messengers not ˹constantly˺ come to you with clear proofs?” They will say, “Yes ˹they did˺.” The keepers will say, “Then pray! Though the prayer of the disbelievers is only in vain.”"
+        },
+        {
+            "verse_key": "40:51",
+            "verse_num": "40:51",
+            "arabic_text": "إِنَّا لَنَنصُرُ رُسُلَنَا وَٱلَّذِينَ ءَامَنُوا۟ فِى ٱلْحَيَوٰةِ ٱلدُّنْيَا وَيَوْمَ يَقُومُ ٱلْأَشْهَـٰدُ",
+            "en_text": "We certainly help Our messengers and the believers, ˹both˺ in this worldly life and on the Day the witnesses will stand forth ˹for testimony˺—"
+        },
+        {
+            "verse_key": "40:52",
+            "verse_num": "40:52",
+            "arabic_text": "يَوْمَ لَا يَنفَعُ ٱلظَّـٰلِمِينَ مَعْذِرَتُهُمْ ۖ وَلَهُمُ ٱللَّعْنَةُ وَلَهُمْ سُوٓءُ ٱلدَّارِ",
+            "en_text": "the Day the wrongdoers’ excuses will be of no benefit to them. They will be condemned, and will have the worst outcome.<sup foot_note=77302>1</sup> "
+        },
+        {
+            "verse_key": "40:53",
+            "verse_num": "40:53",
+            "arabic_text": "وَلَقَدْ ءَاتَيْنَا مُوسَى ٱلْهُدَىٰ وَأَوْرَثْنَا بَنِىٓ إِسْرَٰٓءِيلَ ٱلْكِتَـٰبَ",
+            "en_text": "And indeed, We gave Moses ˹true˺ guidance, and made the Children of Israel inherit the Scripture—"
+        },
+        {
+            "verse_key": "40:54",
+            "verse_num": "40:54",
+            "arabic_text": "هُدًى وَذِكْرَىٰ لِأُو۟لِى ٱلْأَلْبَـٰبِ",
+            "en_text": "a guide and a reminder to people of reason."
+        },
+        {
+            "verse_key": "40:55",
+            "verse_num": "40:55",
+            "arabic_text": "فَٱصْبِرْ إِنَّ وَعْدَ ٱللَّهِ حَقٌّ وَٱسْتَغْفِرْ لِذَنۢبِكَ وَسَبِّحْ بِحَمْدِ رَبِّكَ بِٱلْعَشِىِّ وَٱلْإِبْكَـٰرِ",
+            "en_text": "So be patient ˹O Prophet˺, ˹for˺ Allah’s promise is certainly true. Seek forgiveness for your shortcomings.<sup foot_note=77303>1</sup> And glorify the praises of your Lord morning and evening."
+        },
+        {
+            "verse_key": "40:56",
+            "verse_num": "40:56",
+            "arabic_text": "إِنَّ ٱلَّذِينَ يُجَـٰدِلُونَ فِىٓ ءَايَـٰتِ ٱللَّهِ بِغَيْرِ سُلْطَـٰنٍ أَتَىٰهُمْ ۙ إِن فِى صُدُورِهِمْ إِلَّا كِبْرٌ مَّا هُم بِبَـٰلِغِيهِ ۚ فَٱسْتَعِذْ بِٱللَّهِ ۖ إِنَّهُۥ هُوَ ٱلسَّمِيعُ ٱلْبَصِيرُ",
+            "en_text": "Surely those who dispute Allah’s signs—with no proof given to them—have nothing in their hearts but greed for dominance, which they will never attain. So seek refuge in Allah. Indeed, He alone is the All-Hearing, All-Seeing."
+        },
+        {
+            "verse_key": "40:57",
+            "verse_num": "40:57",
+            "arabic_text": "لَخَلْقُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ أَكْبَرُ مِنْ خَلْقِ ٱلنَّاسِ وَلَـٰكِنَّ أَكْثَرَ ٱلنَّاسِ لَا يَعْلَمُونَ",
+            "en_text": "The creation of the heavens and the earth is certainly greater than the re-creation of humankind, but most people do not know."
+        },
+        {
+            "verse_key": "40:58",
+            "verse_num": "40:58",
+            "arabic_text": "وَمَا يَسْتَوِى ٱلْأَعْمَىٰ وَٱلْبَصِيرُ وَٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ وَلَا ٱلْمُسِىٓءُ ۚ قَلِيلًا مَّا تَتَذَكَّرُونَ",
+            "en_text": "Those blind ˹to the truth˺ and those who can see are not equal, nor are those who believe and do good ˹equal˺ to those who do evil. Yet you are hardly mindful."
+        },
+        {
+            "verse_key": "40:59",
+            "verse_num": "40:59",
+            "arabic_text": "إِنَّ ٱلسَّاعَةَ لَـَٔاتِيَةٌ لَّا رَيْبَ فِيهَا وَلَـٰكِنَّ أَكْثَرَ ٱلنَّاسِ لَا يُؤْمِنُونَ",
+            "en_text": "The Hour is certainly coming, there is no doubt about it. But most people do not believe."
+        },
+        {
+            "verse_key": "40:60",
+            "verse_num": "40:60",
+            "arabic_text": "وَقَالَ رَبُّكُمُ ٱدْعُونِىٓ أَسْتَجِبْ لَكُمْ ۚ إِنَّ ٱلَّذِينَ يَسْتَكْبِرُونَ عَنْ عِبَادَتِى سَيَدْخُلُونَ جَهَنَّمَ دَاخِرِينَ",
+            "en_text": "Your Lord has proclaimed, “Call upon Me, I will respond to you. Surely those who are too proud to worship Me will enter Hell, fully humbled.”"
+        },
+        {
+            "verse_key": "40:61",
+            "verse_num": "40:61",
+            "arabic_text": "ٱللَّهُ ٱلَّذِى جَعَلَ لَكُمُ ٱلَّيْلَ لِتَسْكُنُوا۟ فِيهِ وَٱلنَّهَارَ مُبْصِرًا ۚ إِنَّ ٱللَّهَ لَذُو فَضْلٍ عَلَى ٱلنَّاسِ وَلَـٰكِنَّ أَكْثَرَ ٱلنَّاسِ لَا يَشْكُرُونَ",
+            "en_text": "It is Allah Who has made the night for you to rest in and the day bright. Surely Allah is ever Bountiful to humanity, but most people are ungrateful."
+        },
+        {
+            "verse_key": "40:62",
+            "verse_num": "40:62",
+            "arabic_text": "ذَٰلِكُمُ ٱللَّهُ رَبُّكُمْ خَـٰلِقُ كُلِّ شَىْءٍ لَّآ إِلَـٰهَ إِلَّا هُوَ ۖ فَأَنَّىٰ تُؤْفَكُونَ",
+            "en_text": "That is Allah, your Lord, the Creator of all things. There is no god ˹worthy of worship˺ except Him. How can you then be deluded ˹from the truth˺?"
+        },
+        {
+            "verse_key": "40:63",
+            "verse_num": "40:63",
+            "arabic_text": "كَذَٰلِكَ يُؤْفَكُ ٱلَّذِينَ كَانُوا۟ بِـَٔايَـٰتِ ٱللَّهِ يَجْحَدُونَ",
+            "en_text": "This is how those who used to reject Allah’s signs were ˹also˺ deluded."
+        },
+        {
+            "verse_key": "40:64",
+            "verse_num": "40:64",
+            "arabic_text": "ٱللَّهُ ٱلَّذِى جَعَلَ لَكُمُ ٱلْأَرْضَ قَرَارًا وَٱلسَّمَآءَ بِنَآءً وَصَوَّرَكُمْ فَأَحْسَنَ صُوَرَكُمْ وَرَزَقَكُم مِّنَ ٱلطَّيِّبَـٰتِ ۚ ذَٰلِكُمُ ٱللَّهُ رَبُّكُمْ ۖ فَتَبَارَكَ ٱللَّهُ رَبُّ ٱلْعَـٰلَمِينَ",
+            "en_text": "It is Allah Who made the earth a place of settlement for you and the sky a canopy. He shaped you ˹in the womb˺, perfecting your form. And He has provided you with what is good and lawful. That is Allah—your Lord. So Blessed is Allah, Lord of all worlds."
+        },
+        {
+            "verse_key": "40:65",
+            "verse_num": "40:65",
+            "arabic_text": "هُوَ ٱلْحَىُّ لَآ إِلَـٰهَ إِلَّا هُوَ فَٱدْعُوهُ مُخْلِصِينَ لَهُ ٱلدِّينَ ۗ ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
+            "en_text": "He is the Ever-Living. There is no god ˹worthy of worship˺ except Him. So call upon Him with sincere devotion, ˹saying,˺ “All praise is for Allah—Lord of all worlds.”"
+        },
+        {
+            "verse_key": "40:66",
+            "verse_num": "40:66",
+            "arabic_text": "۞ قُلْ إِنِّى نُهِيتُ أَنْ أَعْبُدَ ٱلَّذِينَ تَدْعُونَ مِن دُونِ ٱللَّهِ لَمَّا جَآءَنِىَ ٱلْبَيِّنَـٰتُ مِن رَّبِّى وَأُمِرْتُ أَنْ أُسْلِمَ لِرَبِّ ٱلْعَـٰلَمِينَ",
+            "en_text": "Say, ˹O Prophet,˺ “I have been forbidden to worship those ˹idols˺ you worship besides Allah, since clear proofs have come to me from my Lord. And I have been commanded to ˹fully˺ submit to the Lord of all worlds.”"
+        },
+        {
+            "verse_key": "40:67",
+            "verse_num": "40:67",
+            "arabic_text": "هُوَ ٱلَّذِى خَلَقَكُم مِّن تُرَابٍ ثُمَّ مِن نُّطْفَةٍ ثُمَّ مِنْ عَلَقَةٍ ثُمَّ يُخْرِجُكُمْ طِفْلًا ثُمَّ لِتَبْلُغُوٓا۟ أَشُدَّكُمْ ثُمَّ لِتَكُونُوا۟ شُيُوخًا ۚ وَمِنكُم مَّن يُتَوَفَّىٰ مِن قَبْلُ ۖ وَلِتَبْلُغُوٓا۟ أَجَلًا مُّسَمًّى وَلَعَلَّكُمْ تَعْقِلُونَ",
+            "en_text": "He is the One Who created you<sup foot_note=77304>1</sup> from dust, then from a sperm-drop,<sup foot_note=77305>2</sup> then ˹developed you into˺ a clinging clot,<sup foot_note=77306>3</sup> then He brings you forth as infants, so that you may reach your prime, and become old—though some of you ˹may˺ die sooner—reaching an appointed time, so perhaps you may understand ˹Allah’s power˺."
+        },
+        {
+            "verse_key": "40:68",
+            "verse_num": "40:68",
+            "arabic_text": "هُوَ ٱلَّذِى يُحْىِۦ وَيُمِيتُ ۖ فَإِذَا قَضَىٰٓ أَمْرًا فَإِنَّمَا يَقُولُ لَهُۥ كُن فَيَكُونُ",
+            "en_text": "He is the One Who gives life and causes death. When He decrees a matter, He simply tells it, “Be!” And it is!"
+        },
+        {
+            "verse_key": "40:69",
+            "verse_num": "40:69",
+            "arabic_text": "أَلَمْ تَرَ إِلَى ٱلَّذِينَ يُجَـٰدِلُونَ فِىٓ ءَايَـٰتِ ٱللَّهِ أَنَّىٰ يُصْرَفُونَ",
+            "en_text": "Have you not seen how those who dispute Allah’s signs are turned away?"
+        },
+        {
+            "verse_key": "40:70",
+            "verse_num": "40:70",
+            "arabic_text": "ٱلَّذِينَ كَذَّبُوا۟ بِٱلْكِتَـٰبِ وَبِمَآ أَرْسَلْنَا بِهِۦ رُسُلَنَا ۖ فَسَوْفَ يَعْلَمُونَ",
+            "en_text": "˹They are˺ the ones who reject this Book and all ˹scriptures˺ We sent Our messengers with. So they will know ˹the consequences˺"
+        },
+        {
+            "verse_key": "40:71",
+            "verse_num": "40:71",
+            "arabic_text": "إِذِ ٱلْأَغْلَـٰلُ فِىٓ أَعْنَـٰقِهِمْ وَٱلسَّلَـٰسِلُ يُسْحَبُونَ",
+            "en_text": "when shackles will be around their necks and chains ˹on their legs˺. They will be dragged"
+        },
+        {
+            "verse_key": "40:72",
+            "verse_num": "40:72",
+            "arabic_text": "فِى ٱلْحَمِيمِ ثُمَّ فِى ٱلنَّارِ يُسْجَرُونَ",
+            "en_text": "through boiling water, then burned in the Fire ˹as fuel˺."
+        },
+        {
+            "verse_key": "40:73",
+            "verse_num": "40:73",
+            "arabic_text": "ثُمَّ قِيلَ لَهُمْ أَيْنَ مَا كُنتُمْ تُشْرِكُونَ",
+            "en_text": "Then they will be asked, “Where are those ˹idols˺ you used to associate"
+        },
+        {
+            "verse_key": "40:74",
+            "verse_num": "40:74",
+            "arabic_text": "مِن دُونِ ٱللَّهِ ۖ قَالُوا۟ ضَلُّوا۟ عَنَّا بَل لَّمْ نَكُن نَّدْعُوا۟ مِن قَبْلُ شَيْـًٔا ۚ كَذَٰلِكَ يُضِلُّ ٱللَّهُ ٱلْكَـٰفِرِينَ",
+            "en_text": "with Allah?” They will cry, “They have ˹all˺ failed us. In fact, we did not invoke anything ˹real˺ before.” This is how Allah leaves the disbelievers to stray."
+        },
+        {
+            "verse_key": "40:75",
+            "verse_num": "40:75",
+            "arabic_text": "ذَٰلِكُم بِمَا كُنتُمْ تَفْرَحُونَ فِى ٱلْأَرْضِ بِغَيْرِ ٱلْحَقِّ وَبِمَا كُنتُمْ تَمْرَحُونَ",
+            "en_text": "˹They will be told,˺ “This ˹punishment˺ is for being prideful on earth unjustly and for acting arrogantly."
+        },
+        {
+            "verse_key": "40:76",
+            "verse_num": "40:76",
+            "arabic_text": "ٱدْخُلُوٓا۟ أَبْوَٰبَ جَهَنَّمَ خَـٰلِدِينَ فِيهَا ۖ فَبِئْسَ مَثْوَى ٱلْمُتَكَبِّرِينَ",
+            "en_text": "Enter the gates of Hell, to stay there forever. What an evil home for the arrogant!”"
+        },
+        {
+            "verse_key": "40:77",
+            "verse_num": "40:77",
+            "arabic_text": "فَٱصْبِرْ إِنَّ وَعْدَ ٱللَّهِ حَقٌّ ۚ فَإِمَّا نُرِيَنَّكَ بَعْضَ ٱلَّذِى نَعِدُهُمْ أَوْ نَتَوَفَّيَنَّكَ فَإِلَيْنَا يُرْجَعُونَ",
+            "en_text": "So be patient ˹O Prophet˺. Surely Allah’s promise is true. Whether We show you some of what We threaten them with, or cause you to die ˹before that˺, to Us they will ˹all˺ be returned."
+        },
+        {
+            "verse_key": "40:78",
+            "verse_num": "40:78",
+            "arabic_text": "وَلَقَدْ أَرْسَلْنَا رُسُلًا مِّن قَبْلِكَ مِنْهُم مَّن قَصَصْنَا عَلَيْكَ وَمِنْهُم مَّن لَّمْ نَقْصُصْ عَلَيْكَ ۗ وَمَا كَانَ لِرَسُولٍ أَن يَأْتِىَ بِـَٔايَةٍ إِلَّا بِإِذْنِ ٱللَّهِ ۚ فَإِذَا جَآءَ أَمْرُ ٱللَّهِ قُضِىَ بِٱلْحَقِّ وَخَسِرَ هُنَالِكَ ٱلْمُبْطِلُونَ",
+            "en_text": "We already sent messengers before you. We have told you the stories of some of them, while others We have not. It was not for any messenger to bring a sign without Allah’s permission. But when Allah’s decree comes, judgment will be passed with fairness, and the people of falsehood will then be in ˹total˺ loss."
+        },
+        {
+            "verse_key": "40:79",
+            "verse_num": "40:79",
+            "arabic_text": "ٱللَّهُ ٱلَّذِى جَعَلَ لَكُمُ ٱلْأَنْعَـٰمَ لِتَرْكَبُوا۟ مِنْهَا وَمِنْهَا تَأْكُلُونَ",
+            "en_text": "It is Allah Who made cattle for you so that you may ride some and eat others."
+        },
+        {
+            "verse_key": "40:80",
+            "verse_num": "40:80",
+            "arabic_text": "وَلَكُمْ فِيهَا مَنَـٰفِعُ وَلِتَبْلُغُوا۟ عَلَيْهَا حَاجَةً فِى صُدُورِكُمْ وَعَلَيْهَا وَعَلَى ٱلْفُلْكِ تُحْمَلُونَ",
+            "en_text": "Also, you find in them ˹other˺ benefits.<sup foot_note=77307>1</sup> And by means of them you may reach destinations you desire. And you are carried upon ˹some of˺ them and upon ships."
+        },
+        {
+            "verse_key": "40:81",
+            "verse_num": "40:81",
+            "arabic_text": "وَيُرِيكُمْ ءَايَـٰتِهِۦ فَأَىَّ ءَايَـٰتِ ٱللَّهِ تُنكِرُونَ",
+            "en_text": "And He shows you His signs. Now which of Allah’s signs will you deny?"
+        },
+        {
+            "verse_key": "40:82",
+            "verse_num": "40:82",
+            "arabic_text": "أَفَلَمْ يَسِيرُوا۟ فِى ٱلْأَرْضِ فَيَنظُرُوا۟ كَيْفَ كَانَ عَـٰقِبَةُ ٱلَّذِينَ مِن قَبْلِهِمْ ۚ كَانُوٓا۟ أَكْثَرَ مِنْهُمْ وَأَشَدَّ قُوَّةً وَءَاثَارًا فِى ٱلْأَرْضِ فَمَآ أَغْنَىٰ عَنْهُم مَّا كَانُوا۟ يَكْسِبُونَ",
+            "en_text": "Have they not travelled throughout the land to see what was the end of those who were ˹destroyed˺ before them? They were far superior in number and might and ˹richer in˺ monuments throughout the land, but their ˹worldly˺ gains were of no benefit to them."
+        },
+        {
+            "verse_key": "40:83",
+            "verse_num": "40:83",
+            "arabic_text": "فَلَمَّا جَآءَتْهُمْ رُسُلُهُم بِٱلْبَيِّنَـٰتِ فَرِحُوا۟ بِمَا عِندَهُم مِّنَ ٱلْعِلْمِ وَحَاقَ بِهِم مَّا كَانُوا۟ بِهِۦ يَسْتَهْزِءُونَ",
+            "en_text": "When their messengers came to them with clear proofs, they were prideful in whatever ˹worldly˺ knowledge they had,<sup foot_note=77308>1</sup> and were ˹ultimately˺ overwhelmed by what they used to ridicule."
+        },
+        {
+            "verse_key": "40:84",
+            "verse_num": "40:84",
+            "arabic_text": "فَلَمَّا رَأَوْا۟ بَأْسَنَا قَالُوٓا۟ ءَامَنَّا بِٱللَّهِ وَحْدَهُۥ وَكَفَرْنَا بِمَا كُنَّا بِهِۦ مُشْرِكِينَ",
+            "en_text": "When they saw Our punishment, they cried, “˹Now˺ we believe in Allah alone and reject what we had been associating with Him!”"
+        },
+        {
+            "verse_key": "40:85",
+            "verse_num": "40:85",
+            "arabic_text": "فَلَمْ يَكُ يَنفَعُهُمْ إِيمَـٰنُهُمْ لَمَّا رَأَوْا۟ بَأْسَنَا ۖ سُنَّتَ ٱللَّهِ ٱلَّتِى قَدْ خَلَتْ فِى عِبَادِهِۦ ۖ وَخَسِرَ هُنَالِكَ ٱلْكَـٰفِرُونَ",
+            "en_text": "But their faith was of no benefit to them when they saw Our torment. This has ˹always˺ been Allah’s way ˹of dealing˺ with His ˹wicked˺ servants. Then and there the disbelievers were in ˹total˺ loss."
         }
     ]
 }

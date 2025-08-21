@@ -10682,28 +10682,736 @@
             "en_text": "He sends down the angels with revelation by His command to whoever He wills of His servants, ˹stating:˺ “Warn ˹humanity˺ that there is no god ˹worthy of worship˺ except Me, so be mindful of Me ˹alone˺.”"
         },
         {
-            "verse_key": "16:3",
-            "verse_num": "16:3",
-            "arabic_text": "خَلَقَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضَ بِٱلْحَقِّ ۚ تَعَـٰلَىٰ عَمَّا يُشْرِكُونَ",
-            "en_text": "He created the heavens and the earth for a purpose. Exalted is He above what they associate with Him ˹in worship˺!"
+            "verse_key": "16:7",
+            "verse_num": "16:7",
+            "arabic_text": "وَتَحْمِلُ أَثْقَالَكُمْ إِلَىٰ بَلَدٍ لَّمْ تَكُونُوا۟ بَـٰلِغِيهِ إِلَّا بِشِقِّ ٱلْأَنفُسِ ۚ إِنَّ رَبَّكُمْ لَرَءُوفٌ رَّحِيمٌ",
+            "en_text": "And they carry your loads to ˹distant˺ lands which you could not otherwise reach without great hardship. Surely your Lord is Ever Gracious, Most Merciful."
         },
         {
-            "verse_key": "16:4",
-            "verse_num": "16:4",
-            "arabic_text": "خَلَقَ ٱلْإِنسَـٰنَ مِن نُّطْفَةٍ فَإِذَا هُوَ خَصِيمٌ مُّبِينٌ",
-            "en_text": "He created humans from a sperm-drop, then—behold!—they openly challenge ˹Him˺."
+            "verse_key": "16:8",
+            "verse_num": "16:8",
+            "arabic_text": "وَٱلْخَيْلَ وَٱلْبِغَالَ وَٱلْحَمِيرَ لِتَرْكَبُوهَا وَزِينَةً ۚ وَيَخْلُقُ مَا لَا تَعْلَمُونَ",
+            "en_text": "˹He also created˺ horses, mules, and donkeys for your transportation and adornment. And He creates what you do not know."
         },
         {
-            "verse_key": "16:5",
-            "verse_num": "16:5",
-            "arabic_text": "وَٱلْأَنْعَـٰمَ خَلَقَهَا ۗ لَكُمْ فِيهَا دِفْءٌ وَمَنَـٰفِعُ وَمِنْهَا تَأْكُلُونَ",
-            "en_text": "And He created the cattle for you as a source of warmth, food, and ˹many other˺ benefits."
+            "verse_key": "16:9",
+            "verse_num": "16:9",
+            "arabic_text": "وَعَلَى ٱللَّهِ قَصْدُ ٱلسَّبِيلِ وَمِنْهَا جَآئِرٌ ۚ وَلَوْ شَآءَ لَهَدَىٰكُمْ أَجْمَعِينَ",
+            "en_text": "It is upon Allah ˹alone˺ to ˹clearly˺ show the Straight Way. Other ways are deviant. Had He willed, He would have easily imposed guidance upon all of you."
         },
         {
-            "verse_key": "16:6",
-            "verse_num": "16:6",
-            "arabic_text": "وَلَكُمْ فِيهَا جَمَالٌ حِينَ تُرِيحُونَ وَحِينَ تَسْرَحُونَ",
-            "en_text": "They are also pleasing to you when you bring them home and when you take them out to graze."
+            "verse_key": "16:10",
+            "verse_num": "16:10",
+            "arabic_text": "هُوَ ٱلَّذِىٓ أَنزَلَ مِنَ ٱلسَّمَآءِ مَآءً ۖ لَّكُم مِّنْهُ شَرَابٌ وَمِنْهُ شَجَرٌ فِيهِ تُسِيمُونَ",
+            "en_text": "He is the One Who sends down rain from the sky, from which you drink and by which plants grow for your cattle to graze."
+        },
+        {
+            "verse_key": "16:11",
+            "verse_num": "16:11",
+            "arabic_text": "يُنۢبِتُ لَكُم بِهِ ٱلزَّرْعَ وَٱلزَّيْتُونَ وَٱلنَّخِيلَ وَٱلْأَعْنَـٰبَ وَمِن كُلِّ ٱلثَّمَرَٰتِ ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَةً لِّقَوْمٍ يَتَفَكَّرُونَ",
+            "en_text": "With it He produces for you ˹various˺ crops, olives, palm trees, grapevines, and every type of fruit. Surely in this is a sign for those who reflect."
+        },
+        {
+            "verse_key": "16:12",
+            "verse_num": "16:12",
+            "arabic_text": "وَسَخَّرَ لَكُمُ ٱلَّيْلَ وَٱلنَّهَارَ وَٱلشَّمْسَ وَٱلْقَمَرَ ۖ وَٱلنُّجُومُ مُسَخَّرَٰتٌۢ بِأَمْرِهِۦٓ ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍ لِّقَوْمٍ يَعْقِلُونَ",
+            "en_text": "And He has subjected for your benefit the day and the night, the sun and the moon. And the stars have been subjected by His command. Surely in this are signs for those who understand."
+        },
+        {
+            "verse_key": "16:13",
+            "verse_num": "16:13",
+            "arabic_text": "وَمَا ذَرَأَ لَكُمْ فِى ٱلْأَرْضِ مُخْتَلِفًا أَلْوَٰنُهُۥٓ ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَةً لِّقَوْمٍ يَذَّكَّرُونَ",
+            "en_text": "And ˹He subjected˺ for you whatever He has created on earth of varying colours.<sup foot_note=76839>1</sup> Surely in this is a sign for those who are mindful."
+        },
+        {
+            "verse_key": "16:14",
+            "verse_num": "16:14",
+            "arabic_text": "وَهُوَ ٱلَّذِى سَخَّرَ ٱلْبَحْرَ لِتَأْكُلُوا۟ مِنْهُ لَحْمًا طَرِيًّا وَتَسْتَخْرِجُوا۟ مِنْهُ حِلْيَةً تَلْبَسُونَهَا وَتَرَى ٱلْفُلْكَ مَوَاخِرَ فِيهِ وَلِتَبْتَغُوا۟ مِن فَضْلِهِۦ وَلَعَلَّكُمْ تَشْكُرُونَ",
+            "en_text": "And He is the One Who has subjected the sea, so from it you may eat tender seafood and extract ornaments to wear. And you see the ships ploughing their way through it, so you may seek His bounty and give thanks ˹to Him˺."
+        },
+        {
+            "verse_key": "16:15",
+            "verse_num": "16:15",
+            "arabic_text": "وَأَلْقَىٰ فِى ٱلْأَرْضِ رَوَٰسِىَ أَن تَمِيدَ بِكُمْ وَأَنْهَـٰرًا وَسُبُلًا لَّعَلَّكُمْ تَهْتَدُونَ",
+            "en_text": "He has placed into the earth firm mountains, so it does not shake with you, as well as rivers, and pathways so you may find your way."
+        },
+        {
+            "verse_key": "16:16",
+            "verse_num": "16:16",
+            "arabic_text": "وَعَلَـٰمَـٰتٍ ۚ وَبِٱلنَّجْمِ هُمْ يَهْتَدُونَ",
+            "en_text": "Also by landmarks and stars do people find their way."
+        },
+        {
+            "verse_key": "16:17",
+            "verse_num": "16:17",
+            "arabic_text": "أَفَمَن يَخْلُقُ كَمَن لَّا يَخْلُقُ ۗ أَفَلَا تَذَكَّرُونَ",
+            "en_text": "Can the One Who creates be equal to those who do not? Will you not then be mindful?"
+        },
+        {
+            "verse_key": "16:18",
+            "verse_num": "16:18",
+            "arabic_text": "وَإِن تَعُدُّوا۟ نِعْمَةَ ٱللَّهِ لَا تُحْصُوهَآ ۗ إِنَّ ٱللَّهَ لَغَفُورٌ رَّحِيمٌ",
+            "en_text": "If you tried to count Allah’s blessings, you would never be able to number them. Surely Allah is All-Forgiving, Most Merciful."
+        },
+        {
+            "verse_key": "16:19",
+            "verse_num": "16:19",
+            "arabic_text": "وَٱللَّهُ يَعْلَمُ مَا تُسِرُّونَ وَمَا تُعْلِنُونَ",
+            "en_text": "And Allah knows what you conceal and what you reveal."
+        },
+        {
+            "verse_key": "16:20",
+            "verse_num": "16:20",
+            "arabic_text": "وَٱلَّذِينَ يَدْعُونَ مِن دُونِ ٱللَّهِ لَا يَخْلُقُونَ شَيْـًٔا وَهُمْ يُخْلَقُونَ",
+            "en_text": "But those ˹idols˺ they invoke besides Allah cannot create anything—they themselves are created."
+        },
+        {
+            "verse_key": "16:21",
+            "verse_num": "16:21",
+            "arabic_text": "أَمْوَٰتٌ غَيْرُ أَحْيَآءٍ ۖ وَمَا يَشْعُرُونَ أَيَّانَ يُبْعَثُونَ",
+            "en_text": "They are dead, not alive—not even knowing when their followers will be resurrected."
+        },
+        {
+            "verse_key": "16:22",
+            "verse_num": "16:22",
+            "arabic_text": "إِلَـٰهُكُمْ إِلَـٰهٌ وَٰحِدٌ ۚ فَٱلَّذِينَ لَا يُؤْمِنُونَ بِٱلْـَٔاخِرَةِ قُلُوبُهُم مُّنكِرَةٌ وَهُم مُّسْتَكْبِرُونَ",
+            "en_text": "Your God is ˹only˺ One God. As for those who do not believe in the Hereafter, their hearts are in denial, and they are too proud."
+        },
+        {
+            "verse_key": "16:23",
+            "verse_num": "16:23",
+            "arabic_text": "لَا جَرَمَ أَنَّ ٱللَّهَ يَعْلَمُ مَا يُسِرُّونَ وَمَا يُعْلِنُونَ ۚ إِنَّهُۥ لَا يُحِبُّ ٱلْمُسْتَكْبِرِينَ",
+            "en_text": "Without a doubt, Allah knows what they conceal and what they reveal. He certainly does not like those who are too proud."
+        },
+        {
+            "verse_key": "16:24",
+            "verse_num": "16:24",
+            "arabic_text": "وَإِذَا قِيلَ لَهُم مَّاذَآ أَنزَلَ رَبُّكُمْ ۙ قَالُوٓا۟ أَسَـٰطِيرُ ٱلْأَوَّلِينَ",
+            "en_text": "And when it is said to them, “What has your Lord revealed?” They say, “Ancient fables!”"
+        },
+        {
+            "verse_key": "16:25",
+            "verse_num": "16:25",
+            "arabic_text": "لِيَحْمِلُوٓا۟ أَوْزَارَهُمْ كَامِلَةً يَوْمَ ٱلْقِيَـٰمَةِ ۙ وَمِنْ أَوْزَارِ ٱلَّذِينَ يُضِلُّونَهُم بِغَيْرِ عِلْمٍ ۗ أَلَا سَآءَ مَا يَزِرُونَ",
+            "en_text": "Let them bear their burdens in full on the Day of Judgment as well as some of the burdens of those they mislead without knowledge. Evil indeed is what they will bear!"
+        },
+        {
+            "verse_key": "16:26",
+            "verse_num": "16:26",
+            "arabic_text": "قَدْ مَكَرَ ٱلَّذِينَ مِن قَبْلِهِمْ فَأَتَى ٱللَّهُ بُنْيَـٰنَهُم مِّنَ ٱلْقَوَاعِدِ فَخَرَّ عَلَيْهِمُ ٱلسَّقْفُ مِن فَوْقِهِمْ وَأَتَىٰهُمُ ٱلْعَذَابُ مِنْ حَيْثُ لَا يَشْعُرُونَ",
+            "en_text": "Indeed, those before them had plotted, but Allah struck at the ˹very˺ foundation of their structure, so the roof collapsed on top of them, and the torment came upon them from where they did not expect.<sup foot_note=76840>1</sup>"
+        },
+        {
+            "verse_key": "16:27",
+            "verse_num": "16:27",
+            "arabic_text": "ثُمَّ يَوْمَ ٱلْقِيَـٰمَةِ يُخْزِيهِمْ وَيَقُولُ أَيْنَ شُرَكَآءِىَ ٱلَّذِينَ كُنتُمْ تُشَـٰٓقُّونَ فِيهِمْ ۚ قَالَ ٱلَّذِينَ أُوتُوا۟ ٱلْعِلْمَ إِنَّ ٱلْخِزْىَ ٱلْيَوْمَ وَٱلسُّوٓءَ عَلَى ٱلْكَـٰفِرِينَ",
+            "en_text": "Then on the Day of Judgment He will humiliate them and say, “Where are My ˹so-called˺ associate-gods for whose sake you used to oppose ˹the believers˺?” Those gifted with knowledge will say, “Surely disgrace and misery today are upon the disbelievers.”"
+        },
+        {
+            "verse_key": "16:28",
+            "verse_num": "16:28",
+            "arabic_text": "ٱلَّذِينَ تَتَوَفَّىٰهُمُ ٱلْمَلَـٰٓئِكَةُ ظَالِمِىٓ أَنفُسِهِمْ ۖ فَأَلْقَوُا۟ ٱلسَّلَمَ مَا كُنَّا نَعْمَلُ مِن سُوٓءٍۭ ۚ بَلَىٰٓ إِنَّ ٱللَّهَ عَلِيمٌۢ بِمَا كُنتُمْ تَعْمَلُونَ",
+            "en_text": "Those whose souls the angels seize while they wrong themselves will then offer ˹full˺ submission ˹and say falsely,˺ “We did not do any evil.” ˹The angels will say,˺ “No! Surely Allah fully knows what you used to do."
+        },
+        {
+            "verse_key": "16:29",
+            "verse_num": "16:29",
+            "arabic_text": "فَٱدْخُلُوٓا۟ أَبْوَٰبَ جَهَنَّمَ خَـٰلِدِينَ فِيهَا ۖ فَلَبِئْسَ مَثْوَى ٱلْمُتَكَبِّرِينَ",
+            "en_text": "So enter the gates of Hell, to stay there forever. Indeed, what an evil home for the arrogant!”"
+        },
+        {
+            "verse_key": "16:30",
+            "verse_num": "16:30",
+            "arabic_text": "۞ وَقِيلَ لِلَّذِينَ ٱتَّقَوْا۟ مَاذَآ أَنزَلَ رَبُّكُمْ ۚ قَالُوا۟ خَيْرًا ۗ لِّلَّذِينَ أَحْسَنُوا۟ فِى هَـٰذِهِ ٱلدُّنْيَا حَسَنَةٌ ۚ وَلَدَارُ ٱلْـَٔاخِرَةِ خَيْرٌ ۚ وَلَنِعْمَ دَارُ ٱلْمُتَّقِينَ",
+            "en_text": "And ˹when˺ it is said to those mindful ˹of Allah˺, “What has your Lord revealed?” They say, “All the best!” For those who do good in this world, there is goodness. But far better is the ˹eternal˺ Home of the Hereafter. How excellent indeed is the home of the righteous:"
+        },
+        {
+            "verse_key": "16:31",
+            "verse_num": "16:31",
+            "arabic_text": "جَنَّـٰتُ عَدْنٍ يَدْخُلُونَهَا تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ ۖ لَهُمْ فِيهَا مَا يَشَآءُونَ ۚ كَذَٰلِكَ يَجْزِى ٱللَّهُ ٱلْمُتَّقِينَ",
+            "en_text": "the Gardens of Eternity which they will enter, under which rivers flow. In it they will have whatever they desire. This is how Allah rewards the righteous—"
+        },
+        {
+            "verse_key": "16:32",
+            "verse_num": "16:32",
+            "arabic_text": "ٱلَّذِينَ تَتَوَفَّىٰهُمُ ٱلْمَلَـٰٓئِكَةُ طَيِّبِينَ ۙ يَقُولُونَ سَلَـٰمٌ عَلَيْكُمُ ٱدْخُلُوا۟ ٱلْجَنَّةَ بِمَا كُنتُمْ تَعْمَلُونَ",
+            "en_text": "those whose souls the angels take while they are virtuous, saying ˹to them˺, “Peace be upon you! Enter Paradise for what you used to do.”"
+        },
+        {
+            "verse_key": "16:33",
+            "verse_num": "16:33",
+            "arabic_text": "هَلْ يَنظُرُونَ إِلَّآ أَن تَأْتِيَهُمُ ٱلْمَلَـٰٓئِكَةُ أَوْ يَأْتِىَ أَمْرُ رَبِّكَ ۚ كَذَٰلِكَ فَعَلَ ٱلَّذِينَ مِن قَبْلِهِمْ ۚ وَمَا ظَلَمَهُمُ ٱللَّهُ وَلَـٰكِن كَانُوٓا۟ أَنفُسَهُمْ يَظْلِمُونَ",
+            "en_text": "Are they only awaiting the coming of the angels or the command of your Lord ˹O Prophet˺? So were those before them. And Allah never wronged them, but it was they who wronged themselves."
+        },
+        {
+            "verse_key": "16:34",
+            "verse_num": "16:34",
+            "arabic_text": "فَأَصَابَهُمْ سَيِّـَٔاتُ مَا عَمِلُوا۟ وَحَاقَ بِهِم مَّا كَانُوا۟ بِهِۦ يَسْتَهْزِءُونَ",
+            "en_text": "Then the evil ˹consequences˺ of their deeds overtook them, and they were overwhelmed by what they used to ridicule."
+        },
+        {
+            "verse_key": "16:35",
+            "verse_num": "16:35",
+            "arabic_text": "وَقَالَ ٱلَّذِينَ أَشْرَكُوا۟ لَوْ شَآءَ ٱللَّهُ مَا عَبَدْنَا مِن دُونِهِۦ مِن شَىْءٍ نَّحْنُ وَلَآ ءَابَآؤُنَا وَلَا حَرَّمْنَا مِن دُونِهِۦ مِن شَىْءٍ ۚ كَذَٰلِكَ فَعَلَ ٱلَّذِينَ مِن قَبْلِهِمْ ۚ فَهَلْ عَلَى ٱلرُّسُلِ إِلَّا ٱلْبَلَـٰغُ ٱلْمُبِينُ",
+            "en_text": "The polytheists argue, “Had Allah willed, neither we nor our forefathers would have worshipped anything other than Him, nor prohibited anything without His command.” So did those before them. Is not the messengers’ duty only to deliver ˹the message˺ clearly?"
+        },
+        {
+            "verse_key": "16:36",
+            "verse_num": "16:36",
+            "arabic_text": "وَلَقَدْ بَعَثْنَا فِى كُلِّ أُمَّةٍ رَّسُولًا أَنِ ٱعْبُدُوا۟ ٱللَّهَ وَٱجْتَنِبُوا۟ ٱلطَّـٰغُوتَ ۖ فَمِنْهُم مَّنْ هَدَى ٱللَّهُ وَمِنْهُم مَّنْ حَقَّتْ عَلَيْهِ ٱلضَّلَـٰلَةُ ۚ فَسِيرُوا۟ فِى ٱلْأَرْضِ فَٱنظُرُوا۟ كَيْفَ كَانَ عَـٰقِبَةُ ٱلْمُكَذِّبِينَ",
+            "en_text": "We surely sent a messenger to every community, saying, “Worship Allah and shun false gods.” But some of them were guided by Allah, while others were destined to stray. So travel throughout the land and see the fate of the deniers!"
+        },
+        {
+            "verse_key": "16:37",
+            "verse_num": "16:37",
+            "arabic_text": "إِن تَحْرِصْ عَلَىٰ هُدَىٰهُمْ فَإِنَّ ٱللَّهَ لَا يَهْدِى مَن يُضِلُّ ۖ وَمَا لَهُم مِّن نَّـٰصِرِينَ",
+            "en_text": "Even though you ˹O Prophet˺ are keen on their guidance, Allah certainly does not guide those He leaves to stray, and they will have no helpers."
+        },
+        {
+            "verse_key": "16:38",
+            "verse_num": "16:38",
+            "arabic_text": "وَأَقْسَمُوا۟ بِٱللَّهِ جَهْدَ أَيْمَـٰنِهِمْ ۙ لَا يَبْعَثُ ٱللَّهُ مَن يَمُوتُ ۚ بَلَىٰ وَعْدًا عَلَيْهِ حَقًّا وَلَـٰكِنَّ أَكْثَرَ ٱلنَّاسِ لَا يَعْلَمُونَ",
+            "en_text": "They swear by Allah their most solemn oaths that Allah will never raise the dead to life. Yes ˹He will˺! It is a true promise binding on Him, but most people do not know."
+        },
+        {
+            "verse_key": "16:39",
+            "verse_num": "16:39",
+            "arabic_text": "لِيُبَيِّنَ لَهُمُ ٱلَّذِى يَخْتَلِفُونَ فِيهِ وَلِيَعْلَمَ ٱلَّذِينَ كَفَرُوٓا۟ أَنَّهُمْ كَانُوا۟ كَـٰذِبِينَ",
+            "en_text": "˹He will do that˺ to make clear to them what they disagreed on, and for the disbelievers to know that they were liars."
+        },
+        {
+            "verse_key": "16:40",
+            "verse_num": "16:40",
+            "arabic_text": "إِنَّمَا قَوْلُنَا لِشَىْءٍ إِذَآ أَرَدْنَـٰهُ أَن نَّقُولَ لَهُۥ كُن فَيَكُونُ",
+            "en_text": "If We ever will something ˹to exist˺, all We say is: “Be!” And it is!"
+        },
+        {
+            "verse_key": "16:41",
+            "verse_num": "16:41",
+            "arabic_text": "وَٱلَّذِينَ هَاجَرُوا۟ فِى ٱللَّهِ مِنۢ بَعْدِ مَا ظُلِمُوا۟ لَنُبَوِّئَنَّهُمْ فِى ٱلدُّنْيَا حَسَنَةً ۖ وَلَأَجْرُ ٱلْـَٔاخِرَةِ أَكْبَرُ ۚ لَوْ كَانُوا۟ يَعْلَمُونَ",
+            "en_text": "As for those who emigrated in ˹the cause of˺ Allah after being persecuted, We will surely bless them with a good home in this world. But the reward of the Hereafter is far better, if only they knew."
+        },
+        {
+            "verse_key": "16:42",
+            "verse_num": "16:42",
+            "arabic_text": "ٱلَّذِينَ صَبَرُوا۟ وَعَلَىٰ رَبِّهِمْ يَتَوَكَّلُونَ",
+            "en_text": "˹It is˺ they who have patiently endured, and in their Lord they put their trust."
+        },
+        {
+            "verse_key": "16:43",
+            "verse_num": "16:43",
+            "arabic_text": "وَمَآ أَرْسَلْنَا مِن قَبْلِكَ إِلَّا رِجَالًا نُّوحِىٓ إِلَيْهِمْ ۚ فَسْـَٔلُوٓا۟ أَهْلَ ٱلذِّكْرِ إِن كُنتُمْ لَا تَعْلَمُونَ",
+            "en_text": "We did not send ˹messengers˺ before you ˹O Prophet˺ except mere men inspired by Us. If you ˹polytheists˺ do not know ˹this already˺, then ask those who have knowledge ˹of the Scriptures˺."
+        },
+        {
+            "verse_key": "16:44",
+            "verse_num": "16:44",
+            "arabic_text": "بِٱلْبَيِّنَـٰتِ وَٱلزُّبُرِ ۗ وَأَنزَلْنَآ إِلَيْكَ ٱلذِّكْرَ لِتُبَيِّنَ لِلنَّاسِ مَا نُزِّلَ إِلَيْهِمْ وَلَعَلَّهُمْ يَتَفَكَّرُونَ",
+            "en_text": "˹We sent them˺ with clear proofs and divine Books. And We have sent down to you ˹O Prophet˺ the Reminder, so that you may explain to people what has been revealed for them, and perhaps they will reflect."
+        },
+        {
+            "verse_key": "16:45",
+            "verse_num": "16:45",
+            "arabic_text": "أَفَأَمِنَ ٱلَّذِينَ مَكَرُوا۟ ٱلسَّيِّـَٔاتِ أَن يَخْسِفَ ٱللَّهُ بِهِمُ ٱلْأَرْضَ أَوْ يَأْتِيَهُمُ ٱلْعَذَابُ مِنْ حَيْثُ لَا يَشْعُرُونَ",
+            "en_text": "Do those who devise evil plots feel secure that Allah will not cause the earth to swallow them? Or that the torment will not come upon them in ways they cannot comprehend?"
+        },
+        {
+            "verse_key": "16:46",
+            "verse_num": "16:46",
+            "arabic_text": "أَوْ يَأْخُذَهُمْ فِى تَقَلُّبِهِمْ فَمَا هُم بِمُعْجِزِينَ",
+            "en_text": "Or that He will not seize them while they go about ˹their day˺, for then they will have no escape?"
+        },
+        {
+            "verse_key": "16:47",
+            "verse_num": "16:47",
+            "arabic_text": "أَوْ يَأْخُذَهُمْ عَلَىٰ تَخَوُّفٍ فَإِنَّ رَبَّكُمْ لَرَءُوفٌ رَّحِيمٌ",
+            "en_text": "Or that He will not destroy them gradually? But your Lord is truly Ever Gracious, Most Merciful."
+        },
+        {
+            "verse_key": "16:48",
+            "verse_num": "16:48",
+            "arabic_text": "أَوَلَمْ يَرَوْا۟ إِلَىٰ مَا خَلَقَ ٱللَّهُ مِن شَىْءٍ يَتَفَيَّؤُا۟ ظِلَـٰلُهُۥ عَنِ ٱلْيَمِينِ وَٱلشَّمَآئِلِ سُجَّدًا لِّلَّهِ وَهُمْ دَٰخِرُونَ",
+            "en_text": "Have they not considered how the shadows of everything Allah has created incline to the right and the left ˹as the sun moves˺, totally submitting to Allah in all humility?"
+        },
+        {
+            "verse_key": "16:49",
+            "verse_num": "16:49",
+            "arabic_text": "وَلِلَّهِ يَسْجُدُ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ مِن دَآبَّةٍ وَٱلْمَلَـٰٓئِكَةُ وَهُمْ لَا يَسْتَكْبِرُونَ",
+            "en_text": "And to Allah ˹alone˺ bows down ˹in submission˺<sup foot_note=76841>1</sup> whatever is in the heavens and whatever is on the earth of living creatures, as do the angels—who are not too proud ˹to do so˺."
+        },
+        {
+            "verse_key": "16:50",
+            "verse_num": "16:50",
+            "arabic_text": "يَخَافُونَ رَبَّهُم مِّن فَوْقِهِمْ وَيَفْعَلُونَ مَا يُؤْمَرُونَ ۩",
+            "en_text": "They<sup foot_note=76842>1</sup> fear their Lord above them, and do whatever they are commanded."
+        },
+        {
+            "verse_key": "16:51",
+            "verse_num": "16:51",
+            "arabic_text": "۞ وَقَالَ ٱللَّهُ لَا تَتَّخِذُوٓا۟ إِلَـٰهَيْنِ ٱثْنَيْنِ ۖ إِنَّمَا هُوَ إِلَـٰهٌ وَٰحِدٌ ۖ فَإِيَّـٰىَ فَٱرْهَبُونِ",
+            "en_text": "And Allah has said, “Do not take two gods. There is only One God. So be in awe of Me ˹alone˺.”"
+        },
+        {
+            "verse_key": "16:52",
+            "verse_num": "16:52",
+            "arabic_text": "وَلَهُۥ مَا فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَلَهُ ٱلدِّينُ وَاصِبًا ۚ أَفَغَيْرَ ٱللَّهِ تَتَّقُونَ",
+            "en_text": "To Him belongs whatever is in the heavens and the earth, and to Him ˹alone˺ is the everlasting devotion. Will you then fear any other than Allah?"
+        },
+        {
+            "verse_key": "16:53",
+            "verse_num": "16:53",
+            "arabic_text": "وَمَا بِكُم مِّن نِّعْمَةٍ فَمِنَ ٱللَّهِ ۖ ثُمَّ إِذَا مَسَّكُمُ ٱلضُّرُّ فَإِلَيْهِ تَجْـَٔرُونَ",
+            "en_text": "Whatever blessings you have are from Allah. Then whenever hardship touches you, to Him ˹alone˺ you cry ˹for help˺."
+        },
+        {
+            "verse_key": "16:54",
+            "verse_num": "16:54",
+            "arabic_text": "ثُمَّ إِذَا كَشَفَ ٱلضُّرَّ عَنكُمْ إِذَا فَرِيقٌ مِّنكُم بِرَبِّهِمْ يُشْرِكُونَ",
+            "en_text": "Then as soon as He removes the hardship from you, a group of you associates ˹others˺ with their Lord ˹in worship˺,"
+        },
+        {
+            "verse_key": "16:55",
+            "verse_num": "16:55",
+            "arabic_text": "لِيَكْفُرُوا۟ بِمَآ ءَاتَيْنَـٰهُمْ ۚ فَتَمَتَّعُوا۟ ۖ فَسَوْفَ تَعْلَمُونَ",
+            "en_text": "only returning Our favours with ingratitude. So enjoy yourselves, for you will soon know."
+        },
+        {
+            "verse_key": "16:56",
+            "verse_num": "16:56",
+            "arabic_text": "وَيَجْعَلُونَ لِمَا لَا يَعْلَمُونَ نَصِيبًا مِّمَّا رَزَقْنَـٰهُمْ ۗ تَٱللَّهِ لَتُسْـَٔلُنَّ عَمَّا كُنتُمْ تَفْتَرُونَ",
+            "en_text": "And they ˹even˺ assign to those ˹idols˺—who know nothing—a share of what We have provided for them. By Allah! You will certainly be questioned about whatever ˹lies˺ you used to fabricate ˹against Allah˺."
+        },
+        {
+            "verse_key": "16:57",
+            "verse_num": "16:57",
+            "arabic_text": "وَيَجْعَلُونَ لِلَّهِ ٱلْبَنَـٰتِ سُبْحَـٰنَهُۥ ۙ وَلَهُم مَّا يَشْتَهُونَ",
+            "en_text": "And they attribute ˹angels as˺ daughters to Allah—glory be to Him!—the opposite of what they desire for themselves."
+        },
+        {
+            "verse_key": "16:58",
+            "verse_num": "16:58",
+            "arabic_text": "وَإِذَا بُشِّرَ أَحَدُهُم بِٱلْأُنثَىٰ ظَلَّ وَجْهُهُۥ مُسْوَدًّا وَهُوَ كَظِيمٌ",
+            "en_text": "Whenever one of them is given the good news of a baby girl, his face grows gloomy, as he suppresses his rage."
+        },
+        {
+            "verse_key": "16:59",
+            "verse_num": "16:59",
+            "arabic_text": "يَتَوَٰرَىٰ مِنَ ٱلْقَوْمِ مِن سُوٓءِ مَا بُشِّرَ بِهِۦٓ ۚ أَيُمْسِكُهُۥ عَلَىٰ هُونٍ أَمْ يَدُسُّهُۥ فِى ٱلتُّرَابِ ۗ أَلَا سَآءَ مَا يَحْكُمُونَ",
+            "en_text": "He hides himself from the people because of the bad news he has received. Should he keep her in disgrace, or bury her ˹alive˺ in the ground? Evil indeed is their judgment!<sup foot_note=76843>1</sup>"
+        },
+        {
+            "verse_key": "16:60",
+            "verse_num": "16:60",
+            "arabic_text": "لِلَّذِينَ لَا يُؤْمِنُونَ بِٱلْـَٔاخِرَةِ مَثَلُ ٱلسَّوْءِ ۖ وَلِلَّهِ ٱلْمَثَلُ ٱلْأَعْلَىٰ ۚ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ",
+            "en_text": "To those who disbelieve in the Hereafter belong all evil qualities, whereas to Allah belong the finest attributes. And He is the Almighty, All-Wise."
+        },
+        {
+            "verse_key": "16:61",
+            "verse_num": "16:61",
+            "arabic_text": "وَلَوْ يُؤَاخِذُ ٱللَّهُ ٱلنَّاسَ بِظُلْمِهِم مَّا تَرَكَ عَلَيْهَا مِن دَآبَّةٍ وَلَـٰكِن يُؤَخِّرُهُمْ إِلَىٰٓ أَجَلٍ مُّسَمًّى ۖ فَإِذَا جَآءَ أَجَلُهُمْ لَا يَسْتَـْٔخِرُونَ سَاعَةً ۖ وَلَا يَسْتَقْدِمُونَ",
+            "en_text": "If Allah were to punish people ˹immediately˺ for their wrongdoing, He would not have left a single living being on earth. But He delays them for an appointed term. And when their time arrives, they cannot delay it for a moment, nor could they advance it."
+        },
+        {
+            "verse_key": "16:62",
+            "verse_num": "16:62",
+            "arabic_text": "وَيَجْعَلُونَ لِلَّهِ مَا يَكْرَهُونَ وَتَصِفُ أَلْسِنَتُهُمُ ٱلْكَذِبَ أَنَّ لَهُمُ ٱلْحُسْنَىٰ ۖ لَا جَرَمَ أَنَّ لَهُمُ ٱلنَّارَ وَأَنَّهُم مُّفْرَطُونَ",
+            "en_text": "They attribute to Allah what they hate ˹for themselves˺,<sup foot_note=76844>1</sup> and their tongues utter the lie that they will have the finest reward. Without a doubt, for them is the Fire, where they will be abandoned."
+        },
+        {
+            "verse_key": "16:63",
+            "verse_num": "16:63",
+            "arabic_text": "تَٱللَّهِ لَقَدْ أَرْسَلْنَآ إِلَىٰٓ أُمَمٍ مِّن قَبْلِكَ فَزَيَّنَ لَهُمُ ٱلشَّيْطَـٰنُ أَعْمَـٰلَهُمْ فَهُوَ وَلِيُّهُمُ ٱلْيَوْمَ وَلَهُمْ عَذَابٌ أَلِيمٌ",
+            "en_text": "By Allah! We have surely sent messengers to communities before you ˹O Prophet˺, but Satan made their misdeeds appealing to them. So he is their patron today, and they will suffer a painful punishment."
+        },
+        {
+            "verse_key": "16:64",
+            "verse_num": "16:64",
+            "arabic_text": "وَمَآ أَنزَلْنَا عَلَيْكَ ٱلْكِتَـٰبَ إِلَّا لِتُبَيِّنَ لَهُمُ ٱلَّذِى ٱخْتَلَفُوا۟ فِيهِ ۙ وَهُدًى وَرَحْمَةً لِّقَوْمٍ يُؤْمِنُونَ",
+            "en_text": "We have revealed to you the Book only to clarify for them what they differed about, and as a guide and mercy for those who believe."
+        },
+        {
+            "verse_key": "16:65",
+            "verse_num": "16:65",
+            "arabic_text": "وَٱللَّهُ أَنزَلَ مِنَ ٱلسَّمَآءِ مَآءً فَأَحْيَا بِهِ ٱلْأَرْضَ بَعْدَ مَوْتِهَآ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَةً لِّقَوْمٍ يَسْمَعُونَ",
+            "en_text": "And Allah sends down rain from the sky, giving life to the earth after its death. Surely in this is a sign for those who listen."
+        },
+        {
+            "verse_key": "16:66",
+            "verse_num": "16:66",
+            "arabic_text": "وَإِنَّ لَكُمْ فِى ٱلْأَنْعَـٰمِ لَعِبْرَةً ۖ نُّسْقِيكُم مِّمَّا فِى بُطُونِهِۦ مِنۢ بَيْنِ فَرْثٍ وَدَمٍ لَّبَنًا خَالِصًا سَآئِغًا لِّلشَّـٰرِبِينَ",
+            "en_text": "And there is certainly a lesson for you in cattle: We give you to drink of what is in their bellies, from between digested food and blood: pure milk, pleasant to drink.<sup foot_note=76845>1</sup>"
+        },
+        {
+            "verse_key": "16:67",
+            "verse_num": "16:67",
+            "arabic_text": "وَمِن ثَمَرَٰتِ ٱلنَّخِيلِ وَٱلْأَعْنَـٰبِ تَتَّخِذُونَ مِنْهُ سَكَرًا وَرِزْقًا حَسَنًا ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَةً لِّقَوْمٍ يَعْقِلُونَ",
+            "en_text": "And from the fruits of palm trees and grapevines you derive intoxicants<sup foot_note=76846>1</sup> as well as wholesome provision. Surely in this is a sign for those who understand."
+        },
+        {
+            "verse_key": "16:68",
+            "verse_num": "16:68",
+            "arabic_text": "وَأَوْحَىٰ رَبُّكَ إِلَى ٱلنَّحْلِ أَنِ ٱتَّخِذِى مِنَ ٱلْجِبَالِ بُيُوتًا وَمِنَ ٱلشَّجَرِ وَمِمَّا يَعْرِشُونَ",
+            "en_text": "And your Lord inspired the bees: “Make ˹your˺ homes in the mountains, the trees, and in what people construct,"
+        },
+        {
+            "verse_key": "16:69",
+            "verse_num": "16:69",
+            "arabic_text": "ثُمَّ كُلِى مِن كُلِّ ٱلثَّمَرَٰتِ فَٱسْلُكِى سُبُلَ رَبِّكِ ذُلُلًا ۚ يَخْرُجُ مِنۢ بُطُونِهَا شَرَابٌ مُّخْتَلِفٌ أَلْوَٰنُهُۥ فِيهِ شِفَآءٌ لِّلنَّاسِ ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَةً لِّقَوْمٍ يَتَفَكَّرُونَ",
+            "en_text": "and feed from ˹the flower of˺ any fruit ˹you please˺ and follow the ways your Lord has made easy for you.” From their bellies comes forth liquid of varying colours, in which there is healing for people. Surely in this is a sign for those who reflect."
+        },
+        {
+            "verse_key": "16:70",
+            "verse_num": "16:70",
+            "arabic_text": "وَٱللَّهُ خَلَقَكُمْ ثُمَّ يَتَوَفَّىٰكُمْ ۚ وَمِنكُم مَّن يُرَدُّ إِلَىٰٓ أَرْذَلِ ٱلْعُمُرِ لِكَىْ لَا يَعْلَمَ بَعْدَ عِلْمٍ شَيْـًٔا ۚ إِنَّ ٱللَّهَ عَلِيمٌ قَدِيرٌ",
+            "en_text": "Allah has created you, and then causes you to die. And some of you are left to reach the most feeble stage of life so that they may know nothing after having known much. Indeed, Allah is All-Knowing, Most Capable."
+        },
+        {
+            "verse_key": "16:71",
+            "verse_num": "16:71",
+            "arabic_text": "وَٱللَّهُ فَضَّلَ بَعْضَكُمْ عَلَىٰ بَعْضٍ فِى ٱلرِّزْقِ ۚ فَمَا ٱلَّذِينَ فُضِّلُوا۟ بِرَآدِّى رِزْقِهِمْ عَلَىٰ مَا مَلَكَتْ أَيْمَـٰنُهُمْ فَهُمْ فِيهِ سَوَآءٌ ۚ أَفَبِنِعْمَةِ ٱللَّهِ يَجْحَدُونَ",
+            "en_text": "And Allah has favoured some of you over others in provision. But those who have been much favoured would not share their wealth with those ˹bondspeople˺ in their possession, making them their equals.<sup foot_note=76847>1</sup> Do they then deny Allah’s favours?"
+        },
+        {
+            "verse_key": "16:72",
+            "verse_num": "16:72",
+            "arabic_text": "وَٱللَّهُ جَعَلَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًا وَجَعَلَ لَكُم مِّنْ أَزْوَٰجِكُم بَنِينَ وَحَفَدَةً وَرَزَقَكُم مِّنَ ٱلطَّيِّبَـٰتِ ۚ أَفَبِٱلْبَـٰطِلِ يُؤْمِنُونَ وَبِنِعْمَتِ ٱللَّهِ هُمْ يَكْفُرُونَ",
+            "en_text": "And Allah has made for you spouses of your own kind, and given you through your spouses children and grandchildren.<sup foot_note=76848>1</sup> And He has granted you good, lawful provisions. Are they then faithful to falsehood and ungrateful for Allah’s favours?"
+        },
+        {
+            "verse_key": "16:73",
+            "verse_num": "16:73",
+            "arabic_text": "وَيَعْبُدُونَ مِن دُونِ ٱللَّهِ مَا لَا يَمْلِكُ لَهُمْ رِزْقًا مِّنَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ شَيْـًٔا وَلَا يَسْتَطِيعُونَ",
+            "en_text": "Yet they worship besides Allah those ˹idols˺ who do not afford them any provision from the heavens and the earth, nor do they have the power to."
+        },
+        {
+            "verse_key": "16:74",
+            "verse_num": "16:74",
+            "arabic_text": "فَلَا تَضْرِبُوا۟ لِلَّهِ ٱلْأَمْثَالَ ۚ إِنَّ ٱللَّهَ يَعْلَمُ وَأَنتُمْ لَا تَعْلَمُونَ",
+            "en_text": "So do not set up equals to Allah, for Allah certainly knows and you do not know."
+        },
+        {
+            "verse_key": "16:75",
+            "verse_num": "16:75",
+            "arabic_text": "۞ ضَرَبَ ٱللَّهُ مَثَلًا عَبْدًا مَّمْلُوكًا لَّا يَقْدِرُ عَلَىٰ شَىْءٍ وَمَن رَّزَقْنَـٰهُ مِنَّا رِزْقًا حَسَنًا فَهُوَ يُنفِقُ مِنْهُ سِرًّا وَجَهْرًا ۖ هَلْ يَسْتَوُۥنَ ۚ ٱلْحَمْدُ لِلَّهِ ۚ بَلْ أَكْثَرُهُمْ لَا يَعْلَمُونَ",
+            "en_text": "Allah sets forth a parable: a slave who lacks all means, compared to a ˹free˺ man to whom We granted a good provision, of which he donates ˹freely,˺ openly and secretly. Are they equal? Praise be to Allah. In fact, most of them do not know."
+        },
+        {
+            "verse_key": "16:76",
+            "verse_num": "16:76",
+            "arabic_text": "وَضَرَبَ ٱللَّهُ مَثَلًا رَّجُلَيْنِ أَحَدُهُمَآ أَبْكَمُ لَا يَقْدِرُ عَلَىٰ شَىْءٍ وَهُوَ كَلٌّ عَلَىٰ مَوْلَىٰهُ أَيْنَمَا يُوَجِّههُّ لَا يَأْتِ بِخَيْرٍ ۖ هَلْ يَسْتَوِى هُوَ وَمَن يَأْمُرُ بِٱلْعَدْلِ ۙ وَهُوَ عَلَىٰ صِرَٰطٍ مُّسْتَقِيمٍ",
+            "en_text": "And Allah sets forth a parable of two men: one of them is dumb, incapable of anything. He is a burden on his master. Wherever he is sent, he brings no good. Can such a person be equal to the one who commands justice and is on the Straight Path?<sup foot_note=76849>1</sup>"
+        },
+        {
+            "verse_key": "16:77",
+            "verse_num": "16:77",
+            "arabic_text": "وَلِلَّهِ غَيْبُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ وَمَآ أَمْرُ ٱلسَّاعَةِ إِلَّا كَلَمْحِ ٱلْبَصَرِ أَوْ هُوَ أَقْرَبُ ۚ إِنَّ ٱللَّهَ عَلَىٰ كُلِّ شَىْءٍ قَدِيرٌ",
+            "en_text": "To Allah ˹alone˺ belongs ˹the knowledge of˺ the unseen in the heavens and the earth. Bringing about the Hour would only take the blink of an eye, or even less. Surely Allah is Most Capable of everything."
+        },
+        {
+            "verse_key": "16:78",
+            "verse_num": "16:78",
+            "arabic_text": "وَٱللَّهُ أَخْرَجَكُم مِّنۢ بُطُونِ أُمَّهَـٰتِكُمْ لَا تَعْلَمُونَ شَيْـًٔا وَجَعَلَ لَكُمُ ٱلسَّمْعَ وَٱلْأَبْصَـٰرَ وَٱلْأَفْـِٔدَةَ ۙ لَعَلَّكُمْ تَشْكُرُونَ",
+            "en_text": "And Allah brought you out of the wombs of your mothers while you knew nothing, and gave you hearing, sight, and intellect so perhaps you would be thankful."
+        },
+        {
+            "verse_key": "16:79",
+            "verse_num": "16:79",
+            "arabic_text": "أَلَمْ يَرَوْا۟ إِلَى ٱلطَّيْرِ مُسَخَّرَٰتٍ فِى جَوِّ ٱلسَّمَآءِ مَا يُمْسِكُهُنَّ إِلَّا ٱللَّهُ ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍ لِّقَوْمٍ يُؤْمِنُونَ",
+            "en_text": "Have they not seen the birds glide in the open sky? None holds them up except Allah. Surely in this are signs for those who believe."
+        },
+        {
+            "verse_key": "16:80",
+            "verse_num": "16:80",
+            "arabic_text": "وَٱللَّهُ جَعَلَ لَكُم مِّنۢ بُيُوتِكُمْ سَكَنًا وَجَعَلَ لَكُم مِّن جُلُودِ ٱلْأَنْعَـٰمِ بُيُوتًا تَسْتَخِفُّونَهَا يَوْمَ ظَعْنِكُمْ وَيَوْمَ إِقَامَتِكُمْ ۙ وَمِنْ أَصْوَافِهَا وَأَوْبَارِهَا وَأَشْعَارِهَآ أَثَـٰثًا وَمَتَـٰعًا إِلَىٰ حِينٍ",
+            "en_text": "And Allah has made your homes a place to rest, and has given you tents from the hide of animals, light to handle when you travel and when you camp. And out of their wool, fur, and hair He has given you furnishings and goods for a while."
+        },
+        {
+            "verse_key": "16:81",
+            "verse_num": "16:81",
+            "arabic_text": "وَٱللَّهُ جَعَلَ لَكُم مِّمَّا خَلَقَ ظِلَـٰلًا وَجَعَلَ لَكُم مِّنَ ٱلْجِبَالِ أَكْنَـٰنًا وَجَعَلَ لَكُمْ سَرَٰبِيلَ تَقِيكُمُ ٱلْحَرَّ وَسَرَٰبِيلَ تَقِيكُم بَأْسَكُمْ ۚ كَذَٰلِكَ يُتِمُّ نِعْمَتَهُۥ عَلَيْكُمْ لَعَلَّكُمْ تُسْلِمُونَ",
+            "en_text": "And Allah has provided you shade out of what He created, and has given you shelter in the mountains. He has also provided you with clothes protecting you from the heat ˹and cold˺, and armour shielding you in battle. This is how He perfects His favour upon you, so perhaps you will ˹fully˺ submit ˹to Him˺."
+        },
+        {
+            "verse_key": "16:82",
+            "verse_num": "16:82",
+            "arabic_text": "فَإِن تَوَلَّوْا۟ فَإِنَّمَا عَلَيْكَ ٱلْبَلَـٰغُ ٱلْمُبِينُ",
+            "en_text": "But if they turn away, then your duty ˹O Prophet˺ is only to deliver ˹the message˺ clearly."
+        },
+        {
+            "verse_key": "16:83",
+            "verse_num": "16:83",
+            "arabic_text": "يَعْرِفُونَ نِعْمَتَ ٱللَّهِ ثُمَّ يُنكِرُونَهَا وَأَكْثَرُهُمُ ٱلْكَـٰفِرُونَ",
+            "en_text": "They are aware of Allah’s favours, but still deny them. And most of them are ˹truly˺ ungrateful."
+        },
+        {
+            "verse_key": "16:84",
+            "verse_num": "16:84",
+            "arabic_text": "وَيَوْمَ نَبْعَثُ مِن كُلِّ أُمَّةٍ شَهِيدًا ثُمَّ لَا يُؤْذَنُ لِلَّذِينَ كَفَرُوا۟ وَلَا هُمْ يُسْتَعْتَبُونَ",
+            "en_text": "˹Consider, O  Prophet,˺ the Day We will call ˹a prophet as˺ a witness from every faith-community. Then the disbelievers will neither be allowed to plead nor appease ˹their Lord˺."
+        },
+        {
+            "verse_key": "16:85",
+            "verse_num": "16:85",
+            "arabic_text": "وَإِذَا رَءَا ٱلَّذِينَ ظَلَمُوا۟ ٱلْعَذَابَ فَلَا يُخَفَّفُ عَنْهُمْ وَلَا هُمْ يُنظَرُونَ",
+            "en_text": "And when the wrongdoers face the punishment, it will not be lightened for them, nor will they be delayed ˹from it˺."
+        },
+        {
+            "verse_key": "16:86",
+            "verse_num": "16:86",
+            "arabic_text": "وَإِذَا رَءَا ٱلَّذِينَ أَشْرَكُوا۟ شُرَكَآءَهُمْ قَالُوا۟ رَبَّنَا هَـٰٓؤُلَآءِ شُرَكَآؤُنَا ٱلَّذِينَ كُنَّا نَدْعُوا۟ مِن دُونِكَ ۖ فَأَلْقَوْا۟ إِلَيْهِمُ ٱلْقَوْلَ إِنَّكُمْ لَكَـٰذِبُونَ",
+            "en_text": "And when the polytheists see their associate-gods, they will say, “Our Lord! These are our associate-gods that we used to invoke besides You.” Their gods will throw a rebuttal at them, ˹saying,˺ “You are definitely liars.”"
+        },
+        {
+            "verse_key": "16:87",
+            "verse_num": "16:87",
+            "arabic_text": "وَأَلْقَوْا۟ إِلَى ٱللَّهِ يَوْمَئِذٍ ٱلسَّلَمَ ۖ وَضَلَّ عَنْهُم مَّا كَانُوا۟ يَفْتَرُونَ",
+            "en_text": "They will offer ˹full˺ submission to Allah on that Day, and whatever ˹gods˺ they fabricated will fail them."
+        },
+        {
+            "verse_key": "16:88",
+            "verse_num": "16:88",
+            "arabic_text": "ٱلَّذِينَ كَفَرُوا۟ وَصَدُّوا۟ عَن سَبِيلِ ٱللَّهِ زِدْنَـٰهُمْ عَذَابًا فَوْقَ ٱلْعَذَابِ بِمَا كَانُوا۟ يُفْسِدُونَ",
+            "en_text": "For those who disbelieve and hinder ˹others˺ from the Way of Allah, We will add more punishment to their punishment for all the corruption they spread."
+        },
+        {
+            "verse_key": "16:89",
+            "verse_num": "16:89",
+            "arabic_text": "وَيَوْمَ نَبْعَثُ فِى كُلِّ أُمَّةٍ شَهِيدًا عَلَيْهِم مِّنْ أَنفُسِهِمْ ۖ وَجِئْنَا بِكَ شَهِيدًا عَلَىٰ هَـٰٓؤُلَآءِ ۚ وَنَزَّلْنَا عَلَيْكَ ٱلْكِتَـٰبَ تِبْيَـٰنًا لِّكُلِّ شَىْءٍ وَهُدًى وَرَحْمَةً وَبُشْرَىٰ لِلْمُسْلِمِينَ",
+            "en_text": "˹Consider, O  Prophet,˺ the Day We will call against every faith-community a witness of their own. And We will call you to be a witness against these ˹people of yours˺. We have revealed to you the Book as an explanation of all things, a guide, a mercy, and good news for those who ˹fully˺ submit."
+        },
+        {
+            "verse_key": "16:90",
+            "verse_num": "16:90",
+            "arabic_text": "۞ إِنَّ ٱللَّهَ يَأْمُرُ بِٱلْعَدْلِ وَٱلْإِحْسَـٰنِ وَإِيتَآئِ ذِى ٱلْقُرْبَىٰ وَيَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ وَٱلْبَغْىِ ۚ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ",
+            "en_text": "Indeed, Allah commands justice, grace, as well as generosity to close relatives. He forbids indecency, wickedness, and aggression. He instructs you so perhaps you will be mindful."
+        },
+        {
+            "verse_key": "16:91",
+            "verse_num": "16:91",
+            "arabic_text": "وَأَوْفُوا۟ بِعَهْدِ ٱللَّهِ إِذَا عَـٰهَدتُّمْ وَلَا تَنقُضُوا۟ ٱلْأَيْمَـٰنَ بَعْدَ تَوْكِيدِهَا وَقَدْ جَعَلْتُمُ ٱللَّهَ عَلَيْكُمْ كَفِيلًا ۚ إِنَّ ٱللَّهَ يَعْلَمُ مَا تَفْعَلُونَ",
+            "en_text": "Honour Allah’s covenant when you make a pledge, and do not break your oaths after confirming them, having made Allah your guarantor. Surely Allah knows all you do."
+        },
+        {
+            "verse_key": "16:92",
+            "verse_num": "16:92",
+            "arabic_text": "وَلَا تَكُونُوا۟ كَٱلَّتِى نَقَضَتْ غَزْلَهَا مِنۢ بَعْدِ قُوَّةٍ أَنكَـٰثًا تَتَّخِذُونَ أَيْمَـٰنَكُمْ دَخَلًۢا بَيْنَكُمْ أَن تَكُونَ أُمَّةٌ هِىَ أَرْبَىٰ مِنْ أُمَّةٍ ۚ إِنَّمَا يَبْلُوكُمُ ٱللَّهُ بِهِۦ ۚ وَلَيُبَيِّنَنَّ لَكُمْ يَوْمَ ٱلْقِيَـٰمَةِ مَا كُنتُمْ فِيهِ تَخْتَلِفُونَ",
+            "en_text": "Do not be like the woman who ˹foolishly˺ unravels her yarn after it is firmly spun, by taking your oaths as a means of deceiving one another in favour of a stronger group. Surely Allah tests you through this. And on the Day of Judgment He will certainly make your differences clear to you."
+        },
+        {
+            "verse_key": "16:93",
+            "verse_num": "16:93",
+            "arabic_text": "وَلَوْ شَآءَ ٱللَّهُ لَجَعَلَكُمْ أُمَّةً وَٰحِدَةً وَلَـٰكِن يُضِلُّ مَن يَشَآءُ وَيَهْدِى مَن يَشَآءُ ۚ وَلَتُسْـَٔلُنَّ عَمَّا كُنتُمْ تَعْمَلُونَ",
+            "en_text": "Had Allah willed, He could have easily made you one community ˹of believers˺, but He leaves to stray whoever He wills and guides whoever He wills.<sup foot_note=76850>1</sup> And you will certainly be questioned about what you used to do."
+        },
+        {
+            "verse_key": "16:94",
+            "verse_num": "16:94",
+            "arabic_text": "وَلَا تَتَّخِذُوٓا۟ أَيْمَـٰنَكُمْ دَخَلًۢا بَيْنَكُمْ فَتَزِلَّ قَدَمٌۢ بَعْدَ ثُبُوتِهَا وَتَذُوقُوا۟ ٱلسُّوٓءَ بِمَا صَدَدتُّمْ عَن سَبِيلِ ٱللَّهِ ۖ وَلَكُمْ عَذَابٌ عَظِيمٌ",
+            "en_text": "And do not take your oaths as a means of deceiving one another or your feet will slip after they have been firm. Then you will taste the evil ˹consequences˺ of hindering ˹others˺ from the Way of Allah, and you will suffer a tremendous punishment."
+        },
+        {
+            "verse_key": "16:95",
+            "verse_num": "16:95",
+            "arabic_text": "وَلَا تَشْتَرُوا۟ بِعَهْدِ ٱللَّهِ ثَمَنًا قَلِيلًا ۚ إِنَّمَا عِندَ ٱللَّهِ هُوَ خَيْرٌ لَّكُمْ إِن كُنتُمْ تَعْلَمُونَ",
+            "en_text": "And do not trade Allah’s covenant for a fleeting gain. What is with Allah is certainly far better for you, if only you knew."
+        },
+        {
+            "verse_key": "16:96",
+            "verse_num": "16:96",
+            "arabic_text": "مَا عِندَكُمْ يَنفَدُ ۖ وَمَا عِندَ ٱللَّهِ بَاقٍ ۗ وَلَنَجْزِيَنَّ ٱلَّذِينَ صَبَرُوٓا۟ أَجْرَهُم بِأَحْسَنِ مَا كَانُوا۟ يَعْمَلُونَ",
+            "en_text": "Whatever you have will end, but whatever Allah has is everlasting. And We will certainly reward the steadfast according to the best of their deeds."
+        },
+        {
+            "verse_key": "16:97",
+            "verse_num": "16:97",
+            "arabic_text": "مَنْ عَمِلَ صَـٰلِحًا مِّن ذَكَرٍ أَوْ أُنثَىٰ وَهُوَ مُؤْمِنٌ فَلَنُحْيِيَنَّهُۥ حَيَوٰةً طَيِّبَةً ۖ وَلَنَجْزِيَنَّهُمْ أَجْرَهُم بِأَحْسَنِ مَا كَانُوا۟ يَعْمَلُونَ",
+            "en_text": "Whoever does good, whether male or female, and is a believer, We will surely bless them with a good life, and We will certainly reward them according to the best of their deeds."
+        },
+        {
+            "verse_key": "16:98",
+            "verse_num": "16:98",
+            "arabic_text": "فَإِذَا قَرَأْتَ ٱلْقُرْءَانَ فَٱسْتَعِذْ بِٱللَّهِ مِنَ ٱلشَّيْطَـٰنِ ٱلرَّجِيمِ",
+            "en_text": "When you recite the Quran, seek refuge with Allah from Satan, the accursed."
+        },
+        {
+            "verse_key": "16:99",
+            "verse_num": "16:99",
+            "arabic_text": "إِنَّهُۥ لَيْسَ لَهُۥ سُلْطَـٰنٌ عَلَى ٱلَّذِينَ ءَامَنُوا۟ وَعَلَىٰ رَبِّهِمْ يَتَوَكَّلُونَ",
+            "en_text": "He certainly has no authority over those who believe and put their trust in their Lord."
+        },
+        {
+            "verse_key": "16:100",
+            "verse_num": "16:100",
+            "arabic_text": "إِنَّمَا سُلْطَـٰنُهُۥ عَلَى ٱلَّذِينَ يَتَوَلَّوْنَهُۥ وَٱلَّذِينَ هُم بِهِۦ مُشْرِكُونَ",
+            "en_text": "His authority is only over those who take him as a patron and who—under his influence—associate ˹others˺ with Allah ˹in worship˺."
+        },
+        {
+            "verse_key": "16:101",
+            "verse_num": "16:101",
+            "arabic_text": "وَإِذَا بَدَّلْنَآ ءَايَةً مَّكَانَ ءَايَةٍ ۙ وَٱللَّهُ أَعْلَمُ بِمَا يُنَزِّلُ قَالُوٓا۟ إِنَّمَآ أَنتَ مُفْتَرٍۭ ۚ بَلْ أَكْثَرُهُمْ لَا يَعْلَمُونَ",
+            "en_text": "When We replace a verse with another<sup foot_note=76851>1</sup>—and Allah knows best what He reveals—they say, “You ˹Muḥammad˺ are just a fabricator.” In fact, most of them do not know."
+        },
+        {
+            "verse_key": "16:102",
+            "verse_num": "16:102",
+            "arabic_text": "قُلْ نَزَّلَهُۥ رُوحُ ٱلْقُدُسِ مِن رَّبِّكَ بِٱلْحَقِّ لِيُثَبِّتَ ٱلَّذِينَ ءَامَنُوا۟ وَهُدًى وَبُشْرَىٰ لِلْمُسْلِمِينَ",
+            "en_text": "Say, “The holy spirit<sup foot_note=76852>1</sup> has brought it down from your Lord with the truth to reassure the believers, and as a guide and good news for those who submit ˹to Allah˺.”"
+        },
+        {
+            "verse_key": "16:103",
+            "verse_num": "16:103",
+            "arabic_text": "وَلَقَدْ نَعْلَمُ أَنَّهُمْ يَقُولُونَ إِنَّمَا يُعَلِّمُهُۥ بَشَرٌ ۗ لِّسَانُ ٱلَّذِى يُلْحِدُونَ إِلَيْهِ أَعْجَمِىٌّ وَهَـٰذَا لِسَانٌ عَرَبِىٌّ مُّبِينٌ",
+            "en_text": "And We surely know that they say, “No one is teaching him except a human.” But the man they refer to speaks a foreign tongue, whereas this ˹Quran˺ is ˹in˺ eloquent Arabic.<sup foot_note=76853>1</sup>"
+        },
+        {
+            "verse_key": "16:104",
+            "verse_num": "16:104",
+            "arabic_text": "إِنَّ ٱلَّذِينَ لَا يُؤْمِنُونَ بِـَٔايَـٰتِ ٱللَّهِ لَا يَهْدِيهِمُ ٱللَّهُ وَلَهُمْ عَذَابٌ أَلِيمٌ",
+            "en_text": "Surely those who do not believe in Allah’s revelations will never be guided by Allah, and they will suffer a painful punishment."
+        },
+        {
+            "verse_key": "16:105",
+            "verse_num": "16:105",
+            "arabic_text": "إِنَّمَا يَفْتَرِى ٱلْكَذِبَ ٱلَّذِينَ لَا يُؤْمِنُونَ بِـَٔايَـٰتِ ٱللَّهِ ۖ وَأُو۟لَـٰٓئِكَ هُمُ ٱلْكَـٰذِبُونَ",
+            "en_text": "No one fabricates lies except those who disbelieve in Allah’s revelations, and it is they who are the ˹true˺ liars."
+        },
+        {
+            "verse_key": "16:106",
+            "verse_num": "16:106",
+            "arabic_text": "مَن كَفَرَ بِٱللَّهِ مِنۢ بَعْدِ إِيمَـٰنِهِۦٓ إِلَّا مَنْ أُكْرِهَ وَقَلْبُهُۥ مُطْمَئِنٌّۢ بِٱلْإِيمَـٰنِ وَلَـٰكِن مَّن شَرَحَ بِٱلْكُفْرِ صَدْرًا فَعَلَيْهِمْ غَضَبٌ مِّنَ ٱللَّهِ وَلَهُمْ عَذَابٌ عَظِيمٌ",
+            "en_text": "Whoever disbelieves in Allah after their belief—not those who are forced while their hearts are firm in faith,<sup foot_note=76854>1</sup> but those who embrace disbelief wholeheartedly—they will be condemned by Allah and suffer a tremendous punishment."
+        },
+        {
+            "verse_key": "16:107",
+            "verse_num": "16:107",
+            "arabic_text": "ذَٰلِكَ بِأَنَّهُمُ ٱسْتَحَبُّوا۟ ٱلْحَيَوٰةَ ٱلدُّنْيَا عَلَى ٱلْـَٔاخِرَةِ وَأَنَّ ٱللَّهَ لَا يَهْدِى ٱلْقَوْمَ ٱلْكَـٰفِرِينَ",
+            "en_text": "This is because they prefer the life of this world over the Hereafter. Surely Allah never guides those who ˹choose to˺ disbelieve."
+        },
+        {
+            "verse_key": "16:108",
+            "verse_num": "16:108",
+            "arabic_text": "أُو۟لَـٰٓئِكَ ٱلَّذِينَ طَبَعَ ٱللَّهُ عَلَىٰ قُلُوبِهِمْ وَسَمْعِهِمْ وَأَبْصَـٰرِهِمْ ۖ وَأُو۟لَـٰٓئِكَ هُمُ ٱلْغَـٰفِلُونَ",
+            "en_text": "They are the ones whose hearts, ears, and eyes are sealed by Allah, and it is they who are ˹truly˺ heedless."
+        },
+        {
+            "verse_key": "16:109",
+            "verse_num": "16:109",
+            "arabic_text": "لَا جَرَمَ أَنَّهُمْ فِى ٱلْـَٔاخِرَةِ هُمُ ٱلْخَـٰسِرُونَ",
+            "en_text": "Without a doubt, they will be the losers in the Hereafter."
+        },
+        {
+            "verse_key": "16:110",
+            "verse_num": "16:110",
+            "arabic_text": "ثُمَّ إِنَّ رَبَّكَ لِلَّذِينَ هَاجَرُوا۟ مِنۢ بَعْدِ مَا فُتِنُوا۟ ثُمَّ جَـٰهَدُوا۟ وَصَبَرُوٓا۟ إِنَّ رَبَّكَ مِنۢ بَعْدِهَا لَغَفُورٌ رَّحِيمٌ",
+            "en_text": "As for those who emigrated after being compelled ˹to renounce Islam˺, then struggled ˹in Allah’s cause˺, and persevered, your Lord ˹O Prophet˺ is truly All-Forgiving, Most Merciful after all."
+        },
+        {
+            "verse_key": "16:111",
+            "verse_num": "16:111",
+            "arabic_text": "۞ يَوْمَ تَأْتِى كُلُّ نَفْسٍ تُجَـٰدِلُ عَن نَّفْسِهَا وَتُوَفَّىٰ كُلُّ نَفْسٍ مَّا عَمِلَتْ وَهُمْ لَا يُظْلَمُونَ",
+            "en_text": "˹Consider˺ the Day ˹when˺ every soul will come pleading for itself, and each will be paid in full for what it did, and none will be wronged."
+        },
+        {
+            "verse_key": "16:112",
+            "verse_num": "16:112",
+            "arabic_text": "وَضَرَبَ ٱللَّهُ مَثَلًا قَرْيَةً كَانَتْ ءَامِنَةً مُّطْمَئِنَّةً يَأْتِيهَا رِزْقُهَا رَغَدًا مِّن كُلِّ مَكَانٍ فَكَفَرَتْ بِأَنْعُمِ ٱللَّهِ فَأَذَٰقَهَا ٱللَّهُ لِبَاسَ ٱلْجُوعِ وَٱلْخَوْفِ بِمَا كَانُوا۟ يَصْنَعُونَ",
+            "en_text": "And Allah sets forth the example of a society which was safe and at ease, receiving its provision in abundance from all directions. But its people met Allah’s favours with ingratitude, so Allah made them taste the clutches of hunger and fear for their misdeeds."
+        },
+        {
+            "verse_key": "16:113",
+            "verse_num": "16:113",
+            "arabic_text": "وَلَقَدْ جَآءَهُمْ رَسُولٌ مِّنْهُمْ فَكَذَّبُوهُ فَأَخَذَهُمُ ٱلْعَذَابُ وَهُمْ ظَـٰلِمُونَ",
+            "en_text": "A messenger of their own actually did come to them, but they denied him. So the torment overtook them while they persisted in wrongdoing."
+        },
+        {
+            "verse_key": "16:114",
+            "verse_num": "16:114",
+            "arabic_text": "فَكُلُوا۟ مِمَّا رَزَقَكُمُ ٱللَّهُ حَلَـٰلًا طَيِّبًا وَٱشْكُرُوا۟ نِعْمَتَ ٱللَّهِ إِن كُنتُمْ إِيَّاهُ تَعْبُدُونَ",
+            "en_text": "So eat from the good, lawful things which Allah has provided for you, and be grateful for Allah’s favours, if you ˹truly˺ worship Him ˹alone˺."
+        },
+        {
+            "verse_key": "16:115",
+            "verse_num": "16:115",
+            "arabic_text": "إِنَّمَا حَرَّمَ عَلَيْكُمُ ٱلْمَيْتَةَ وَٱلدَّمَ وَلَحْمَ ٱلْخِنزِيرِ وَمَآ أُهِلَّ لِغَيْرِ ٱللَّهِ بِهِۦ ۖ فَمَنِ ٱضْطُرَّ غَيْرَ بَاغٍ وَلَا عَادٍ فَإِنَّ ٱللَّهَ غَفُورٌ رَّحِيمٌ",
+            "en_text": "He has only forbidden you ˹to eat˺ carrion, blood, swine,<sup foot_note=76855>1</sup> and what is slaughtered in the name of any other than Allah. But if someone is compelled by necessity—neither driven by desire nor exceeding immediate need—then surely Allah is All-Forgiving, Most Merciful."
+        },
+        {
+            "verse_key": "16:116",
+            "verse_num": "16:116",
+            "arabic_text": "وَلَا تَقُولُوا۟ لِمَا تَصِفُ أَلْسِنَتُكُمُ ٱلْكَذِبَ هَـٰذَا حَلَـٰلٌ وَهَـٰذَا حَرَامٌ لِّتَفْتَرُوا۟ عَلَى ٱللَّهِ ٱلْكَذِبَ ۚ إِنَّ ٱلَّذِينَ يَفْتَرُونَ عَلَى ٱللَّهِ ٱلْكَذِبَ لَا يُفْلِحُونَ",
+            "en_text": "Do not falsely declare with your tongues, “This is lawful, and that is unlawful,” ˹only˺ fabricating lies against Allah. Indeed, those who fabricate lies against Allah will never succeed."
+        },
+        {
+            "verse_key": "16:117",
+            "verse_num": "16:117",
+            "arabic_text": "مَتَـٰعٌ قَلِيلٌ وَلَهُمْ عَذَابٌ أَلِيمٌ",
+            "en_text": "˹It is only˺ a brief enjoyment, then they will suffer a painful punishment."
+        },
+        {
+            "verse_key": "16:118",
+            "verse_num": "16:118",
+            "arabic_text": "وَعَلَى ٱلَّذِينَ هَادُوا۟ حَرَّمْنَا مَا قَصَصْنَا عَلَيْكَ مِن قَبْلُ ۖ وَمَا ظَلَمْنَـٰهُمْ وَلَـٰكِن كَانُوٓا۟ أَنفُسَهُمْ يَظْلِمُونَ",
+            "en_text": "To the Jews, We have forbidden what We related to you before.<sup foot_note=76856>1</sup> We did not wrong them, but it was they who wronged themselves."
+        },
+        {
+            "verse_key": "16:119",
+            "verse_num": "16:119",
+            "arabic_text": "ثُمَّ إِنَّ رَبَّكَ لِلَّذِينَ عَمِلُوا۟ ٱلسُّوٓءَ بِجَهَـٰلَةٍ ثُمَّ تَابُوا۟ مِنۢ بَعْدِ ذَٰلِكَ وَأَصْلَحُوٓا۟ إِنَّ رَبَّكَ مِنۢ بَعْدِهَا لَغَفُورٌ رَّحِيمٌ",
+            "en_text": "As for those who commit evil ignorantly ˹or recklessly˺, then repent afterwards and mend their ways, then your Lord is surely All-Forgiving, Most Merciful."
+        },
+        {
+            "verse_key": "16:120",
+            "verse_num": "16:120",
+            "arabic_text": "إِنَّ إِبْرَٰهِيمَ كَانَ أُمَّةً قَانِتًا لِّلَّهِ حَنِيفًا وَلَمْ يَكُ مِنَ ٱلْمُشْرِكِينَ",
+            "en_text": "Indeed, Abraham was a model of excellence: devoted to Allah, ˹perfectly˺ upright—not a polytheist—"
+        },
+        {
+            "verse_key": "16:121",
+            "verse_num": "16:121",
+            "arabic_text": "شَاكِرًا لِّأَنْعُمِهِ ۚ ٱجْتَبَىٰهُ وَهَدَىٰهُ إِلَىٰ صِرَٰطٍ مُّسْتَقِيمٍ",
+            "en_text": "˹utterly˺ grateful for Allah’s favours. ˹So˺ He chose him and guided him to the Straight Path."
+        },
+        {
+            "verse_key": "16:122",
+            "verse_num": "16:122",
+            "arabic_text": "وَءَاتَيْنَـٰهُ فِى ٱلدُّنْيَا حَسَنَةً ۖ وَإِنَّهُۥ فِى ٱلْـَٔاخِرَةِ لَمِنَ ٱلصَّـٰلِحِينَ",
+            "en_text": "We blessed him with all goodness in this world,<sup foot_note=76857>1</sup> and in the Hereafter he will certainly be among the righteous."
+        },
+        {
+            "verse_key": "16:123",
+            "verse_num": "16:123",
+            "arabic_text": "ثُمَّ أَوْحَيْنَآ إِلَيْكَ أَنِ ٱتَّبِعْ مِلَّةَ إِبْرَٰهِيمَ حَنِيفًا ۖ وَمَا كَانَ مِنَ ٱلْمُشْرِكِينَ",
+            "en_text": "Then We revealed to you ˹O Prophet, saying˺: “Follow the faith of Abraham, the upright, who was not one of the polytheists.”"
+        },
+        {
+            "verse_key": "16:124",
+            "verse_num": "16:124",
+            "arabic_text": "إِنَّمَا جُعِلَ ٱلسَّبْتُ عَلَى ٱلَّذِينَ ٱخْتَلَفُوا۟ فِيهِ ۚ وَإِنَّ رَبَّكَ لَيَحْكُمُ بَيْنَهُمْ يَوْمَ ٱلْقِيَـٰمَةِ فِيمَا كَانُوا۟ فِيهِ يَخْتَلِفُونَ",
+            "en_text": "˹Honouring˺ the Sabbath was ordained only for those who disputed about Abraham.<sup foot_note=76858>1</sup> And surely your Lord will judge between them on the Day of Judgment regarding their disputes."
+        },
+        {
+            "verse_key": "16:125",
+            "verse_num": "16:125",
+            "arabic_text": "ٱدْعُ إِلَىٰ سَبِيلِ رَبِّكَ بِٱلْحِكْمَةِ وَٱلْمَوْعِظَةِ ٱلْحَسَنَةِ ۖ وَجَـٰدِلْهُم بِٱلَّتِى هِىَ أَحْسَنُ ۚ إِنَّ رَبَّكَ هُوَ أَعْلَمُ بِمَن ضَلَّ عَن سَبِيلِهِۦ ۖ وَهُوَ أَعْلَمُ بِٱلْمُهْتَدِينَ",
+            "en_text": "Invite ˹all˺ to the Way of your Lord with wisdom and kind advice, and only debate with them in the best manner. Surely your Lord ˹alone˺ knows best who has strayed from His Way and who is ˹rightly˺ guided."
+        },
+        {
+            "verse_key": "16:126",
+            "verse_num": "16:126",
+            "arabic_text": "وَإِنْ عَاقَبْتُمْ فَعَاقِبُوا۟ بِمِثْلِ مَا عُوقِبْتُم بِهِۦ ۖ وَلَئِن صَبَرْتُمْ لَهُوَ خَيْرٌ لِّلصَّـٰبِرِينَ",
+            "en_text": "If you retaliate, then let it be equivalent to what you have suffered. But if you patiently endure, it is certainly best for those who are patient."
+        },
+        {
+            "verse_key": "16:127",
+            "verse_num": "16:127",
+            "arabic_text": "وَٱصْبِرْ وَمَا صَبْرُكَ إِلَّا بِٱللَّهِ ۚ وَلَا تَحْزَنْ عَلَيْهِمْ وَلَا تَكُ فِى ضَيْقٍ مِّمَّا يَمْكُرُونَ",
+            "en_text": "Be patient ˹O Prophet˺, for your patience is only with Allah’s help. Do not grieve over those ˹who disbelieve˺, nor be distressed by their schemes."
+        },
+        {
+            "verse_key": "16:128",
+            "verse_num": "16:128",
+            "arabic_text": "إِنَّ ٱللَّهَ مَعَ ٱلَّذِينَ ٱتَّقَوا۟ وَّٱلَّذِينَ هُم مُّحْسِنُونَ",
+            "en_text": "Surely Allah is with those who shun evil and who do good ˹deeds˺."
         }
     ]
 }

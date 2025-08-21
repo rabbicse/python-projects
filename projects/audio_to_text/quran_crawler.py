@@ -104,7 +104,7 @@ def get_surah_ayahs(surah_number):
     url = f'https://quran.com/_next/data/aU_WE3nqYKk2YCDt4qgcc/en/{surah_number}.json'
     response = session.get(url, headers=HEADERS)
 
-    print(response.json())
+    # print(response.json())
 
     if response.status_code != 200:
         print(f"⚠️ Failed to fetch Surah {surah_number}")
@@ -113,8 +113,8 @@ def get_surah_ayahs(surah_number):
     json_data = response.json()
     verse_response = json_data["pageProps"]["versesResponse"]
     verses = verse_response["verses"]
-    print(f"Total verses: {len(verses)}")
-    print(f"json response: {json.dumps(json_data)}")
+    # print(f"Total verses: {len(verses)}")
+    # print(f"json response: {json.dumps(json_data)}")
 
     ayahs_data = []
     for verse in verses:
@@ -133,13 +133,13 @@ def get_surah_ayahs_by_page(surah_number, page=1, per_page=5):
     response = session.get(url, headers=HEADERS)
 
     if response.status_code != 200:
-        print(f"⚠️ Failed to fetch Surah {surah_number}")
+        print(f"⚠️ Failed to fetch Surah {surah_number} with page {page} and per page={per_page}")
         return None
 
     json_data = response.json()
     verses = json_data["verses"]
-    print(f"Total verses: {len(verses)}")
-    print(f"json response: {json.dumps(json_data)}")
+    # print(f"Total verses: {len(verses)}")
+    # print(f"json response: {json.dumps(json_data)}")
 
     ayahs_data = []
     for verse in verses:
@@ -180,23 +180,38 @@ def crawl_quran():
     print("✅ Quran data saved successfully!")
 
 
-def crawl_quran_by_surah(surah_number):
+def crawl_quran_by_surah(surah_number, per_page=5):
     """Crawl all 114 Surahs (info + Ayahs) and save them in JSON."""
-
+    print(f"Processing surah: {surah_number} ...")
     surah_info = get_surah_info(surah_number)
     ayahs = []
 
-    page = 1
-    per_page = 5
+    orig_verses = get_surah_ayahs(surah_number)
 
-    while True:
-        verses = get_surah_ayahs_by_page(surah_number, page=page, per_page=per_page)
 
-        if not verses or len(verses) == 0:
-            break
+    if int(surah_info["ayah_count"]) > len(orig_verses):
+        success_count = 0
+        page = 1
 
-        ayahs.extend(verses)
-        page += 1
+        while True:
+            verses = get_surah_ayahs_by_page(surah_number, page=page, per_page=per_page)
+
+            if not verses or len(verses) == 0:
+                per_page += 1
+                if per_page > int(surah_info["ayah_count"]) - success_count:
+                    print(f"per page exceeded!")
+                    break
+                continue
+
+            print(f"✅ Paging data success for page: {page} and page number: {per_page}!")
+            success_count += len(verses)
+            ayahs.extend(verses)
+            page += 1
+
+        if int(surah_info["ayah_count"]) > len(ayahs):
+            print(f"Surah data mismatch!")
+    else:
+        ayahs = orig_verses
 
     audio_segments = get_audio_segments(surah_number)
     surah_data = {"audio": audio_segments}
@@ -214,9 +229,14 @@ def crawl_quran_by_surah(surah_number):
 
 # Run the crawler
 # crawl_quran()
-# crawl_quran_by_surah(2) # download by surah
+# crawl_quran_by_surah(92, per_page=14) # download by surah
 
-get_all_surah_info()
+for i in range(1, 81):
+    crawl_quran_by_surah(i, per_page=1)
+
+# crawl_quran_by_surah(92, per_page=3)
+
+# get_all_surah_info()
 
 # get_surah_info(45)
 # ayah_data = get_surah_ayahs(45)

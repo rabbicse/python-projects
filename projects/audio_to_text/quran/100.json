@@ -361,6 +361,18 @@
             "verse_num": "100:9",
             "arabic_text": "۞ أَفَلَا يَعْلَمُ إِذَا بُعْثِرَ مَا فِى ٱلْقُبُورِ",
             "en_text": "Do they not know that when the contents of the graves will be spilled out,"
+        },
+        {
+            "verse_key": "100:10",
+            "verse_num": "100:10",
+            "arabic_text": "وَحُصِّلَ مَا فِى ٱلصُّدُورِ",
+            "en_text": "and the secrets of the hearts will be laid bare—"
+        },
+        {
+            "verse_key": "100:11",
+            "verse_num": "100:11",
+            "arabic_text": "إِنَّ رَبَّهُم بِهِمْ يَوْمَئِذٍ لَّخَبِيرٌۢ",
+            "en_text": "surely their Lord is All-Aware of them on that Day."
         }
     ]
 }
