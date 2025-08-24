@@ -32,8 +32,8 @@ def create_youtube_banner(
         print(f"Image loaded with dimensions: {width}x{height}")
 
         # --- Add a semi-transparent dark overlay to make text more readable ---
-        # overlay = Image.new('RGBA', base_image.size, (0, 0, 0, 75)) # Semi-transparent black
-        # base_image = Image.alpha_composite(base_image, overlay)
+        overlay = Image.new('RGBA', base_image.size, (0, 0, 0, 75)) # Semi-transparent black
+        base_image = Image.alpha_composite(base_image, overlay)
 
         # Create a drawing context
         draw = ImageDraw.Draw(base_image)

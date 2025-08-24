@@ -9,10 +9,13 @@ from langdetect import detect
 from PIL import Image, ImageDraw, ImageFont
 import arabic_reshaper
 from bidi.algorithm import get_display
+
+os.environ["IMAGEIO_FFMPEG_EXE"] = "/usr/bin/ffmpeg"
 from moviepy import *
 from moviepy.video.fx import FadeIn, FadeOut
 import ffmpeg
 import argparse
+
 
 # --- CONFIGURATION ---
 # Base paths that will be formatted with the surah number
@@ -34,7 +37,7 @@ FALLBACK_FONT_PATH = "fonts/DejaVuSans.ttf"
 
 # Style configuration
 FONT_SIZE = 30
-FONT_SIZE_MULTILINE = 15
+FONT_SIZE_MULTILINE = 20
 FONT_SIZE_ARABIC = 50
 FONT_SIZE_ARABIC_MULTILINE = 25
 FONT_HEADER_SIZE = 100
@@ -347,7 +350,7 @@ def process_subtitle_line(line, font, color, is_arabic=False, duration=5.0, max_
                                    radius=15, fill=BG_COLOR)
 
             # Draw each line of text (full text, no animation)
-            y_offset = 20
+            y_offset = 25
             for i, wrapped_line in enumerate(wrapped_lines):
                 if is_arabic:
                     # Process Arabic text
@@ -776,7 +779,7 @@ def create_slide_animation(text, font_path, font_size, duration, bg_color, is_rt
 
     # Position text
     x_pos = canvas_width - text_width - 10 if is_rtl else 10
-    draw.text((x_pos, 10), display_text, font=font, fill="white")
+    draw.text((x_pos, 25 if is_rtl else 10), display_text, font=font, fill="white")
     full_text_array = np.array(bg_img)
 
     def make_frame(t):
@@ -880,7 +883,7 @@ def create_header_clips_updated(video, surah_no, font_english, font_arabic):
     data_ar = data["ar"][f"{surah_no}"]
 
     surah_name_en = f'Surah {data_en["transliteratedName"]}'
-    surah_name_ar = "نوح" #data_ar["transliteratedName"]
+    surah_name_ar = data_ar["transliteratedName"]
     surah_meaning_en = data_en["translatedName"]
 
     # Arabic header
@@ -891,13 +894,13 @@ def create_header_clips_updated(video, surah_no, font_english, font_arabic):
         duration=video.duration,
         bg_color=(0, 0, 0, 0),
         is_rtl=True,
-        h_pad=90)
+        h_pad=130)
 
     base_y = 136
     # Get dimensions for positioning
     # _, width_ar, height_ar = preprocess_subtitle(surah_name_ar, font_arabic, is_arabic=True)
     header_clips.append(arabic_clip.with_position(((video.w - canvas_width) / 2, base_y)))
-    base_y += height_ar + 30
+    base_y += height_ar + 40
 
     # English header (using same approach but left-to-right)
     english_clip, canvas_width, height_en = create_slide_animation(
@@ -911,7 +914,7 @@ def create_header_clips_updated(video, surah_no, font_english, font_arabic):
 
     # _, width_en, height_en = preprocess_subtitle(surah_name_en, font_english, is_arabic=False)
     header_clips.append(english_clip.with_position(((video.w - canvas_width) / 2, base_y)))
-    base_y += height_en + 20
+    base_y += height_en + 10
 
     # English meaning (using same approach but left-to-right)
     english_meaning_clip, canvas_width, canvas_height = create_slide_animation(
@@ -948,7 +951,7 @@ def main(surah_number):
         # Step 2: Merge Canva video and audio using ffmpeg-python
         if not os.path.exists(TEMP_MERGED_PATH):
             # Step 2: Merge Canva video and audio using ffmpeg-python
-            print("Step 1: Merging video and audio...")
+            print("Step 2: Merging video and audio...")
 
             (
                 ffmpeg
@@ -963,10 +966,31 @@ def main(surah_number):
                     pix_fmt="yuv420p",  # Pixel format (for compatibility)
                     shortest=None,  # End when shortest stream ends
                     map_metadata="-1",  # Strip metadata
+                    threads="32"
                     #**{'map': ['0:v:0', '1:a:0']}  # Explicit stream mapping (video from 1st input, audio from 2nd)
                 )
                 .run(overwrite_output=True)
             )
+
+            # (
+            #     ffmpeg
+            #     .input(INIT_VIDEO_PATH, stream_loop=-1)  # Loop video indefinitely
+            #     .video
+            #     .output(
+            #         ffmpeg.input(AUDIO_PATH).audio,
+            #         TEMP_MERGED_PATH,
+            #         vcodec="h264_nvenc",  # Use NVIDIA hardware encoding
+            #         acodec="aac",  # Audio codec
+            #         # video_bitrate="5M",  # Video bitrate
+            #         audio_bitrate="192k",  # Set audio bitrate to 192kbps
+            #         pix_fmt="yuv420p",  # Pixel format
+            #         preset="fast",  # NVENC preset
+            #         shortest=None,  # End when shortest stream ends
+            #         map_metadata="-1",  # Strip metadata
+            #         # **{'map': ['0:v:0', '1:a:0']}  # Explicit stream mapping
+            #     )
+            #     .run(overwrite_output=True)
+            # )
 
             print("Video and audio merged successfully.")
 
@@ -987,26 +1011,83 @@ def main(surah_number):
         subtitle_clips = create_subtitle_clips(video, subs, font_english, font_arabic)
         final = CompositeVideoClip([video] + header_clips + subtitle_clips)
         # final = CompositeVideoClip([video] + header_clips)
+        # final.write_videofile(
+        #     OUTPUT_VIDEO_PATH,
+        #     fps=video.fps,
+        #     codec="libx264",
+        #     audio_codec="aac",
+        #     threads=8,
+        #     preset="ultrafast",
+        #     ffmpeg_params=[
+        #         "-tune", "fastdecode",
+        #         "-movflags", "+faststart",
+        #         "-x264opts", "no-mbtree:sliced-threads=1"
+        #     ]
+        # )
+
         final.write_videofile(
             OUTPUT_VIDEO_PATH,
             fps=video.fps,
-            codec="libx264",
+            codec="h264_nvenc",
             audio_codec="aac",
-            threads=32,
-            preset="ultrafast"
+            threads=0,
+            preset="p1",  # Fastest preset
+            ffmpeg_params=[
+                # "-cq", "25",  # Slightly lower quality for speed
+                # "-rc", "vbr",
+                # "-b:v", "8M",  # Higher bitrate for faster encoding
+                "-tune", "ll",  # Low latency tuning
+                "-movflags", "+faststart",
+                # "-gpu", "0",  # Use GPU 0
+                "-y"
+            ]
         )
+
+        # final.write_videofile(
+        #     OUTPUT_VIDEO_PATH,
+        #     fps=video.fps,
+        #     codec="h264_nvenc",  # Use NVIDIA GPU encoder
+        #     audio_codec="aac",
+        #     threads=0,  # Let NVENC handle threading
+        #     preset="p1",  # NVENC presets: slow, medium, fast, p1–p7
+        #     ffmpeg_params=[
+        #         "-movflags", "+faststart",
+        #         # "-b:v", "5M",  # Target bitrate
+        #         "-pix_fmt", "yuv420p",  # Ensure compatibility
+        #         "-preset", "fast",  # NVENC preset again for safety
+        #         # "-rc:v", "vbr_hq",  # High quality variable bitrate
+        #         "-cq", "24"  # Constant quality similar to CRF
+        #     ]
+        # )
+
+        ## working code
+        # final.write_videofile(
+        #     OUTPUT_VIDEO_PATH,
+        #     fps=video.fps,
+        #     codec="libx264",
+        #     audio_codec="aac",
+        #     threads=32,  # Use more threads if available
+        #     preset="ultrafast",
+        #     ffmpeg_params=[
+        #         "-tune", "fastdecode",
+        #         "-movflags", "+faststart",
+        #         "-x264-params", "threads=32:lookahead-threads=8",  # More explicit threading
+        #         "-crf", "24",  # Slightly higher CRF for faster encoding
+        #         "-y"
+        #     ]
+        # )
         print(f"Final video created at {OUTPUT_VIDEO_PATH}")
 
     except Exception as e:
         print(f"Error: {e}")
-    # finally:
-    #     # Clean up temporary files
-    #     if os.path.exists(TEMP_DIR):
-    #         shutil.rmtree(TEMP_DIR)
-    #     if os.path.exists(TEMP_MERGED_PATH):
-    #         os.remove(TEMP_MERGED_PATH)
-    #     if os.path.exists(SUBS_PATH):
-    #         os.remove(SUBS_PATH)
+    finally:
+        # Clean up temporary files
+        if os.path.exists(TEMP_DIR):
+            shutil.rmtree(TEMP_DIR)
+        # if os.path.exists(TEMP_MERGED_PATH):
+        #     os.remove(TEMP_MERGED_PATH)
+        if os.path.exists(SUBS_PATH):
+            os.remove(SUBS_PATH)
 
 
 if __name__ == "__main__":
@@ -1015,6 +1096,6 @@ if __name__ == "__main__":
     # parser.add_argument("surah_number", type=int, help="The number of the surah (e.g., 113)")
     # args = parser.parse_args()
     # surah_number = args.surah_number
-    # for surah_number in range(101, 115):
+    # for surah_number in range(36, 41):
     #     main(surah_number)
-    main(108)
+    main(36)
