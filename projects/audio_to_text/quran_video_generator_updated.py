@@ -1096,6 +1096,6 @@ if __name__ == "__main__":
     # parser.add_argument("surah_number", type=int, help="The number of the surah (e.g., 113)")
     # args = parser.parse_args()
     # surah_number = args.surah_number
-    # for surah_number in range(36, 41):
-    #     main(surah_number)
-    main(36)
+    for surah_number in range(5, 8):
+        main(surah_number)
+    # main(4)

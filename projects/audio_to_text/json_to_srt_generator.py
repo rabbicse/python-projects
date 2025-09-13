@@ -56,4 +56,4 @@ def json_to_srt(json_file, srt_file):
         f.write(srt_content)
 
 # Example usage
-json_to_srt("quran/113.json", "data/113_subtitles.srt")
+json_to_srt("quran/105.json", "data/105_subtitles.srt")
