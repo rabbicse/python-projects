@@ -834,6 +834,7 @@ def create_subtitle_clips(video, subs, font_english, font_arabic):
         # Process Arabic lines
         arabic_line_count = 0
         for line in arabic_lines:
+<<<<<<< Updated upstream
             try:
                 line_clip, canvas_width, canvas_height = process_subtitle_line(
                     line, font_arabic, COLOR_ARABIC, True, duration, max_width)
@@ -869,6 +870,84 @@ def create_subtitle_clips(video, subs, font_english, font_arabic):
                 subtitle_clips.append(positioned_clip)
             except Exception as x:
                 print(x)
+=======
+            result = process_subtitle_line(
+                line, font_arabic, COLOR_ARABIC, True, duration, max_width)
+
+            if isinstance(result, tuple) and len(result) == 4:
+                # Multi-line result (line_clips, width, total_height, line_heights)
+                line_clips, canvas_width, total_height, line_heights = result
+
+                # Position each line vertically
+                current_y = video_size[1] - SUBTITLE_HEIGHT - (
+                            len(english_lines) * LINE_SPACING) - arabic_line_count * total_height - 80
+
+                for i, (line_clip, line_height) in enumerate(line_clips):
+                    x_pos = (video_size[0] - canvas_width) / 2
+                    y_pos = current_y
+
+                    positioned_clip = line_clip.with_position((x_pos, y_pos)) \
+                        .with_start(start_time) \
+                        .with_duration(duration)
+
+                    subtitle_clips.append(positioned_clip)
+                    current_y += line_height
+
+                arabic_line_count += len(line_clips)
+            else:
+                # Single line result
+                line_clip, canvas_width, canvas_height = result
+
+                y_pos = video_size[1] - SUBTITLE_HEIGHT - (
+                            len(english_lines) * LINE_SPACING) - arabic_line_count * LINE_SPACING - 80
+                x_pos = (video_size[0] - canvas_width) / 2
+
+                positioned_clip = line_clip.with_position((x_pos, y_pos)) \
+                    .with_start(start_time) \
+                    .with_duration(duration)
+
+                subtitle_clips.append(positioned_clip)
+                arabic_line_count += 1
+
+        # Process English lines
+        english_line_count = 0
+        for line in english_lines:
+            result = process_subtitle_line(
+                line, font_english, COLOR_ENGLISH, False, duration, max_width)
+
+            if isinstance(result, tuple) and len(result) == 4:
+                # Multi-line result
+                line_clips, canvas_width, total_height, line_heights = result
+
+                # Position each line vertically
+                current_y = video_size[1] - SUBTITLE_HEIGHT - english_line_count * total_height
+
+                for i, (line_clip, line_height) in enumerate(line_clips):
+                    x_pos = (video_size[0] - canvas_width) / 2
+                    y_pos = current_y
+
+                    positioned_clip = line_clip.with_position((x_pos, y_pos)) \
+                        .with_start(start_time) \
+                        .with_duration(duration)
+
+                    subtitle_clips.append(positioned_clip)
+                    current_y += line_height
+
+                english_line_count += len(line_clips)
+            else:
+                # Single line result
+                line_clip, canvas_width, canvas_height = result
+
+                y_pos = video_size[1] - SUBTITLE_HEIGHT - english_line_count * LINE_SPACING
+                x_pos = (video_size[0] - canvas_width) / 2
+
+                positioned_clip = line_clip.with_position((x_pos, y_pos)) \
+                    .with_start(start_time) \
+                    .with_duration(duration)
+
+                subtitle_clips.append(positioned_clip)
+                english_line_count += 1
+>>>>>>> Stashed changes
 
     return subtitle_clips
 
