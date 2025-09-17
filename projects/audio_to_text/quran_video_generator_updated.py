@@ -834,43 +834,6 @@ def create_subtitle_clips(video, subs, font_english, font_arabic):
         # Process Arabic lines
         arabic_line_count = 0
         for line in arabic_lines:
-<<<<<<< Updated upstream
-            try:
-                line_clip, canvas_width, canvas_height = process_subtitle_line(
-                    line, font_arabic, COLOR_ARABIC, True, duration, max_width)
-
-                y_pos = video_size[1] - SUBTITLE_HEIGHT - (
-                            len(english_lines) * LINE_SPACING) - arabic_line_count * LINE_SPACING - 80
-                x_pos = (video_size[0] - canvas_width) / 2
-
-                positioned_clip = line_clip.with_position((x_pos, y_pos)) \
-                    .with_start(start_time) \
-                    .with_duration(duration)
-
-                positioned_clip = positioned_clip.with_effects([vfx.FadeIn(FADE_DURATION, initial_color=[0, 0, 0, 0])])
-                subtitle_clips.append(positioned_clip)
-                arabic_line_count += 1
-            except Exception as x:
-                print(x)
-
-        # Process English lines
-        for line_idx, line in enumerate(english_lines):
-            try:
-                line_clip, canvas_width, canvas_height = process_subtitle_line(
-                    line, font_english, COLOR_ENGLISH, False, duration, max_width)
-
-                y_pos = video_size[1] - SUBTITLE_HEIGHT - line_idx * LINE_SPACING
-                x_pos = (video_size[0] - canvas_width) / 2
-
-                positioned_clip = line_clip.with_position((x_pos, y_pos)) \
-                    .with_start(start_time) \
-                    .with_duration(duration)
-
-                # positioned_clip = positioned_clip.with_effects([vfx.FadeIn(FADE_DURATION, initial_color=[0, 0, 0, 0])])
-                subtitle_clips.append(positioned_clip)
-            except Exception as x:
-                print(x)
-=======
             result = process_subtitle_line(
                 line, font_arabic, COLOR_ARABIC, True, duration, max_width)
 
@@ -947,7 +910,6 @@ def create_subtitle_clips(video, subs, font_english, font_arabic):
 
                 subtitle_clips.append(positioned_clip)
                 english_line_count += 1
->>>>>>> Stashed changes
 
     return subtitle_clips
 
