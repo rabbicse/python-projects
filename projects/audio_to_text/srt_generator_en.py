@@ -4,7 +4,7 @@ import whisper
 
 model = whisper.load_model("small", device="cpu")  # small model is faster
 # result = model.transcribe("data/quran-en-verse-by-verse/001-001.mp3", language="en", word_timestamps=True)
-result = model.transcribe("data/quran-arabic-english/001.mp3", language="en", word_timestamps=False)
+result = model.transcribe("data/quran-arabic-english/001.mp3", language="ar", word_timestamps=False)
 
 # Save to JSON
 with open(f"data/001_001_segments_en.json", "w", encoding="utf-8") as f:

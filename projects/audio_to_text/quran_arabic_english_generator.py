@@ -193,7 +193,7 @@ def generate_audio_with_subs(surah_no: int, subtitles: Optional[List[str]]):
         # All clip will play one after the other
         concat = concatenate_audioclips([audio_arabic, audio_english])
 
-        with open(f"/mnt/7A4CEE3F674E3964/quran/quran-in-english-clearquran-verse-by-verse-txt-edition-allah/{surah}-{audio_en_index}.txt") as f:
+        with open(f"quran/quran-english-verse-by-verse-allah/{surah}-{audio_en_index}.txt") as f:
             subtitle_english = f.readline().strip()
 
         # Create your text animation
