@@ -1,5 +1,7 @@
+import glob
 import json
 import os
+import random
 from typing import Optional, List, Tuple
 
 import constants
@@ -12,10 +14,21 @@ from moviepy import *
 
 # get path to default font of the system. Make sure to change it
 FONT = "fonts/DejaVuSans.ttf"
+# FONT_ARABIC = "fonts/Amiri-Regular.ttf"
 FONT_ARABIC = "fonts/Amiri-Regular.ttf"
 FONT_BANGLA = "fonts/Siyamrupali.ttf"
 BASE_JSON_PATH = "quran/{}.json"
 CHAPTERS_PATH = "quran/chapters.json"
+BASE_OUTPUT_VIDEO_PATH = "quran-en/{}-video.mp4"
+MAX_SUB_WIDTH = 1500
+TARGET_MAX_HEIGHT = 1080
+FONT_SIZE = 50
+FONT_SIZE_ARABIC = 70
+
+dummy_sub = {
+    "arabic_text": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِذَا تَدَايَنتُم بِدَيْنٍ إِلَىٰٓ أَجَلٍ مُّسَمًّى فَٱكْتُبُوهُ ۚ وَلْيَكْتُب بَّيْنَكُمْ كَاتِبٌۢ بِٱلْعَدْلِ ۚ وَلَا يَأْبَ كَاتِبٌ أَن يَكْتُبَ كَمَا عَلَّمَهُ ٱللَّهُ ۚ فَلْيَكْتُبْ وَلْيُمْلِلِ ٱلَّذِى عَلَيْهِ ٱلْحَقُّ وَلْيَتَّقِ ٱللَّهَ رَبَّهُۥ وَلَا يَبْخَسْ مِنْهُ شَيْـًٔا ۚ فَإِن كَانَ ٱلَّذِى عَلَيْهِ ٱلْحَقُّ سَفِيهًا أَوْ ضَعِيفًا أَوْ لَا يَسْتَطِيعُ أَن يُمِلَّ هُوَ فَلْيُمْلِلْ وَلِيُّهُۥ بِٱلْعَدْلِ ۚ وَٱسْتَشْهِدُوا۟ شَهِيدَيْنِ مِن رِّجَالِكُمْ ۖ فَإِن لَّمْ يَكُونَا رَجُلَيْنِ فَرَجُلٌ وَٱمْرَأَتَانِ مِمَّن تَرْضَوْنَ مِنَ ٱلشُّهَدَآءِ أَن تَضِلَّ إِحْدَىٰهُمَا فَتُذَكِّرَ إِحْدَىٰهُمَا ٱلْأُخْرَىٰ ۚ وَلَا يَأْبَ ٱلشُّهَدَآءُ إِذَا مَا دُعُوا۟ ۚ وَلَا تَسْـَٔمُوٓا۟ أَن تَكْتُبُوهُ صَغِيرًا أَوْ كَبِيرًا إِلَىٰٓ أَجَلِهِۦ ۚ ذَٰلِكُمْ أَقْسَطُ عِندَ ٱللَّهِ وَأَقْوَمُ لِلشَّهَـٰدَةِ وَأَدْنَىٰٓ أَلَّا تَرْتَابُوٓا۟ ۖ إِلَّآ أَن تَكُونَ تِجَـٰرَةً حَاضِرَةً تُدِيرُونَهَا بَيْنَكُمْ فَلَيْسَ عَلَيْكُمْ جُنَاحٌ أَلَّا تَكْتُبُوهَا ۗ وَأَشْهِدُوٓا۟ إِذَا تَبَايَعْتُمْ ۚ وَلَا يُضَآرَّ كَاتِبٌ وَلَا شَهِيدٌ ۚ وَإِن تَفْعَلُوا۟ فَإِنَّهُۥ فُسُوقٌۢ بِكُمْ ۗ وَٱتَّقُوا۟ ٱللَّهَ ۖ وَيُعَلِّمُكُمُ ٱللَّهُ ۗ وَٱللَّهُ بِكُلِّ شَىْءٍ عَلِيمٌ",
+    "en_text": "O believers! When you contract a loan for a fixed period of time, commit it to writing. Let the scribe maintain justice between the parties. The scribe should not refuse to write as Allah has taught them to write. They will write what the debtor dictates, bearing Allah in mind and not defrauding the debt. If the debtor is incompetent, weak, or unable to dictate, let their guardian dictate for them with justice. Call upon two of your men to witness. If two men cannot be found, then one man and two women of your choice will witness—so if one of the women forgets the other may remind her.<sup foot_note=76489>1</sup> The witnesses must not refuse when they are summoned. You must not be against writing ˹contracts˺ for a fixed period—whether the sum is small or great. This is more just ˹for you˺ in the sight of Allah, and more convenient to establish evidence and remove doubts. However, if you conduct an immediate transaction among yourselves, then there is no need for you to record it, but call upon witnesses when a deal is finalized. Let no harm come to the scribe or witnesses. If you do, then you have gravely exceeded ˹your limits˺. Be mindful of Allah, for Allah ˹is the One Who˺ teaches you. And Allah has ˹perfect˺ knowledge of all things.",
+}
 
 # Color scheme - Attractive Islamic-inspired colors
 COLORS = {
@@ -53,9 +66,9 @@ def json_to_srt(json_file):
 
 def create_animated_text(text, text_arabic, duration=5, fps=30):
     # Create a background
-    background = ColorClip(size=(1920, 1080), color=(0, 0, 0, 0))
+    background = ColorClip(size=(1920, 1080), color=(0, 0, 0, 255))
     background = background.with_duration(duration)
-    background = background.with_opacity(0.3)  # 30% opacity
+    background = background.with_opacity(0.2)  # 30% opacity
 
     # Arabic Caption
     # Create the text clip without a font parameter
@@ -73,22 +86,42 @@ def create_animated_text(text, text_arabic, duration=5, fps=30):
         font=FONT_ARABIC,
         text=arabic_display_text,
         color="white",
-        font_size=50,
-        size=(1800, None),
+        font_size=FONT_SIZE_ARABIC,
+        size=(MAX_SUB_WIDTH, None),
         method='caption',  # Enable word wrapping
         text_align="center",
         stroke_color="#030303",
         stroke_width=3,  # Gold stroke
         interline=30,
-        margin=(10, 20, 10, 20)  # left, top, right, bottom
+        margin=(10, 30, 10, 30)  # left, top, right, bottom
     )
+
+    estimated_ar_height = text_clip_arabic.h
+    if estimated_ar_height > TARGET_MAX_HEIGHT / 2:
+        # Ensure the new size is smaller than or equal to the test size
+        scale_factor = min(1.0, TARGET_MAX_HEIGHT / estimated_ar_height)
+        font_size = int(FONT_SIZE_ARABIC * scale_factor)
+
+        text_clip_arabic = TextClip(
+            font=FONT_ARABIC,
+            text=arabic_display_text,
+            color="white",
+            font_size=font_size,
+            size=(MAX_SUB_WIDTH, None),
+            method='caption',  # Enable word wrapping
+            text_align="center",
+            stroke_color="#030303",
+            stroke_width=1,  # Gold stroke
+            interline=20,
+            margin=(10, 20, 10, 20)  # left, top, right, bottom
+        )
 
     # Set the clip duration
     text_clip_arabic = text_clip_arabic.with_duration(duration)
 
     # Apply the movement
     text_clip_arabic = text_clip_arabic.with_position(
-        (background.w / 2 - text_clip_arabic.w / 2, background.h / 2 - text_clip_arabic.h - 50))
+        (background.w / 2 - text_clip_arabic.w / 2, background.h / 2 - text_clip_arabic.h))
 
     # Apply effects
     text_clip_arabic = text_clip_arabic.with_effects([vfx.CrossFadeIn(0.5), vfx.CrossFadeOut(0.5)])
@@ -99,21 +132,41 @@ def create_animated_text(text, text_arabic, duration=5, fps=30):
         font=FONT,
         text=text,
         color="white",
-        font_size=35,
-        size=(1800, None),
+        font_size=FONT_SIZE,
+        size=(MAX_SUB_WIDTH, None),
         method='caption',  # Enable word wrapping
         text_align="center",
         stroke_color="#030303",
         stroke_width=3,
         interline=30,
-        margin=(10, 20, 10, 20)  # left, top, right, bottom
+        margin=(10, 20, 10, 30)  # left, top, right, bottom
     )
+
+    estimated_height = text_clip.h
+    if estimated_height > TARGET_MAX_HEIGHT / 2:
+        # Ensure the new size is smaller than or equal to the test size
+        scale_factor = min(1.0, TARGET_MAX_HEIGHT / estimated_ar_height)
+        font_size = int(FONT_SIZE * scale_factor)
+
+        text_clip = TextClip(
+            font=FONT,
+            text=text,
+            color="white",
+            font_size=font_size,
+            size=(MAX_SUB_WIDTH, None),
+            method='caption',  # Enable word wrapping
+            text_align="center",
+            stroke_color="#030303",
+            stroke_width=1,  # Gold stroke
+            interline=20,
+            margin=(10, 20, 10, 20)  # left, top, right, bottom
+        )
 
     # Set the clip duration
     text_clip = text_clip.with_duration(duration)
 
     # Apply the movement
-    text_clip = text_clip.with_position((background.w / 2 - text_clip.w / 2, background.h / 2 + 50))
+    text_clip = text_clip.with_position((background.w / 2 - text_clip.w / 2, background.h / 2))
 
     # Apply effects
     text_clip = text_clip.with_effects([vfx.CrossFadeIn(0.5), vfx.CrossFadeOut(0.5)])
@@ -130,7 +183,7 @@ def create_arabic_text_clip(text: str,
                             duration: int = 5,
                             text_color=(255, 255, 255),
                             stroke_color=(0, 0, 0),
-                            margin: Optional[Tuple[int, int, int, int]] = (10, 10, 10, 10)):
+                            margin: Optional[Tuple[int, int, int, int]] = (10, 10, 20, 10)):
     # Arabic Caption
     # Create the text clip without a font parameter
     # For Arabic, we need to process the text first
@@ -150,7 +203,7 @@ def create_arabic_text_clip(text: str,
         font_size=font_size,
         text_align="center",
         stroke_color=stroke_color,
-        stroke_width=3,
+        stroke_width=1,
         margin=margin  # left, top, right, bottom
     )
 
@@ -161,7 +214,7 @@ def create_arabic_text_clip(text: str,
     # text_clip_arabic = text_clip_arabic.with_position(position)
 
     # Apply effects
-    text_clip_arabic = text_clip_arabic.with_effects([vfx.CrossFadeIn(0.5), vfx.CrossFadeOut(0.5)])
+    text_clip_arabic = text_clip_arabic.with_effects([vfx.CrossFadeIn(1.5), vfx.CrossFadeOut(1.5)])
 
     return text_clip_arabic
 
@@ -172,7 +225,7 @@ def create_text_clip(text: str,
                      duration: int = 5,
                      text_color=(255, 255, 255),
                      stroke_color=(0, 0, 0),
-                     margin: Optional[Tuple[int, int, int, int]] = (10, 10, 10, 10)):
+                     margin: Optional[Tuple[int, int, int, int]] = (10, 10, 20, 10)):
     # English Caption
     # Create the text clip without a font parameter
     text_clip = TextClip(
@@ -182,7 +235,7 @@ def create_text_clip(text: str,
         font_size=font_size,
         text_align="center",
         stroke_color=stroke_color,
-        stroke_width=3,
+        stroke_width=1,
         margin=margin,  # left, top, right, bottom
         method='label',  # Use 'label' for cleaner text rendering
         interline=2,  # Add interline spacing
@@ -192,15 +245,16 @@ def create_text_clip(text: str,
     text_clip = text_clip.with_duration(duration)
 
     # Apply effects
-    text_clip = text_clip.with_effects([vfx.CrossFadeIn(0.5), vfx.CrossFadeOut(0.5)])
+    text_clip = text_clip.with_effects([vfx.CrossFadeIn(1.5), vfx.CrossFadeOut(1.5)])
 
     return text_clip
 
 
-def create_animated_surah(surah_arabic, surah_english, surah_bangla, meaning_en, duration=5, fps=30):
+def create_animated_surah(surah_arabic, surah_english, surah_bangla, meaning_en, duration=5):
     """Create an attractive overlay for surah information with GIF"""
     # Calculate how many loops needed
-    num_loops = int(duration / 5) + 1  # +1 to ensure it covers full duration
+    min_duration = 3
+    max_duration = 10
 
     # Load and prepare GIF
     try:
@@ -213,15 +267,15 @@ def create_animated_surah(surah_arabic, surah_english, surah_bangla, meaning_en,
         # Position the resized clip
         logo_clip = logo_clip.with_position((20, 20))
 
-        logo_clip = logo_clip.with_duration(5)
+        logo_clip = logo_clip.with_duration(random.randint(min_duration, max_duration))
 
         # Apply fade animations (1 second fade in, 1 second fade out)
-        logo_clip = logo_clip.with_start(0).with_effects([vfx.CrossFadeIn(1.0), vfx.CrossFadeOut(1.0)])
+        logo_clip = logo_clip.with_start(0).with_effects([vfx.CrossFadeIn(1.5), vfx.CrossFadeOut(1.5)])
 
         # logo_clip.loop(duration=duration)
 
         # Create looped version
-        logo_clip = logo_clip.with_effects([vfx.Loop(n=num_loops)])
+        logo_clip = logo_clip.with_effects([vfx.Loop(duration=duration)])
     except Exception as ex:
         print(ex)
         # Fallback if GIF is not available
@@ -231,58 +285,58 @@ def create_animated_surah(surah_arabic, surah_english, surah_bangla, meaning_en,
     width, height = 1920, 1080
     background = ColorClip(size=(width, height), color=(0, 0, 0, 0))
     background = background.with_duration(duration)
-    # background = background.with_opacity(0.0)  # 0% opacity
+    background = background.with_opacity(0.0)  # 0% opacity
 
     # Arabic surah
     surah_clip_arabic = create_arabic_text_clip(text=surah_arabic,
                                                 font=FONT_ARABIC,
                                                 font_size=30,
-                                                duration=5,
-                                                margin=(10, 10, 10, 10),
+                                                duration=random.randint(min_duration, max_duration),
+                                                margin=(10, 20, 20, 20),
                                                 text_color=COLORS["arabic_text"],
                                                 stroke_color=COLORS["stroke"]
                                                 )
     # Apply the movement
     surah_clip_arabic = surah_clip_arabic.with_position((width - surah_clip_arabic.w, 5))
-    surah_clip_arabic = surah_clip_arabic.with_effects([vfx.Loop(n=num_loops)])
+    surah_clip_arabic = surah_clip_arabic.with_effects([vfx.Loop(duration=duration)])
 
     # English Surah
     surah_clip_english = create_text_clip(text=surah_english,
                                           font=FONT,
                                           font_size=20,
-                                          duration=5,
-                                          margin=(10, 10, 10, 10),
+                                          duration=random.randint(3, 5),
+                                          margin=(10, 10, 20, 10),
                                           text_color=COLORS["english_text"],
                                           stroke_color=COLORS["stroke"])
     # Apply the movement
     surah_clip_english = surah_clip_english.with_position((width - surah_clip_english.w, surah_clip_arabic.h))
-    surah_clip_english = surah_clip_english.with_effects([vfx.Loop(n=num_loops)])
+    surah_clip_english = surah_clip_english.with_effects([vfx.Loop(duration=duration)])
 
     # Bangla Surah
     surah_clip_bangla = create_text_clip(text=surah_bangla,
                                          font=FONT_BANGLA,
                                          font_size=20,
-                                         duration=5,
-                                         margin=(10, 0, 10, 0),
+                                         duration=random.randint(min_duration, max_duration),
+                                         margin=(10, 0, 20, 10),
                                          text_color=COLORS["bangla_text"],
                                          stroke_color=COLORS["stroke"])
     # Apply the movement
     surah_clip_bangla = surah_clip_bangla.with_position(
         (width - surah_clip_bangla.w, surah_clip_arabic.h + surah_clip_english.h))
-    surah_clip_bangla = surah_clip_bangla.with_effects([vfx.Loop(n=num_loops)])
+    surah_clip_bangla = surah_clip_bangla.with_effects([vfx.Loop(duration=duration)])
 
     # English Meaning
     meaning_clip_english = create_text_clip(text=meaning_en,
                                             font=FONT,
-                                            font_size=15,
-                                            duration=5,
-                                            margin=(10, 0, 10, 10),
+                                            font_size=18,
+                                            duration=random.randint(min_duration, max_duration),
+                                            margin=(10, 0, 20, 10),
                                             text_color=COLORS["meaning_text"],
                                             stroke_color=COLORS["stroke"])
     # Apply the movement
     meaning_clip_english = meaning_clip_english.with_position(
         (width - meaning_clip_english.w, surah_clip_arabic.h + surah_clip_english.h + surah_clip_bangla.h))
-    meaning_clip_english = meaning_clip_english.with_effects([vfx.Loop(n=num_loops)])
+    meaning_clip_english = meaning_clip_english.with_effects([vfx.Loop(duration=duration)])
 
     # Combine background and text
     all_clips = [background, surah_clip_arabic, surah_clip_english, surah_clip_bangla, meaning_clip_english]
@@ -302,15 +356,11 @@ def generate_bismillah(subtitle_arabic: str, subtitle_english: str):
     # All clip will play one after the other
     concat = concatenate_audioclips([audio_arabic, audio_english])
 
-    # audio_arabic.with_volume_scaled(1.0)
-    # audio = CompositeAudioClip([audio_arabic.with_volume_scaled(1), audio_english.with_volume_scaled(1)])
-
     # Create your text animation
     subtitle_video = create_animated_text(
         text=subtitle_english,
         text_arabic=subtitle_arabic,
-        duration=concat.duration,  # Match your background video duration
-        fps=30
+        duration=concat.duration
     )
 
     final_video = subtitle_video.with_audio(concat)
@@ -328,12 +378,18 @@ def generate_audio_with_subs(surah_no: int, subtitles: Optional[List[str]]):
     data_ar = data["ar"][f"{surah_no}"]
 
     surah_name_en = f'Surah {data_en["transliteratedName"]}'
-    surah_name_ar = data_ar["transliteratedName"]
+    surah_name_ar = 'سورة' + f' {data_ar["transliteratedName"]}'
     surah_meaning_en = data_en["translatedName"]
     # Get Bengali name
     surah_name_bn = f'সূরা {constants.BENGALI_NAMES.get(str(surah_no), "")}'
 
     videos = []
+    # if not surah al-fatihah then add bismillah
+    if surah_no != 1:
+        bismillah_subtitle = json_to_srt(BASE_JSON_PATH.format(1))[0]
+        videos.append(generate_bismillah(subtitle_arabic=bismillah_subtitle,
+                                         subtitle_english="In the name of Allah, the Gracious, the Merciful."))
+
     # loop through each audio
     for index, subtitle in enumerate(subtitles):
         audio_ar_index = f"{(index + 1):03}"
@@ -351,11 +407,16 @@ def generate_audio_with_subs(surah_no: int, subtitles: Optional[List[str]]):
 
         # Create your text animation
         subtitle_video = create_animated_text(
-            text=subtitle_english,
-            text_arabic=subtitle,
-            duration=concat.duration,  # Match your background video duration
-            fps=30
+            text=subtitle_english.strip(),
+            text_arabic=subtitle.strip(),
+            duration=concat.duration
         )
+
+        # subtitle_video = create_animated_text(
+        #     text=dummy_sub["en_text"],
+        #     text_arabic=dummy_sub["arabic_text"],
+        #     duration=concat.duration
+        # )
 
         video = subtitle_video.with_audio(concat)
         videos.append(video)
@@ -370,6 +431,9 @@ def generate_audio_with_subs(surah_no: int, subtitles: Optional[List[str]]):
                                            meaning_en=surah_meaning_en,
                                            duration=final_video.duration)
 
+        if surah_clip.duration > final_video.duration:
+            surah_clip = surah_clip.subclipped(0, final_video.duration)
+
         final_video = CompositeVideoClip([final_video, surah_clip])
 
         return final_video
@@ -377,101 +441,139 @@ def generate_audio_with_subs(surah_no: int, subtitles: Optional[List[str]]):
         return None
 
 
-def main():
+def loop_backgrounds(total_duration: int):
+    # Get all background videos
+    background_files = sorted(glob.glob("data/backgrounds/*.mp4"))
+
+    # Create a sequence of backgrounds with transitions
+    backgrounds_with_transitions = []
+    duration_left = total_duration
+
+    while duration_left > 0:
+        random.shuffle(background_files)
+        for bg_video_file in background_files:
+            bg_video_clip = VideoFileClip(bg_video_file)
+            bg_video_clip = bg_video_clip.with_effects([vfx.CrossFadeIn(1.0), vfx.CrossFadeOut(1.0)])
+
+            if duration_left < bg_video_clip.duration:
+                bg_video_clip = bg_video_clip.subclipped(0, duration_left)
+                backgrounds_with_transitions.append(bg_video_clip)
+            else:
+                backgrounds_with_transitions.append(bg_video_clip)
+
+            duration_left -= bg_video_clip.duration
+
+            if duration_left <= 0:
+                break
+
+    # Concatenate with transitions
+    background_video = concatenate_videoclips(backgrounds_with_transitions)
+
+    # remaining_duration = total_duration - background_video.duration
+    #
+    # # If the background is shorter than needed, loop it
+    # if background_video.duration < remaining_duration:
+    #     background_video = background_video.loop(duration=remaining_duration)
+    # # If it's longer, trim it
+    # elif background_video.duration > remaining_duration:
+    #     background_video = background_video.subclipped(0, remaining_duration)
+
+    return background_video
+
+
+def generate_videos(surah_no: int):
     # Generate video contents
-    subtitles = json_to_srt(BASE_JSON_PATH.format(1))
-    video = generate_audio_with_subs(surah_no=1, subtitles=subtitles)
+    subtitles = json_to_srt(BASE_JSON_PATH.format(surah_no))
+    video = generate_audio_with_subs(surah_no=surah_no, subtitles=subtitles)
 
     # Load your background video
-    background_video = VideoFileClip("data/backgrounds/001.mp4")
+    # background_video = loop_backgrounds(video.duration)
+    # 
+    # if background_video.duration > video.duration:
+    #     background_video = background_video.subclipped(0, video.duration)
 
     # Overlay the text animation on the background video
-    final_video = CompositeVideoClip([background_video, video])
+    # final_video = CompositeVideoClip([background_video, video])
+    final_video = CompositeVideoClip([video])
 
-    # Mix audio - adjust volumes as needed
-    # background_audio = background_audio.volumex(0.7)  # Reduce background music volume
-    # You can add voiceover or other audio here if needed
+    # final_video.preview(fps=30)
 
-    # Set the mixed audio to the final video
-    # final_video = final_video.with_audio(background_audio)
-
-    # Ensure the video duration matches the audio
-    # final_video = final_video.with_duration(background_audio.duration)
-    # final_video = final_video.with_duration(25)
-    #
-    # return final_video
-
-    final_video.preview(fps=10)
-
-    # # Write with audio
-    # video.write_videofile(
-    #     "test.mp4",
+    # When writing the final video, use higher quality settings
+    # final_video.write_videofile(
+    #     "output.mp4",
     #     fps=30,
     #     codec="h264_nvenc",
     #     audio_codec="aac",
-    #     threads=1700,
-    #     preset="p1",  # Fastest preset
-    # )
-
-    # # Write with audio - Simple GPU encoding
-    # video.write_videofile(
-    #     "test.mp4",
-    #     fps=30,
-    #     codec="h264_nvenc",  # This is the key for GPU encoding
-    #     audio_codec="aac",
-    #     threads=32,
-    #     preset="p1",  # Fastest preset
+    #     preset="p4",  # Better quality preset
     #     ffmpeg_params=[
-    #         "-cq", "23",  # Quality level
-    #         "-rc", "vbr",  # Variable bitrate
-    #         "-profile:v", "high",  # H.264 profile
-    #         "-movflags", "+faststart",  # Fast start for web
-    #         "-y",  # Overwrite output
-    #     ]
-    # )
-
-    # # Optimized for GTX 970 (1st gen NVENC)
-    # video.write_videofile(
-    #     "test.mp4",
-    #     fps=30,
-    #     codec="hevc_nvenc",
-    #     audio_codec="aac",
-    #     threads=32,  # Reduced threads for better stability
-    #     preset="p1",  # Use p4 instead of p1 for GTX 970 (p1 may be too aggressive)
-    #     ffmpeg_params=[
-    #         # "-cq", "26",  # Slightly higher (worse) quality for speed
-    #         # "-rc", "vbr",  # Variable bitrate
-    #         # "-b:v", "8M",  # Set target bitrate instead of quality-based
-    #         # "-maxrate", "12M",  # Maximum bitrate
-    #         # "-bufsize", "16M",  # Buffer size
-    #         "-profile:v", "main",  # Use main profile instead of high
-    #         "-tune", "fastdecode",  # Optimize for fast decoding
+    #         "-cq", "18",  # Better quality
+    #         "-rc", "vbr",
+    #         "-profile:v", "high",
+    #         "-pix_fmt", "yuv420p",  # Ensure proper pixel format
     #         "-movflags", "+faststart",
     #         "-y"
     #     ]
     # )
 
-    # When writing the final video, use higher quality settings
+    OUTPUT_VIDEO_PATH = BASE_OUTPUT_VIDEO_PATH.format(surah_no)
     final_video.write_videofile(
-        "output.mp4",
+        OUTPUT_VIDEO_PATH,
         fps=30,
-        codec="h264_nvenc",
+        codec="hevc_nvenc",
         audio_codec="aac",
-        preset="p4",  # Better quality preset
+        preset="p7",
+        bitrate="50M",  # Very high bitrate
         ffmpeg_params=[
-            "-cq", "18",  # Better quality
-            "-rc", "vbr",
-            "-profile:v", "high",
-            "-pix_fmt", "yuv420p",  # Ensure proper pixel format
+            "-tune", "hq",  # Low latency tuning
             "-movflags", "+faststart",
+            "-profile:v", "main10",
+            "-cq", "0",  # Constant quality mode (best)
+            "-pix_fmt", "yuv420p",
             "-y"
         ]
     )
 
+    # final_video.write_videofile(
+    #     OUTPUT_VIDEO_PATH,
+    #     fps=video.fps,
+    #     codec="hevc_nvenc",  # Best compression for text content
+    #     audio_codec="aac",
+    #     preset="p7",  # Maximum quality preset
+    #     bitrate="30M",  # High bitrate for crisp text
+    #     ffmpeg_params=[
+    #         "-tune", "hq",
+    #         "-movflags", "+faststart",
+    #         "-profile:v", "main10",
+    #         "-pix_fmt", "p010le",
+    #         "-cq", "0",  # Constant quality mode (best)
+    #         "-rc", "vbr",
+    #         "-b:v", "30M",
+    #         "-maxrate", "60M",
+    #         "-bufsize", "60M",
+    #         "-bf", "4",
+    #         "-refs", "4",
+    #         "-y"
+    #     ]
+    # )
 
-
-
+    # final_video.write_videofile(
+    #     OUTPUT_VIDEO_PATH,
+    #     fps=video.fps,
+    #     codec="libx264",  # Software encoding
+    #     audio_codec="aac",
+    #     threads=128,  # NOW this matters - use your CPU cores
+    #     preset="ultrafast",
+    #     ffmpeg_params=[
+    #         "-tune", "film",
+    #         "-movflags", "+faststart",
+    #         "-profile:v", "high",
+    #         "-pix_fmt", "yuv420p",
+    #         "-y"
+    #     ]
+    # )
 
 
 if __name__ == "__main__":
-    main()
+    generate_videos(36)
+    # for i in range(61, 66):
+    #     generate_videos(i)

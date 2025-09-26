@@ -137,21 +137,31 @@ def generate_markdown(surah_data, surah_number, surah_info=None):
     surah_en = surah_data["en"][str(surah_number)]
     surah_ar = surah_data["ar"][str(surah_number)]
 
+
+    surah_ar_text = 'سورة'
+    surah_name_en = f'Surah {surah_en['transliteratedName']}'
+    surah_name_ar = surah_ar_text + f' {surah_ar['transliteratedName']}'
+    surah_meaning_en = f'{surah_en["translatedName"]}'
+
+    # Get Bengali name
     # Get Bengali name
     bengali_name = BENGALI_NAMES.get(str(surah_number), "")
+    surah_name_bn = f'সূরা {bengali_name}'
 
     # Format title with Bengali
-    title = f"{surah_number}. Surah {surah_en['transliteratedName']} | {surah_ar['transliteratedName']} | {bengali_name}"
+    title = f"{surah_number}. {surah_name_en} | {surah_name_ar} | {surah_name_bn} | Arabic Recitation with English Translation & Subtitles"
 
     # Format description
-    description = f"✨ Surah {surah_en['transliteratedName']} - {surah_en['translatedName']}\n\n"
-    description += "Listen, learn, and reflect on each word.\n\n"
+    description = f"✨ Surah {surah_number}. {surah_name_en} | {surah_name_ar} | {surah_name_bn} | Arabic Recitation with English Translation & Subtitles\n"
+    description += f"Meaning: {surah_meaning_en}\n\n"
+    description += "Listen, learn, and reflect on each word. This video features a beautiful Arabic recitation with English audio translation and subtitles, along with Bangla title reference. Perfect for those who want to listen, learn, and reflect on the meanings of the Qur’an.\n\n"
     description += "Understand Allah's guidance, mercy, and blessings through this short word-by-word recitation.\n\n"
     description += f"🎵 Recitation: Mishari Rashid al-`Afasy - https://quran.com/reciters/7\n"
     description += "Source: https://quran.com/\n"
-    description += "All rights to the recitation belong to the respective copyright holders.\n\n"
-    description += "🌙 Du'a: May Allah guide us to His light. Ameen.\n\n"
-    description += "🔔 Subscribe for more Qur'an recitations and Islamic reminders!\n\n"
+    description += "🎧 Translation (English Audio & Subtitles): Quran.com"
+    description += "(All rights to the recitation belong to the respective copyright holders.)\n\n"
+    description += "🌙 Du'a: May Allah protect us from all evil and guide us to His light. Ameen.\n\n"
+    description += "🔔 Subscribe for more animated Qur’an videos, English translations, and Islamic reminders!\n\n"
 
     # Add hashtags
     hashtags = [

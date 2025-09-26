@@ -267,6 +267,12 @@ def create_youtube_banner_updated(
         english_text (str): The Surah name in English.
         meaning_text (str): The meaning of the Surah name.
         output_path (str): The path to save the new banner image (e.g., "final_banner.jpg").
+        :param image_path:
+        :param arabic_text:
+        :param english_text:
+        :param bangla_text:
+        :param meaning_text:
+        :param output_path:
     """
     try:
         # Load the banner image
@@ -333,7 +339,7 @@ def create_youtube_banner_updated(
         reshaper = arabic_reshaper.ArabicReshaper(configuration=configuration)
         reshaped_text = reshaper.reshape(arabic_text)
         display_text = get_display(reshaped_text)
-        display_text = display_text#[::-1]
+        display_text = display_text[::-1]
         arabic_text_bbox = draw.textbbox((0, 0), display_text, font=arabic_font)
         arabic_text_width = arabic_text_bbox[2] - arabic_text_bbox[0]
         arabic_x = (width - arabic_text_width) / 2
@@ -381,7 +387,7 @@ def create_youtube_banner_updated(
 
         # Save the new image
         base_image = base_image.convert("RGB")
-        base_image.show()
+        # base_image.show()
         base_image.save(output_path, optimize=True, quality=95, compress_level=9)
         print(f"New banner saved successfully at {output_path}")
 
@@ -428,7 +434,7 @@ def generate_banner_en(surah_no):
     data_ar = data["ar"][f"{surah_no}"]
 
     surah_name_en = f'Surah {data_en["transliteratedName"]}'
-    surah_name_ar = f'{data_ar["transliteratedName"]}'
+    surah_name_ar = 'سورة' + f' {data_ar["transliteratedName"]}'
     surah_meaning_en = f'{data_en["translatedName"]}'
 
     # Get Bengali name
@@ -438,11 +444,6 @@ def generate_banner_en(surah_no):
     # Make sure "banner_template.jpg" is in the same directory as this script.
     # You can also use the full path, e.g., "C:/Users/YourName/Pictures/banner_template.jpg"
     image_file = "quran/banner-english.png"
-
-    # # Define the text content
-    # surah_arabic = "الفاتحة"
-    # surah_english = "Surah Al-Fatihah"
-    # surah_meaning = "The Opener"
 
     # Define the output file name
     output_file = f"banners/{surah_no}_en_banner.jpg"
@@ -468,6 +469,6 @@ if __name__ == "__main__":
     # # Run the function to create the banner
     # create_youtube_banner(image_file, surah_arabic, surah_english, surah_meaning, output_file)
 
-    # for i in range(1, 115):
-    #     generate_banner(i)
-    generate_banner_en(114)
+    for i in range(1, 115):
+        generate_banner_en(i)
+    # generate_banner_en(114)

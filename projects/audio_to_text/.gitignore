@@ -1,6 +1,8 @@
 data/
 banners/
 .idea/
+quran-en/
+tmp/
 
 *.mp4
 *.mp3
