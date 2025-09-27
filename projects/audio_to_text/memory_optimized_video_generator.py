@@ -42,8 +42,8 @@ COLORS = {
 }
 
 # New Chroma Key Color: Bright Cyan (RGB)
-CHROMA_KEY_COLOR = (0, 0, 0, 255)
-CHROMA_KEY_HEX = "000000" # Bright Cyan
+CHROMA_KEY_COLOR = (0, 255, 0)
+CHROMA_KEY_HEX = "00FF00"  # Bright Cyan
 
 
 class TempFileManager:
@@ -106,9 +106,10 @@ def json_to_srt(json_file):
 
 def create_animated_text(text, text_arabic, duration=5):
     # Create a background
-    background = ColorClip(size=(VIDEO_WIDTH, VIDEO_HEIGHT), color=(0, 0, 0, 255))
-    background = background.with_duration(duration)
-    background = background.with_opacity(0.2)  # 30% opacity
+    # background = ColorClip(size=(VIDEO_WIDTH, VIDEO_HEIGHT), color=(0, 0, 0, 255))
+    # background = ColorClip(size=(VIDEO_WIDTH, VIDEO_HEIGHT), color=CHROMA_KEY_COLOR)
+    # background = background.with_duration(duration)
+    # background = background.with_opacity(0.2)  # 30% opacity
 
     # Arabic Caption
     # Create the text clip without a font parameter
@@ -161,7 +162,7 @@ def create_animated_text(text, text_arabic, duration=5):
 
     # Apply the movement
     text_clip_arabic = text_clip_arabic.with_position(
-        (background.w / 2 - text_clip_arabic.w / 2, background.h / 2 - text_clip_arabic.h))
+        (VIDEO_WIDTH / 2 - text_clip_arabic.w / 2, VIDEO_HEIGHT / 2 - text_clip_arabic.h))
 
     # Apply effects
     text_clip_arabic = text_clip_arabic.with_effects([vfx.CrossFadeIn(1.5), vfx.CrossFadeOut(1.5)])
@@ -206,13 +207,14 @@ def create_animated_text(text, text_arabic, duration=5):
     text_clip = text_clip.with_duration(duration)
 
     # Apply the movement
-    text_clip = text_clip.with_position((background.w / 2 - text_clip.w / 2, background.h / 2))
+    text_clip = text_clip.with_position((VIDEO_WIDTH / 2 - text_clip.w / 2, VIDEO_HEIGHT / 2))
 
     # Apply effects
     text_clip = text_clip.with_effects([vfx.CrossFadeIn(1.5), vfx.CrossFadeOut(1.5)])
 
     # Combine background and text
-    final_clip = CompositeVideoClip([background, text_clip, text_clip_arabic])
+    # final_clip = CompositeVideoClip([background, text_clip, text_clip_arabic])
+    final_clip = CompositeVideoClip([text_clip, text_clip_arabic], size=(VIDEO_WIDTH, VIDEO_HEIGHT), bg_color=None)
 
     return final_clip
 
@@ -322,8 +324,9 @@ def create_animated_surah(surah_arabic, surah_english, surah_bangla, meaning_en,
         logo_clip = None
 
     # Create a background
-    background = ColorClip(size=(VIDEO_WIDTH, VIDEO_HEIGHT), color=CHROMA_KEY_COLOR)
-    background = background.with_duration(duration)
+    # background = ColorClip(size=(VIDEO_WIDTH, VIDEO_HEIGHT), color=CHROMA_KEY_COLOR)
+    # background = ColorClip(size=(VIDEO_WIDTH, VIDEO_HEIGHT), color=(0, 0, 0, 0))
+    # background = background.with_duration(duration)
     # background = background.with_opacity(0.0)  # 0% opacity
 
     # Arabic surah
@@ -378,10 +381,11 @@ def create_animated_surah(surah_arabic, surah_english, surah_bangla, meaning_en,
     meaning_clip_english = meaning_clip_english.with_effects([vfx.Loop(duration=duration)])
 
     # Combine background and text
-    all_clips = [background, surah_clip_arabic, surah_clip_english, surah_clip_bangla, meaning_clip_english]
+    # all_clips = [background, surah_clip_arabic, surah_clip_english, surah_clip_bangla, meaning_clip_english]
+    all_clips = [surah_clip_arabic, surah_clip_english, surah_clip_bangla, meaning_clip_english]
     if logo_clip:
         all_clips.append(logo_clip)
-    final_clip = CompositeVideoClip(all_clips)
+    final_clip = CompositeVideoClip(all_clips, size=(VIDEO_WIDTH, VIDEO_HEIGHT), bg_color=None)
 
     return final_clip
 
@@ -392,7 +396,7 @@ def generate_verse_to_file(surah_no, verse_index, subtitle_arabic, subtitle_engl
     audio_ar_index = f"{(verse_index + 1):03}"
     audio_en_index = f"{(verse_index + 1):03}"
 
-    temp_file = temp_manager.create_temp_file(suffix=f'_verse_{verse_index}.mp4')
+    temp_file = temp_manager.create_temp_file(suffix=f'_verse_{verse_index}.mov')
     duration = 0
 
     try:
@@ -412,24 +416,64 @@ def generate_verse_to_file(surah_no, verse_index, subtitle_arabic, subtitle_engl
         video = subtitle_video.with_audio(concat)
         duration = video.duration
 
-        # Write final video with high quality settings
+        # # Write final video with high quality settings
+        # video.write_videofile(
+        #     temp_file,
+        #     fps=30,
+        #     codec="hevc_nvenc",
+        #     audio_codec="aac",
+        #     preset="p7",
+        #     bitrate="50M",
+        #     ffmpeg_params=[
+        #         "-tune", "hq",
+        #         "-movflags", "+faststart",
+        #         "-profile:v", "main10",
+        #         "-cq", "0",
+        #         "-pix_fmt", "yuva420p",
+        #         "-y"
+        #     ],
+        # )
+
+        # # Write final video with high quality settings
+        # video.write_videofile(
+        #     temp_file,
+        #     fps=30,
+        #     codec="hevc_nvenc",
+        #     audio_codec="aac",
+        #     preset="p7",
+        #     bitrate="50M",
+        #     ffmpeg_params=[
+        #         "-tune", "hq",
+        #         "-movflags", "+faststart",
+        #         "-profile:v", "main10",
+        #         "-cq", "0",
+        #         "-pix_fmt", "yuva420p",
+        #         "-y"
+        #     ],
+        # )
+
+
+        # video.write_videofile(
+        #     temp_file,
+        #     fps=30,
+        #     codec="libvpx-vp9",
+        #     ffmpeg_params=[
+        #         "-pix_fmt", "yuva420p",  # alpha pixel format
+        #         "-auto-alt-ref", "0",  # prevent VP9 from breaking alpha
+        #         "-lossless", "1",  # preserve quality
+        #         "-y"
+        #     ]
+        # )
+
+
         video.write_videofile(
             temp_file,
             fps=30,
-            codec="hevc_nvenc",
-            audio_codec="aac",
-            preset="p7",
-            bitrate="50M",
+            codec="png",
+            preset="ultrafast",
             ffmpeg_params=[
-                "-tune", "hq",
-                "-movflags", "+faststart",
-                "-profile:v", "main10",
-                "-cq", "0",
-                "-pix_fmt", "yuva420p",
                 "-y"
-            ],
-            # threads=32,
-            # verbose=False
+            ]
         )
 
         # Close clips to free memory
@@ -657,7 +701,7 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
             return None
 
         # Step 2: Use ffmpeg to concatenate all videos
-        temp_concat_file = temp_manager.create_temp_file(suffix='_concat.mp4')
+        temp_concat_file = temp_manager.create_temp_file(suffix='_concat.mov')
 
         # First pass: Simple concatenation
         concat_command = [
@@ -687,23 +731,64 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
         if surah_clip.duration > total_duration:
             surah_clip = surah_clip.subclipped(0, total_duration)
 
-        overlay_temp = temp_manager.create_temp_file(suffix='_overlay.mp4')
+        overlay_temp = temp_manager.create_temp_file(suffix='_overlay.mov')
+
+        # surah_clip.write_videofile(
+        #     overlay_temp,
+        #     fps=30,
+        #     codec="libvpx-vp9",
+        #     # preset="p7",
+        #     # bitrate="50M",  # Very high bitrate
+        #     ffmpeg_params=[
+        #         # "-tune", "hq",  # Low latency tuning
+        #         # "-quality", "good",
+        #         # "-movflags", "+faststart",
+        #         # "-profile:v", "main10",
+        #         "-cq", "0",  # Constant quality mode (best)
+        #         "-pix_fmt", "yuva420p",
+        #         "-auto-alt-ref", "0",   # important for alpha with VP9
+        #         "-lossless", "1",
+        #         "-y"
+        #     ]
+        # )
+
+        # surah_clip.write_videofile(
+        #     overlay_temp,
+        #     fps=30,
+        #     codec="libvpx-vp9",
+        #     ffmpeg_params=[
+        #         "-pix_fmt", "yuva420p",  # alpha pixel format
+        #         "-auto-alt-ref", "0",  # prevent VP9 from breaking alpha
+        #         "-lossless", "1",  # preserve quality
+        #         "-y"
+        #     ]
+        # )
 
         surah_clip.write_videofile(
             overlay_temp,
             fps=30,
-            codec="hevc_nvenc",
-            preset="p7",
-            bitrate="50M",  # Very high bitrate
+            codec="png",
             ffmpeg_params=[
-                "-tune", "hq",  # Low latency tuning
-                "-movflags", "+faststart",
-                "-profile:v", "main10",
-                "-cq", "0",  # Constant quality mode (best)
-                "-pix_fmt", "yuva420p",
                 "-y"
             ]
         )
+
+
+        # surah_clip.write_videofile(
+        #     overlay_temp,
+        #     fps=30,
+        #     codec="hevc_nvenc",
+        #     preset="p7",
+        #     bitrate="50M",  # Very high bitrate
+        #     ffmpeg_params=[
+        #         "-tune", "hq",  # Low latency tuning
+        #         "-movflags", "+faststart",
+        #         "-profile:v", "main10",
+        #         "-cq", "0",  # Constant quality mode (best)
+        #         "-pix_fmt", "yuva420p",
+        #         "-y"
+        #     ]
+        # )
         surah_clip.close()
 
         # Step 4: Concatenated background video files
@@ -723,6 +808,51 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
         #     '[bg_main][overlay]overlay[outv]'  # Overlay surah info
         # ]
 
+        # final_command = [
+        #     'ffmpeg',
+        #     '-i', background_video,      # Background video
+        #     '-i', temp_concat_file,     # Main content video
+        #     '-i', overlay_temp,         # Overlay video (transparent)
+        #     '-filter_complex',
+        #     '[0:v]setpts=PTS-STARTPTS[bg];'  # Background
+        #     '[1:v]setpts=PTS-STARTPTS,format=yuva420p,colorkey=0x' + CHROMA_KEY_HEX + ':similarity=0.1:blend=0.6[main];'  # Main content
+        #     # '[1:v]setpts=PTS-STARTPTS,format=yuva420p[main];'  # Main content
+        #     '[2:v]setpts=PTS-STARTPTS,format=yuva420p,colorkey=0x' + CHROMA_KEY_HEX + ':similarity=0.1:blend=0.6[overlay_with_alpha];'  # Overlay with alpha
+        #     '[bg][main]overlay=shortest=1[bg_main];'  # Overlay main on background
+        #     '[bg_main][overlay_with_alpha]overlay[outv]'  # Overlay surah info
+        # ]
+
+
+        # final_command = [
+        #     'ffmpeg',
+        #     '-i', background_video,      # Background video
+        #     '-i', temp_concat_file,     # Main content video
+        #     '-i', overlay_temp,         # Overlay video (transparent)
+        #     '-filter_complex',
+        #     '[0:v]setpts=PTS-STARTPTS[bg];'  # Background
+        #     '[1:v]setpts=PTS-STARTPTS,format=yuva420p,colorkey=0x' + CHROMA_KEY_HEX + ':similarity=0.1:blend=0.6[main];'  # Main content
+        #     # '[1:v]setpts=PTS-STARTPTS,format=yuva420p[main];'  # Main content
+        #     '[2:v]setpts=PTS-STARTPTS,format=yuva420p,colorkey=0x' + CHROMA_KEY_HEX + ':similarity=0.1:blend=0.6[overlay_with_alpha];'  # Overlay with alpha
+        #     '[bg][main]overlay[bg_main];'  # Overlay main on background
+        #     '[bg_main][overlay_with_alpha]overlay[outv]'  # Overlay surah info
+        # ]
+
+
+        # final_command = [
+        #     'ffmpeg',
+        #     '-i', background_video,      # Background video
+        #     '-i', temp_concat_file,     # Main content video
+        #     # '-i', overlay_temp,         # Overlay video (transparent)
+        #     '-filter_complex',
+        #     '[0:v]setpts=PTS-STARTPTS[bg];'  # Background
+        #     '[1:v]setpts=PTS-STARTPTS[main];'  # Main content
+        #     # '[1:v]setpts=PTS-STARTPTS,format=yuva420p[main];'  # Main content
+        #     # '[2:v]setpts=PTS-STARTPTS,format=yuva420p[overlay_with_alpha];'  # Overlay with alpha
+        #     '[bg][main]overlay:format=yuva420p[bg_main];'  # Overlay main on background
+        #     # '[bg_main][overlay_with_alpha]overlay[outv]'  # Overlay surah info
+        # ]
+
+
         final_command = [
             'ffmpeg',
             '-i', background_video,      # Background video
@@ -730,11 +860,25 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
             '-i', overlay_temp,         # Overlay video (transparent)
             '-filter_complex',
             '[0:v]setpts=PTS-STARTPTS[bg];'  # Background
-            '[1:v]setpts=PTS-STARTPTS,format=yuva420p,colorkey=0x' + CHROMA_KEY_HEX + ':similarity=0.1:blend=0.6[main];'  # Main content
-            '[2:v]setpts=PTS-STARTPTS,format=yuva420p,colorkey=0x' + CHROMA_KEY_HEX + ':similarity=0.1:blend=0.6[overlay_with_alpha];'  # Overlay with alpha
-            '[bg][main]overlay=shortest=1[bg_main];'  # Overlay main on background
-            '[bg_main][overlay_with_alpha]overlay[outv]'  # Overlay surah info
+            '[1:v]setpts=PTS-STARTPTS[main];'  # Main content
+            '[2:v]setpts=PTS-STARTPTS[overlay_with_alpha];'  # Overlay with alpha
+            '[bg][main] overlay=0:0:format=auto[bg_main];'  # Overlay main on background
+            '[bg_main][overlay_with_alpha] overlay=0:0:format=auto[outv]'  # Overlay surah info
         ]
+
+
+        # final_command = [
+        #     'ffmpeg',
+        #     '-i', background_video,  # Background video
+        #     '-i', temp_concat_file,  # Main content video
+        #     '-i', overlay_temp,  # Overlay video (transparent)
+        #     '-filter_complex',
+        #     '[0:v]setpts=PTS-STARTPTS[bg];'  # Background
+        #     '[1:v]setpts=PTS-STARTPTS,format=yuva420p[main];'  # Main content
+        #     '[2:v]setpts=PTS-STARTPTS,format=yuva420p[overlay_with_alpha];'  # Overlay with alpha
+        #     '[bg][main]overlay=shortest=1[bg_main];'  # Overlay main on background
+        #     '[bg_main][overlay_with_alpha]overlay[outv]'  # Overlay surah info
+        # ]
 
         # Add audio from the main content
         final_command.extend([
@@ -747,7 +891,7 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
             '-tune', 'hq',
             '-movflags', '+faststart',
             '-profile:v', 'main10',
-            '-pix_fmt', 'yuva420p',
+            '-pix_fmt', 'yuv420p',
             '-y',
             output_path
         ])
@@ -762,6 +906,7 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
 
     except Exception as ex:
         print(ex)
+
 
 def generate_videos(surah_no: int):
     """Main function that writes each verse to file to save memory"""
