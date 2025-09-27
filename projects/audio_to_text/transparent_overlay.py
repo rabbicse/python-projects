@@ -16,5 +16,6 @@ final = CompositeVideoClip([background, overlay])
 final.write_videofile(
     "final_output.mp4",
     codec="libx264",
+    audio=False,
     fps=30
 )

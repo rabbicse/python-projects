@@ -21,7 +21,8 @@ final = CompositeVideoClip([background, txt_clip], size=(1920, 1080))
 # Export with transparency
 final.write_videofile(
     "transparent.mov",
-    codec="png",   # keeps alpha channel
+    codec="qtrle",   # keeps alpha channel
+    audio=False,
     fps=30,
     preset="ultrafast"
 )

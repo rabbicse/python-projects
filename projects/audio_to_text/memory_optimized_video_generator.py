@@ -109,7 +109,7 @@ def create_animated_text(text, text_arabic, duration=5):
     background = ColorClip(size=(VIDEO_WIDTH, VIDEO_HEIGHT), color=(0, 0, 0, 255))
     # background = ColorClip(size=(VIDEO_WIDTH, VIDEO_HEIGHT), color=CHROMA_KEY_COLOR)
     background = background.with_duration(duration)
-    background = background.with_opacity(0.2)  # 30% opacity
+    background = background.with_opacity(0.25)  # 30% opacity
 
     # Arabic Caption
     # Create the text clip without a font parameter
@@ -470,7 +470,7 @@ def generate_verse_to_file(surah_no, verse_index, subtitle_arabic, subtitle_engl
         video.write_videofile(
             temp_file,
             fps=30,
-            codec="png",
+            codec="qtrle",
             preset="ultrafast",
             threads=32,
             ffmpeg_params=[
@@ -539,7 +539,7 @@ def generate_bismillah_to_file(temp_manager):
         video.write_videofile(
             temp_file,
             fps=30,
-            codec="png",
+            codec="qtrle",
             preset="ultrafast",
             threads=32,
             ffmpeg_params=[
@@ -563,7 +563,7 @@ def loop_backgrounds(total_duration: int, temp_manager):
     print("🎨 Generating background video...")
 
     # Get all background videos
-    background_files = sorted(glob.glob("data/backgrounds/*.mp4"))
+    background_files = sorted(glob.glob("data/processed-backgrounds/*.mp4"))
 
     if not background_files:
         print("⚠️ No background files found, using solid color background")
@@ -577,18 +577,37 @@ def loop_backgrounds(total_duration: int, temp_manager):
 
     while duration_left > 0:
         random.shuffle(background_files)
-        for bg_video_file in background_files:
+        for i, bg_video_file in enumerate(background_files):
             try:
                 bg_video_clip = VideoFileClip(bg_video_file)
-                bg_video_clip = bg_video_clip.with_effects([vfx.CrossFadeIn(2.0), vfx.CrossFadeOut(2.0)])
-
                 if duration_left < bg_video_clip.duration:
+                    print(f"Generating background video from: {bg_video_file}")
                     bg_video_clip = bg_video_clip.subclipped(0, duration_left)
-                    backgrounds_with_transitions.append(bg_video_clip)
+                    bg_video_clip = bg_video_clip.with_effects([vfx.CrossFadeIn(2.0), vfx.CrossFadeOut(2.0)])
+                    temp_file = temp_manager.create_temp_file(suffix=f"_bg_{i:04d}.mp4")
+                    bg_video_clip.write_videofile(
+                        temp_file,
+                        fps=30,
+                        codec="hevc_nvenc",
+                        preset="p7",
+                        bitrate="50M",
+                        ffmpeg_params=[
+                            "-tune", "hq",
+                            "-movflags", "+faststart",
+                            "-profile:v", "main10",
+                            "-cq", "0",
+                            "-pix_fmt", "yuv420p",
+                            "-y"
+                        ]
+                    )
+                    backgrounds_with_transitions.append(temp_file)
                 else:
-                    backgrounds_with_transitions.append(bg_video_clip)
+                    print(f"Adding background video: {bg_video_file}")
+                    backgrounds_with_transitions.append(bg_video_file)
 
                 duration_left -= bg_video_clip.duration
+
+                bg_video_clip.close()
 
                 if duration_left <= 0:
                     break
@@ -600,37 +619,10 @@ def loop_backgrounds(total_duration: int, temp_manager):
     # Concatenate with transitions using ffmpeg instead of MoviePy
     if backgrounds_with_transitions:
         try:
-            # Create temporary directory for intermediate files
-            import tempfile
-            import os
-            temp_dir = tempfile.mkdtemp()
-
-            # Write each clip to temporary file
-            temp_files = []
-            for i, clip in enumerate(backgrounds_with_transitions):
-                temp_file = temp_manager.create_temp_file(suffix=f"_bg_{i:04d}.mp4")
-                clip.write_videofile(
-                    temp_file,
-                    fps=30,
-                    codec="hevc_nvenc",
-                    preset="p7",
-                    bitrate="50M",
-                    ffmpeg_params=[
-                        "-tune", "hq",
-                        "-movflags", "+faststart",
-                        "-profile:v", "main10",
-                        "-cq", "0",
-                        "-pix_fmt", "yuva420p",
-                        "-y"
-                    ]
-                )
-                temp_files.append(temp_file)
-                clip.close()  # Free memory immediately
-
             # Create ffmpeg concat file list
             concat_list_path = temp_manager.create_temp_file(suffix='_concat_bg.txt')
             with open(concat_list_path, 'w') as f:
-                for temp_file in temp_files:
+                for temp_file in backgrounds_with_transitions:
                     f.write(f"file '{os.path.abspath(temp_file)}'\n")
 
             # Use ffmpeg to concatenate with stream copy (no re-encoding)
@@ -647,24 +639,8 @@ def loop_backgrounds(total_duration: int, temp_manager):
                 output_temp
             ]
 
-            result = subprocess.run(concat_command, capture_output=True, text=True)
-
+            result = subprocess.run(concat_command)
             if result.returncode == 0:
-                # Load the final concatenated video
-                # background_video = VideoFileClip(output_temp)
-                # print(f"✅ Background video created with ffmpeg: {background_video.duration:.1f}s")
-
-                # Clean up temporary files
-                # for temp_file in temp_files + [concat_list_path, output_temp]:
-                #     try:
-                #         os.remove(temp_file)
-                #     except:
-                #         pass
-                # try:
-                #     os.rmdir(temp_dir)
-                # except:
-                #     pass
-
                 return output_temp
             else:
                 print(f"⚠️ FFmpeg concatenation failed: {result.stderr}")
@@ -679,10 +655,6 @@ def loop_backgrounds(total_duration: int, temp_manager):
             background_video = concatenate_videoclips(backgrounds_with_transitions)
             print(f"✅ Background video created with MoviePy fallback: {background_video.duration:.1f}s")
             return background_video
-    else:
-        print("⚠️ No valid background clips, using fallback")
-        background = ColorClip(size=(VIDEO_WIDTH, VIDEO_HEIGHT), color=(0, 10, 20))
-        return background.with_duration(total_duration)
 
     return None
 
@@ -780,7 +752,9 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
         surah_clip.write_videofile(
             overlay_temp,
             fps=30,
-            codec="png",
+            codec="qtrle",
+            audio=False,
+            preset="ultrafast",
             threads=32,
             ffmpeg_params=[
                 "-y"
@@ -873,8 +847,8 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
             '[0:v]setpts=PTS-STARTPTS[bg];'  # Background
             '[1:v]setpts=PTS-STARTPTS[main];'  # Main content
             '[2:v]setpts=PTS-STARTPTS[overlay_with_alpha];'  # Overlay with alpha
-            '[bg][main] overlay=0:0:format=auto[bg_main];'  # Overlay main on background
-            '[bg_main][overlay_with_alpha] overlay=0:0:format=auto[outv]'  # Overlay surah info
+            '[bg][main]overlay=0:0:format=auto[bg_main];'  # Overlay main on background
+            '[bg_main][overlay_with_alpha]overlay=0:0:format=auto[outv]'  # Overlay surah info
         ]
 
         # final_command = [
@@ -909,7 +883,9 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
 
         print("🎬 Final compositing with ffmpeg...")
         print(f'FFMPEG Command: {" ".join(final_command)}')
-        result = subprocess.run(final_command, capture_output=True, text=True)
+        result = subprocess.run(final_command)
+        # print(result.stdout)
+        # print(result.stderr)
 
         if result.returncode != 0:
             print(f"❌ Final compositing failed: {result.stderr}")
