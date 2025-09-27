@@ -106,10 +106,10 @@ def json_to_srt(json_file):
 
 def create_animated_text(text, text_arabic, duration=5):
     # Create a background
-    # background = ColorClip(size=(VIDEO_WIDTH, VIDEO_HEIGHT), color=(0, 0, 0, 255))
+    background = ColorClip(size=(VIDEO_WIDTH, VIDEO_HEIGHT), color=(0, 0, 0, 255))
     # background = ColorClip(size=(VIDEO_WIDTH, VIDEO_HEIGHT), color=CHROMA_KEY_COLOR)
-    # background = background.with_duration(duration)
-    # background = background.with_opacity(0.2)  # 30% opacity
+    background = background.with_duration(duration)
+    background = background.with_opacity(0.2)  # 30% opacity
 
     # Arabic Caption
     # Create the text clip without a font parameter
@@ -214,7 +214,10 @@ def create_animated_text(text, text_arabic, duration=5):
 
     # Combine background and text
     # final_clip = CompositeVideoClip([background, text_clip, text_clip_arabic])
-    final_clip = CompositeVideoClip([text_clip, text_clip_arabic], size=(VIDEO_WIDTH, VIDEO_HEIGHT), bg_color=None)
+    # final_clip = CompositeVideoClip([text_clip, text_clip_arabic], size=(VIDEO_WIDTH, VIDEO_HEIGHT),
+    #                                 bg_color=None)
+
+    final_clip = CompositeVideoClip([background, text_clip, text_clip_arabic], size=(VIDEO_WIDTH, VIDEO_HEIGHT))
 
     return final_clip
 
@@ -346,7 +349,7 @@ def create_animated_surah(surah_arabic, surah_english, surah_bangla, meaning_en,
     surah_clip_english = create_text_clip(text=surah_english,
                                           font=FONT,
                                           font_size=20,
-                                          duration=random.randint(3, 5),
+                                          duration=random.randint(min_duration, max_duration),
                                           margin=(10, 10, 20, 10),
                                           text_color=COLORS["english_text"],
                                           stroke_color=COLORS["stroke"])
@@ -452,7 +455,6 @@ def generate_verse_to_file(surah_no, verse_index, subtitle_arabic, subtitle_engl
         #     ],
         # )
 
-
         # video.write_videofile(
         #     temp_file,
         #     fps=30,
@@ -465,12 +467,12 @@ def generate_verse_to_file(surah_no, verse_index, subtitle_arabic, subtitle_engl
         #     ]
         # )
 
-
         video.write_videofile(
             temp_file,
             fps=30,
             codec="png",
             preset="ultrafast",
+            threads=32,
             ffmpeg_params=[
                 "-y"
             ]
@@ -490,7 +492,7 @@ def generate_verse_to_file(surah_no, verse_index, subtitle_arabic, subtitle_engl
 
 def generate_bismillah_to_file(temp_manager):
     """Generate bismillah video and write to temporary file"""
-    temp_file = temp_manager.create_temp_file(suffix='_bismillah.mp4')
+    temp_file = temp_manager.create_temp_file(suffix='_bismillah.mov')
     duration = 0
 
     try:
@@ -517,19 +519,30 @@ def generate_bismillah_to_file(temp_manager):
         duration = video.duration
 
         # Write final video with high quality settings
+        # video.write_videofile(
+        #     temp_file,
+        #     fps=30,
+        #     codec="hevc_nvenc",
+        #     audio_codec="aac",
+        #     preset="p7",
+        #     bitrate="50M",
+        #     ffmpeg_params=[
+        #         "-tune", "hq",
+        #         "-movflags", "+faststart",
+        #         "-profile:v", "main10",
+        #         "-cq", "0",
+        #         "-pix_fmt", "yuv420p",
+        #         "-y"
+        #     ]
+        # )
+
         video.write_videofile(
             temp_file,
             fps=30,
-            codec="hevc_nvenc",
-            audio_codec="aac",
-            preset="p7",
-            bitrate="50M",
+            codec="png",
+            preset="ultrafast",
+            threads=32,
             ffmpeg_params=[
-                "-tune", "hq",
-                "-movflags", "+faststart",
-                "-profile:v", "main10",
-                "-cq", "0",
-                "-pix_fmt", "yuv420p",
                 "-y"
             ]
         )
@@ -725,7 +738,7 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
         # Add surah overlay if needed
         surah_name_ar, surah_name_en, surah_name_bn, surah_meaning_en = surah_info
         surah_clip = create_animated_surah(
-            surah_name_ar, surah_name_en, surah_name_bn, surah_meaning_en, 10
+            surah_name_ar, surah_name_en, surah_name_bn, surah_meaning_en, 15
         )
 
         if surah_clip.duration > total_duration:
@@ -768,11 +781,11 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
             overlay_temp,
             fps=30,
             codec="png",
+            threads=32,
             ffmpeg_params=[
                 "-y"
             ]
         )
-
 
         # surah_clip.write_videofile(
         #     overlay_temp,
@@ -822,7 +835,6 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
         #     '[bg_main][overlay_with_alpha]overlay[outv]'  # Overlay surah info
         # ]
 
-
         # final_command = [
         #     'ffmpeg',
         #     '-i', background_video,      # Background video
@@ -836,7 +848,6 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
         #     '[bg][main]overlay[bg_main];'  # Overlay main on background
         #     '[bg_main][overlay_with_alpha]overlay[outv]'  # Overlay surah info
         # ]
-
 
         # final_command = [
         #     'ffmpeg',
@@ -852,12 +863,12 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
         #     # '[bg_main][overlay_with_alpha]overlay[outv]'  # Overlay surah info
         # ]
 
-
         final_command = [
             'ffmpeg',
-            '-i', background_video,      # Background video
-            '-i', temp_concat_file,     # Main content video
-            '-i', overlay_temp,         # Overlay video (transparent)
+            '-i', background_video,  # Background video
+            '-i', temp_concat_file,  # Main content video
+            '-stream_loop', '-1',
+            '-i', overlay_temp,  # Overlay video (transparent)
             '-filter_complex',
             '[0:v]setpts=PTS-STARTPTS[bg];'  # Background
             '[1:v]setpts=PTS-STARTPTS[main];'  # Main content
@@ -865,7 +876,6 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
             '[bg][main] overlay=0:0:format=auto[bg_main];'  # Overlay main on background
             '[bg_main][overlay_with_alpha] overlay=0:0:format=auto[outv]'  # Overlay surah info
         ]
-
 
         # final_command = [
         #     'ffmpeg',
@@ -892,6 +902,7 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
             '-movflags', '+faststart',
             '-profile:v', 'main10',
             '-pix_fmt', 'yuv420p',
+            '-shortest',
             '-y',
             output_path
         ])
@@ -936,12 +947,12 @@ def generate_videos(surah_no: int):
         total_duration = 0
 
         # Generate bismillah if needed
-        # if surah_no != 1:
-        #     bismillah_file, duration = generate_bismillah_to_file(temp_manager)
-        #     if bismillah_file:
-        #         video_files.append(bismillah_file)
-        #         # Estimate duration (you could get actual duration if needed)
-        #         total_duration += duration
+        if surah_no != 1:
+            bismillah_file, duration = generate_bismillah_to_file(temp_manager)
+            if bismillah_file:
+                video_files.append(bismillah_file)
+                # Estimate duration (you could get actual duration if needed)
+                total_duration += duration
 
         # Generate each verse to separate file
         for index, subtitle in enumerate(subtitles):
@@ -968,7 +979,6 @@ def generate_videos(surah_no: int):
             # # Force garbage collection every few verses
             # if index % 10 == 0:
             #     gc.collect()
-            break
 
         print(f"Generated {len(video_files)} video files, concatenating...")
 
@@ -983,7 +993,7 @@ def generate_videos(surah_no: int):
         raise
     finally:
         # Clean up temporary files
-        # temp_manager.cleanup()
+        temp_manager.cleanup()
         gc.collect()
 
 
