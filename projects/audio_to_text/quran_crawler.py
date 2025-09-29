@@ -129,7 +129,9 @@ def get_surah_ayahs(surah_number):
 
 def get_surah_ayahs_by_page(surah_number, page=1, per_page=5):
     """Scrape Ayahs from a given Surah page."""
-    url = f'https://quran.com/api/proxy/content/api/qdc/verses/by_chapter/{surah_number}?words=true&translation_fields=resource_name%2Clanguage_id&per_page={per_page}&fields=text_uthmani%2Cchapter_id%2Chizb_number%2Ctext_imlaei_simple&translations=131&reciter=7&word_translation_language=en&page={page}&word_fields=verse_key%2Cverse_id%2Cpage_number%2Clocation%2Ctext_uthmani%2Ctext_imlaei_simple%2Ccode_v1%2Cqpc_uthmani_hafs&mushaf=2'
+    # url = f'https://quran.com/api/proxy/content/api/qdc/verses/by_chapter/{surah_number}?words=true&translation_fields=resource_name%2Clanguage_id&per_page={per_page}&fields=text_uthmani%2Cchapter_id%2Chizb_number%2Ctext_imlaei_simple&translations=131&reciter=7&word_translation_language=en&page={page}&word_fields=verse_key%2Cverse_id%2Cpage_number%2Clocation%2Ctext_uthmani%2Ctext_imlaei_simple%2Ccode_v1%2Cqpc_uthmani_hafs&mushaf=2'
+    url = f"https://quran.com/api/proxy/content/api/qdc/verses/by_chapter/{surah_number}?words=true&translation_fields=resource_name%2Clanguage_id&per_page={per_page}&fields=text_uthmani%2Cchapter_id%2Chizb_number%2Ctext_imlaei_simple&translations=131&reciter=7&word_translation_language=en&page={page}&word_fields=verse_key%2Cverse_id%2Cpage_number%2Clocation%2Ctext_uthmani%2Ctext_imlaei_simple%2Ccode_v1%2Cqpc_uthmani_hafs&mushaf=2"
+    # print(url)
     response = session.get(url, headers=HEADERS)
 
     if response.status_code != 200:
@@ -148,6 +150,7 @@ def get_surah_ayahs_by_page(surah_number, page=1, per_page=5):
             "verse_num": verse["verse_key"],
             "arabic_text": verse["text_uthmani"],
             "en_text": "".join([translation["text"] for translation in verse["translations"]]),
+            "verse": verse
         })
     return ayahs_data
 
@@ -221,7 +224,7 @@ def crawl_quran_by_surah(surah_number, per_page=5):
         surah_data["surah_verses"] = ayahs
 
     # Save to JSON
-    with open(f"quran/{surah_number}.json", "w", encoding="utf-8") as f:
+    with open(f"quran/quran-full/{surah_number}.json", "w", encoding="utf-8") as f:
         json.dump(surah_data, f, ensure_ascii=False, indent=4)
 
     print("✅ Quran data saved successfully!")
@@ -231,10 +234,10 @@ def crawl_quran_by_surah(surah_number, per_page=5):
 # crawl_quran()
 # crawl_quran_by_surah(92, per_page=14) # download by surah
 
-for i in range(1, 81):
-    crawl_quran_by_surah(i, per_page=1)
+# for i in range(1, 81):
+#     crawl_quran_by_surah(i, per_page=1)
 
-# crawl_quran_by_surah(92, per_page=3)
+crawl_quran_by_surah(2, per_page=5)
 
 # get_all_surah_info()
 

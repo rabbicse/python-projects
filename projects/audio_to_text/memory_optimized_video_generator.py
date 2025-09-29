@@ -2,6 +2,7 @@ import glob
 import json
 import os
 import random
+import subprocess
 from typing import Optional, List, Tuple
 import gc
 import tempfile
@@ -65,10 +66,11 @@ class TempFileManager:
         self.temp_files.append(self.session_dir)
         print(f"📁 Temporary files directory: {self.session_dir}")
 
-    def create_temp_file(self, suffix='.mp4'):
-        temp_file = tempfile.mktemp(suffix=suffix, dir=self.session_dir)
+    def get_or_create_temp_file(self, suffix='.mp4'):
+        # temp_file = tempfile.mktemp(suffix=suffix, dir=self.session_dir)
+        temp_file = os.path.join(self.session_dir, suffix)
         self.temp_files.append(temp_file)
-        return temp_file
+        return temp_file, os.path.exists(temp_file)
 
     def cleanup(self):
         print("🧹 Cleaning up temporary files...")
@@ -86,15 +88,23 @@ class TempFileManager:
         gc.collect()
 
 
-def generate_srt(data):
-    verse_timings = data["audio"]["audio_files"][0]["verse_timings"]
-    verses = {v["verse_key"]: v for v in data["surah_verses"]}
+# def generate_srt(data):
+#     verse_timings = data["audio"]["audio_files"][0]["verse_timings"]
+#     verses = {v["verse_key"]: v for v in data["surah_verses"]}
+#
+#     srt_lines = []
+#     for timing in verse_timings:
+#         verse_key = timing["verse_key"]
+#         if verse_key in verses:
+#             srt_lines.append(verses[verse_key]["arabic_text"])
+#     return srt_lines
 
+def generate_srt(data):
     srt_lines = []
-    for timing in verse_timings:
-        verse_key = timing["verse_key"]
-        if verse_key in verses:
-            srt_lines.append(verses[verse_key]["arabic_text"])
+    # print(f"Total verses: {len(data['surah_verses'])}")
+    for verse in data["surah_verses"]:
+        # print(f"verse key: {verse['verse_key']}")
+        srt_lines.append(verse["arabic_text"])
     return srt_lines
 
 
@@ -109,7 +119,7 @@ def create_animated_text(text, text_arabic, duration=5):
     background = ColorClip(size=(VIDEO_WIDTH, VIDEO_HEIGHT), color=(0, 0, 0, 255))
     # background = ColorClip(size=(VIDEO_WIDTH, VIDEO_HEIGHT), color=CHROMA_KEY_COLOR)
     background = background.with_duration(duration)
-    background = background.with_opacity(0.25)  # 30% opacity
+    background = background.with_opacity(0.35)  # 30% opacity
 
     # Arabic Caption
     # Create the text clip without a font parameter
@@ -134,7 +144,7 @@ def create_animated_text(text, text_arabic, duration=5):
         stroke_color="#030303",
         stroke_width=3,  # Gold stroke
         interline=30,
-        margin=(10, 30, 10, 30)  # left, top, right, bottom
+        margin=(10, 40, 10, 30)  # left, top, right, bottom
     )
 
     estimated_ar_height = text_clip_arabic.h
@@ -154,7 +164,7 @@ def create_animated_text(text, text_arabic, duration=5):
             stroke_color="#030303",
             stroke_width=1,  # Gold stroke
             interline=20,
-            margin=(10, 20, 10, 20)  # left, top, right, bottom
+            margin=(10, 30, 10, 20)  # left, top, right, bottom
         )
 
     # Set the clip duration
@@ -399,7 +409,7 @@ def generate_verse_to_file(surah_no, verse_index, subtitle_arabic, subtitle_engl
     audio_ar_index = f"{(verse_index + 1):03}"
     audio_en_index = f"{(verse_index + 1):03}"
 
-    temp_file = temp_manager.create_temp_file(suffix=f'_verse_{verse_index}.mov')
+    temp_file, is_exists = temp_manager.get_or_create_temp_file(suffix=f'verse_{(verse_index + 1):03}.mov')
     duration = 0
 
     try:
@@ -408,6 +418,11 @@ def generate_verse_to_file(surah_no, verse_index, subtitle_arabic, subtitle_engl
         audio_english = AudioFileClip(
             f"/mnt/7A4CEE3F674E3964/quran/quran-in-english-clearquran-mp3-verse-by-verse-edtion-allah/{surah}-{audio_en_index}.mp3")
         concat = concatenate_audioclips([audio_arabic, audio_english])
+
+        if is_exists:
+            duration = concat.duration
+            concat.close()
+            return temp_file, duration
 
         # Create video
         subtitle_video = create_animated_text(
@@ -419,58 +434,10 @@ def generate_verse_to_file(surah_no, verse_index, subtitle_arabic, subtitle_engl
         video = subtitle_video.with_audio(concat)
         duration = video.duration
 
-        # # Write final video with high quality settings
-        # video.write_videofile(
-        #     temp_file,
-        #     fps=30,
-        #     codec="hevc_nvenc",
-        #     audio_codec="aac",
-        #     preset="p7",
-        #     bitrate="50M",
-        #     ffmpeg_params=[
-        #         "-tune", "hq",
-        #         "-movflags", "+faststart",
-        #         "-profile:v", "main10",
-        #         "-cq", "0",
-        #         "-pix_fmt", "yuva420p",
-        #         "-y"
-        #     ],
-        # )
-
-        # # Write final video with high quality settings
-        # video.write_videofile(
-        #     temp_file,
-        #     fps=30,
-        #     codec="hevc_nvenc",
-        #     audio_codec="aac",
-        #     preset="p7",
-        #     bitrate="50M",
-        #     ffmpeg_params=[
-        #         "-tune", "hq",
-        #         "-movflags", "+faststart",
-        #         "-profile:v", "main10",
-        #         "-cq", "0",
-        #         "-pix_fmt", "yuva420p",
-        #         "-y"
-        #     ],
-        # )
-
-        # video.write_videofile(
-        #     temp_file,
-        #     fps=30,
-        #     codec="libvpx-vp9",
-        #     ffmpeg_params=[
-        #         "-pix_fmt", "yuva420p",  # alpha pixel format
-        #         "-auto-alt-ref", "0",  # prevent VP9 from breaking alpha
-        #         "-lossless", "1",  # preserve quality
-        #         "-y"
-        #     ]
-        # )
-
         video.write_videofile(
             temp_file,
             fps=30,
-            codec="qtrle",
+            codec="qtrle",  # qtrle or png
             preset="ultrafast",
             threads=32,
             ffmpeg_params=[
@@ -492,7 +459,7 @@ def generate_verse_to_file(surah_no, verse_index, subtitle_arabic, subtitle_engl
 
 def generate_bismillah_to_file(temp_manager):
     """Generate bismillah video and write to temporary file"""
-    temp_file = temp_manager.create_temp_file(suffix='_bismillah.mov')
+    temp_file, is_exists = temp_manager.get_or_create_temp_file(suffix='bismillah.mov')
     duration = 0
 
     try:
@@ -504,6 +471,11 @@ def generate_bismillah_to_file(temp_manager):
 
         # All clip will play one after the other
         concat = concatenate_audioclips([audio_arabic, audio_english])
+
+        if is_exists:
+            duration = concat.duration
+            concat.close()
+            return temp_file, duration
 
         bismillah_subtitle = json_to_srt(BASE_JSON_PATH.format(1))[0]
         subtitle_english = "In the name of Allah, the Gracious, the Merciful."
@@ -555,7 +527,7 @@ def generate_bismillah_to_file(temp_manager):
 
     except Exception as e:
         print(f"Error generating bismillah: {e}")
-        return None
+        return None, duration
 
 
 def loop_backgrounds(total_duration: int, temp_manager):
@@ -581,25 +553,27 @@ def loop_backgrounds(total_duration: int, temp_manager):
             try:
                 bg_video_clip = VideoFileClip(bg_video_file)
                 if duration_left < bg_video_clip.duration:
-                    print(f"Generating background video from: {bg_video_file}")
-                    bg_video_clip = bg_video_clip.subclipped(0, duration_left)
-                    bg_video_clip = bg_video_clip.with_effects([vfx.CrossFadeIn(2.0), vfx.CrossFadeOut(2.0)])
-                    temp_file = temp_manager.create_temp_file(suffix=f"_bg_{i:04d}.mp4")
-                    bg_video_clip.write_videofile(
-                        temp_file,
-                        fps=30,
-                        codec="hevc_nvenc",
-                        preset="p7",
-                        bitrate="50M",
-                        ffmpeg_params=[
-                            "-tune", "hq",
-                            "-movflags", "+faststart",
-                            "-profile:v", "main10",
-                            "-cq", "0",
-                            "-pix_fmt", "yuv420p",
-                            "-y"
-                        ]
-                    )
+                    temp_file, is_exists = temp_manager.get_or_create_temp_file(suffix=f"bg_{i:04d}.mp4")
+                    if not is_exists:
+                        print(f"Generating background video from: {bg_video_file}")
+                        bg_video_clip = bg_video_clip.subclipped(0, duration_left)
+                        bg_video_clip = bg_video_clip.with_effects([vfx.CrossFadeIn(2.0), vfx.CrossFadeOut(2.0)])
+                        bg_video_clip.write_videofile(
+                            temp_file,
+                            fps=30,
+                            codec="hevc_nvenc",
+                            audio=False,
+                            preset="p7",
+                            bitrate="50M",
+                            ffmpeg_params=[
+                                "-tune", "hq",
+                                "-movflags", "+faststart",
+                                "-profile:v", "main10",
+                                "-cq", "0",
+                                "-pix_fmt", "yuv420p",
+                                "-y"
+                            ]
+                        )
                     backgrounds_with_transitions.append(temp_file)
                 else:
                     print(f"Adding background video: {bg_video_file}")
@@ -620,14 +594,13 @@ def loop_backgrounds(total_duration: int, temp_manager):
     if backgrounds_with_transitions:
         try:
             # Create ffmpeg concat file list
-            concat_list_path = temp_manager.create_temp_file(suffix='_concat_bg.txt')
+            concat_list_path, _ = temp_manager.get_or_create_temp_file(suffix='video_concat_bg.txt')
             with open(concat_list_path, 'w') as f:
                 for temp_file in backgrounds_with_transitions:
                     f.write(f"file '{os.path.abspath(temp_file)}'\n")
 
             # Use ffmpeg to concatenate with stream copy (no re-encoding)
-            import subprocess
-            output_temp = temp_manager.create_temp_file(suffix=f"_final_background.mp4")
+            output_temp, _ = temp_manager.get_or_create_temp_file(suffix=f"video_final_background.mp4")
 
             concat_command = [
                 'ffmpeg',
@@ -669,11 +642,11 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
         print(f"🔗 Concatenating {len(video_files)} video files using ffmpeg...")
 
         # Step 1: Create file list for ffmpeg concat
-        file_list_path = temp_manager.create_temp_file(suffix='_filelist.txt')
+        file_list_path, is_exists = temp_manager.get_or_create_temp_file(suffix='video_filelist.txt')
 
         with open(file_list_path, 'w', encoding='utf-8') as f:
             for video_file in video_files:
-                if os.path.exists(video_file) and os.path.getsize(video_file) > 1024:
+                if os.path.exists(video_file):
                     # ffmpeg concat format: file 'path/to/file.mp4'
                     f.write(f"file '{os.path.abspath(video_file)}'\n")
 
@@ -686,7 +659,7 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
             return None
 
         # Step 2: Use ffmpeg to concatenate all videos
-        temp_concat_file = temp_manager.create_temp_file(suffix='_concat.mov')
+        temp_concat_file, _ = temp_manager.get_or_create_temp_file(suffix='video_concat.mov')
 
         # First pass: Simple concatenation
         concat_command = [
@@ -708,75 +681,76 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
             return
 
         # Add surah overlay if needed
+        overlay_temp, is_exists = temp_manager.get_or_create_temp_file(suffix='video_overlay.mov')
         surah_name_ar, surah_name_en, surah_name_bn, surah_meaning_en = surah_info
-        surah_clip = create_animated_surah(
-            surah_name_ar, surah_name_en, surah_name_bn, surah_meaning_en, 15
-        )
 
-        if surah_clip.duration > total_duration:
-            surah_clip = surah_clip.subclipped(0, total_duration)
+        if not is_exists:
+            surah_clip = create_animated_surah(
+                surah_name_ar, surah_name_en, surah_name_bn, surah_meaning_en, 15
+            )
 
-        overlay_temp = temp_manager.create_temp_file(suffix='_overlay.mov')
+            if surah_clip.duration > total_duration:
+                surah_clip = surah_clip.subclipped(0, total_duration)
 
-        # surah_clip.write_videofile(
-        #     overlay_temp,
-        #     fps=30,
-        #     codec="libvpx-vp9",
-        #     # preset="p7",
-        #     # bitrate="50M",  # Very high bitrate
-        #     ffmpeg_params=[
-        #         # "-tune", "hq",  # Low latency tuning
-        #         # "-quality", "good",
-        #         # "-movflags", "+faststart",
-        #         # "-profile:v", "main10",
-        #         "-cq", "0",  # Constant quality mode (best)
-        #         "-pix_fmt", "yuva420p",
-        #         "-auto-alt-ref", "0",   # important for alpha with VP9
-        #         "-lossless", "1",
-        #         "-y"
-        #     ]
-        # )
+            # surah_clip.write_videofile(
+            #     overlay_temp,
+            #     fps=30,
+            #     codec="libvpx-vp9",
+            #     # preset="p7",
+            #     # bitrate="50M",  # Very high bitrate
+            #     ffmpeg_params=[
+            #         # "-tune", "hq",  # Low latency tuning
+            #         # "-quality", "good",
+            #         # "-movflags", "+faststart",
+            #         # "-profile:v", "main10",
+            #         "-cq", "0",  # Constant quality mode (best)
+            #         "-pix_fmt", "yuva420p",
+            #         "-auto-alt-ref", "0",   # important for alpha with VP9
+            #         "-lossless", "1",
+            #         "-y"
+            #     ]
+            # )
 
-        # surah_clip.write_videofile(
-        #     overlay_temp,
-        #     fps=30,
-        #     codec="libvpx-vp9",
-        #     ffmpeg_params=[
-        #         "-pix_fmt", "yuva420p",  # alpha pixel format
-        #         "-auto-alt-ref", "0",  # prevent VP9 from breaking alpha
-        #         "-lossless", "1",  # preserve quality
-        #         "-y"
-        #     ]
-        # )
+            # surah_clip.write_videofile(
+            #     overlay_temp,
+            #     fps=30,
+            #     codec="libvpx-vp9",
+            #     ffmpeg_params=[
+            #         "-pix_fmt", "yuva420p",  # alpha pixel format
+            #         "-auto-alt-ref", "0",  # prevent VP9 from breaking alpha
+            #         "-lossless", "1",  # preserve quality
+            #         "-y"
+            #     ]
+            # )
 
-        surah_clip.write_videofile(
-            overlay_temp,
-            fps=30,
-            codec="qtrle",
-            audio=False,
-            preset="ultrafast",
-            threads=32,
-            ffmpeg_params=[
-                "-y"
-            ]
-        )
+            surah_clip.write_videofile(
+                overlay_temp,
+                fps=30,
+                codec="qtrle",
+                audio=False,
+                preset="ultrafast",
+                threads=32,
+                ffmpeg_params=[
+                    "-y"
+                ]
+            )
 
-        # surah_clip.write_videofile(
-        #     overlay_temp,
-        #     fps=30,
-        #     codec="hevc_nvenc",
-        #     preset="p7",
-        #     bitrate="50M",  # Very high bitrate
-        #     ffmpeg_params=[
-        #         "-tune", "hq",  # Low latency tuning
-        #         "-movflags", "+faststart",
-        #         "-profile:v", "main10",
-        #         "-cq", "0",  # Constant quality mode (best)
-        #         "-pix_fmt", "yuva420p",
-        #         "-y"
-        #     ]
-        # )
-        surah_clip.close()
+            # surah_clip.write_videofile(
+            #     overlay_temp,
+            #     fps=30,
+            #     codec="hevc_nvenc",
+            #     preset="p7",
+            #     bitrate="50M",  # Very high bitrate
+            #     ffmpeg_params=[
+            #         "-tune", "hq",  # Low latency tuning
+            #         "-movflags", "+faststart",
+            #         "-profile:v", "main10",
+            #         "-cq", "0",  # Constant quality mode (best)
+            #         "-pix_fmt", "yuva420p",
+            #         "-y"
+            #     ]
+            # )
+            surah_clip.close()
 
         # Step 4: Concatenated background video files
         background_video = loop_backgrounds(total_duration=total_duration, temp_manager=temp_manager)
@@ -871,7 +845,7 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
             '-c:v', 'hevc_nvenc',  # Your preferred encoder
             '-c:a', 'aac',
             '-preset', 'p7',
-            '-b:v', '50M',
+            '-b:v', '30M',
             '-tune', 'hq',
             '-movflags', '+faststart',
             '-profile:v', 'main10',
@@ -884,33 +858,36 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
         print("🎬 Final compositing with ffmpeg...")
         print(f'FFMPEG Command: {" ".join(final_command)}')
         result = subprocess.run(final_command)
-        # print(result.stdout)
-        # print(result.stderr)
 
-        if result.returncode != 0:
-            print(f"❌ Final compositing failed: {result.stderr}")
+        if result.returncode == 0:
+            return True
 
+        print(f"❌ Final compositing failed: {result.stderr}")
 
     except Exception as ex:
         print(ex)
+
+    return False
 
 
 def generate_videos(surah_no: int):
     """Main function that writes each verse to file to save memory"""
     temp_manager = TempFileManager(surah_no=surah_no)
+    success = False
 
     try:
         print(f"Processing Surah {surah_no}...")
 
         # Load subtitles
-        subtitles = json_to_srt(BASE_JSON_PATH.format(surah_no))
-        print(f"Loaded {len(subtitles)} verses")
+        # subtitles = json_to_srt(BASE_JSON_PATH.format(surah_no))
 
         # Load chapter info
         with open(CHAPTERS_PATH, 'r', encoding='utf-8') as f:
             data = json.load(f)
         data_en = data["en"][f"{surah_no}"]
         data_ar = data["ar"][f"{surah_no}"]
+        verse_count = int(data["en"][f"{surah_no}"]["versesCount"])
+        print(f"Total verses: {verse_count}")
 
         surah_info = (
             'سورة' + f' {data_ar["transliteratedName"]}',
@@ -931,8 +908,9 @@ def generate_videos(surah_no: int):
                 total_duration += duration
 
         # Generate each verse to separate file
-        for index, subtitle in enumerate(subtitles):
-            print(f"Processing verse {index + 1}/{len(subtitles)}")
+        # for index, subtitle in enumerate(subtitles):
+        for index in range(verse_count):
+            print(f"Processing verse {index + 1}/{verse_count}")
 
             # Load English subtitle
             surah = f"{surah_no:03}"
@@ -943,24 +921,31 @@ def generate_videos(surah_no: int):
             else:
                 subtitle_english = "Translation not available"
 
+            subtitle_ar_file = f"quran/verse-by-verse/{surah}-{index + 1:03}.txt"
+            if os.path.exists(subtitle_ar_file):
+                with open(subtitle_ar_file, 'r', encoding='utf-8') as f:
+                    subtitle_ar = f.readline().strip()
+            else:
+                subtitle_ar = ""
+
             # Generate verse video to file
             verse_file, duration = generate_verse_to_file(
-                surah_no, index, subtitle, subtitle_english, temp_manager
+                surah_no, index, subtitle_ar, subtitle_english, temp_manager
             )
 
             if verse_file:
                 video_files.append(verse_file)
                 total_duration += duration  # Estimate
 
-            # # Force garbage collection every few verses
-            # if index % 10 == 0:
-            #     gc.collect()
+            # Force garbage collection every few verses
+            if index % 10 == 0:
+                gc.collect()
 
         print(f"Generated {len(video_files)} video files, concatenating...")
 
         # Concatenate all temporary files
         output_path = BASE_OUTPUT_VIDEO_PATH.format(surah_no)
-        concatenate_video_files(video_files, output_path, surah_info, total_duration, temp_manager=temp_manager)
+        success = concatenate_video_files(video_files, output_path, surah_info, total_duration, temp_manager=temp_manager)
 
         print(f"Successfully created: {output_path}")
 
@@ -969,12 +954,13 @@ def generate_videos(surah_no: int):
         raise
     finally:
         # Clean up temporary files
-        temp_manager.cleanup()
+        if success:
+            temp_manager.cleanup()
         gc.collect()
 
 
 if __name__ == "__main__":
-    generate_videos(108)
+    generate_videos(2)
 
     # For multiple surahs:
     # for i in range(61, 66):
