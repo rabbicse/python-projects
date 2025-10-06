@@ -281,7 +281,7 @@ def create_youtube_banner_updated(
         print(f"Image loaded with dimensions: {width}x{height}")
 
         # --- Add a semi-transparent dark overlay to make text more readable ---
-        overlay = Image.new('RGBA', base_image.size, (0, 0, 0, 128)) # Semi-transparent black
+        overlay = Image.new('RGBA', base_image.size, (0, 0, 0, 150)) # Semi-transparent black
         base_image = Image.alpha_composite(base_image, overlay)
 
         # Create a drawing context
@@ -293,25 +293,25 @@ def create_youtube_banner_updated(
         # For English, a bold, clear font like "Montserrat-Bold" or "Roboto-Bold" is a good choice.
         # Replace the font file paths with your actual font paths.
         try:
-            arabic_font = ImageFont.truetype(FONT_ARABIC_HEADER_PATH, 330)
+            arabic_font = ImageFont.truetype(FONT_ARABIC_HEADER_PATH, 400)
         except IOError:
             print("Arabic font not found. Using default font.")
             arabic_font = ImageFont.load_default()
 
         try:
-            english_font = ImageFont.truetype(FONT_ENGLISH_HEADER_PATH, 200)
+            english_font = ImageFont.truetype(FONT_ENGLISH_HEADER_PATH, 300)
         except IOError:
             print("English font not found. Using default font.")
             english_font = ImageFont.load_default()
 
         try:
-            bangla_font = ImageFont.truetype(FONT_BANGLA_HEADER_PATH, 200)
+            bangla_font = ImageFont.truetype(FONT_BANGLA_HEADER_PATH, 250)
         except IOError:
             print("English font not found. Using default font.")
             bangla_font = ImageFont.load_default()
 
         try:
-            meaning_font = ImageFont.truetype(FONT_ENGLISH_HEADER_PATH, 120)
+            meaning_font = ImageFont.truetype(FONT_ENGLISH_HEADER_PATH, 100)
         except IOError:
             print("Meaning font not found. Using default font.")
             meaning_font = ImageFont.load_default()
@@ -339,7 +339,7 @@ def create_youtube_banner_updated(
         reshaper = arabic_reshaper.ArabicReshaper(configuration=configuration)
         reshaped_text = reshaper.reshape(arabic_text)
         display_text = get_display(reshaped_text)
-        display_text = display_text[::-1]
+        display_text = display_text#[::-1]
         arabic_text_bbox = draw.textbbox((0, 0), display_text, font=arabic_font)
         arabic_text_width = arabic_text_bbox[2] - arabic_text_bbox[0]
         arabic_x = (width - arabic_text_width) / 2
@@ -349,19 +349,19 @@ def create_youtube_banner_updated(
         english_text_bbox = draw.textbbox((0, 0), english_text, font=english_font)
         english_text_width = english_text_bbox[2] - english_text_bbox[0]
         english_x = (width - english_text_width) / 2
-        english_y = height * 0.35  # Adjust this position as needed
+        english_y = height * 0.40  # Adjust this position as needed
 
         # Position for the English text
         bangla_text_bbox = draw.textbbox((0, 0), bangla_text, font=bangla_font)
         bangla_text_width = bangla_text_bbox[2] - bangla_text_bbox[0]
         bangla_x = (width - bangla_text_width) / 2
-        bangla_y = height * 0.55  # Adjust this position as needed
+        bangla_y = height * 0.60  # Adjust this position as needed
 
         # Position for the Meaning text
         meaning_text_bbox = draw.textbbox((0, 0), meaning_text, font=meaning_font)
         meaning_text_width = meaning_text_bbox[2] - meaning_text_bbox[0]
         meaning_x = (width - meaning_text_width) / 2
-        meaning_y = height * 0.80  # Adjust this position as needed
+        meaning_y = height * 0.85  # Adjust this position as needed
 
         # --- Drawing the Text onto the Image ---
         draw.text((arabic_x, arabic_y), display_text, font=arabic_font, fill=GOLD)
@@ -387,9 +387,9 @@ def create_youtube_banner_updated(
 
         # Save the new image
         base_image = base_image.convert("RGB")
-        # base_image.show()
-        base_image.save(output_path, optimize=True, quality=95, compress_level=9)
-        print(f"New banner saved successfully at {output_path}")
+        base_image.show()
+        # base_image.save(output_path, optimize=True, quality=95, compress_level=9)
+        # print(f"New banner saved successfully at {output_path}")
 
     except FileNotFoundError:
         print(f"Error: The image file '{image_path}' was not found.")
@@ -469,6 +469,6 @@ if __name__ == "__main__":
     # # Run the function to create the banner
     # create_youtube_banner(image_file, surah_arabic, surah_english, surah_meaning, output_file)
 
-    for i in range(1, 115):
-        generate_banner_en(i)
-    # generate_banner_en(114)
+    # for i in range(1, 115):
+    #     generate_banner_en(i)
+    generate_banner_en(114)

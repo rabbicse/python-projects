@@ -8,6 +8,10 @@ from moviepy import ImageClip
 text = "وَكُلُّهُمۡ ءَاتِيهِ يَوۡمَ ٱلۡقِيَٰمَةِ فَرۡدٗا ۝٩٥"
 # text = "وَكُلُّهُمۡ ءَاتِيهِ يَوۡمَ ٱلۡقِيَٰمَةِ فَرۡدٗا"
 # text = "بسم الله"  # Simpler Arabic text for testing
+# text = "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ ٢"
+
+text = "سورة الفاتحة"
+
 # Step 1: Reshape (needed for proper joining of Arabic letters)
 configuration = {
     'delete_harakat': False,
@@ -29,16 +33,16 @@ img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
 draw = ImageDraw.Draw(img)
 
 # Step 5: Measure text properly
-bbox = draw.textbbox((0, 0), bidi_text, font=font)
+bbox = draw.textbbox((0, 0), text, font=font)
 w, h = bbox[2] - bbox[0], bbox[3] - bbox[1]
 
 # Step 6: Draw centered text
-draw.text(((W - w) // 2, (H - h) // 2), text, font=font, fill="white")
+draw.text(((W - w) // 2, (H - h) // 2), text[::-1], font=font, fill="white")
 
 img.show()
 
 # Save if you want
-img.save("ayah.png")
+# img.save("ayah.png")
 
 # Convert to MoviePy clip (no need to save file)
 # clip = ImageClip(img).with_duration(10)
