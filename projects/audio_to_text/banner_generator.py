@@ -6,8 +6,9 @@ from bidi.algorithm import get_display
 
 FONT_ENGLISH_HEADER_PATH = "fonts/DejaVuSans.ttf"
 FONT_BANGLA_HEADER_PATH = "fonts/Siyamrupali.ttf"
-FONT_ARABIC_HEADER_PATH = "fonts/Amiri-Regular.ttf"
+FONT_ARABIC_HEADER_PATH = "fonts/uthmanic_hafs_v20.ttf"
 CHAPTERS_PATH = "quran/chapters.json"
+FONT_ARABIC = "fonts/uthmanic_hafs_v20.ttf"
 
 BENGALI_NAMES = {
     "1": "আল-ফাতিহা",
@@ -162,19 +163,19 @@ def create_youtube_banner(
         # For English, a bold, clear font like "Montserrat-Bold" or "Roboto-Bold" is a good choice.
         # Replace the font file paths with your actual font paths.
         try:
-            arabic_font = ImageFont.truetype(FONT_ARABIC_HEADER_PATH, 330)
+            arabic_font = ImageFont.truetype(FONT_ARABIC_HEADER_PATH, 450)
         except IOError:
             print("Arabic font not found. Using default font.")
             arabic_font = ImageFont.load_default()
 
         try:
-            english_font = ImageFont.truetype(FONT_ENGLISH_HEADER_PATH, 200)
+            english_font = ImageFont.truetype(FONT_ENGLISH_HEADER_PATH, 250)
         except IOError:
             print("English font not found. Using default font.")
             english_font = ImageFont.load_default()
 
         try:
-            meaning_font = ImageFont.truetype(FONT_ENGLISH_HEADER_PATH, 120)
+            meaning_font = ImageFont.truetype(FONT_ENGLISH_HEADER_PATH, 150)
         except IOError:
             print("Meaning font not found. Using default font.")
             meaning_font = ImageFont.load_default()
@@ -277,6 +278,8 @@ def create_youtube_banner_updated(
     try:
         # Load the banner image
         base_image = Image.open(image_path).convert("RGBA")
+        # Resize to 1920x1080
+        base_image = base_image.resize((1920, 1080), Image.Resampling.LANCZOS)
         width, height = base_image.size
         print(f"Image loaded with dimensions: {width}x{height}")
 
@@ -293,25 +296,25 @@ def create_youtube_banner_updated(
         # For English, a bold, clear font like "Montserrat-Bold" or "Roboto-Bold" is a good choice.
         # Replace the font file paths with your actual font paths.
         try:
-            arabic_font = ImageFont.truetype(FONT_ARABIC_HEADER_PATH, 330)
+            arabic_font = ImageFont.truetype(FONT_ARABIC_HEADER_PATH, 350)
         except IOError:
             print("Arabic font not found. Using default font.")
             arabic_font = ImageFont.load_default()
 
         try:
-            english_font = ImageFont.truetype(FONT_ENGLISH_HEADER_PATH, 200)
+            english_font = ImageFont.truetype(FONT_ENGLISH_HEADER_PATH, 150)
         except IOError:
             print("English font not found. Using default font.")
             english_font = ImageFont.load_default()
 
         try:
-            bangla_font = ImageFont.truetype(FONT_BANGLA_HEADER_PATH, 200)
+            bangla_font = ImageFont.truetype(FONT_BANGLA_HEADER_PATH, 150)
         except IOError:
             print("English font not found. Using default font.")
             bangla_font = ImageFont.load_default()
 
         try:
-            meaning_font = ImageFont.truetype(FONT_ENGLISH_HEADER_PATH, 120)
+            meaning_font = ImageFont.truetype(FONT_ENGLISH_HEADER_PATH, 100)
         except IOError:
             print("Meaning font not found. Using default font.")
             meaning_font = ImageFont.load_default()
@@ -320,8 +323,10 @@ def create_youtube_banner_updated(
         # Using a golden color for prominence and white for readability.
         GOLD = "#FDD017" #"#FFD700"
         WHITE = "#FFFFFF"
+        BANGLA_TEXT_COLOR = "#FFFFFF"
+        MEANING_TEXT_COLOR = "#06D6A0"
         SHADOW_COLOR = "#000000"  # Black shadow for a clear contrast
-        OFFSET = (12, 12)  # X and Y offset for the shadow in pixels
+        OFFSET = (9, 9)  # X and Y offset for the shadow in pixels
 
         # --- Text Positioning ---
         # The following calculations center the text horizontally and position it vertically.
@@ -340,50 +345,51 @@ def create_youtube_banner_updated(
         reshaped_text = reshaper.reshape(arabic_text)
         display_text = get_display(reshaped_text)
         display_text = display_text[::-1]
-        arabic_text_bbox = draw.textbbox((0, 0), display_text, font=arabic_font)
+        arabic_text_bbox = draw.textbbox((0, 0), arabic_text, font=arabic_font)
         arabic_text_width = arabic_text_bbox[2] - arabic_text_bbox[0]
         arabic_x = (width - arabic_text_width) / 2
         arabic_y = height * 0.0  # 20% down from the top
+        arabic_y = -90
 
         # Position for the English text
         english_text_bbox = draw.textbbox((0, 0), english_text, font=english_font)
         english_text_width = english_text_bbox[2] - english_text_bbox[0]
         english_x = (width - english_text_width) / 2
-        english_y = height * 0.35  # Adjust this position as needed
+        english_y = height * 0.50  # Adjust this position as needed
 
         # Position for the English text
         bangla_text_bbox = draw.textbbox((0, 0), bangla_text, font=bangla_font)
         bangla_text_width = bangla_text_bbox[2] - bangla_text_bbox[0]
         bangla_x = (width - bangla_text_width) / 2
-        bangla_y = height * 0.55  # Adjust this position as needed
+        bangla_y = height * 0.65  # Adjust this position as needed
 
         # Position for the Meaning text
         meaning_text_bbox = draw.textbbox((0, 0), meaning_text, font=meaning_font)
         meaning_text_width = meaning_text_bbox[2] - meaning_text_bbox[0]
         meaning_x = (width - meaning_text_width) / 2
-        meaning_y = height * 0.80  # Adjust this position as needed
+        meaning_y = height * 0.88  # Adjust this position as needed
 
         # --- Drawing the Text onto the Image ---
-        draw.text((arabic_x, arabic_y), display_text, font=arabic_font, fill=GOLD)
+        draw.text((arabic_x, arabic_y), arabic_text, font=arabic_font, fill=GOLD)
         draw.text((english_x, english_y), english_text, font=english_font, fill=WHITE)
         draw.text((bangla_x, bangla_y), bangla_text, font=bangla_font, fill=WHITE)
         draw.text((meaning_x, meaning_y), meaning_text, font=meaning_font, fill=WHITE)
 
         # --- Drawing the Text onto the Image with Shadows ---
         # Arabic Text with Shadow
-        draw.text((arabic_x + OFFSET[0], arabic_y + OFFSET[1]), display_text, font=arabic_font, fill=SHADOW_COLOR)
-        draw.text((arabic_x, arabic_y), display_text, font=arabic_font, fill=GOLD)
+        draw.text((arabic_x + OFFSET[0], arabic_y + OFFSET[1]), arabic_text, font=arabic_font, fill=SHADOW_COLOR)
+        draw.text((arabic_x, arabic_y), arabic_text, font=arabic_font, fill=GOLD)
 
         # English Text with Shadow
         draw.text((english_x + OFFSET[0], english_y + OFFSET[1]), english_text, font=english_font, fill=SHADOW_COLOR)
         draw.text((english_x, english_y), english_text, font=english_font, fill=WHITE)
 
         draw.text((bangla_x + OFFSET[0], bangla_y + OFFSET[1]), bangla_text, font=bangla_font, fill=SHADOW_COLOR)
-        draw.text((bangla_x, bangla_y), bangla_text, font=bangla_font, fill=WHITE)
+        draw.text((bangla_x, bangla_y), bangla_text, font=bangla_font, fill=BANGLA_TEXT_COLOR)
 
         # Meaning Text with Shadow
         draw.text((meaning_x + OFFSET[0], meaning_y + OFFSET[1]), meaning_text, font=meaning_font, fill=SHADOW_COLOR)
-        draw.text((meaning_x, meaning_y), meaning_text, font=meaning_font, fill=WHITE)
+        draw.text((meaning_x, meaning_y), meaning_text, font=meaning_font, fill=MEANING_TEXT_COLOR)
 
         # Save the new image
         base_image = base_image.convert("RGB")
@@ -443,10 +449,10 @@ def generate_banner_en(surah_no):
     # You need to provide the path to your image here.
     # Make sure "banner_template.jpg" is in the same directory as this script.
     # You can also use the full path, e.g., "C:/Users/YourName/Pictures/banner_template.jpg"
-    image_file = "quran/banner-english.png"
+    image_file = "quran/banner-base-ai.png"
 
     # Define the output file name
-    output_file = f"banners/{surah_no}_en_banner.jpg"
+    output_file = f"banners/{surah_no}_en_banner_new.jpg"
 
     # Run the function to create the banner
     create_youtube_banner_updated(image_file, surah_name_ar, surah_name_en, surah_name_bn, surah_meaning_en, output_file)
@@ -471,4 +477,4 @@ if __name__ == "__main__":
 
     for i in range(1, 115):
         generate_banner_en(i)
-    # generate_banner_en(114)
+    # generate_banner_en(36)

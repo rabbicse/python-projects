@@ -1,12 +1,11 @@
+import gc
 import glob
 import json
 import os
 import random
-import subprocess
-from typing import Optional, List, Tuple
-import gc
-import tempfile
 import shutil
+import subprocess
+from typing import Optional, Tuple
 
 import constants
 
@@ -18,15 +17,16 @@ from moviepy import *
 
 # Configuration
 FONT = "fonts/DejaVuSans.ttf"
-FONT_ARABIC = "fonts/Amiri-Regular.ttf"
+FONT_ARABIC = "fonts/uthmanic_hafs_v20.ttf"
 FONT_BANGLA = "fonts/Siyamrupali.ttf"
 BASE_JSON_PATH = "quran/{}.json"
 CHAPTERS_PATH = "quran/chapters.json"
 BASE_OUTPUT_VIDEO_PATH = "quran-en/{}-video.mp4"
 MAX_SUB_WIDTH = 1500
 TARGET_MAX_HEIGHT = 1080
-FONT_SIZE = 50
-FONT_SIZE_ARABIC = 70
+MAX_ALLOWED_HEIGHT = TARGET_MAX_HEIGHT / 2
+FONT_SIZE = 60
+FONT_SIZE_ARABIC = 90
 
 VIDEO_WIDTH = 1920
 VIDEO_HEIGHT = 1080
@@ -41,6 +41,19 @@ COLORS = {
     "stroke": (0, 0, 0),
     "overlay_bg": (0, 0, 0, 180)
 }
+
+dummy_sub = {
+    "arabic_text": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِذَا تَدَايَنتُم بِدَيْنٍ إِلَىٰٓ أَجَلٍ مُّسَمًّى فَٱكْتُبُوهُ ۚ وَلْيَكْتُب بَّيْنَكُمْ كَاتِبٌۢ بِٱلْعَدْلِ ۚ وَلَا يَأْبَ كَاتِبٌ أَن يَكْتُبَ كَمَا عَلَّمَهُ ٱللَّهُ ۚ فَلْيَكْتُبْ وَلْيُمْلِلِ ٱلَّذِى عَلَيْهِ ٱلْحَقُّ وَلْيَتَّقِ ٱللَّهَ رَبَّهُۥ وَلَا يَبْخَسْ مِنْهُ شَيْـًٔا ۚ فَإِن كَانَ ٱلَّذِى عَلَيْهِ ٱلْحَقُّ سَفِيهًا أَوْ ضَعِيفًا أَوْ لَا يَسْتَطِيعُ أَن يُمِلَّ هُوَ فَلْيُمْلِلْ وَلِيُّهُۥ بِٱلْعَدْلِ ۚ وَٱسْتَشْهِدُوا۟ شَهِيدَيْنِ مِن رِّجَالِكُمْ ۖ فَإِن لَّمْ يَكُونَا رَجُلَيْنِ فَرَجُلٌ وَٱمْرَأَتَانِ مِمَّن تَرْضَوْنَ مِنَ ٱلشُّهَدَآءِ أَن تَضِلَّ إِحْدَىٰهُمَا فَتُذَكِّرَ إِحْدَىٰهُمَا ٱلْأُخْرَىٰ ۚ وَلَا يَأْبَ ٱلشُّهَدَآءُ إِذَا مَا دُعُوا۟ ۚ وَلَا تَسْـَٔمُوٓا۟ أَن تَكْتُبُوهُ صَغِيرًا أَوْ كَبِيرًا إِلَىٰٓ أَجَلِهِۦ ۚ ذَٰلِكُمْ أَقْسَطُ عِندَ ٱللَّهِ وَأَقْوَمُ لِلشَّهَـٰدَةِ وَأَدْنَىٰٓ أَلَّا تَرْتَابُوٓا۟ ۖ إِلَّآ أَن تَكُونَ تِجَـٰرَةً حَاضِرَةً تُدِيرُونَهَا بَيْنَكُمْ فَلَيْسَ عَلَيْكُمْ جُنَاحٌ أَلَّا تَكْتُبُوهَا ۗ وَأَشْهِدُوٓا۟ إِذَا تَبَايَعْتُمْ ۚ وَلَا يُضَآرَّ كَاتِبٌ وَلَا شَهِيدٌ ۚ وَإِن تَفْعَلُوا۟ فَإِنَّهُۥ فُسُوقٌۢ بِكُمْ ۗ وَٱتَّقُوا۟ ٱللَّهَ ۖ وَيُعَلِّمُكُمُ ٱللَّهُ ۗ وَٱللَّهُ بِكُلِّ شَىْءٍ عَلِيمٌ",
+    "english_text": "O believers! When you contract a loan for a fixed period of time, commit it to writing. Let the scribe maintain justice between the parties. The scribe should not refuse to write as Allah has taught them to write. They will write what the debtor dictates, bearing Allah in mind and not defrauding the debt. If the debtor is incompetent, weak, or unable to dictate, let their guardian dictate for them with justice. Call upon two of your men to witness. If two men cannot be found, then one man and two women of your choice will witness—so if one of the women forgets the other may remind her.<sup foot_note=76489>1</sup> The witnesses must not refuse when they are summoned. You must not be against writing ˹contracts˺ for a fixed period—whether the sum is small or great. This is more just ˹for you˺ in the sight of Allah, and more convenient to establish evidence and remove doubts. However, if you conduct an immediate transaction among yourselves, then there is no need for you to record it, but call upon witnesses when a deal is finalized. Let no harm come to the scribe or witnesses. If you do, then you have gravely exceeded ˹your limits˺. Be mindful of Allah, for Allah ˹is the One Who˺ teaches you. And Allah has ˹perfect˺ knowledge of all things.",
+}
+
+
+def to_arabic(num: int) -> str:
+    # Western to Arabic-Indic digits map (Unicode escapes)
+    digits = ["\u0660", "\u0661", "\u0662", "\u0663", "\u0664",
+              "\u0665", "\u0666", "\u0667", "\u0668", "\u0669"]
+    return "".join(digits[int(d)] for d in str(num))
+
 
 # New Chroma Key Color: Bright Cyan (RGB)
 CHROMA_KEY_COLOR = (0, 255, 0)
@@ -88,17 +101,6 @@ class TempFileManager:
         gc.collect()
 
 
-# def generate_srt(data):
-#     verse_timings = data["audio"]["audio_files"][0]["verse_timings"]
-#     verses = {v["verse_key"]: v for v in data["surah_verses"]}
-#
-#     srt_lines = []
-#     for timing in verse_timings:
-#         verse_key = timing["verse_key"]
-#         if verse_key in verses:
-#             srt_lines.append(verses[verse_key]["arabic_text"])
-#     return srt_lines
-
 def generate_srt(data):
     srt_lines = []
     # print(f"Total verses: {len(data['surah_verses'])}")
@@ -114,12 +116,12 @@ def json_to_srt(json_file):
     return generate_srt(data)
 
 
-def create_animated_text(text, text_arabic, duration=5):
+def create_animated_text(text: str, text_arabic: str, duration=5):
     # Create a background
     background = ColorClip(size=(VIDEO_WIDTH, VIDEO_HEIGHT), color=(0, 0, 0, 255))
     # background = ColorClip(size=(VIDEO_WIDTH, VIDEO_HEIGHT), color=CHROMA_KEY_COLOR)
     background = background.with_duration(duration)
-    background = background.with_opacity(0.35)  # 30% opacity
+    background = background.with_opacity(0.45)  # 30% opacity
 
     # Arabic Caption
     # Create the text clip without a font parameter
@@ -135,7 +137,7 @@ def create_animated_text(text, text_arabic, duration=5):
     arabic_display_text = arabic_display_text[::-1]  # Reverse for proper RTL display
     text_clip_arabic = TextClip(
         font=FONT_ARABIC,
-        text=arabic_display_text,
+        text=text_arabic,
         color="white",
         font_size=FONT_SIZE_ARABIC,
         size=(MAX_SUB_WIDTH, None),
@@ -144,20 +146,26 @@ def create_animated_text(text, text_arabic, duration=5):
         stroke_color="#030303",
         stroke_width=3,  # Gold stroke
         interline=30,
-        margin=(10, 40, 10, 30)  # left, top, right, bottom
+        margin=(10, 30, 30, 50)  # left, top, right, bottom
     )
 
     estimated_ar_height = text_clip_arabic.h
-    if estimated_ar_height > TARGET_MAX_HEIGHT / 2:
+    font_size_arabic = FONT_SIZE_ARABIC
+    while estimated_ar_height > MAX_ALLOWED_HEIGHT:
         # Ensure the new size is smaller than or equal to the test size
-        scale_factor = min(1.0, TARGET_MAX_HEIGHT / estimated_ar_height)
-        font_size = int(FONT_SIZE_ARABIC * scale_factor)
+        # scale_factor = min(1.0, TARGET_MAX_HEIGHT / estimated_ar_height)
+        # Compute scale factor relative to allowed height
+        scale_factor = MAX_ALLOWED_HEIGHT / estimated_ar_height
+        # Clamp scale factor to a reasonable range (avoid extreme tiny/huge)
+        # scale_factor = max(0.4, min(scale_factor, 1.2))
+        # font_size = int(FONT_SIZE_ARABIC * scale_factor)
+        font_size_arabic -= 5
 
         text_clip_arabic = TextClip(
             font=FONT_ARABIC,
-            text=arabic_display_text,
+            text=text_arabic,
             color="white",
-            font_size=font_size,
+            font_size=font_size_arabic,
             size=(MAX_SUB_WIDTH, None),
             method='caption',  # Enable word wrapping
             text_align="center",
@@ -165,7 +173,13 @@ def create_animated_text(text, text_arabic, duration=5):
             stroke_width=1,  # Gold stroke
             interline=20,
             margin=(10, 30, 10, 20)  # left, top, right, bottom
+
+            # stroke_width=max(1, int(3 * scale_factor)),  # scale stroke a bit
+            # interline=max(10, int(20 * scale_factor)),  # scale spacing
+            # margin=(20, int(30 * scale_factor), 20, int(40 * scale_factor))
         )
+        estimated_ar_height = text_clip_arabic.h
+        print(f"Arabic Text height too high. Current Font Size: {font_size_arabic}")
 
     # Set the clip duration
     text_clip_arabic = text_clip_arabic.with_duration(duration)
@@ -173,6 +187,21 @@ def create_animated_text(text, text_arabic, duration=5):
     # Apply the movement
     text_clip_arabic = text_clip_arabic.with_position(
         (VIDEO_WIDTH / 2 - text_clip_arabic.w / 2, VIDEO_HEIGHT / 2 - text_clip_arabic.h))
+
+    # Add padding (margin) around text
+    # padding = 5
+    # box_width = text_clip_arabic.w + 2 * padding
+    # box_height = text_clip_arabic.h + 2 * padding
+    #
+    # # Background box
+    # box = ColorClip(size=(box_width, box_height), color=(255, 0, 0))  # black box
+    # box = box.with_opacity(0.6)  # transparent
+    # box = box.with_position(
+    #     (VIDEO_WIDTH / 2 - text_clip_arabic.w / 2 - padding, VIDEO_HEIGHT / 2 - text_clip_arabic.h - padding))
+    # box = box.with_duration(duration)
+
+    # text_clip_arabic = text_clip_arabic.with_position(
+    #     ("center", "center"))
 
     # Apply effects
     text_clip_arabic = text_clip_arabic.with_effects([vfx.CrossFadeIn(1.5), vfx.CrossFadeOut(1.5)])
@@ -192,12 +221,20 @@ def create_animated_text(text, text_arabic, duration=5):
         interline=30,
         margin=(10, 20, 10, 30)  # left, top, right, bottom
     )
+    y_english = VIDEO_HEIGHT / 2
 
     estimated_height = text_clip.h
-    if estimated_height > TARGET_MAX_HEIGHT / 2:
+    font_size = FONT_SIZE
+    while estimated_height > MAX_ALLOWED_HEIGHT:
+        # Compute scale factor relative to allowed height
+        # scale_factor = MAX_ALLOWED_HEIGHT / estimated_height
         # Ensure the new size is smaller than or equal to the test size
-        scale_factor = min(1.0, TARGET_MAX_HEIGHT / estimated_ar_height)
-        font_size = int(FONT_SIZE * scale_factor)
+        # scale_factor = min(1.0, TARGET_MAX_HEIGHT / estimated_height)
+        # Clamp scale factor to a reasonable range (avoid extreme tiny/huge)
+        # scale_factor = max(0.45, min(scale_factor, 1.2))
+        # font_size = int(FONT_SIZE * scale_factor)
+
+        font_size -= 5
 
         text_clip = TextClip(
             font=FONT,
@@ -208,19 +245,37 @@ def create_animated_text(text, text_arabic, duration=5):
             method='caption',  # Enable word wrapping
             text_align="center",
             stroke_color="#030303",
-            stroke_width=1,  # Gold stroke
+            stroke_width=2,  # Gold stroke
             interline=20,
             margin=(10, 20, 10, 20)  # left, top, right, bottom
+            # stroke_width=max(1, int(3 * scale_factor)),  # scale stroke a bit
+            # interline=max(10, int(20 * scale_factor)),  # scale spacing
+            # margin=(10, int(30 * scale_factor), 10, int(10 * scale_factor))
         )
+        estimated_height = text_clip.h
+        # y_english = VIDEO_HEIGHT / 2
+        print(f"English Text height too high. Current Font Size: {font_size}")
 
     # Set the clip duration
     text_clip = text_clip.with_duration(duration)
 
     # Apply the movement
-    text_clip = text_clip.with_position((VIDEO_WIDTH / 2 - text_clip.w / 2, VIDEO_HEIGHT / 2))
+    text_clip = text_clip.with_position((VIDEO_WIDTH / 2 - text_clip.w / 2, y_english))
+
+    # text_clip = text_clip.with_position(("center", "center"))
 
     # Apply effects
     text_clip = text_clip.with_effects([vfx.CrossFadeIn(1.5), vfx.CrossFadeOut(1.5)])
+
+    # box_width = text_clip_arabic.w + 2 * padding
+    # box_height = text_clip_arabic.h + 2 * padding
+    #
+    # # Background box
+    # box1 = ColorClip(size=(box_width, box_height), color=(0, 255, 0))  # black box
+    # box1 = box1.with_opacity(0.6)  # transparent
+    # box1 = box1.with_position(
+    #     (VIDEO_WIDTH / 2 - text_clip.w / 2 - padding, VIDEO_HEIGHT / 2 - padding))
+    # box1 = box1.with_duration(duration)
 
     # Combine background and text
     # final_clip = CompositeVideoClip([background, text_clip, text_clip_arabic])
@@ -228,6 +283,8 @@ def create_animated_text(text, text_arabic, duration=5):
     #                                 bg_color=None)
 
     final_clip = CompositeVideoClip([background, text_clip, text_clip_arabic], size=(VIDEO_WIDTH, VIDEO_HEIGHT))
+
+    # final_clip.preview()
 
     return final_clip
 
@@ -253,7 +310,7 @@ def create_arabic_text_clip(text: str,
     arabic_display_text = arabic_display_text[::-1]  # Reverse for proper RTL display
     text_clip_arabic = TextClip(
         font=font,
-        text=arabic_display_text,
+        text=text,
         color=text_color,
         font_size=font_size,
         text_align="center",
@@ -336,18 +393,12 @@ def create_animated_surah(surah_arabic, surah_english, surah_bangla, meaning_en,
         # Fallback if GIF is not available
         logo_clip = None
 
-    # Create a background
-    # background = ColorClip(size=(VIDEO_WIDTH, VIDEO_HEIGHT), color=CHROMA_KEY_COLOR)
-    # background = ColorClip(size=(VIDEO_WIDTH, VIDEO_HEIGHT), color=(0, 0, 0, 0))
-    # background = background.with_duration(duration)
-    # background = background.with_opacity(0.0)  # 0% opacity
-
     # Arabic surah
     surah_clip_arabic = create_arabic_text_clip(text=surah_arabic,
                                                 font=FONT_ARABIC,
                                                 font_size=30,
                                                 duration=random.randint(min_duration, max_duration),
-                                                margin=(10, 20, 20, 20),
+                                                margin=(10, 20, 20, 30),
                                                 text_color=COLORS["arabic_text"],
                                                 stroke_color=COLORS["stroke"]
                                                 )
@@ -403,7 +454,7 @@ def create_animated_surah(surah_arabic, surah_english, surah_bangla, meaning_en,
     return final_clip
 
 
-def generate_verse_to_file(surah_no, verse_index, subtitle_arabic, subtitle_english, temp_manager):
+def generate_verse_to_file(surah_no, verse_index, subtitle_arabic, subtitle_english, temp_manager, duration_pad=1):
     """Generate a single verse video and write it to a temporary file"""
     surah = f"{surah_no:03}"
     audio_ar_index = f"{(verse_index + 1):03}"
@@ -418,9 +469,12 @@ def generate_verse_to_file(surah_no, verse_index, subtitle_arabic, subtitle_engl
         audio_english = AudioFileClip(
             f"/mnt/7A4CEE3F674E3964/quran/quran-in-english-clearquran-mp3-verse-by-verse-edtion-allah/{surah}-{audio_en_index}.mp3")
         concat = concatenate_audioclips([audio_arabic, audio_english])
+        duration = concat.duration + duration_pad
 
         if is_exists:
-            duration = concat.duration
+            # Close clips to free memory
+            audio_arabic.close()
+            audio_english.close()
             concat.close()
             return temp_file, duration
 
@@ -428,12 +482,10 @@ def generate_verse_to_file(surah_no, verse_index, subtitle_arabic, subtitle_engl
         subtitle_video = create_animated_text(
             text=subtitle_english.strip(),
             text_arabic=subtitle_arabic.strip(),
-            duration=concat.duration
+            duration=duration
         )
 
         video = subtitle_video.with_audio(concat)
-        duration = video.duration
-
         video.write_videofile(
             temp_file,
             fps=30,
@@ -449,6 +501,8 @@ def generate_verse_to_file(surah_no, verse_index, subtitle_arabic, subtitle_engl
         video.close()
         subtitle_video.close()
         concat.close()
+        audio_arabic.close()
+        audio_english.close()
 
         return temp_file, duration
 
@@ -471,9 +525,11 @@ def generate_bismillah_to_file(temp_manager):
 
         # All clip will play one after the other
         concat = concatenate_audioclips([audio_arabic, audio_english])
+        duration = concat.duration + 1
 
         if is_exists:
-            duration = concat.duration
+            audio_arabic.close()
+            audio_english.close()
             concat.close()
             return temp_file, duration
 
@@ -484,30 +540,10 @@ def generate_bismillah_to_file(temp_manager):
         subtitle_video = create_animated_text(
             text=subtitle_english,
             text_arabic=bismillah_subtitle,
-            duration=concat.duration
+            duration=duration
         )
 
         video = subtitle_video.with_audio(concat)
-        duration = video.duration
-
-        # Write final video with high quality settings
-        # video.write_videofile(
-        #     temp_file,
-        #     fps=30,
-        #     codec="hevc_nvenc",
-        #     audio_codec="aac",
-        #     preset="p7",
-        #     bitrate="50M",
-        #     ffmpeg_params=[
-        #         "-tune", "hq",
-        #         "-movflags", "+faststart",
-        #         "-profile:v", "main10",
-        #         "-cq", "0",
-        #         "-pix_fmt", "yuv420p",
-        #         "-y"
-        #     ]
-        # )
-
         video.write_videofile(
             temp_file,
             fps=30,
@@ -519,6 +555,8 @@ def generate_bismillah_to_file(temp_manager):
             ]
         )
 
+        audio_arabic.close()
+        audio_english.close()
         video.close()
         subtitle_video.close()
         concat.close()
@@ -564,7 +602,7 @@ def loop_backgrounds(total_duration: int, temp_manager):
                             codec="hevc_nvenc",
                             audio=False,
                             preset="p7",
-                            bitrate="50M",
+                            bitrate="30M",
                             ffmpeg_params=[
                                 "-tune", "hq",
                                 "-movflags", "+faststart",
@@ -692,37 +730,6 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
             if surah_clip.duration > total_duration:
                 surah_clip = surah_clip.subclipped(0, total_duration)
 
-            # surah_clip.write_videofile(
-            #     overlay_temp,
-            #     fps=30,
-            #     codec="libvpx-vp9",
-            #     # preset="p7",
-            #     # bitrate="50M",  # Very high bitrate
-            #     ffmpeg_params=[
-            #         # "-tune", "hq",  # Low latency tuning
-            #         # "-quality", "good",
-            #         # "-movflags", "+faststart",
-            #         # "-profile:v", "main10",
-            #         "-cq", "0",  # Constant quality mode (best)
-            #         "-pix_fmt", "yuva420p",
-            #         "-auto-alt-ref", "0",   # important for alpha with VP9
-            #         "-lossless", "1",
-            #         "-y"
-            #     ]
-            # )
-
-            # surah_clip.write_videofile(
-            #     overlay_temp,
-            #     fps=30,
-            #     codec="libvpx-vp9",
-            #     ffmpeg_params=[
-            #         "-pix_fmt", "yuva420p",  # alpha pixel format
-            #         "-auto-alt-ref", "0",  # prevent VP9 from breaking alpha
-            #         "-lossless", "1",  # preserve quality
-            #         "-y"
-            #     ]
-            # )
-
             surah_clip.write_videofile(
                 overlay_temp,
                 fps=30,
@@ -735,82 +742,12 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
                 ]
             )
 
-            # surah_clip.write_videofile(
-            #     overlay_temp,
-            #     fps=30,
-            #     codec="hevc_nvenc",
-            #     preset="p7",
-            #     bitrate="50M",  # Very high bitrate
-            #     ffmpeg_params=[
-            #         "-tune", "hq",  # Low latency tuning
-            #         "-movflags", "+faststart",
-            #         "-profile:v", "main10",
-            #         "-cq", "0",  # Constant quality mode (best)
-            #         "-pix_fmt", "yuva420p",
-            #         "-y"
-            #     ]
-            # )
             surah_clip.close()
 
         # Step 4: Concatenated background video files
         background_video = loop_backgrounds(total_duration=total_duration, temp_manager=temp_manager)
 
         # Step 4: Use ffmpeg to composite everything
-        # final_command = [
-        #     'ffmpeg',
-        #     '-i', background_video,      # Background video
-        #     '-i', temp_concat_file,     # Main content video
-        #     '-i', overlay_temp,         # Overlay video (transparent)
-        #     '-filter_complex',
-        #     '[0:v]setpts=PTS-STARTPTS[bg];'  # Background
-        #     '[1:v]setpts=PTS-STARTPTS[main];'  # Main content
-        #     '[2:v]setpts=PTS-STARTPTS,format=yuva420p[overlay];'  # Overlay with alpha
-        #     '[bg][main]overlay[bg_main];'  # Overlay main on background
-        #     '[bg_main][overlay]overlay[outv]'  # Overlay surah info
-        # ]
-
-        # final_command = [
-        #     'ffmpeg',
-        #     '-i', background_video,      # Background video
-        #     '-i', temp_concat_file,     # Main content video
-        #     '-i', overlay_temp,         # Overlay video (transparent)
-        #     '-filter_complex',
-        #     '[0:v]setpts=PTS-STARTPTS[bg];'  # Background
-        #     '[1:v]setpts=PTS-STARTPTS,format=yuva420p,colorkey=0x' + CHROMA_KEY_HEX + ':similarity=0.1:blend=0.6[main];'  # Main content
-        #     # '[1:v]setpts=PTS-STARTPTS,format=yuva420p[main];'  # Main content
-        #     '[2:v]setpts=PTS-STARTPTS,format=yuva420p,colorkey=0x' + CHROMA_KEY_HEX + ':similarity=0.1:blend=0.6[overlay_with_alpha];'  # Overlay with alpha
-        #     '[bg][main]overlay=shortest=1[bg_main];'  # Overlay main on background
-        #     '[bg_main][overlay_with_alpha]overlay[outv]'  # Overlay surah info
-        # ]
-
-        # final_command = [
-        #     'ffmpeg',
-        #     '-i', background_video,      # Background video
-        #     '-i', temp_concat_file,     # Main content video
-        #     '-i', overlay_temp,         # Overlay video (transparent)
-        #     '-filter_complex',
-        #     '[0:v]setpts=PTS-STARTPTS[bg];'  # Background
-        #     '[1:v]setpts=PTS-STARTPTS,format=yuva420p,colorkey=0x' + CHROMA_KEY_HEX + ':similarity=0.1:blend=0.6[main];'  # Main content
-        #     # '[1:v]setpts=PTS-STARTPTS,format=yuva420p[main];'  # Main content
-        #     '[2:v]setpts=PTS-STARTPTS,format=yuva420p,colorkey=0x' + CHROMA_KEY_HEX + ':similarity=0.1:blend=0.6[overlay_with_alpha];'  # Overlay with alpha
-        #     '[bg][main]overlay[bg_main];'  # Overlay main on background
-        #     '[bg_main][overlay_with_alpha]overlay[outv]'  # Overlay surah info
-        # ]
-
-        # final_command = [
-        #     'ffmpeg',
-        #     '-i', background_video,      # Background video
-        #     '-i', temp_concat_file,     # Main content video
-        #     # '-i', overlay_temp,         # Overlay video (transparent)
-        #     '-filter_complex',
-        #     '[0:v]setpts=PTS-STARTPTS[bg];'  # Background
-        #     '[1:v]setpts=PTS-STARTPTS[main];'  # Main content
-        #     # '[1:v]setpts=PTS-STARTPTS,format=yuva420p[main];'  # Main content
-        #     # '[2:v]setpts=PTS-STARTPTS,format=yuva420p[overlay_with_alpha];'  # Overlay with alpha
-        #     '[bg][main]overlay:format=yuva420p[bg_main];'  # Overlay main on background
-        #     # '[bg_main][overlay_with_alpha]overlay[outv]'  # Overlay surah info
-        # ]
-
         final_command = [
             'ffmpeg',
             '-i', background_video,  # Background video
@@ -824,19 +761,6 @@ def concatenate_video_files(video_files, output_path, surah_info, total_duration
             '[bg][main]overlay=0:0:format=auto[bg_main];'  # Overlay main on background
             '[bg_main][overlay_with_alpha]overlay=0:0:format=auto[outv]'  # Overlay surah info
         ]
-
-        # final_command = [
-        #     'ffmpeg',
-        #     '-i', background_video,  # Background video
-        #     '-i', temp_concat_file,  # Main content video
-        #     '-i', overlay_temp,  # Overlay video (transparent)
-        #     '-filter_complex',
-        #     '[0:v]setpts=PTS-STARTPTS[bg];'  # Background
-        #     '[1:v]setpts=PTS-STARTPTS,format=yuva420p[main];'  # Main content
-        #     '[2:v]setpts=PTS-STARTPTS,format=yuva420p[overlay_with_alpha];'  # Overlay with alpha
-        #     '[bg][main]overlay=shortest=1[bg_main];'  # Overlay main on background
-        #     '[bg_main][overlay_with_alpha]overlay[outv]'  # Overlay surah info
-        # ]
 
         # Add audio from the main content
         final_command.extend([
@@ -878,9 +802,6 @@ def generate_videos(surah_no: int):
     try:
         print(f"Processing Surah {surah_no}...")
 
-        # Load subtitles
-        # subtitles = json_to_srt(BASE_JSON_PATH.format(surah_no))
-
         # Load chapter info
         with open(CHAPTERS_PATH, 'r', encoding='utf-8') as f:
             data = json.load(f)
@@ -900,7 +821,7 @@ def generate_videos(surah_no: int):
         total_duration = 0
 
         # Generate bismillah if needed
-        if surah_no != 1:
+        if surah_no not in (1, 9):
             bismillah_file, duration = generate_bismillah_to_file(temp_manager)
             if bismillah_file:
                 video_files.append(bismillah_file)
@@ -919,19 +840,28 @@ def generate_videos(surah_no: int):
                 with open(subtitle_file, 'r', encoding='utf-8') as f:
                     subtitle_english = f.readline().strip()
             else:
-                subtitle_english = "Translation not available"
+                subtitle_english = ""
 
             subtitle_ar_file = f"quran/verse-by-verse/{surah}-{index + 1:03}.txt"
             if os.path.exists(subtitle_ar_file):
                 with open(subtitle_ar_file, 'r', encoding='utf-8') as f:
-                    subtitle_ar = f.readline().strip()
+                    subtitle_ar = f.readline().strip() + " " + to_arabic(index + 1)
             else:
                 subtitle_ar = ""
 
             # Generate verse video to file
-            verse_file, duration = generate_verse_to_file(
-                surah_no, index, subtitle_ar, subtitle_english, temp_manager
-            )
+            if index + 1 == verse_count:
+                verse_file, duration = generate_verse_to_file(
+                    surah_no, index, subtitle_ar, subtitle_english, temp_manager, duration_pad=3
+                )
+            else:
+                verse_file, duration = generate_verse_to_file(
+                    surah_no, index, subtitle_ar, subtitle_english, temp_manager
+                )
+
+            # verse_file, duration = generate_verse_to_file(
+            #     surah_no, index, dummy_sub["arabic_text"], dummy_sub["english_text"], temp_manager
+            # )
 
             if verse_file:
                 video_files.append(verse_file)
@@ -945,7 +875,8 @@ def generate_videos(surah_no: int):
 
         # Concatenate all temporary files
         output_path = BASE_OUTPUT_VIDEO_PATH.format(surah_no)
-        success = concatenate_video_files(video_files, output_path, surah_info, total_duration, temp_manager=temp_manager)
+        success = concatenate_video_files(video_files, output_path, surah_info, total_duration,
+                                          temp_manager=temp_manager)
 
         print(f"Successfully created: {output_path}")
 
@@ -960,9 +891,9 @@ def generate_videos(surah_no: int):
 
 
 if __name__ == "__main__":
-    generate_videos(2)
+    generate_videos(18)
 
     # For multiple surahs:
-    # for i in range(61, 66):
+    # for i in range(6, 9):
     #     generate_videos(i)
     #     gc.collect()

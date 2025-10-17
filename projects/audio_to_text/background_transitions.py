@@ -29,7 +29,7 @@ def generate_processed_backgrounds():
                 codec="hevc_nvenc",
                 audio=False,
                 preset="p7",
-                bitrate="50M",
+                bitrate="30M",
                 ffmpeg_params=[
                     "-tune", "hq",
                     "-movflags", "+faststart",

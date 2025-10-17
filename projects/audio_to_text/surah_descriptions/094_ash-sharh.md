@@ -15,4 +15,4 @@ Source: https://quran.com/
 
 🔔 Subscribe for more animated Qur’an videos, English translations, and Islamic reminders!
 
-#surahashsharh #holyquran #quranrecitation #tilawat #beautifulrecitation #surah94 #soothingquran #quranhealing #quranwithtajweed #heartsoothingquran #islamicreminders #listenquran #dailyquran #peacefulrecitation #quranshorts #healingquran #islamicvideo #islamicvideos
+#surahashsharh #holyquran #quranrecitation #tilawat #beautifulrecitation #surah94 #soothingquran #quranhealing #quranwithtajweed #heartsoothingquran #islamicreminders #listenquran #dailyquran #peacefulrecitation #quranshorts #healingquran #islamicvideo #islamicvideos #misharialafasy #misharyrashidalfasy#সূরা #কুরআন #কুরআন_তিলাওয়াত

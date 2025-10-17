@@ -182,7 +182,12 @@ def generate_markdown(surah_data, surah_number, surah_info=None):
         "#quranshorts",
         "#healingquran",
         "#islamicvideo",
-        "#islamicvideos"
+        "#islamicvideos",
+        "#misharialafasy",
+        "#misharyrashidalfasy"
+        "#সূরা",
+        "#কুরআন",
+        "#কুরআন_তিলাওয়াত"
     ]
 
     description += " ".join(hashtags)

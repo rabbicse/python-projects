@@ -75,6 +75,8 @@ def create_animated_surah(surah_arabic, surah_english, surah_bangla, meaning_en,
         # Fallback if GIF is not available
         logo_clip = None
 
+    TOP_PAD = 50
+
     # Arabic surah
     surah_clip_arabic = create_arabic_text_clip(text=surah_arabic,
                                                 font=FONT_ARABIC,
@@ -85,7 +87,7 @@ def create_animated_surah(surah_arabic, surah_english, surah_bangla, meaning_en,
                                                 stroke_color=COLORS["stroke"]
                                                 )
     # Apply the movement
-    surah_clip_arabic = surah_clip_arabic.with_position((VIDEO_WIDTH / 2 - surah_clip_arabic.w / 2, 5))
+    surah_clip_arabic = surah_clip_arabic.with_position((VIDEO_WIDTH / 2 - surah_clip_arabic.w / 2, TOP_PAD))
     surah_clip_arabic = surah_clip_arabic.with_effects([vfx.Loop(duration=duration)])
 
     # English Surah
@@ -97,7 +99,7 @@ def create_animated_surah(surah_arabic, surah_english, surah_bangla, meaning_en,
                                           text_color=COLORS["english_text"],
                                           stroke_color=COLORS["stroke"])
     # Apply the movement
-    surah_clip_english = surah_clip_english.with_position((VIDEO_WIDTH / 2 - surah_clip_english.w / 2, surah_clip_arabic.h))
+    surah_clip_english = surah_clip_english.with_position((VIDEO_WIDTH / 2 - surah_clip_english.w / 2, TOP_PAD + surah_clip_arabic.h))
     surah_clip_english = surah_clip_english.with_effects([vfx.Loop(duration=duration)])
 
     # Bangla Surah
@@ -110,7 +112,7 @@ def create_animated_surah(surah_arabic, surah_english, surah_bangla, meaning_en,
                                          stroke_color=COLORS["stroke"])
     # Apply the movement
     surah_clip_bangla = surah_clip_bangla.with_position(
-        (VIDEO_WIDTH / 2 - surah_clip_bangla.w / 2, surah_clip_arabic.h + surah_clip_english.h))
+        (VIDEO_WIDTH / 2 - surah_clip_bangla.w / 2, TOP_PAD + surah_clip_arabic.h + surah_clip_english.h))
     surah_clip_bangla = surah_clip_bangla.with_effects([vfx.Loop(duration=duration)])
 
     # English Meaning
@@ -123,7 +125,7 @@ def create_animated_surah(surah_arabic, surah_english, surah_bangla, meaning_en,
                                             stroke_color=COLORS["stroke"])
     # Apply the movement
     meaning_clip_english = meaning_clip_english.with_position(
-        (VIDEO_WIDTH / 2 - meaning_clip_english.w / 2, surah_clip_arabic.h + surah_clip_english.h + surah_clip_bangla.h))
+        (VIDEO_WIDTH / 2 - meaning_clip_english.w / 2, TOP_PAD + surah_clip_arabic.h + surah_clip_english.h + surah_clip_bangla.h))
     meaning_clip_english = meaning_clip_english.with_effects([vfx.Loop(duration=duration)])
 
     # Combine background and text
@@ -328,21 +330,23 @@ def generate_bismillah(subtitle_arabic: str, subtitle_english: str):
     audio_english = AudioFileClip("/mnt/7A4CEE3F674E3964/quran/quran-in-english-verse-by-verse-mp3-allah/001-001.mp3")
 
     # All clip will play one after the other
-    concat = concatenate_audioclips([audio_arabic, audio_english])
+    # concat = concatenate_audioclips([audio_arabic, audio_english])
 
     # Create your text animation
     subtitle_video = create_animated_text(
         text=subtitle_english,
         text_arabic=subtitle_arabic,
-        duration=concat.duration
+        duration=audio_arabic.duration
     )
 
-    final_video = subtitle_video.with_audio(concat)
+    final_video = subtitle_video.with_audio(audio_arabic)
 
     return final_video
 
 
-def generate_audio_with_subs(surah_no: int):
+def generate_audio_with_subs(surah_no: int,
+                             start_index = 0,
+                             end_index = 10):
     # Load bismillah
     surah = f"{surah_no:03}"
 
@@ -362,29 +366,33 @@ def generate_audio_with_subs(surah_no: int):
     videos = []
     # if not surah al-fatihah then add bismillah
     num = 0
-    if surah_no != 1:
-        subtitle_ar_file = f"quran/verse-by-verse/001-001.txt"
-        if os.path.exists(subtitle_ar_file):
-            with open(subtitle_ar_file, 'r', encoding='utf-8') as f:
-                subtitle_ar = f.readline().strip() + " " + to_arabic(1)
-        else:
-            subtitle_ar = ""
-        bismillah_subtitle = subtitle_ar
-        videos.append(generate_bismillah(subtitle_arabic=bismillah_subtitle,
-                                         subtitle_english="In the name of Allah, the Gracious, the Merciful."))
-        num += 1
+    # if surah_no != 1:
+    #     subtitle_ar_file = f"quran/verse-by-verse/001-001.txt"
+    #     if os.path.exists(subtitle_ar_file):
+    #         with open(subtitle_ar_file, 'r', encoding='utf-8') as f:
+    #             subtitle_ar = f.readline().strip()
+    #     else:
+    #         subtitle_ar = ""
+    #     bismillah_subtitle = subtitle_ar
+    #     videos.append(generate_bismillah(subtitle_arabic=bismillah_subtitle,
+    #                                      subtitle_english="In the name of Allah, the Gracious, the Merciful."))
 
     # loop through each audio
-    for index in range(verse_count):
+    total_duration = 0
+    for index in range(start_index, min(end_index + 1, verse_count)):
         audio_ar_index = f"{(index + 1):03}"
         audio_en_index = f"{(index + 1):03}"
         audio_arabic = AudioFileClip(f"/mnt/7A4CEE3F674E3964/quran/000_versebyverse/{surah}{audio_ar_index}.mp3")
 
-        audio_english = AudioFileClip(
-            f"/mnt/7A4CEE3F674E3964/quran/quran-in-english-clearquran-mp3-verse-by-verse-edtion-allah/{surah}-{audio_en_index}.mp3")
+        total_duration += audio_arabic.duration
+        if total_duration >= 60:
+            break
+
+        # audio_english = AudioFileClip(
+        #     f"/mnt/7A4CEE3F674E3964/quran/quran-in-english-clearquran-mp3-verse-by-verse-edtion-allah/{surah}-{audio_en_index}.mp3")
 
         # All clip will play one after the other
-        concat = concatenate_audioclips([audio_arabic, audio_english])
+        # concat = concatenate_audioclips([audio_arabic, audio_english])
 
         with open(f"quran/quran-english-verse-by-verse-allah/{surah}-{audio_en_index}.txt") as f:
             subtitle_english = f.readline().strip()
@@ -400,7 +408,7 @@ def generate_audio_with_subs(surah_no: int):
         subtitle_video = create_animated_text(
             text=subtitle_english.strip(),
             text_arabic=subtitle_ar,
-            duration=concat.duration
+            duration=audio_arabic.duration
         )
 
         # subtitle_video = create_animated_text(
@@ -409,8 +417,10 @@ def generate_audio_with_subs(surah_no: int):
         #     duration=concat.duration
         # )
 
-        video = subtitle_video.with_audio(concat)
+        video = subtitle_video.with_audio(audio_arabic)
         videos.append(video)
+
+
 
     # Concatenate the final video clips, playing them one after the other
     if videos:
@@ -498,4 +508,4 @@ def generate_videos(surah_no: int):
 
 
 if __name__ == "__main__":
-    generate_videos(108)
+    generate_videos(107)

@@ -13,8 +13,10 @@ def to_arabic(num: int) -> str:
 # Example ayah (Ayatul Kursi)
 # text = "وَلَمَّا بَرَزُوا۟ لِجَالُوتَ وَجُنُودِهِۦ قَالُوا۟ رَبَّنَآ أَفْرِغْ عَلَيْنَا صَبْرًۭا وَثَبِّتْ أَقْدَامَنَا وَٱنصُرْنَا عَلَى ٱلْقَوْمِ ٱلْكَـٰفِرِينَ ٢٥٠"
 
+text="الفاتحة"
 
-text = "بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ ١"
+
+# text = "بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ ١"
 # Reshape + fix RTL
 # Arabic Caption
 # Create the text clip without a font parameter
@@ -29,16 +31,17 @@ reshaped_text = reshaper.reshape(text)
 arabic_display_text = get_display(reshaped_text)
 arabic_display_text = arabic_display_text[::-1]  # Reverse for proper RTL display
 
-subtitle_ar_file = f"quran/verse-by-verse/002-286.txt"
+subtitle_ar_file = f"quran/verse-by-verse/001-001.txt"
 with open(subtitle_ar_file, 'r', encoding='utf-8') as f:
     subtitle_ar = f.readline().strip()
 
 # Create MoviePy clip
 clip = TextClip(
     # text=" ".join([to_arabic(i) for i in range(50)]),
-    text=subtitle_ar + " " + to_arabic(1),
-    font_size=70,
-    font="fonts/uthmanic_hafs_v20.ttf",  # point directly to font file
+    text="132",#to_arabic(113),#text,#subtitle_ar + " " + to_arabic(1),
+    font_size=400,
+    font="fonts/ArabQuranIslamic140-K7n4W.ttf",  # point directly to font file
+    # font="fonts/uthmanic_hafs_v20.ttf",  # point directly to font file
     # font="fonts/UthmanicHafs1Ver18.woff2",   # point directly to font file
     color="white",
     size=(1500, None),
