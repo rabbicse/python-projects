@@ -242,7 +242,7 @@ nlp = spacy.load("en_core_web_sm")
 
 
 text = """
-The innovative developer built a powerful application using Python and MoviePy. It automatically highlights important
+When there comes Allah’s victory, and conquest.
 """
 
 
@@ -272,7 +272,7 @@ def create_individual_words_video(text, width=1920, height=1080, duration=10):
                 font=FONT_ULTRA_BOLD,
                 font_size=36,
                 color='yellow',
-                method='label',
+                method='caption',
                 text_align="center",
                 stroke_color="#030303",
                 stroke_width=2,  # Gold stroke
@@ -281,10 +281,11 @@ def create_individual_words_video(text, width=1920, height=1080, duration=10):
             )
         else:
             word_clip = TextClip(
-                text=word.upper(),
+                text=word,
+                font=FONT_REGULAR,
                 font_size=36,
                 color='white',
-                method='label',
+                method='caption',
                 text_align="center",
                 stroke_color="#030303",
                 stroke_width=2,  # Gold stroke
@@ -471,7 +472,7 @@ def create_centered_individual_words(text, width=1920, height=1080, duration=10)
                     font_size=36,
                     color='white',
                     method='label',
-                    font=FONT_REGULAR,
+                    font=FONT,
                     text_align="center",
                     stroke_color="#030303",
                     stroke_width=2,  # Gold stroke

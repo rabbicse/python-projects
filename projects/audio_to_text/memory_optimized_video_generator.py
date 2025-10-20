@@ -139,20 +139,27 @@ def analyze_text(text: str):
 
     tokens = []
     for token in doc:
-        # Fix possessive words like "Allah's"
-        if token.tag_ == "POS" and tokens:  # POS = possessive
-            tokens[-1]["text"] += token.text  # attach 's
+
+        # Merge punctuation to previous word
+        if token.is_punct and tokens:
+            tokens[-1]["text"] += token.text
             tokens[-1]["end"] = token.idx + len(token.text)
             continue
 
+        # Merge possessive 's
+        if token.tag_ == "POS" and tokens:
+            tokens[-1]["text"] += token.text
+            tokens[-1]["end"] = token.idx + len(token.text)
+            continue
+
+        # Normal token
         tokens.append({
             "text": token.text,
             "start": token.idx,
             "end": token.idx + len(token.text),
             "highlight": (
-                    token.pos_ in highlight_pos and
-                    token.text.lower() not in stopwords and
-                    token.is_alpha
+                token.pos_ in highlight_pos
+                and token.text.lower() not in stopwords
             )
         })
 
@@ -348,7 +355,7 @@ def create_centered_individual_words(text:str,
     lines = []
     current_line = []
     current_line_width = 0
-    max_line_width = width - 420
+    max_line_width = width - 200
 
     # First pass: group words into lines
     for token in doc:
@@ -494,7 +501,7 @@ def create_animated_highlight_text(text: str, text_arabic: str, duration=5):
     # Create the text clip without a font parameter
     stroke_width = 3
     text_clip = TextClip(
-        font=FONT,
+        font=FONT_REGULAR,
         text=text,
         color="white",
         font_size=FONT_SIZE,
@@ -514,7 +521,7 @@ def create_animated_highlight_text(text: str, text_arabic: str, duration=5):
         font_size -= 5
         stroke_width = 2
         text_clip = TextClip(
-            font=FONT,
+            font=FONT_REGULAR,
             text=text,
             color="white",
             font_size=font_size,
@@ -752,7 +759,7 @@ def generate_verse_to_file(surah_no, verse_index, subtitle_arabic, subtitle_engl
 
         video = subtitle_video.with_audio(concat)
 
-        # video.preview()
+        video.preview()
 
         video.write_videofile(
             temp_file,
