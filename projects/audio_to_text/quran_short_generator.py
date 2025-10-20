@@ -15,6 +15,7 @@ from moviepy import *
 # get path to default font of the system. Make sure to change it
 FONT = "fonts/DejaVuSans.ttf"
 # FONT_ARABIC = "fonts/Amiri-Regular.ttf"
+FONT_ARABIC_CALIGRAPH = "fonts/ArabQuranIslamic140-K7n4W.ttf"
 FONT_ARABIC = "fonts/uthmanic_hafs_v20.ttf"
 FONT_BANGLA = "fonts/Siyamrupali.ttf"
 BASE_JSON_PATH = "quran/{}.json"
@@ -59,7 +60,7 @@ def create_animated_surah(surah_arabic, surah_english, surah_bangla, meaning_en,
         logo_clip = logo_clip.resized(width=50)
 
         # Position the resized clip
-        logo_clip = logo_clip.with_position((5, 5))
+        logo_clip = logo_clip.with_position((50, 100))
 
         logo_clip = logo_clip.with_duration(random.randint(min_duration, max_duration))
 
@@ -75,12 +76,12 @@ def create_animated_surah(surah_arabic, surah_english, surah_bangla, meaning_en,
         # Fallback if GIF is not available
         logo_clip = None
 
-    TOP_PAD = 50
+    TOP_PAD = 150
 
     # Arabic surah
     surah_clip_arabic = create_arabic_text_clip(text=surah_arabic,
-                                                font=FONT_ARABIC,
-                                                font_size=80,
+                                                font=FONT_ARABIC_CALIGRAPH,
+                                                font_size=150,
                                                 duration=random.randint(min_duration, max_duration),
                                                 margin=(5, 10, 5, 50),
                                                 text_color=COLORS["arabic_text"],
@@ -356,7 +357,7 @@ def generate_audio_with_subs(surah_no: int,
     data_ar = data["ar"][f"{surah_no}"]
 
     surah_name_en = f'Surah {data_en["transliteratedName"]}'
-    surah_name_ar = 'سورة' + f' {data_ar["transliteratedName"]}'
+    surah_name_ar = f'{surah_no}'# 'سورة' + f' {data_ar["transliteratedName"]}'
     surah_meaning_en = data_en["translatedName"]
     # Get Bengali name
     surah_name_bn = f'সূরা {constants.BENGALI_NAMES.get(str(surah_no), "")}'
@@ -395,7 +396,7 @@ def generate_audio_with_subs(surah_no: int,
         # concat = concatenate_audioclips([audio_arabic, audio_english])
 
         with open(f"quran/quran-english-verse-by-verse-allah/{surah}-{audio_en_index}.txt") as f:
-            subtitle_english = f.readline().strip()
+            subtitle_english = f.readline().strip().upper()
 
         subtitle_ar_file = f"quran/verse-by-verse/{surah}-{index + 1:03}.txt"
         if os.path.exists(subtitle_ar_file):
@@ -508,4 +509,4 @@ def generate_videos(surah_no: int):
 
 
 if __name__ == "__main__":
-    generate_videos(107)
+    generate_videos(110)

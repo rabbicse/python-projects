@@ -7,6 +7,7 @@ from bidi.algorithm import get_display
 FONT_ENGLISH_HEADER_PATH = "fonts/DejaVuSans.ttf"
 FONT_BANGLA_HEADER_PATH = "fonts/Siyamrupali.ttf"
 FONT_ARABIC_HEADER_PATH = "fonts/uthmanic_hafs_v20.ttf"
+FONT_ARABIC_PATH = "fonts/ArabQuranIslamic140-K7n4W.ttf"
 CHAPTERS_PATH = "quran/chapters.json"
 FONT_ARABIC = "fonts/uthmanic_hafs_v20.ttf"
 
@@ -296,7 +297,7 @@ def create_youtube_banner_updated(
         # For English, a bold, clear font like "Montserrat-Bold" or "Roboto-Bold" is a good choice.
         # Replace the font file paths with your actual font paths.
         try:
-            arabic_font = ImageFont.truetype(FONT_ARABIC_HEADER_PATH, 350)
+            arabic_font = ImageFont.truetype(FONT_ARABIC_PATH, 400)
         except IOError:
             print("Arabic font not found. Using default font.")
             arabic_font = ImageFont.load_default()
@@ -314,7 +315,7 @@ def create_youtube_banner_updated(
             bangla_font = ImageFont.load_default()
 
         try:
-            meaning_font = ImageFont.truetype(FONT_ENGLISH_HEADER_PATH, 100)
+            meaning_font = ImageFont.truetype(FONT_ENGLISH_HEADER_PATH, 90)
         except IOError:
             print("Meaning font not found. Using default font.")
             meaning_font = ImageFont.load_default()
@@ -348,14 +349,14 @@ def create_youtube_banner_updated(
         arabic_text_bbox = draw.textbbox((0, 0), arabic_text, font=arabic_font)
         arabic_text_width = arabic_text_bbox[2] - arabic_text_bbox[0]
         arabic_x = (width - arabic_text_width) / 2
-        arabic_y = height * 0.0  # 20% down from the top
-        arabic_y = -90
+        arabic_y = height * 0.05  # 20% down from the top
+        # arabic_y = -90
 
         # Position for the English text
         english_text_bbox = draw.textbbox((0, 0), english_text, font=english_font)
         english_text_width = english_text_bbox[2] - english_text_bbox[0]
         english_x = (width - english_text_width) / 2
-        english_y = height * 0.50  # Adjust this position as needed
+        english_y = height * 0.45  # Adjust this position as needed
 
         # Position for the English text
         bangla_text_bbox = draw.textbbox((0, 0), bangla_text, font=bangla_font)
@@ -437,11 +438,12 @@ def generate_banner_en(surah_no):
         data = json.load(f)
 
     data_en = data["en"][f"{surah_no}"]
-    data_ar = data["ar"][f"{surah_no}"]
+    # data_ar = data["ar"][f"{surah_no}"]
 
-    surah_name_en = f'Surah {data_en["transliteratedName"]}'
-    surah_name_ar = 'سورة' + f' {data_ar["transliteratedName"]}'
+    surah_name_en = f'Surah {data_en["transliteratedName"]}'.upper()
+    # surah_name_ar = 'سورة' + f' {data_ar["transliteratedName"]}'
     surah_meaning_en = f'{data_en["translatedName"]}'
+    surah_name_ar = f'{surah_no}'
 
     # Get Bengali name
     surah_name_bn = f'সূরা {BENGALI_NAMES.get(str(surah_no), "")}'

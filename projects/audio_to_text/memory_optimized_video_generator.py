@@ -15,9 +15,18 @@ import arabic_reshaper
 from bidi.algorithm import get_display
 from moviepy import *
 
+# Load spaCy model
+import spacy
+
+nlp = spacy.load("en_core_web_sm", disable=["ner"])
+
 # Configuration
 FONT = "fonts/DejaVuSans.ttf"
+FONT_REGULAR = "fonts/merriweather.regular.ttf"
+FONT_BOLD = "fonts/merriweather.bold.ttf"
+FONT_ULTRA_BOLD = "fonts/merriweather.ultrabold.ttf"
 FONT_ARABIC = "fonts/uthmanic_hafs_v20.ttf"
+FONT_ARABIC_CALIGRAPH = "fonts/ArabQuranIslamic140-K7n4W.ttf"
 FONT_BANGLA = "fonts/Siyamrupali.ttf"
 BASE_JSON_PATH = "quran/{}.json"
 CHAPTERS_PATH = "quran/chapters.json"
@@ -34,9 +43,9 @@ VIDEO_HEIGHT = 1080
 # Color scheme
 COLORS = {
     "background": (0, 10, 20),
-    "arabic_text": (255, 215, 0),
-    "english_text": (230, 230, 250),
-    "bangla_text": (176, 224, 230),
+    "arabic_text": "#FFFFFF",#(255, 215, 0),
+    "english_text": "#1E90FF", #(230, 230, 250),
+    "bangla_text": "#FFFFFF",#(176, 224, 230),
     "meaning_text": (230, 230, 250),
     "stroke": (0, 0, 0),
     "overlay_bg": (0, 0, 0, 180)
@@ -114,6 +123,41 @@ def json_to_srt(json_file):
     with open(json_file, "r", encoding="utf-8") as f:
         data = json.load(f)
     return generate_srt(data)
+
+
+# def analyze_text(text: str):
+#     """Analyze text and return tokens with highlight information"""
+#     doc = nlp(text)
+#     highlight_pos = {"NOUN", "PROPN", "ADJ", "VERB"}
+#     return doc, highlight_pos
+
+def analyze_text(text: str):
+    doc = nlp(text)
+
+    highlight_pos = {"NOUN", "PROPN", "ADJ", "VERB"}
+    stopwords = nlp.Defaults.stop_words
+
+    tokens = []
+    for token in doc:
+        # Fix possessive words like "Allah's"
+        if token.tag_ == "POS" and tokens:  # POS = possessive
+            tokens[-1]["text"] += token.text  # attach 's
+            tokens[-1]["end"] = token.idx + len(token.text)
+            continue
+
+        tokens.append({
+            "text": token.text,
+            "start": token.idx,
+            "end": token.idx + len(token.text),
+            "highlight": (
+                    token.pos_ in highlight_pos and
+                    token.text.lower() not in stopwords and
+                    token.is_alpha
+            )
+        })
+
+    return tokens
+
 
 
 def create_animated_text(text: str, text_arabic: str, duration=5):
@@ -289,6 +333,221 @@ def create_animated_text(text: str, text_arabic: str, duration=5):
     return final_clip
 
 
+def create_centered_individual_words(text:str,
+                                     font_size:int,
+                                     stroke_width:int=3,
+                                     width=1920,
+                                     height=540,
+                                     duration=10):
+    """Create centered individual words with better positioning"""
+    # doc, highlight_pos = analyze_text(text)
+
+    doc = analyze_text(text)
+
+    # Group words into lines first
+    lines = []
+    current_line = []
+    current_line_width = 0
+    max_line_width = width - 420
+
+    # First pass: group words into lines
+    for token in doc:
+        word = token["text"]#token.text_with_ws
+
+        # Create temp clip to measure width
+        temp_clip = TextClip(
+            text=word.upper(),
+            font_size=font_size,
+            color='white',
+            method='label',
+            font=FONT_REGULAR,
+            text_align="center",
+            stroke_color="#030303",
+            stroke_width=stroke_width,  # Gold stroke
+            interline=20,
+            margin=(5, 20, 5, 20)  # left, top, right, bottom
+        )
+
+        word_width = temp_clip.w
+
+        if current_line_width + word_width > max_line_width and current_line:
+            lines.append(current_line)
+            current_line = [(token, word)]
+            current_line_width = word_width
+        else:
+            current_line.append((token, word))
+            current_line_width += word_width
+
+    if current_line:
+        lines.append(current_line)
+
+    # Second pass: create and position clips
+    text_clips = []
+    line_height = 70
+    total_text_height = len(lines) * line_height
+    start_y = 0#(height - total_text_height) // 2
+
+    for line_num, line in enumerate(lines):
+        line_clips = []
+        line_total_width = 0
+
+        # Create clips for each word in the line
+        for token, word in line:
+            if token["highlight"]:
+                word_clip = TextClip(
+                    text=word.upper(),
+                    font_size=font_size,
+                    color='#1E90FF',
+                    stroke_color='#030303',
+                    stroke_width=stroke_width,
+                    method='label',
+                    font=FONT_BOLD,
+                    text_align="center",
+                    interline=20,
+                    margin=(5, 20, 5, 20)  # left, top, right, bottom
+                )
+            else:
+                word_clip = TextClip(
+                    text=word.upper(),
+                    font_size=font_size,
+                    color='white',
+                    method='label',
+                    font=FONT_REGULAR,
+                    text_align="center",
+                    stroke_color="#030303",
+                    stroke_width=stroke_width,  # Gold stroke
+                    interline=20,
+                    margin=(5, 20, 5, 20)  # left, top, right, bottom
+                )
+
+            line_clips.append(word_clip)
+            line_total_width += word_clip.w
+
+        # Center the line horizontally
+        start_x = (width - line_total_width) // 2
+        current_x = start_x
+        y_pos = start_y + (line_num * line_height)
+
+        # Position each word in the line
+        for clip in line_clips:
+            positioned_clip = clip.with_position((current_x, y_pos)).with_duration(duration)
+            text_clips.append(positioned_clip)
+            current_x += clip.w
+
+    # Combine all clips
+    final = CompositeVideoClip(text_clips, size=(width, height), bg_color=None)
+    return final
+
+
+def create_animated_highlight_text(text: str, text_arabic: str, duration=5):
+    # Create a background
+    background = ColorClip(size=(VIDEO_WIDTH, VIDEO_HEIGHT), color=(0, 0, 0, 255))
+    background = background.with_duration(duration)
+    background = background.with_opacity(0.50)  # 50% opacity
+
+    # Arabic Caption
+    text_clip_arabic = TextClip(
+        font=FONT_ARABIC,
+        text=text_arabic,
+        color="white",
+        font_size=FONT_SIZE_ARABIC,
+        size=(MAX_SUB_WIDTH, None),
+        method='caption',  # Enable word wrapping
+        text_align="center",
+        stroke_color="#030303",
+        stroke_width=3,  # Gold stroke
+        interline=30,
+        margin=(10, 30, 30, 50)  # left, top, right, bottom
+    )
+
+    estimated_ar_height = text_clip_arabic.h
+    font_size_arabic = FONT_SIZE_ARABIC
+    while estimated_ar_height > MAX_ALLOWED_HEIGHT:
+        font_size_arabic -= 5
+        text_clip_arabic = TextClip(
+            font=FONT_ARABIC,
+            text=text_arabic,
+            color="white",
+            font_size=font_size_arabic,
+            size=(MAX_SUB_WIDTH, None),
+            method='caption',  # Enable word wrapping
+            text_align="center",
+            stroke_color="#030303",
+            stroke_width=1,  # Gold stroke
+            interline=20,
+            margin=(10, 30, 10, 20)  # left, top, right, bottom
+        )
+        estimated_ar_height = text_clip_arabic.h
+        print(f"Arabic Text height too high. Current Font Size: {font_size_arabic}")
+
+    # Set the clip duration
+    text_clip_arabic = text_clip_arabic.with_duration(duration)
+
+    # Apply the movement
+    text_clip_arabic = text_clip_arabic.with_position(
+        (VIDEO_WIDTH / 2 - text_clip_arabic.w / 2, VIDEO_HEIGHT / 2 - text_clip_arabic.h))
+
+    # Apply effects
+    text_clip_arabic = text_clip_arabic.with_effects([vfx.CrossFadeIn(1.5), vfx.CrossFadeOut(1.5)])
+
+    # English Caption
+    # Create the text clip without a font parameter
+    stroke_width = 3
+    text_clip = TextClip(
+        font=FONT,
+        text=text,
+        color="white",
+        font_size=FONT_SIZE,
+        size=(MAX_SUB_WIDTH, None),
+        method='caption',  # Enable word wrapping
+        text_align="center",
+        stroke_color="#030303",
+        stroke_width=stroke_width,
+        interline=30,
+        margin=(10, 20, 10, 30)  # left, top, right, bottom
+    )
+    y_english = VIDEO_HEIGHT / 2
+
+    estimated_height = text_clip.h
+    font_size = FONT_SIZE
+    while estimated_height > MAX_ALLOWED_HEIGHT:
+        font_size -= 5
+        stroke_width = 2
+        text_clip = TextClip(
+            font=FONT,
+            text=text,
+            color="white",
+            font_size=font_size,
+            size=(MAX_SUB_WIDTH, None),
+            method='caption',  # Enable word wrapping
+            text_align="center",
+            stroke_color="#030303",
+            stroke_width=stroke_width,  # Gold stroke
+            interline=20,
+            margin=(10, 20, 10, 20)  # left, top, right, bottom
+        )
+        estimated_height = text_clip.h
+        # y_english = VIDEO_HEIGHT / 2
+        print(f"English Text height too high. Current Font Size: {font_size}")
+
+    # Set the clip duration
+    # text_clip = text_clip.with_duration(duration)
+    text_clip = create_centered_individual_words(text=text, font_size=font_size, stroke_width=stroke_width, duration=duration)
+
+    # Apply the movement
+    # text_clip = text_clip.with_position((VIDEO_WIDTH / 2 - text_clip.w / 2, y_english))
+    text_clip = text_clip.with_position((0, y_english))
+
+    # Apply effects
+    text_clip = text_clip.with_effects([vfx.CrossFadeIn(1.5), vfx.CrossFadeOut(1.5)])
+
+    final_clip = CompositeVideoClip([background, text_clip, text_clip_arabic], size=(VIDEO_WIDTH, VIDEO_HEIGHT))
+
+    # final_clip.preview()
+
+    return final_clip
+
+
 def create_arabic_text_clip(text: str,
                             font: str,
                             font_size: int,
@@ -374,7 +633,7 @@ def create_animated_surah(surah_arabic, surah_english, surah_bangla, meaning_en,
         logo_clip = ImageClip("quran/quran-logo.png", transparent=True)
 
         # Resize the clip to your desired dimensions
-        logo_clip = logo_clip.resized(width=100)
+        logo_clip = logo_clip.resized(width=80)
 
         # Position the resized clip
         logo_clip = logo_clip.with_position((20, 20))
@@ -395,10 +654,10 @@ def create_animated_surah(surah_arabic, surah_english, surah_bangla, meaning_en,
 
     # Arabic surah
     surah_clip_arabic = create_arabic_text_clip(text=surah_arabic,
-                                                font=FONT_ARABIC,
-                                                font_size=30,
+                                                font=FONT_ARABIC_CALIGRAPH,
+                                                font_size=50,
                                                 duration=random.randint(min_duration, max_duration),
-                                                margin=(10, 20, 20, 30),
+                                                margin=(10, 20, 20, 10),
                                                 text_color=COLORS["arabic_text"],
                                                 stroke_color=COLORS["stroke"]
                                                 )
@@ -407,8 +666,8 @@ def create_animated_surah(surah_arabic, surah_english, surah_bangla, meaning_en,
     surah_clip_arabic = surah_clip_arabic.with_effects([vfx.Loop(duration=duration)])
 
     # English Surah
-    surah_clip_english = create_text_clip(text=surah_english,
-                                          font=FONT,
+    surah_clip_english = create_text_clip(text=surah_english.upper(),
+                                          font=FONT_BOLD,
                                           font_size=20,
                                           duration=random.randint(min_duration, max_duration),
                                           margin=(10, 10, 20, 10),
@@ -433,8 +692,8 @@ def create_animated_surah(surah_arabic, surah_english, surah_bangla, meaning_en,
 
     # English Meaning
     meaning_clip_english = create_text_clip(text=meaning_en,
-                                            font=FONT,
-                                            font_size=18,
+                                            font=FONT_REGULAR,
+                                            font_size=15,
                                             duration=random.randint(min_duration, max_duration),
                                             margin=(10, 0, 20, 10),
                                             text_color=COLORS["meaning_text"],
@@ -479,13 +738,22 @@ def generate_verse_to_file(surah_no, verse_index, subtitle_arabic, subtitle_engl
             return temp_file, duration
 
         # Create video
-        subtitle_video = create_animated_text(
+        # subtitle_video = create_animated_text(
+        #     text=subtitle_english.strip(),
+        #     text_arabic=subtitle_arabic.strip(),
+        #     duration=duration
+        # )
+
+        subtitle_video = create_animated_highlight_text(
             text=subtitle_english.strip(),
             text_arabic=subtitle_arabic.strip(),
             duration=duration
         )
 
         video = subtitle_video.with_audio(concat)
+
+        # video.preview()
+
         video.write_videofile(
             temp_file,
             fps=30,
@@ -537,7 +805,13 @@ def generate_bismillah_to_file(temp_manager):
         subtitle_english = "In the name of Allah, the Gracious, the Merciful."
 
         # Create your text animation
-        subtitle_video = create_animated_text(
+        # subtitle_video = create_animated_text(
+        #     text=subtitle_english,
+        #     text_arabic=bismillah_subtitle,
+        #     duration=duration
+        # )
+
+        subtitle_video = create_animated_highlight_text(
             text=subtitle_english,
             text_arabic=bismillah_subtitle,
             duration=duration
@@ -811,7 +1085,8 @@ def generate_videos(surah_no: int):
         print(f"Total verses: {verse_count}")
 
         surah_info = (
-            'سورة' + f' {data_ar["transliteratedName"]}',
+            # 'سورة' + f' {data_ar["transliteratedName"]}',
+            f"{surah_no}",
             f'Surah {data_en["transliteratedName"]}',
             f'সূরা {constants.BENGALI_NAMES.get(str(surah_no), "")}',
             data_en["translatedName"]
@@ -891,9 +1166,9 @@ def generate_videos(surah_no: int):
 
 
 if __name__ == "__main__":
-    generate_videos(18)
+    generate_videos(110)
 
     # For multiple surahs:
-    # for i in range(6, 9):
+    # for i in range(14, 18):
     #     generate_videos(i)
     #     gc.collect()
