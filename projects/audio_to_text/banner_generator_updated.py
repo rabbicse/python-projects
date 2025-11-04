@@ -1,0 +1,120 @@
+import json
+import arabic_reshaper
+from bidi.algorithm import get_display
+from PIL import Image, ImageDraw, ImageFont, ImageFilter
+
+# ---- Configuration ----
+CHAPTERS_PATH = "quran/chapters.json"
+IMAGE_TEMPLATE = "quran/banner-pro.png"  # Use your new elegant dark background
+OUTPUT_DIR = "banners/"
+
+# Fonts
+FONT_ARABIC_PATH = "fonts/ArabQuranIslamic140-K7n4W.ttf"
+FONT_ENGLISH_PATH = "fonts/Montserrat-Bold.ttf"  # Download from Google Fonts
+FONT_REGULAR = "fonts/merriweather.regular.ttf"
+FONT_BOLD = "fonts/merriweather.bold.ttf"
+FONT_ULTRA_BOLD = "fonts/merriweather.ultrabold.ttf"
+FONT_BANGLA_PATH = "fonts/Siyamrupali.ttf"
+
+# Bengali Names Mapping
+BENGALI_NAMES = {
+    "1": "আল-ফাতিহা", "2": "আল-বাকারা", "3": "আল-ই-ইমরান", "4": "আন-নিসা",
+    "5": "আল-মায়িদাহ", "6": "আল-আন'আম", "7": "আল-আ'রাফ", "8": "আল-আনফাল",
+    "9": "আত-তাওবাহ", "10": "ইউনুস", "11": "হুদ", "12": "ইউসুফ", "13": "আর-রাদ",
+    "14": "ইব্রাহিম", "15": "আল-হিজর", "16": "আন-নাহল", "17": "আল-ইসরা",
+    "18": "আল-কাহফ", "19": "মরিয়ম", "20": "তাহা", "21": "আল-আম্বিয়া",
+    "22": "আল-হাজ্জ", "23": "আল-মুমিনুন", "24": "আন-নূর", "25": "আল-ফুরকান",
+    "26": "আশ-শু'আরা", "27": "আন-নামল", "28": "আল-কাসাস", "29": "আল-আনকাবুত",
+    "30": "আর-রুম", "31": "লুকমান", "32": "আস-সাজদা", "33": "আল-আহযাব",
+    "34": "সাবা", "35": "ফাতির", "36": "ইয়াসিন", "37": "আস-সাফফাত", "38": "সাদ",
+    "39": "আয-যুমার", "40": "গাফির", "41": "ফুসসিলাত", "42": "আশ-শুরা",
+    "43": "আয-যুখরুফ", "44": "আদ-দুখান", "45": "আল-জাসিয়াহ", "46": "আল-আহকাফ",
+    "47": "মুহাম্মদ", "48": "আল-ফাতহ", "49": "আল-হুজুরাত", "50": "কাফ",
+    "51": "আয-যারিয়াত", "52": "আত-তুর", "53": "আন-নাজম", "54": "আল-কামার",
+    "55": "আর-রাহমান", "56": "আল-ওয়াকিয়াহ", "57": "আল-হাদিদ", "58": "আল-মুজাদিলাহ",
+    "59": "আল-হাশর", "60": "আল-মুমতাহানাহ", "61": "আস-সাফ", "62": "আল-জুমু'আহ",
+    "63": "আল-মুনাফিকুন", "64": "আত-তাগাবুন", "65": "আত-তালাক", "66": "আত-তাহরিম",
+    "67": "আল-মুলক", "68": "আল-কালাম", "69": "আল-হাক্কাহ", "70": "আল-মা'আরিজ",
+    "71": "নূহ", "72": "আল-জিন", "73": "আল-মুজাম্মিল", "74": "আল-মুদদাসসির",
+    "75": "আল-কিয়ামাহ", "76": "আল-ইনসান", "77": "আল-মুরসালাত", "78": "আন-নাবা",
+    "79": "আন-নাজিয়াত", "80": "আবাসা", "81": "আত-তাকভীর", "82": "আল-ইনফিতার",
+    "83": "আল-মুতাফফিফিন", "84": "আল-ইনশিকাক", "85": "আল-বুরুজ", "86": "আত-তারিক",
+    "87": "আল-আ'লা", "88": "আল-গাশিয়াহ", "89": "আল-ফাজর", "90": "আল-বালাদ",
+    "91": "আশ-শামস", "92": "আল-লাইল", "93": "আদ-দুহা", "94": "আল-শারহ",
+    "95": "আত-তিন", "96": "আল-আলাক", "97": "আল-কদর", "98": "আল-বাইয়িনাহ",
+    "99": "আয-যালযালাহ", "100": "আল-আদিয়াত", "101": "আল-কারিয়াহ", "102": "আত-তাকাসুর",
+    "103": "আল-আসর", "104": "আল-হুমাজাহ", "105": "আল-ফীল", "106": "কুরাইশ",
+    "107": "আল-মাউন", "108": "আল-কাওসার", "109": "আল-কাফিরুন", "110": "আন-নাসর",
+    "111": "আল-মাসাদ", "112": "আল-ইখলাস", "113": "আল-ফালাক", "114": "আন-নাস"
+}
+
+# ---- Design Helper ----
+def draw_centered_text(draw, text, font, y, color, width, shadow=True, glow=False, glow_radius=12):
+    bbox = draw.textbbox((0, 0), text, font=font)
+    text_width = bbox[2] - bbox[0]
+    x = (width - text_width) / 2
+    if shadow:
+        draw.text((x + 6, y + 6), text, font=font, fill="#000000")
+    draw.text((x, y), text, font=font, fill=color)
+    return x, y
+
+def generate_thumbnail(arabic, english, bangla, meaning, output_file):
+    base = Image.open(IMAGE_TEMPLATE).convert("RGBA")
+    base = base.resize((1920, 1080))
+    width, height = base.size
+    draw = ImageDraw.Draw(base)
+
+    # Fonts and sizes
+    arabic_font = ImageFont.truetype(FONT_ARABIC_PATH, 380)
+    english_font = ImageFont.truetype(FONT_BOLD, 160)
+    bangla_font = ImageFont.truetype(FONT_BANGLA_PATH, 150)
+    meaning_font = ImageFont.truetype(FONT_REGULAR, 100)
+
+    # Colors
+    GOLD = "#FFD700"
+    WHITE = "#FFFFFF"
+    GRAY = "#E0E0E0"
+    # TEAL = "#00FFC6"
+    # Calm + modern contrast
+    MEANING_TEXT_COLOR = "#00FFC6"
+
+    # Arabic text reshaping
+    reshaped = arabic_reshaper.reshape(arabic)
+    display_arabic = get_display(reshaped)
+
+    # Draw text layers
+    draw_centered_text(draw, display_arabic, arabic_font, height * 0.08, GOLD, width)
+    draw_centered_text(draw, english, english_font, height * 0.45, WHITE, width)
+    draw_centered_text(draw, bangla, bangla_font, height * 0.65, GRAY, width)
+    draw_centered_text(draw, meaning, meaning_font, height * 0.84, MEANING_TEXT_COLOR, width)
+
+    # Subtle blur glow for Arabic
+    glow_layer = Image.new("RGBA", base.size, (0, 0, 0, 0))
+    glow_draw = ImageDraw.Draw(glow_layer)
+    glow_draw.text(((width - draw.textlength(display_arabic, font=arabic_font)) / 2, height * 0.08), display_arabic, font=arabic_font, fill=(255, 215, 0, 255))
+    glow = glow_layer.filter(ImageFilter.GaussianBlur(15))
+    base = Image.alpha_composite(base, glow)
+    # base.show()
+
+    base = base.convert("RGB")
+    base.save(output_file, quality=95)
+    print(f"✅ Saved: {output_file}")
+
+def generate_all_banners():
+    with open(CHAPTERS_PATH, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    for i in range(1, 115):
+        en = data["en"][str(i)]
+        ar = data["ar"][str(i)]
+        # arabic_name = ar["transliteratedName"]
+        arabic_name = f'{i}'
+        english_name = f"SURAH {en['transliteratedName'].upper()}"
+        bangla_name = f"সূরা {BENGALI_NAMES[str(i)]}"
+        meaning = en["translatedName"]
+        output = f"{OUTPUT_DIR}{i:03d}_pro_banner.jpg"
+        generate_thumbnail(arabic_name, english_name, bangla_name, meaning, output)
+
+
+if __name__ == "__main__":
+    generate_all_banners()

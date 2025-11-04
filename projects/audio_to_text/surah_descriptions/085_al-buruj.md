@@ -1,18 +1,21 @@
-# 85. Surah Al-Buruj | سورة البروج | সূরা আল-বুরুজ | Arabic Recitation with English Translation & Subtitles
+# 85. Surah Al-Buruj | سورة البروج | সূরা আল-বুরুজ | Arabic Recitation with English Subtitles
 
-✨ Surah 85. Surah Al-Buruj | سورة البروج | সূরা আল-বুরুজ | Arabic Recitation with English Translation & Subtitles
-Meaning: The Mansions of the Stars
+✨ Surah 85. Surah Al-Buruj | سورة البروج | সূরা আল-বুরুজ | Arabic Recitation with English Subtitles
+📖 Meaning: The Mansions of the Stars
+🏙️ Revelation Place: Makkah
+🔢 Number of Verses: 22
 
-Listen, learn, and reflect on each word. This video features a beautiful Arabic recitation with English audio translation and subtitles, along with Bangla title reference. Perfect for those who want to listen, learn, and reflect on the meanings of the Qur’an.
+This beautiful Surah, revealed in Makkah, contains 22 ayahs and reminds us of Allah’s infinite mercy, wisdom, and power. Listen to its soothing recitation, understand its meaning, and let your heart find peace through the words of the Qur’an.
 
-Understand Allah's guidance, mercy, and blessings through this short word-by-word recitation.
+🌙 Reflect on the timeless guidance from Allah and strengthen your connection with Him. Perfect for those who love listening to peaceful and healing Qur’an recitations.
 
 🎵 Recitation: Mishari Rashid al-`Afasy - https://quran.com/reciters/7
 Source: https://quran.com/
-🎧 Translation (English Audio & Subtitles): Quran.com(All rights to the recitation belong to the respective copyright holders.)
+🎧 Translation (English Subtitles): Quran.com
+(All rights to the recitation belong to the respective copyright holders.)
 
-🌙 Du'a: May Allah protect us from all evil and guide us to His light. Ameen.
+🌸 Du’a: May Allah fill your heart with peace, protect you from all harm, and guide you to His light. Ameen.
 
-🔔 Subscribe for more animated Qur’an videos, English translations, and Islamic reminders!
+🔔 Subscribe for more Qur’an recitations, translations, and Islamic reminders every day!
 
-#surahalburuj #holyquran #quranrecitation #tilawat #beautifulrecitation #surah85 #soothingquran #quranhealing #quranwithtajweed #heartsoothingquran #islamicreminders #listenquran #dailyquran #peacefulrecitation #quranshorts #healingquran #islamicvideo #islamicvideos #misharialafasy #misharyrashidalfasy#সূরা #কুরআন #কুরআন_তিলাওয়াত
+#surahalburuj #holyquran #quranrecitation #tilawat #beautifulrecitation #surah85 #soothingquran #quranhealing #quranwithtajweed #heartsoothingquran #islamicreminders #listenquran #dailyquran #peacefulrecitation #quranshorts #healingquran #islamicvideo #islamicvideos #misharialafasy #সূরা #কুরআন #কুরআন_তিলাওয়াত

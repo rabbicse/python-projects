@@ -119,12 +119,6 @@ BENGALI_NAMES = {
     "114": "আন-নাস"
 }
 
-# Wikipedia URLs
-WIKI_URLS = {
-    "en": "https://en.wikipedia.org/wiki/List_of_chapters_in_the_Quran",
-    "bn": "https://bn.wikipedia.org/wiki/%E0%A6%95%E0%A7%81%E0%A6%B0%E0%A6%86%E0%A6%A8%E0%A7%87%E0%A6%B0_%E0%A6%B8%E0%A7%82%E0%A6%B0%E0%A6%BE%E0%A6%B0_%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE"
-}
-
 
 def load_surah_data(json_file_path):
     """Load surah data from JSON file"""
@@ -137,33 +131,41 @@ def generate_markdown(surah_data, surah_number, surah_info=None):
     surah_en = surah_data["en"][str(surah_number)]
     surah_ar = surah_data["ar"][str(surah_number)]
 
-
     surah_ar_text = 'سورة'
-    surah_name_en = f'Surah {surah_en['transliteratedName']}'
-    surah_name_ar = surah_ar_text + f' {surah_ar['transliteratedName']}'
-    surah_meaning_en = f'{surah_en["translatedName"]}'
+    surah_name_en = f"Surah {surah_en['transliteratedName']}"
+    surah_name_ar = f"{surah_ar_text} {surah_ar['transliteratedName']}"
+    surah_meaning_en = f"{surah_en['translatedName']}"
 
-    # Get Bengali name
-    # Get Bengali name
     bengali_name = BENGALI_NAMES.get(str(surah_number), "")
-    surah_name_bn = f'সূরা {bengali_name}'
+    surah_name_bn = f"সূরা {bengali_name}"
 
-    # Format title with Bengali
+    # Build title
     title = f"{surah_number}. {surah_name_en} | {surah_name_ar} | {surah_name_bn} | Arabic Recitation with English Subtitles"
 
-    # Format description
-    description = f"✨ Surah {surah_number}. {surah_name_en} | {surah_name_ar} | {surah_name_bn} | Arabic Recitation with English Subtitles\n"
-    description += f"Meaning: {surah_meaning_en}\n\n"
-    description += "Listen, learn, and reflect on each word. This video features a beautiful Arabic recitation with English subtitles, along with Bangla title reference. Perfect for those who want to listen, learn, and reflect on the meanings of the Qur’an.\n\n"
-    description += "Understand Allah's guidance, mercy, and blessings through this short word-by-word recitation.\n\n"
-    description += f"🎵 Recitation: Mishari Rashid al-`Afasy - https://quran.com/reciters/7\n"
-    description += "Source: https://quran.com/\n"
-    description += "🎧 Translation (English Audio & Subtitles): Quran.com"
-    description += "(All rights to the recitation belong to the respective copyright holders.)\n\n"
-    description += "🌙 Du'a: May Allah protect us from all evil and guide us to His light. Ameen.\n\n"
-    description += "🔔 Subscribe for more animated Qur’an videos, English translations, and Islamic reminders!\n\n"
+    # Extract revelation info
+    revelation_place = surah_en.get("revelationPlace", "").capitalize()
+    ayah_count = surah_en.get("versesCount", "N/A")
 
-    # Add hashtags
+    # Build description (SEO + emotional)
+    description = f"✨ Surah {surah_number}. {surah_name_en} | {surah_name_ar} | {surah_name_bn} | Arabic Recitation with English Subtitles\n"
+    description += f"📖 Meaning: {surah_meaning_en}\n"
+    description += f"🏙️ Revelation Place: {revelation_place}\n"
+    description += f"🔢 Number of Verses: {ayah_count}\n\n"
+
+    description += (
+        f"This beautiful Surah, revealed in {revelation_place}, contains {ayah_count} ayahs and "
+        f"reminds us of Allah’s infinite mercy, wisdom, and power. "
+        "Listen to its soothing recitation, understand its meaning, and let your heart find peace through the words of the Qur’an.\n\n"
+        "🌙 Reflect on the timeless guidance from Allah and strengthen your connection with Him. "
+        "Perfect for those who love listening to peaceful and healing Qur’an recitations.\n\n"
+        "🎵 Recitation: Mishari Rashid al-`Afasy - https://quran.com/reciters/7\n"
+        "Source: https://quran.com/\n"
+        "🎧 Translation (English Subtitles): Quran.com\n"
+        "(All rights to the recitation belong to the respective copyright holders.)\n\n"
+        "🌸 Du’a: May Allah fill your heart with peace, protect you from all harm, and guide you to His light. Ameen.\n\n"
+        "🔔 Subscribe for more Qur’an recitations, translations, and Islamic reminders every day!\n\n"
+    )
+
     hashtags = [
         f"#surah{surah_en['slug'].replace('-','')}",
         "#holyquran",
@@ -184,7 +186,6 @@ def generate_markdown(surah_data, surah_number, surah_info=None):
         "#islamicvideo",
         "#islamicvideos",
         "#misharialafasy",
-        "#misharyrashidalfasy"
         "#সূরা",
         "#কুরআন",
         "#কুরআন_তিলাওয়াত"
@@ -195,44 +196,40 @@ def generate_markdown(surah_data, surah_number, surah_info=None):
     # Add surah info if available
     if surah_info:
         description += f"\n\n## About this Surah\n\n"
-        description += f"**Name**: {surah_info.get('surah_name', 'N/A')}\n\n"
-        description += f"**Number of Verses**: {surah_info.get('ayah_count', 'N/A')}\n\n"
-        description += f"**Revelation Place**: {surah_info.get('revelation_place', 'N/A')}\n\n"
-        description += f"**Description**: {surah_info.get('description', 'N/A')}\n\n"
+        description += f"**Name**: {surah_info.get('surah_name', surah_en['transliteratedName'])}\n\n"
+        description += f"**Number of Verses**: {surah_info.get('ayah_count', ayah_count)}\n\n"
+        description += f"**Revelation Place**: {surah_info.get('revelation_place', revelation_place)}\n\n"
+        description += f"**Description**: {surah_info.get('description', f'A Surah revealed in {revelation_place} containing {ayah_count} verses.')}"
 
     return title, description
 
 
 def main():
     # Load your surah data
-    surah_data = load_surah_data('quran/chapters.json')  # Replace with your JSON file path
+    surah_data = load_surah_data('quran/chapters.json')  # Adjust path as needed
 
-    # Create output directory if it doesn't exist
+    # Create output directory
     os.makedirs('surah_descriptions', exist_ok=True)
 
-    # Process each surah
-    for surah_number in range(1, 115):  # 1 to 114
+    # Process all 114 Surahs
+    for surah_number in range(1, 115):
         try:
-            # Try to load additional surah info if available
             surah_info_path = f'surah_info/{surah_number}.json'
             surah_info = None
             if os.path.exists(surah_info_path):
                 with open(surah_info_path, 'r', encoding='utf-8') as f:
                     surah_info = json.load(f).get('surah_info', {})
 
-            # Generate markdown content
             title, description = generate_markdown(surah_data, surah_number, surah_info)
 
-            # Save to file
             filename = f"surah_descriptions/{surah_number:03d}_{surah_data['en'][str(surah_number)]['slug']}.md"
             with open(filename, 'w', encoding='utf-8') as f:
-                f.write(f"# {title}\n\n")
-                f.write(description)
+                f.write(f"# {title}\n\n{description}")
 
-            print(f"Generated: {filename}")
+            print(f"✅ Generated: {filename}")
 
         except Exception as e:
-            print(f"Error processing surah {surah_number}: {e}")
+            print(f"⚠️ Error processing Surah {surah_number}: {e}")
 
 
 if __name__ == "__main__":

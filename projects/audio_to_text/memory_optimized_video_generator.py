@@ -355,7 +355,7 @@ def create_centered_individual_words(text:str,
     lines = []
     current_line = []
     current_line_width = 0
-    max_line_width = width - 200
+    max_line_width = width - 120
 
     # First pass: group words into lines
     for token in doc:
@@ -390,8 +390,7 @@ def create_centered_individual_words(text:str,
 
     # Second pass: create and position clips
     text_clips = []
-    line_height = 70
-    total_text_height = len(lines) * line_height
+    line_height = 0
     start_y = 0#(height - total_text_height) // 2
 
     for line_num, line in enumerate(lines):
@@ -426,6 +425,9 @@ def create_centered_individual_words(text:str,
                     interline=20,
                     margin=(5, 20, 5, 20)  # left, top, right, bottom
                 )
+
+            if line_height == 0:
+                line_height = word_clip.h
 
             line_clips.append(word_clip)
             line_total_width += word_clip.w
@@ -536,6 +538,8 @@ def create_animated_highlight_text(text: str, text_arabic: str, duration=5):
         estimated_height = text_clip.h
         # y_english = VIDEO_HEIGHT / 2
         print(f"English Text height too high. Current Font Size: {font_size}")
+
+    text_clip.close()
 
     # Set the clip duration
     # text_clip = text_clip.with_duration(duration)
@@ -732,15 +736,16 @@ def generate_verse_to_file(surah_no, verse_index, subtitle_arabic, subtitle_engl
     try:
         # Load audio with context managers
         audio_arabic = AudioFileClip(f"/mnt/7A4CEE3F674E3964/quran/000_versebyverse/{surah}{audio_ar_index}.mp3")
-        audio_english = AudioFileClip(
-            f"/mnt/7A4CEE3F674E3964/quran/quran-in-english-clearquran-mp3-verse-by-verse-edtion-allah/{surah}-{audio_en_index}.mp3")
-        concat = concatenate_audioclips([audio_arabic, audio_english])
+        # audio_english = AudioFileClip(
+        #     f"/mnt/7A4CEE3F674E3964/quran/quran-in-english-clearquran-mp3-verse-by-verse-edtion-allah/{surah}-{audio_en_index}.mp3")
+        # concat = concatenate_audioclips([audio_arabic, audio_english])
+        concat = concatenate_audioclips([audio_arabic])
         duration = concat.duration + duration_pad
 
         if is_exists:
             # Close clips to free memory
             audio_arabic.close()
-            audio_english.close()
+            # audio_english.close()
             concat.close()
             return temp_file, duration
 
@@ -759,7 +764,7 @@ def generate_verse_to_file(surah_no, verse_index, subtitle_arabic, subtitle_engl
 
         video = subtitle_video.with_audio(concat)
 
-        video.preview()
+        # video.preview()
 
         video.write_videofile(
             temp_file,
@@ -777,7 +782,7 @@ def generate_verse_to_file(surah_no, verse_index, subtitle_arabic, subtitle_engl
         subtitle_video.close()
         concat.close()
         audio_arabic.close()
-        audio_english.close()
+        # audio_english.close()
 
         return temp_file, duration
 
@@ -795,16 +800,17 @@ def generate_bismillah_to_file(temp_manager):
         # Load bismillah
         audio_arabic = AudioFileClip("/mnt/7A4CEE3F674E3964/quran/000_versebyverse/001001.mp3")
 
-        audio_english = AudioFileClip(
-            "/mnt/7A4CEE3F674E3964/quran/quran-in-english-verse-by-verse-mp3-allah/001-001.mp3")
+        # audio_english = AudioFileClip(
+        #     "/mnt/7A4CEE3F674E3964/quran/quran-in-english-verse-by-verse-mp3-allah/001-001.mp3")
 
         # All clip will play one after the other
-        concat = concatenate_audioclips([audio_arabic, audio_english])
+        # concat = concatenate_audioclips([audio_arabic, audio_english])
+        concat = concatenate_audioclips([audio_arabic])
         duration = concat.duration + 1
 
         if is_exists:
             audio_arabic.close()
-            audio_english.close()
+            # audio_english.close()
             concat.close()
             return temp_file, duration
 
@@ -837,7 +843,7 @@ def generate_bismillah_to_file(temp_manager):
         )
 
         audio_arabic.close()
-        audio_english.close()
+        # audio_english.close()
         video.close()
         subtitle_video.close()
         concat.close()
@@ -1173,9 +1179,9 @@ def generate_videos(surah_no: int):
 
 
 if __name__ == "__main__":
-    generate_videos(110)
+    # generate_videos(110)
 
     # For multiple surahs:
-    # for i in range(14, 18):
-    #     generate_videos(i)
-    #     gc.collect()
+    for i in range(81, 101):
+        generate_videos(i)
+        gc.collect()
